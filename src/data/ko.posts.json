@@ -1,0 +1,221 @@
+[
+  {
+    "id": 1,
+    "title": "스텔라 블레이드 전투 시스템 어떻게 생각하세요?",
+    "content": "스텔라 블레이드의 전투 시스템이 정말 재미있네요. 콤보 연결이 매끄럽고 회피 타이밍도 절묘해요. 다들 어떤 무기를 주로 사용하시나요?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "액션게이머",
+        "content": "저는 검을 주로 사용해요. 콤보가 화려하고 데미지도 좋더라고요.",
+        "timestamp": "2시간 전"
+      },
+      {
+        "id": 2,
+        "author": "스텔라팬",
+        "content": "회피 후 반격이 정말 쾌감있어요. 타이밍 맞추는 재미가 있네요.",
+        "timestamp": "1시간 전"
+      },
+      {
+        "id": 3,
+        "author": "PS5유저",
+        "content": "그래픽도 정말 좋고 최적화도 잘 되어있어서 만족스러워요!",
+        "timestamp": "30분 전"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/stellarblade/post1",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399641720743792793",
+    "communityId": "reddit",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 2,
+    "title": "스텔라 블레이드 보스전 공략법",
+    "content": "스텔라 블레이드의 보스전이 정말 어렵네요. 특히 패턴 파악이 힘들어요. 효과적인 공략법이 있을까요?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "보스킬러",
+        "content": "패턴을 외우는 것보다 회피 타이밍에 집중하세요. 반격 기회가 많아져요.",
+        "timestamp": "3시간 전"
+      },
+      {
+        "id": 2,
+        "author": "프로게이머",
+        "content": "무기 업그레이드를 충분히 하고 도전하는 것도 중요해요.",
+        "timestamp": "2시간 전"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/stellarblade/post2",
+    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade2",
+    "communityId": "steam",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 3,
+    "title": "스텔라 블레이드 사운드트랙 정말 좋네요",
+    "content": "스텔라 블레이드의 사운드트랙이 정말 인상적이에요. 전투 중 나오는 BGM도 좋고, 환경음도 상당히 몰입감을 주네요.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "음악애호가",
+        "content": "보스전 BGM이 정말 웅장하고 좋았어요. 전투의 긴장감을 잘 살렸네요.",
+        "timestamp": "4시간 전"
+      },
+      {
+        "id": 2,
+        "author": "게임음악팬",
+        "content": "환경음도 정말 세세하게 되어있어서 몰입감이 높아요.",
+        "timestamp": "2시간 전"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/stellarblade/thread3",
+    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade3",
+    "communityId": "5ch",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 4,
+    "title": "33원정대 캠페인 모드 리뷰",
+    "content": "33원정대의 캠페인 모드를 해보았는데 정말 재미있네요! 전략적 요소와 스토리가 잘 어우러져 있어요.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "전략게이머",
+        "content": "저는 마법사 캐릭터를 주로 사용해요. 원거리 공격이 강력해요!",
+        "timestamp": "3시간 전"
+      },
+      {
+        "id": 2,
+        "author": "RPG러버",
+        "content": "캐릭터 커스터마이징이 정말 세세하게 되어있어서 좋아요.",
+        "timestamp": "2시간 전"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/clairobscur33/post4",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-4",
+    "communityId": "reddit",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 5,
+    "title": "33원정대 멀티플레이 모드 추천",
+    "content": "33원정대의 멀티플레이 모드가 정말 재미있네요! 친구들과 함께 플레이하니 더욱 재미있어요.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "코업게이머",
+        "content": "친구들과 함께 하니 정말 재미있어요. 전략적 소통이 중요하네요.",
+        "timestamp": "5시간 전"
+      },
+      {
+        "id": 2,
+        "author": "파티게이머",
+        "content": "난이도 조절이 잘 되어있어서 초보자도 즉시 적응할 수 있어요.",
+        "timestamp": "3시간 전"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/clairobscur33/post5",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-5",
+    "communityId": "steam",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 6,
+    "title": "33원정대 캐릭터 빌드 추천",
+    "content": "33원정대에서 어떤 캐릭터 빌드가 가장 효과적인지 궁금해요. 초보자에게 추천할만한 빌드가 있을까요?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "빌드마스터",
+        "content": "초보자라면 전사 빌드를 추천해요. 생존력이 높고 조작이 간단해요.",
+        "timestamp": "6시간 전"
+      },
+      {
+        "id": 2,
+        "author": "33마스터",
+        "content": "마법사도 좋지만 포지셔닝이 중요해서 어려울 수 있어요.",
+        "timestamp": "4시간 전"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/clairobscur33/thread6",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-6",
+    "communityId": "5ch",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 7,
+    "title": "델타포스 베타 테스트 후기",
+    "content": "델타포스 베타를 해보았는데 정말 재미있네요! 그래픽도 좋고 최적화도 잘 되어있어요.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "FPS마니아",
+        "content": "전술적 FPS라는 컨셉이 정말 좋아요. 팀워크가 중요하네요.",
+        "timestamp": "4시간 전"
+      },
+      {
+        "id": 2,
+        "author": "밀리타리게이머",
+        "content": "무기 커스터마이징이 상당히 세마하게 되어있어서 좋아요.",
+        "timestamp": "3시간 전"
+      },
+      {
+        "id": 3,
+        "author": "베타테스터",
+        "content": "아직 베타인데도 완성도가 높아서 기대되네요!",
+        "timestamp": "1시간 전"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/deltaforce/post7",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-7",
+    "communityId": "reddit",
+    "projectId": "deltaforce"
+  },
+  {
+    "id": 8,
+    "title": "델타포스 무기 추천",
+    "content": "델타포스에서 어떤 무기가 가장 좋은지 궁금해요. 초보자에게 추천할만한 무기가 있을까요?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "무기전문가",
+        "content": "M4A1이 초보자에게 가장 좋아요. 반동이 적고 데미지도 준수해요.",
+        "timestamp": "5시간 전"
+      },
+      {
+        "id": 2,
+        "author": "FPS프로",
+        "content": "AK-47도 좋지만 반동 컨트롤이 어려워서 연습이 필요해요.",
+        "timestamp": "3시간 전"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/deltaforce/post8",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-8",
+    "communityId": "steam",
+    "projectId": "deltaforce"
+  },
+  {
+    "id": 9,
+    "title": "델타포스 맵 분석",
+    "content": "델타포스의 맵들이 정말 잘 만들어진 것 같아요. 각 맵의 특징과 전략이 궁금해요.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "맵분석가",
+        "content": "도시 맵은 근거리 전투가 많아서 SMG가 유리해요.",
+        "timestamp": "7시간 전"
+      },
+      {
+        "id": 2,
+        "author": "전술가",
+        "content": "사막 맵은 저격 포인트가 많아서 스나이퍼가 강력해요.",
+        "timestamp": "5시간 전"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/deltaforce/thread9",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-9",
+    "communityId": "5ch",
+    "projectId": "deltaforce"
+  }
+]

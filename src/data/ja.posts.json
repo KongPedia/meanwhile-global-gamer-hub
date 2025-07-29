@@ -1,0 +1,221 @@
+[
+  {
+    "id": 1,
+    "title": "ステラブレードの戦闘システムはどう思いますか？",
+    "content": "ステラブレードの戦闘システムが本当に面白いですね！コンボの繋がりが滑らかで、回避のタイミングも絶妙です。皆さんはどの武器を主に使っていますか？",
+    "comments": [
+      {
+        "id": 1,
+        "author": "アクションゲーマー",
+        "content": "私は主に剣を使っています。コンボが華麗でダメージも良いです。",
+        "timestamp": "2時間前"
+      },
+      {
+        "id": 2,
+        "author": "ステラファン",
+        "content": "回避後の反撃が本当に爽快です。タイミングを合わせる楽しさがありますね。",
+        "timestamp": "1時間前"
+      },
+      {
+        "id": 3,
+        "author": "PS5ユーザー",
+        "content": "グラフィックも本当に良くて最適化もよくできているので満足です！",
+        "timestamp": "30分前"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/stellarblade/post1",
+    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade1",
+    "communityId": "reddit",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 2,
+    "title": "ステラブレードのボス戦攻略法",
+    "content": "ステラブレードのボス戦が本当に難しいですね。特にパターンの把握が困難です。効果的な攻略法はありますか？",
+    "comments": [
+      {
+        "id": 1,
+        "author": "ボスキラー",
+        "content": "パターンを覚えるより回避タイミングに集中してください。反撃の機会が増えます。",
+        "timestamp": "3時間前"
+      },
+      {
+        "id": 2,
+        "author": "プロゲーマー",
+        "content": "武器のアップグレードを十分にしてから挑戦することも重要です。",
+        "timestamp": "2時間前"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/stellarblade/post2",
+    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade2",
+    "communityId": "steam",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 3,
+    "title": "ステラブレードのサウンドトラックが本当に良いですね",
+    "content": "ステラブレードのサウンドトラックが本当に印象的です。戦闘中に流れるBGMも良いし、環境音もかなり没入感を与えますね。",
+    "comments": [
+      {
+        "id": 1,
+        "author": "音楽愛好家",
+        "content": "ボス戦のBGMが本当に壮大で良かったです。戦闘の緊張感をよく表現していますね。",
+        "timestamp": "4時間前"
+      },
+      {
+        "id": 2,
+        "author": "ゲーム音楽ファン",
+        "content": "環境音も本当に細かく作られていて没入感が高いです。",
+        "timestamp": "2時間前"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/stellarblade/thread3",
+    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade3",
+    "communityId": "5ch",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 4,
+    "title": "33遠征隊キャンペーンモードレビュー",
+    "content": "33遠征隊のキャンペーンモードをプレイしましたが、本当に面白いですね！戦略的要素とストーリーがよく調和しています。",
+    "comments": [
+      {
+        "id": 1,
+        "author": "戦略ゲーマー",
+        "content": "私は主に魔法使いキャラクターを使っています。遠距離攻撃が強力です！",
+        "timestamp": "3時間前"
+      },
+      {
+        "id": 2,
+        "author": "RPGラバー",
+        "content": "キャラクターカスタマイズが本当に細かくできているのが良いです。",
+        "timestamp": "2時間前"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/clairobscur33/post4",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-4",
+    "communityId": "reddit",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 5,
+    "title": "33遠征隊マルチプレイモード推薦",
+    "content": "33遠征隊のマルチプレイモードが本当に面白いですね！友達と一緒にプレイするとさらに楽しいです。",
+    "comments": [
+      {
+        "id": 1,
+        "author": "協力ゲーマー",
+        "content": "友達と一緒にやると本当に楽しいです。戦略的なコミュニケーションが重要ですね。",
+        "timestamp": "5時間前"
+      },
+      {
+        "id": 2,
+        "author": "パーティーゲーマー",
+        "content": "難易度調整がよくできているので初心者もすぐに適応できます。",
+        "timestamp": "3時間前"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/clairobscur33/post5",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-5",
+    "communityId": "steam",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 6,
+    "title": "33遠征隊キャラクタービルド推薦",
+    "content": "33遠征隊でどのキャラクタービルドが最も効果的か気になります。初心者におすすめのビルドはありますか？",
+    "comments": [
+      {
+        "id": 1,
+        "author": "ビルドマスター",
+        "content": "初心者なら戦士ビルドをおすすめします。生存力が高く操作が簡単です。",
+        "timestamp": "6時間前"
+      },
+      {
+        "id": 2,
+        "author": "33マスター",
+        "content": "魔法使いも良いですがポジショニングが重要なので難しいかもしれません。",
+        "timestamp": "4時間前"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/clairobscur33/thread6",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-6",
+    "communityId": "5ch",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 7,
+    "title": "デルタフォースベータテストレビュー",
+    "content": "デルタフォースのベータをプレイしましたが本当に面白いですね！グラフィックも良く最適化もよくできています。",
+    "comments": [
+      {
+        "id": 1,
+        "author": "FPSマニア",
+        "content": "戦術的FPSというコンセプトが本当に良いです。チームワークが重要ですね。",
+        "timestamp": "4時間前"
+      },
+      {
+        "id": 2,
+        "author": "ミリタリーゲーマー",
+        "content": "武器カスタマイズがかなり細かくできているのが良いです。",
+        "timestamp": "3時間前"
+      },
+      {
+        "id": 3,
+        "author": "ベータテスター",
+        "content": "まだベータなのに完成度が高くて期待できますね！",
+        "timestamp": "1時間前"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/deltaforce/post7",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-7",
+    "communityId": "reddit",
+    "projectId": "deltaforce"
+  },
+  {
+    "id": 8,
+    "title": "デルタフォース武器推薦",
+    "content": "デルタフォースでどの武器が最も良いか気になります。初心者におすすめの武器はありますか？",
+    "comments": [
+      {
+        "id": 1,
+        "author": "武器専門家",
+        "content": "M4A1が初心者に最適です。反動が少なくダメージも適度です。",
+        "timestamp": "5時間前"
+      },
+      {
+        "id": 2,
+        "author": "FPSプロ",
+        "content": "AK-47も良いですが反動コントロールが難しいので練習が必要です。",
+        "timestamp": "3時間前"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/deltaforce/post8",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-8",
+    "communityId": "steam",
+    "projectId": "deltaforce"
+  },
+  {
+    "id": 9,
+    "title": "デルタフォースマップ分析",
+    "content": "デルタフォースのマップが本当によく作られているようです。各マップの特徴と戦略が気になります。",
+    "comments": [
+      {
+        "id": 1,
+        "author": "マップ分析家",
+        "content": "都市マップは近距離戦闘が多いのでSMGが有利です。",
+        "timestamp": "7時間前"
+      },
+      {
+        "id": 2,
+        "author": "戦術家",
+        "content": "砂漠マップは狙撃ポイントが多いのでスナイパーが強力です。",
+        "timestamp": "5時間前"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/deltaforce/thread9",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-9",
+    "communityId": "5ch",
+    "projectId": "deltaforce"
+  }
+]

@@ -1,0 +1,221 @@
+[
+  {
+    "id": 1,
+    "title": "What do you think about Stellar Blade's combat system?",
+    "content": "Stellar Blade's combat system is really fun! The combo connections are smooth and the dodge timing is exquisite. What weapons do you mainly use?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "ActionGamer",
+        "content": "I mainly use swords. The combos are flashy and the damage is good too.",
+        "timestamp": "2 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "StellarFan",
+        "content": "Counter-attacks after dodging are really satisfying. It's fun to get the timing right.",
+        "timestamp": "1 hour ago"
+      },
+      {
+        "id": 3,
+        "author": "PS5User",
+        "content": "The graphics are really good and it's well optimized, so I'm satisfied!",
+        "timestamp": "30 minutes ago"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/stellarblade/post1",
+    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade1",
+    "communityId": "reddit",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 2,
+    "title": "Stellar Blade boss fight strategies",
+    "content": "Stellar Blade's boss fights are really difficult. Pattern recognition is especially hard. Are there any effective strategies?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "BossKiller",
+        "content": "Focus on dodge timing rather than memorizing patterns. You'll get more counter-attack opportunities.",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "ProGamer",
+        "content": "It's also important to upgrade your weapons sufficiently before challenging bosses.",
+        "timestamp": "2 hours ago"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/stellarblade/post2",
+    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade2",
+    "communityId": "steam",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 3,
+    "title": "Stellar Blade soundtrack is really good",
+    "content": "Stellar Blade's soundtrack is really impressive. The BGM during combat is good, and the environmental sounds are quite immersive too.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "MusicLover",
+        "content": "The boss fight BGM was really grand and good. It captured the tension of battle well.",
+        "timestamp": "4 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "GameMusicFan",
+        "content": "The environmental sounds are really detailed, which increases immersion.",
+        "timestamp": "2 hours ago"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/stellarblade/thread3",
+    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade3",
+    "communityId": "5ch",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 4,
+    "title": "Clair Obscur: Expedition 33 campaign mode review",
+    "content": "I tried Clair Obscur: Expedition 33's campaign mode and it's really fun! The strategic elements and story are well integrated.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "StrategyGamer",
+        "content": "I mainly use mage characters. Ranged attacks are powerful!",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "RPGLover",
+        "content": "Character customization is really detailed, which is great.",
+        "timestamp": "2 hours ago"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/clairobscur33/post4",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-4",
+    "communityId": "reddit",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 5,
+    "title": "Clair Obscur: Expedition 33 multiplayer mode recommendation",
+    "content": "Clair Obscur: Expedition 33's multiplayer mode is really fun! Playing with friends makes it even more enjoyable.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "CoopGamer",
+        "content": "Playing with friends is really fun. Strategic communication is important.",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "PartyGamer",
+        "content": "The difficulty adjustment is well done, so beginners can adapt immediately.",
+        "timestamp": "3 hours ago"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/clairobscur33/post5",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-5",
+    "communityId": "steam",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 6,
+    "title": "Clair Obscur: Expedition 33 character build recommendations",
+    "content": "I'm curious about which character builds are most effective in Clair Obscur: Expedition 33. Are there any builds you'd recommend for beginners?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "BuildMaster",
+        "content": "For beginners, I recommend warrior builds. High survivability and simple controls.",
+        "timestamp": "6 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "33Master",
+        "content": "Mage is good too, but positioning is important so it can be difficult.",
+        "timestamp": "4 hours ago"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/clairobscur33/thread6",
+    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-6",
+    "communityId": "5ch",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 7,
+    "title": "Delta Force beta test review",
+    "content": "I tried the Delta Force beta and it's really fun! The graphics are good and it's well optimized too.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "FPSManiac",
+        "content": "The tactical FPS concept is really good. Teamwork is important.",
+        "timestamp": "4 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "MilitaryGamer",
+        "content": "Weapon customization is quite detailed, which is great.",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "id": 3,
+        "author": "BetaTester",
+        "content": "Even though it's still beta, the completion level is high, so I'm looking forward to it!",
+        "timestamp": "1 hour ago"
+      }
+    ],
+    "sourceURL": "https://reddit.com/r/deltaforce/post7",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-7",
+    "communityId": "reddit",
+    "projectId": "deltaforce"
+  },
+  {
+    "id": 8,
+    "title": "Delta Force weapon recommendations",
+    "content": "I'm curious about which weapons are best in Delta Force. Are there any weapons you'd recommend for beginners?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "WeaponExpert",
+        "content": "M4A1 is best for beginners. Low recoil and decent damage.",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "FPSPro",
+        "content": "AK-47 is good too, but recoil control is difficult so it needs practice.",
+        "timestamp": "3 hours ago"
+      }
+    ],
+    "sourceURL": "https://steamcommunity.com/discussions/deltaforce/post8",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-8",
+    "communityId": "steam",
+    "projectId": "deltaforce"
+  },
+  {
+    "id": 9,
+    "title": "Delta Force map analysis",
+    "content": "Delta Force's maps seem really well made. I'm curious about each map's characteristics and strategies.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "MapAnalyst",
+        "content": "Urban maps have a lot of close combat, so SMGs are advantageous.",
+        "timestamp": "7 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "Tactician",
+        "content": "Desert maps have many sniper points, so snipers are powerful.",
+        "timestamp": "5 hours ago"
+      }
+    ],
+    "sourceURL": "https://5ch.net/games/deltaforce/thread9",
+    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-9",
+    "communityId": "5ch",
+    "projectId": "deltaforce"
+  }
+]
