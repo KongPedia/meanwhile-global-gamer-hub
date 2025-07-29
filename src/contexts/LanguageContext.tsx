@@ -1,5 +1,5 @@
 // @refresh reset
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export type Language = 'ko' | 'en' | 'ja' | 'zh' | 'es';
 
@@ -23,8 +23,52 @@ interface LanguageProviderProps {
   children: ReactNode;
 }
 
+// Function to detect browser language
+const detectBrowserLanguage = (): Language => {
+  // Get browser language preferences
+  const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+  
+  // Extract language code (e.g., 'ko-KR' -> 'ko')
+  const langCode = browserLang.toLowerCase().split('-')[0];
+  // Map to supported languages
+  const supportedLanguages: Language[] = ['en', 'ja', 'zh', 'es'];
+  
+  // Check if detected language is supported
+  if (supportedLanguages.includes(langCode as Language)) {
+    console.log(langCode)
+    return langCode as Language;
+  }
+  
+  // Fallback logic based on region
+  const region = browserLang.toLowerCase().split('-')[1];
+  
+  if (region) {
+    // Asian regions default to appropriate languages
+    if (['kr', 'kp'].includes(region)) return 'ko';
+    if (['jp'].includes(region)) return 'ja';
+    if (['cn', 'tw', 'hk', 'mo'].includes(region)) return 'zh';
+    if (['es', 'mx', 'ar', 'co', 've', 'pe', 'cl', 'ec', 'gt', 'cu', 'bo', 'do', 'hn', 'py', 'sv', 'ni', 'cr', 'pa', 'uy', 'gq'].includes(region)) return 'es';
+  }
+  
+  // Default to English for unsupported languages
+  return 'en';
+};
+
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [language, setLanguage] = useState<Language>('ko');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Try to get saved language from localStorage first
+    const savedLanguage = localStorage.getItem('preferred-language') as Language;
+    if (savedLanguage && ['ko', 'en', 'ja', 'zh', 'es'].includes(savedLanguage)) {
+      return savedLanguage;
+    }
+    // Otherwise detect from browser
+    return detectBrowserLanguage();
+  });
+  
+  // Save language preference to localStorage when it changes
+  useEffect(() => {
+    localStorage.setItem('preferred-language', language);
+  }, [language]);
 
   const t = (key: string): string => {
     return translations[language][key] || translations['en'][key] || key;
