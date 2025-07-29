@@ -1,27 +1,30 @@
 import { Card } from "@/components/ui/card";
 import { Zap, Users, Search, Heart } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const BenefitsSection = () => {
+  const { t } = useLanguage();
+  
   const benefits = [
     {
       icon: <Search className="w-8 h-8" />,
-      title: "빠른 탐색",
-      description: "원하는 게임 정보를 빠르게 찾아보세요"
+      title: t('benefits.search.title'),
+      description: t('benefits.search.desc')
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "번역 지원",
-      description: "언어의 제약 없이 전 세계 게이머와 소통하세요"
+      title: t('benefits.translation.title'),
+      description: t('benefits.translation.desc')
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "커뮤니티 연결",
-      description: "같은 관심사를 가진 게이머들과 연결되세요"
+      title: t('benefits.community.title'),
+      description: t('benefits.community.desc')
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "건전한 문화",
-      description: "AI가 필터링한 건전한 게임 커뮤니티를 경험하세요"
+      title: t('benefits.culture.title'),
+      description: t('benefits.culture.desc')
     }
   ];
 
@@ -30,10 +33,10 @@ const BenefitsSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            눈팅 유저도 글로벌 게이머가 됩니다
+            {t('benefits.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            MeanWhile과 함께 게임 커뮤니티의 새로운 경험을 시작하세요
+            {t('benefits.subtitle')}
           </p>
         </div>
         

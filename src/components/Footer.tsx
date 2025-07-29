@@ -1,16 +1,19 @@
 import { MessageCircle, Github, Twitter } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="py-12 px-4 border-t border-border">
       <div className="container mx-auto">
         <div className="text-center">
           <div className="mb-8">
             <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-              MeanWhile
+              {t('footer.title')}
             </h3>
             <p className="text-muted-foreground">
-              전 세계 게이머들의 목소리를 한 곳에서
+              {t('footer.subtitle')}
             </p>
           </div>
           
@@ -27,8 +30,8 @@ const Footer = () => {
           </div>
           
           <div className="text-sm text-muted-foreground">
-            <p>&copy; 2024 MeanWhile. All rights reserved.</p>
-            <p className="mt-2">Made with ❤️ for global gaming community</p>
+            <p>{t('footer.copyright')}</p>
+            <p className="mt-2">{t('footer.made')}</p>
           </div>
         </div>
       </div>

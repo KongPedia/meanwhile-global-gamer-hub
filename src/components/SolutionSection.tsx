@@ -1,24 +1,27 @@
 import { Card } from "@/components/ui/card";
 import { Brain, Clock, TrendingUp } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const SolutionSection = () => {
+  const { t } = useLanguage();
+  
   const solutions = [
     {
       icon: <Brain className="w-10 h-10" />,
-      title: "AI 요약 & 번역",
-      description: "글로벌 게임 커뮤니티의 모든 언어를 실시간으로 번역하고 핵심 내용을 요약합니다.",
+      title: t('solution.ai.title'),
+      description: t('solution.ai.desc'),
       gradient: "bg-gradient-primary"
     },
     {
       icon: <Clock className="w-10 h-10" />,
-      title: "통합 게임 타임라인",
-      description: "여러 커뮤니티의 정보를 하나의 타임라인으로 통합하여 놓치는 소식이 없도록 합니다.",
+      title: t('solution.timeline.title'),
+      description: t('solution.timeline.desc'),
       gradient: "bg-gradient-secondary"
     },
     {
       icon: <TrendingUp className="w-10 h-10" />,
-      title: "실시간 트렌드 감지",
-      description: "AI가 게임 커뮤니티의 최신 이슈와 트렌드를 실시간으로 분석하고 알려드립니다.",
+      title: t('solution.trends.title'),
+      description: t('solution.trends.desc'),
       gradient: "bg-gradient-primary"
     }
   ];
@@ -28,10 +31,10 @@ const SolutionSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            MeanWhile의 혁신적 해결책
+            {t('solution.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            AI 기술로 게임 커뮤니티의 모든 장벽을 허물다
+            {t('solution.subtitle')}
           </p>
         </div>
         
