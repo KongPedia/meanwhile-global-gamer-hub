@@ -3,6 +3,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
 import heroImage from "@/assets/hero-gaming.jpg";
 
+const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
+
 const Hero = () => {
   const { t } = useLanguage();
 
@@ -37,6 +39,7 @@ const Hero = () => {
               variant="discord" 
               size="lg"
               className="animate-pulse-neon text-lg px-8 py-4 whitespace-nowrap"
+              onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
             >
               {t('hero.cta.discord')}
             </Button>
@@ -45,6 +48,12 @@ const Hero = () => {
               variant="neon" 
               size="lg"
               className="text-lg px-8 py-4 whitespace-nowrap"
+              onClick={() => {
+                const communitySection = document.getElementById('community');
+                if (communitySection) {
+                  communitySection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               {t('hero.cta.learn')}
             </Button>

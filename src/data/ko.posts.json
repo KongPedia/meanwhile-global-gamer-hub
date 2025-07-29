@@ -1,220 +1,232 @@
 [
   {
     "id": 1,
-    "title": "스텔라 블레이드 전투 시스템 어떻게 생각하세요?",
-    "content": "스텔라 블레이드의 전투 시스템이 정말 재미있네요. 콤보 연결이 매끄럽고 회피 타이밍도 절묘해요. 다들 어떤 무기를 주로 사용하시나요?",
+    "title": "지도 더 쉽게 여는 법",
+    "content": "PC에서 PS5 터치패드처럼 게임 지도를 더 쉽게 여는 방법이 있을까요? 설정에서 이걸 바꿀 수 있는 옵션이 있는지 궁금해요. 다들 도와주셔서 이제 해결했어요! 이 팁들이 다른 분들께도 도움이 됐으면 좋겠네요!",
     "comments": [
       {
         "id": 1,
-        "author": "액션게이머",
-        "content": "저는 검을 주로 사용해요. 콤보가 화려하고 데미지도 좋더라고요.",
+        "author": "#FE73",
+        "content": "보통 컨트롤러 설정 들어가서 오른쪽 화살표 같은 키를 지도 열기로 할당할 수 있어요. 키보드 유저도 비슷할 거예요.",
         "timestamp": "2시간 전"
       },
       {
         "id": 2,
-        "author": "스텔라팬",
-        "content": "회피 후 반격이 정말 쾌감있어요. 타이밍 맞추는 재미가 있네요.",
+        "author": "#8F55",
+        "content": "그냥 설정에서 컨트롤러 키 재할당하세요. 왼쪽이나 오른쪽 D-패드 버튼이 보통 비어있어서 지도 단축키로 딱이에요.",
         "timestamp": "1시간 전"
       },
       {
         "id": 3,
-        "author": "PS5유저",
-        "content": "그래픽도 정말 좋고 최적화도 잘 되어있어서 만족스러워요!",
+        "author": "#9907",
+        "content": "'M' 키 눌러보셨어요? 보통 지도는 'M'이 기본일 텐데요.",
+        "timestamp": "30분 전"
+      },
+      {
+        "id": 4,
+        "author": "#A44D",
+        "content": "완전 공감해요. 메뉴 거치지 않고 바로 지도 들어가는 빠른 방법이 있었으면 좋겠어요. 직통 단축키가 없어서 짜증 나요.",
         "timestamp": "30분 전"
       }
     ],
-    "sourceURL": "https://reddit.com/r/stellarblade/post1",
-    "discordURL": "https://discord.com/channels/1388870376251199508/1399641720743792793",
-    "communityId": "reddit",
-    "projectId": "stellarblade"
-  },
-  {
-    "id": 2,
-    "title": "스텔라 블레이드 보스전 공략법",
-    "content": "스텔라 블레이드의 보스전이 정말 어렵네요. 특히 패턴 파악이 힘들어요. 효과적인 공략법이 있을까요?",
-    "comments": [
-      {
-        "id": 1,
-        "author": "보스킬러",
-        "content": "패턴을 외우는 것보다 회피 타이밍에 집중하세요. 반격 기회가 많아져요.",
-        "timestamp": "3시간 전"
-      },
-      {
-        "id": 2,
-        "author": "프로게이머",
-        "content": "무기 업그레이드를 충분히 하고 도전하는 것도 중요해요.",
-        "timestamp": "2시간 전"
-      }
-    ],
-    "sourceURL": "https://steamcommunity.com/discussions/stellarblade/post2",
-    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade2",
+    "sourceURL": "https://steamcommunity.com/app/3489700/discussions/0/555745444093828485/",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399587819164405760",
     "communityId": "steam",
     "projectId": "stellarblade"
   },
   {
-    "id": 3,
-    "title": "스텔라 블레이드 사운드트랙 정말 좋네요",
-    "content": "스텔라 블레이드의 사운드트랙이 정말 인상적이에요. 전투 중 나오는 BGM도 좋고, 환경음도 상당히 몰입감을 주네요.",
+    "id": 2,
+    "title": "[PC 버전] 스텔라 블레이드 [MOD] Part5",
+    "content": "PC 버전 스텔라 블레이드 MOD에 대한 5ch 스레드",
     "comments": [
       {
         "id": 1,
-        "author": "음악애호가",
-        "content": "보스전 BGM이 정말 웅장하고 좋았어요. 전투의 긴장감을 잘 살렸네요.",
-        "timestamp": "4시간 전"
-      },
-      {
-        "id": 2,
-        "author": "게임음악팬",
-        "content": "환경음도 정말 세세하게 되어있어서 몰입감이 높아요.",
-        "timestamp": "2시간 전"
-      }
-    ],
-    "sourceURL": "https://5ch.net/games/stellarblade/thread3",
-    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade3",
-    "communityId": "5ch",
-    "projectId": "stellarblade"
-  },
-  {
-    "id": 4,
-    "title": "33원정대 캠페인 모드 리뷰",
-    "content": "33원정대의 캠페인 모드를 해보았는데 정말 재미있네요! 전략적 요소와 스토리가 잘 어우러져 있어요.",
-    "comments": [
-      {
-        "id": 1,
-        "author": "전략게이머",
-        "content": "저는 마법사 캐릭터를 주로 사용해요. 원거리 공격이 강력해요!",
+        "author": "#3074",
+        "content": "기가스가 부활해서 나왔는데, 알파 코어 먹어도 못 잡는 거야?",
         "timestamp": "3시간 전"
       },
       {
         "id": 2,
-        "author": "RPG러버",
-        "content": "캐릭터 커스터마이징이 정말 세세하게 되어있어서 좋아요.",
+        "author": "#4267",
+        "content": "서브 퀘스트 기가스가 제일 고전했던 보스였어",
+        "timestamp": "2시간 전"
+      },
+      {
+        "id": 3,
+        "author": "#CC80",
+        "content": "14700이 아니라 5080이면 성능 부족할 거야. DLSS 안 쓰면 5090 아니면 144fps 뽑기 힘들지 않을까?",
         "timestamp": "2시간 전"
       }
     ],
-    "sourceURL": "https://reddit.com/r/clairobscur33/post4",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-4",
+    "sourceURL": "https://egg.5ch.net/test/read.cgi/game/1750851470",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1396794568040644651/1396794568040644651",
+    "communityId": "5ch",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 3,
+    "title": "상자 열기 전에 셀카 찍는 거 잊지 마세요.",
+    "content": "물고기 상자 열기 전에 물고기랑 셀카 꼭 찍으세요!",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#746E",
+        "content": "사실 상자 열고 나서도 셀카 찍을 수 있어요. 상자가 좀 가려도 물고기만 찍히면 돼요. 저도 이 물고기로 직접 확인했어요.",
+        "timestamp": "4시간 전"
+      },
+      {
+        "id": 2,
+        "author": "#ABA6",
+        "content": "네, 저도 상자 먼저 열었는데 사진 찍는 데 문제 없었어요.",
+        "timestamp": "2시간 전"
+      },
+      {
+        "id": 3,
+        "author": "#21E4",
+        "content": "확실히 가능하긴 한데, 훨씬 더 짜증나요.",
+        "timestamp": "2시간 전"
+      }
+    ],
+    "sourceURL": "https://www.reddit.com/r/stellarblade/comments/1mbn52w/dont_forget_to_take_the_selfie_before_opening_the/",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399495616631017633",
+    "communityId": "reddit",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 4,
+    "title": "마엘한테 이 둘 중에 어떤 무기가 제일 좋을까?",
+    "content": "마엘한테 최적의 무기가 뭔지 고민 중인데, 리튬이랑 메달룸 중에 뭐가 더 효과적인지 의견 좀 듣고 싶어.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "전략게이머",
+        "content": "빠른 한 턴 킬을 노린다면 메달룸이 이상적이야. 바로 미덕 자세로 들어가서 턴을 아낄 수 있거든. 하지만 적을 바로 끝내지 못하는 긴 전투에서는 리튬이 미덕 자세를 유지하고 표식을 보존해서 지속적인 피해를 줄 수 있어 빛을 발해.",
+        "timestamp": "3시간 전"
+      },
+      {
+        "id": 2,
+        "author": "#5BDD",
+        "content": "나는 리튬 쪽으로 기울어. 특히 속도를 낮추고 약화 표식을 우선시하는 솔로 또는 듀오 마엘 빌드에서는 말이야. 게다가 선제 공격을 제거하면 모든 반격과 턴에 미덕 자세를 유지할 수 있어.",
+        "timestamp": "2시간 전"
+      }
+    ],
+    "sourceURL": "https://www.reddit.com/r/expedition33/comments/1mc2sqh/which_one_is_the_best_weapon_for_maelle_between/",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399665553081237586",
     "communityId": "reddit",
     "projectId": "clairobscur33"
   },
   {
     "id": 5,
-    "title": "33원정대 멀티플레이 모드 추천",
-    "content": "33원정대의 멀티플레이 모드가 정말 재미있네요! 친구들과 함께 플레이하니 더욱 재미있어요.",
+    "title": "33 원정대: 5ch 스레드",
+    "content": "Clair Obscur: Expedition 33 관련 5ch 스레드를 들여다보니 다양한 의견이 있어요.",
     "comments": [
       {
         "id": 1,
-        "author": "코업게이머",
-        "content": "친구들과 함께 하니 정말 재미있어요. 전략적 소통이 중요하네요.",
+        "author": "패링마스터",
+        "content": "패리 중요성은 알겠는데, 타이밍 좀 더 알기 쉽게 해주면 안 될까.",
         "timestamp": "5시간 전"
       },
       {
         "id": 2,
-        "author": "파티게이머",
-        "content": "난이도 조절이 잘 되어있어서 초보자도 즉시 적응할 수 있어요.",
+        "author": "#4BC9",
+        "content": "모드로 난이도 내릴 거면, 본편에서 조절해 주지 그래.",
         "timestamp": "3시간 전"
       }
     ],
-    "sourceURL": "https://steamcommunity.com/discussions/clairobscur33/post5",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-5",
-    "communityId": "steam",
+    "sourceURL": "https://egg.5ch.net/test/read.cgi/game/1745446516",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1396779261334913057",
+    "communityId": "5ch",
     "projectId": "clairobscur33"
   },
   {
     "id": 6,
-    "title": "33원정대 캐릭터 빌드 추천",
-    "content": "33원정대에서 어떤 캐릭터 빌드가 가장 효과적인지 궁금해요. 초보자에게 추천할만한 빌드가 있을까요?",
+    "title": "일부 시네마틱에서 빨간 화면이 떠요",
+    "content": "게임 내 일부 시네마틱에서 빨간 화면이 뜨는 문제가 발생하고 있는데, 이 문제를 어떻게 해결해야 할지 알고 싶습니다.",
     "comments": [
       {
         "id": 1,
-        "author": "빌드마스터",
-        "content": "초보자라면 전사 빌드를 추천해요. 생존력이 높고 조작이 간단해요.",
+        "author": "#5BDD",
+        "content": "게임 내에서랑 캐릭터 화면에서 화면 찢김 현상이 있었는데, 엔비디아 그래픽 드라이버 클린 설치하니까 해결됐어요.",
         "timestamp": "6시간 전"
       },
       {
         "id": 2,
         "author": "33마스터",
-        "content": "마법사도 좋지만 포지셔닝이 중요해서 어려울 수 있어요.",
+        "content": "저도 이 문제 겪고 있는데, 엔비디아 드라이버 업데이트로는 안 되는 것 같네요.",
         "timestamp": "4시간 전"
       }
     ],
-    "sourceURL": "https://5ch.net/games/clairobscur33/thread6",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-6",
-    "communityId": "5ch",
+    "sourceURL": "https://steamcommunity.com/app/1903340/discussions/0/592895271730491154/",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399636839199146004",
+    "communityId": "steam",
     "projectId": "clairobscur33"
   },
   {
     "id": 7,
-    "title": "델타포스 베타 테스트 후기",
-    "content": "델타포스 베타를 해보았는데 정말 재미있네요! 그래픽도 좋고 최적화도 잘 되어있어요.",
+    "title": "시크릿 모델이 뭔가요?",
+    "content": "디럭스 시즌 3의 '시크릿 모델'이 뭔지 궁금해요. 정확히 뭘 의미하고, 다른 아이템들보다 더 희귀한 건가요?",
     "comments": [
       {
         "id": 1,
         "author": "FPS마니아",
-        "content": "전술적 FPS라는 컨셉이 정말 좋아요. 팀워크가 중요하네요.",
+        "content": "네, 다른 희귀 아이템들보다 확실히 더 희귀해요.",
         "timestamp": "4시간 전"
       },
       {
         "id": 2,
-        "author": "밀리타리게이머",
-        "content": "무기 커스터마이징이 상당히 세마하게 되어있어서 좋아요.",
+        "author": "#1980",
+        "content": "장식은 잘 안 쓰는 것 같던데, 그 용 장식은 진짜 멋있어 보이네요.",
         "timestamp": "3시간 전"
       },
       {
         "id": 3,
-        "author": "베타테스터",
-        "content": "아직 베타인데도 완성도가 높아서 기대되네요!",
+        "author": "#AD61",
+        "content": "진짜 멋있긴 해요. 제 주된 질문은 그냥 희귀도에 대한 거였어요.",
         "timestamp": "1시간 전"
       }
     ],
-    "sourceURL": "https://reddit.com/r/deltaforce/post7",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-7",
+    "sourceURL": "https://www.reddit.com/r/DeltaForceGlobal/comments/1mbsn16/what_does_secret_model_mean/",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399547156364525708",
     "communityId": "reddit",
     "projectId": "deltaforce"
   },
   {
     "id": 8,
-    "title": "델타포스 무기 추천",
-    "content": "델타포스에서 어떤 무기가 가장 좋은지 궁금해요. 초보자에게 추천할만한 무기가 있을까요?",
+    "title": "ㅋㅋㅋ, 맨날 죽기만 함",
+    "content": "진심 나만 워페어 모드 감 못 잡는 거임? 저격으로 멀리서 쏘는 거 아니면 1대1 총싸움에서 맨날 지고, 돌격하면 예외 없이 바로 죽음. 다들 나보다 빠르고 덜 움찔거리는 것 같음. 내가 이렇게 못한다는 게 솔직히 믿기지 않음. 오퍼레이션에서는 총싸움이 더 전략이랑 스킬을 요구해서 대부분 사람들이 콜 오브 듀티처럼 하는 거랑 다르게 꽤 잘하는데. 근데 워페어는? 아 진짜 너무 못함.",
     "comments": [
       {
         "id": 1,
         "author": "무기전문가",
-        "content": "M4A1이 초보자에게 가장 좋아요. 반동이 적고 데미지도 준수해요.",
+        "content": "상대 팀에 저격수만 가득할 때 힘듦, 내 매치 대부분이 그럼. 게다가 이 게임 히트 레지스트레이션이나 넷코드 별로 안 좋은 것 같음.",
         "timestamp": "5시간 전"
       },
       {
         "id": 2,
         "author": "FPS프로",
-        "content": "AK-47도 좋지만 반동 컨트롤이 어려워서 연습이 필요해요.",
+        "content": "너만 그런 거 아님; 모두가 (핵쟁이랑 소프트 핵 쓰는 스트리머 빼고) 계속 죽고 한두 킬 겨우 하고 죽음.",
         "timestamp": "3시간 전"
       }
     ],
-    "sourceURL": "https://steamcommunity.com/discussions/deltaforce/post8",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-8",
+    "sourceURL": "https://steamcommunity.com/app/2507950/discussions/0/592885445492239701/",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399261666314686505",
     "communityId": "steam",
     "projectId": "deltaforce"
   },
   {
     "id": 9,
-    "title": "델타포스 맵 분석",
-    "content": "델타포스의 맵들이 정말 잘 만들어진 것 같아요. 각 맵의 특징과 전략이 궁금해요.",
+    "title": "DeltaForce ★14 【델타포스】",
+    "content": "델타포스에 대해 여러 플랫폼에서의 플레이 상황과 매칭 이야기가 활발하네요. 에뮬레이터 사용 시 주의점, Google Play Games 버전과 모바일 버전의 매칭 차이, 태블릿에서의 조작감 등에 대해서도 이야기하고 있습니다.",
     "comments": [
       {
         "id": 1,
-        "author": "맵분석가",
-        "content": "도시 맵은 근거리 전투가 많아서 SMG가 유리해요.",
+        "author": "#C872",
+        "content": "오퍼레이션 댐에 자주 있는 랭크 없는 애들, 그거 결국 봇인가?",
         "timestamp": "7시간 전"
-      },
-      {
-        "id": 2,
-        "author": "전술가",
-        "content": "사막 맵은 저격 포인트가 많아서 스나이퍼가 강력해요.",
-        "timestamp": "5시간 전"
       }
     ],
-    "sourceURL": "https://5ch.net/games/deltaforce/thread9",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-9",
+    "sourceURL": "https://fate.5ch.net/test/read.cgi/gamef/1750760926",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399361400601575459",
     "communityId": "5ch",
     "projectId": "deltaforce"
   }

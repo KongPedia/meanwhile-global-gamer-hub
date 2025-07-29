@@ -1,220 +1,232 @@
 [
   {
     "id": 1,
-    "title": "ステラブレードの戦闘システムはどう思いますか？",
-    "content": "ステラブレードの戦闘システムが本当に面白いですね！コンボの繋がりが滑らかで、回避のタイミングも絶妙です。皆さんはどの武器を主に使っていますか？",
+    "title": "マップをもっと簡単に開く方法",
+    "content": "PCでPS5のタッチパッドのように、ゲームのマップをもっと簡単に開く方法はありますか？設定で変更できるオプションがあるか知りたいです。皆さんのおかげで解決しました！このヒントが他の方にも役立つと嬉しいです！",
     "comments": [
       {
         "id": 1,
-        "author": "アクションゲーマー",
-        "content": "私は主に剣を使っています。コンボが華麗でダメージも良いです。",
+        "author": "#FE73",
+        "content": "通常、コントローラー設定で右矢印キーなどをマップ表示に割り当てることができます。キーボードユーザーも同様だと思います。",
         "timestamp": "2時間前"
       },
       {
         "id": 2,
-        "author": "ステラファン",
-        "content": "回避後の反撃が本当に爽快です。タイミングを合わせる楽しさがありますね。",
+        "author": "#8F55",
+        "content": "設定でコントローラーのキーを再割り当てするだけです。左か右のD-padボタンは通常空いているので、マップのショートカットに最適です。",
         "timestamp": "1時間前"
       },
       {
         "id": 3,
-        "author": "PS5ユーザー",
-        "content": "グラフィックも本当に良くて最適化もよくできているので満足です！",
+        "author": "#9907",
+        "content": "「M」キーは試しましたか？通常、マップは「M」がデフォルトのはずです。",
+        "timestamp": "30分前"
+      },
+      {
+        "id": 4,
+        "author": "#A44D",
+        "content": "全く同感です。メニューを経由せずに直接マップに入れる簡単な方法があればいいのに。直通のショートカットがなくてイライラします。",
         "timestamp": "30分前"
       }
     ],
-    "sourceURL": "https://reddit.com/r/stellarblade/post1",
-    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade1",
-    "communityId": "reddit",
-    "projectId": "stellarblade"
-  },
-  {
-    "id": 2,
-    "title": "ステラブレードのボス戦攻略法",
-    "content": "ステラブレードのボス戦が本当に難しいですね。特にパターンの把握が困難です。効果的な攻略法はありますか？",
-    "comments": [
-      {
-        "id": 1,
-        "author": "ボスキラー",
-        "content": "パターンを覚えるより回避タイミングに集中してください。反撃の機会が増えます。",
-        "timestamp": "3時間前"
-      },
-      {
-        "id": 2,
-        "author": "プロゲーマー",
-        "content": "武器のアップグレードを十分にしてから挑戦することも重要です。",
-        "timestamp": "2時間前"
-      }
-    ],
-    "sourceURL": "https://steamcommunity.com/discussions/stellarblade/post2",
-    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade2",
+    "sourceURL": "",
+    "discordURL": "",
     "communityId": "steam",
     "projectId": "stellarblade"
   },
   {
-    "id": 3,
-    "title": "ステラブレードのサウンドトラックが本当に良いですね",
-    "content": "ステラブレードのサウンドトラックが本当に印象的です。戦闘中に流れるBGMも良いし、環境音もかなり没入感を与えますね。",
+    "id": 2,
+    "title": "[PC版] ステラブレイド [MOD] Part5",
+    "content": "PC版ステラブレイドMODに関する5chスレッド",
     "comments": [
       {
         "id": 1,
-        "author": "音楽愛好家",
-        "content": "ボス戦のBGMが本当に壮大で良かったです。戦闘の緊張感をよく表現していますね。",
-        "timestamp": "4時間前"
-      },
-      {
-        "id": 2,
-        "author": "ゲーム音楽ファン",
-        "content": "環境音も本当に細かく作られていて没入感が高いです。",
-        "timestamp": "2時間前"
-      }
-    ],
-    "sourceURL": "https://5ch.net/games/stellarblade/thread3",
-    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade3",
-    "communityId": "5ch",
-    "projectId": "stellarblade"
-  },
-  {
-    "id": 4,
-    "title": "33遠征隊キャンペーンモードレビュー",
-    "content": "33遠征隊のキャンペーンモードをプレイしましたが、本当に面白いですね！戦略的要素とストーリーがよく調和しています。",
-    "comments": [
-      {
-        "id": 1,
-        "author": "戦略ゲーマー",
-        "content": "私は主に魔法使いキャラクターを使っています。遠距離攻撃が強力です！",
+        "author": "#3074",
+        "content": "ギガスが復活して出てきたけど、アルファコアを食べても倒せないの？",
         "timestamp": "3時間前"
       },
       {
         "id": 2,
-        "author": "RPGラバー",
-        "content": "キャラクターカスタマイズが本当に細かくできているのが良いです。",
+        "author": "#4267",
+        "content": "サブクエストのギガスが一番苦戦したボスだった。",
+        "timestamp": "2時間前"
+      },
+      {
+        "id": 3,
+        "author": "#CC80",
+        "content": "14700じゃなくて5080だと性能不足だよ。DLSSを使わないなら5090じゃないと144fpsを出すのは難しいんじゃないかな？",
         "timestamp": "2時間前"
       }
     ],
-    "sourceURL": "https://reddit.com/r/clairobscur33/post4",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-4",
+    "sourceURL": "",
+    "discordURL": "",
+    "communityId": "5ch",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 3,
+    "title": "箱を開ける前にセルフィーを撮るのを忘れずに。",
+    "content": "魚の箱を開ける前に、魚とセルフィーを必ず撮ってください！",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#746E",
+        "content": "実は箱を開けた後でもセルフィーは撮れます。箱が少し隠れても魚さえ写れば大丈夫です。私もこの魚で直接確認しました。",
+        "timestamp": "4時間前"
+      },
+      {
+        "id": 2,
+        "author": "#ABA6",
+        "content": "はい、私も先に箱を開けましたが、写真を撮るのに問題ありませんでした。",
+        "timestamp": "2時間前"
+      },
+      {
+        "id": 3,
+        "author": "#21E4",
+        "content": "確かに可能ですが、はるかに面倒です。",
+        "timestamp": "2時間前"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "",
+    "communityId": "reddit",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 4,
+    "title": "マエルにとって、この2つのうちどちらの武器が一番良いか？",
+    "content": "マエルに最適な武器は何か悩んでいますが、リチウムとメダルームのどちらがより効果的か、意見を聞かせてください。",
+    "comments": [
+      {
+        "id": 1,
+        "author": "戦略ゲーマー",
+        "content": "素早い1ターンキルを狙うならメダルームが理想的です。すぐに美徳の構えに入ってターンを節約できます。しかし、敵をすぐに倒せない長期戦では、リチウムが美徳の構えを維持し、マークを保持して持続的なダメージを与えるのに役立ちます。",
+        "timestamp": "3時間前"
+      },
+      {
+        "id": 2,
+        "author": "#5BDD",
+        "content": "私はリチウム派です。特に速度を下げて弱体化マークを優先するソロまたはデュオのマエルビルドでは。さらに、先制攻撃をなくせば、すべての反撃とターンで美徳の構えを維持できます。",
+        "timestamp": "2時間前"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1398047484000993381",
     "communityId": "reddit",
     "projectId": "clairobscur33"
   },
   {
     "id": 5,
-    "title": "33遠征隊マルチプレイモード推薦",
-    "content": "33遠征隊のマルチプレイモードが本当に面白いですね！友達と一緒にプレイするとさらに楽しいです。",
+    "title": "エクスペディション33：5chスレッド",
+    "content": "Clair Obscur: Expedition 33に関する5chスレッドを覗いてみると、様々な意見があります。",
     "comments": [
       {
         "id": 1,
-        "author": "協力ゲーマー",
-        "content": "友達と一緒にやると本当に楽しいです。戦略的なコミュニケーションが重要ですね。",
+        "author": "パリィマスター",
+        "content": "パリィの重要性はわかるけど、タイミングをもう少し分かりやすくしてくれないかな。",
         "timestamp": "5時間前"
       },
       {
         "id": 2,
-        "author": "パーティーゲーマー",
-        "content": "難易度調整がよくできているので初心者もすぐに適応できます。",
+        "author": "#4BC9",
+        "content": "MODで難易度を下げるなら、本編で調整してくれればいいのに。",
         "timestamp": "3時間前"
       }
     ],
-    "sourceURL": "https://steamcommunity.com/discussions/clairobscur33/post5",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-5",
-    "communityId": "steam",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1398047484000993381",
+    "communityId": "5ch",
     "projectId": "clairobscur33"
   },
   {
     "id": 6,
-    "title": "33遠征隊キャラクタービルド推薦",
-    "content": "33遠征隊でどのキャラクタービルドが最も効果的か気になります。初心者におすすめのビルドはありますか？",
+    "title": "一部のシネマティックで赤い画面が表示されます",
+    "content": "ゲーム内の一部のシネマティックで赤い画面が表示される問題が発生していますが、この問題を解決する方法を知りたいです。",
     "comments": [
       {
         "id": 1,
-        "author": "ビルドマスター",
-        "content": "初心者なら戦士ビルドをおすすめします。生存力が高く操作が簡単です。",
+        "author": "#5BDD",
+        "content": "ゲーム内とキャラクター画面で画面のティアリングがありましたが、NVIDIAのグラフィックドライバをクリーンインストールしたら解決しました。",
         "timestamp": "6時間前"
       },
       {
         "id": 2,
         "author": "33マスター",
-        "content": "魔法使いも良いですがポジショニングが重要なので難しいかもしれません。",
+        "content": "私もこの問題に遭遇していますが、NVIDIAドライバのアップデートでは解決しないようです。",
         "timestamp": "4時間前"
       }
     ],
-    "sourceURL": "https://5ch.net/games/clairobscur33/thread6",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-6",
-    "communityId": "5ch",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399261570592411791",
+    "communityId": "steam",
     "projectId": "clairobscur33"
   },
   {
     "id": 7,
-    "title": "デルタフォースベータテストレビュー",
-    "content": "デルタフォースのベータをプレイしましたが本当に面白いですね！グラフィックも良く最適化もよくできています。",
+    "title": "シークレットモデルとは何ですか？",
+    "content": "デラックスシーズン3の「シークレットモデル」とは何か気になります。正確には何を意味し、他のアイテムよりも希少なのでしょうか？",
     "comments": [
       {
         "id": 1,
         "author": "FPSマニア",
-        "content": "戦術的FPSというコンセプトが本当に良いです。チームワークが重要ですね。",
+        "content": "はい、他のレアアイテムよりも確実に希少です。",
         "timestamp": "4時間前"
       },
       {
         "id": 2,
-        "author": "ミリタリーゲーマー",
-        "content": "武器カスタマイズがかなり細かくできているのが良いです。",
+        "author": "#1980",
+        "content": "装飾はあまり使わないようですが、その龍の装飾は本当に格好いいですね。",
         "timestamp": "3時間前"
       },
       {
         "id": 3,
-        "author": "ベータテスター",
-        "content": "まだベータなのに完成度が高くて期待できますね！",
+        "author": "#AD61",
+        "content": "本当に格好いいです。私の主な質問は、単に希少度についてでした。",
         "timestamp": "1時間前"
       }
     ],
-    "sourceURL": "https://reddit.com/r/deltaforce/post7",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-7",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1398047589843861524",
     "communityId": "reddit",
     "projectId": "deltaforce"
   },
   {
     "id": 8,
-    "title": "デルタフォース武器推薦",
-    "content": "デルタフォースでどの武器が最も良いか気になります。初心者におすすめの武器はありますか？",
+    "title": "www、いつも死んでばかり",
+    "content": "本気で、ウォーフェアモードの感覚が掴めないのは私だけ？遠くからスナイパーで撃つ以外、1対1の撃ち合いではいつも負けるし、突撃すれば例外なく即死。みんな私より速くて、硬直も少ないみたい。自分がこんなに下手だなんて正直信じられない。オペレーションでは撃ち合いがもっと戦略とスキルを要求されるから、ほとんどの人がCoDみたいにプレイするのとは違って、かなりうまくやれるんだけど。でもウォーフェアは？ああ、本当に下手すぎる。",
     "comments": [
       {
         "id": 1,
         "author": "武器専門家",
-        "content": "M4A1が初心者に最適です。反動が少なくダメージも適度です。",
+        "content": "相手チームがスナイパーだらけの時はきつい。私のマッチのほとんどがそうです。それに、このゲームのヒットレジストレーションやネットコードはあまり良くないようです。",
         "timestamp": "5時間前"
       },
       {
         "id": 2,
         "author": "FPSプロ",
-        "content": "AK-47も良いですが反動コントロールが難しいので練習が必要です。",
+        "content": "君だけじゃないよ。みんな（チーターとソフトハックを使うストリーマーを除いて）死に続けて、1、2キルしては死ぬの繰り返しだよ。",
         "timestamp": "3時間前"
       }
     ],
-    "sourceURL": "https://steamcommunity.com/discussions/deltaforce/post8",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-8",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399261570592411791",
     "communityId": "steam",
     "projectId": "deltaforce"
   },
   {
     "id": 9,
-    "title": "デルタフォースマップ分析",
-    "content": "デルタフォースのマップが本当によく作られているようです。各マップの特徴と戦略が気になります。",
+    "title": "DeltaForce ★14 【デルタフォース】",
+    "content": "デルタフォースについて、様々なプラットフォームでのプレイ状況やマッチングの話が活発ですね。エミュレータ使用時の注意点、Google Play Games版とモバイル版のマッチングの違い、タブレットでの操作感などについても話されています。",
     "comments": [
       {
         "id": 1,
-        "author": "マップ分析家",
-        "content": "都市マップは近距離戦闘が多いのでSMGが有利です。",
+        "author": "#C872",
+        "content": "オペレーションダムによくいるランクなしのやつら、あれって結局ボットなのかな？",
         "timestamp": "7時間前"
-      },
-      {
-        "id": 2,
-        "author": "戦術家",
-        "content": "砂漠マップは狙撃ポイントが多いのでスナイパーが強力です。",
-        "timestamp": "5時間前"
       }
     ],
-    "sourceURL": "https://5ch.net/games/deltaforce/thread9",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-9",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1398047484000993381",
     "communityId": "5ch",
     "projectId": "deltaforce"
   }

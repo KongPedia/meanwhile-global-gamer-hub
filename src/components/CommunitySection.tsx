@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { CommunityPost } from "@/types/post";
 
 const DEFAULT_PROJECT_ID = 'clairobscur33';
+const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
 
 const CommunitySection = () => {
   const { t, language } = useLanguage();
@@ -106,7 +107,7 @@ const CommunitySection = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-hero">
+    <section id="community" className="py-20 px-4 bg-gradient-hero">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
@@ -270,7 +271,7 @@ const CommunitySection = () => {
               variant="discord" 
               size="lg"
               className="text-xl px-10 py-4 animate-pulse-neon whitespace-nowrap mb-4"
-              onClick={() => window.open('https://discord.gg/meanwhile-gaming', '_blank')}
+              onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
             >
               {t('community.cta') || 'Discord 커뮤니티 합류하기'}
             </Button>

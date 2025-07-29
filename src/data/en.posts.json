@@ -1,220 +1,232 @@
 [
   {
     "id": 1,
-    "title": "What do you think about Stellar Blade's combat system?",
-    "content": "Stellar Blade's combat system is really fun! The combo connections are smooth and the dodge timing is exquisite. What weapons do you mainly use?",
+    "title": "How to Open Map More Easily",
+    "content": "Looking for ways to open the game map more easily on PC, similar to PS5 touchpad. Can I change this in settings? Got help and now it's solved! Hope these tips help others too!",
     "comments": [
       {
         "id": 1,
-        "author": "ActionGamer",
-        "content": "I mainly use swords. The combos are flashy and the damage is good too.",
+        "author": "#FE73",
+        "content": "Usually you can assign map opening to arrow keys in controller settings. Keyboard users should be similar.",
         "timestamp": "2 hours ago"
       },
       {
         "id": 2,
-        "author": "StellarFan",
-        "content": "Counter-attacks after dodging are really satisfying. It's fun to get the timing right.",
+        "author": "#8F55",
+        "content": "Just reassign controller keys in settings. Left or right D-pad buttons are usually free and perfect for map shortcuts.",
         "timestamp": "1 hour ago"
       },
       {
         "id": 3,
-        "author": "PS5User",
-        "content": "The graphics are really good and it's well optimized, so I'm satisfied!",
+        "author": "#9907",
+        "content": "Try pressing 'M' key? Maps are usually 'M' by default.",
+        "timestamp": "30 minutes ago"
+      },
+      {
+        "id": 4,
+        "author": "#A44D",
+        "content": "Totally agree. Having a quick way to access maps directly without menus would be great. No direct shortcut is really annoying.",
         "timestamp": "30 minutes ago"
       }
     ],
-    "sourceURL": "https://reddit.com/r/stellarblade/post1",
-    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade1",
-    "communityId": "reddit",
-    "projectId": "stellarblade"
-  },
-  {
-    "id": 2,
-    "title": "Stellar Blade boss fight strategies",
-    "content": "Stellar Blade's boss fights are really difficult. Pattern recognition is especially hard. Are there any effective strategies?",
-    "comments": [
-      {
-        "id": 1,
-        "author": "BossKiller",
-        "content": "Focus on dodge timing rather than memorizing patterns. You'll get more counter-attack opportunities.",
-        "timestamp": "3 hours ago"
-      },
-      {
-        "id": 2,
-        "author": "ProGamer",
-        "content": "It's also important to upgrade your weapons sufficiently before challenging bosses.",
-        "timestamp": "2 hours ago"
-      }
-    ],
-    "sourceURL": "https://steamcommunity.com/discussions/stellarblade/post2",
-    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade2",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399587644018786394",
     "communityId": "steam",
     "projectId": "stellarblade"
   },
   {
-    "id": 3,
-    "title": "Stellar Blade soundtrack is really good",
-    "content": "Stellar Blade's soundtrack is really impressive. The BGM during combat is good, and the environmental sounds are quite immersive too.",
+    "id": 2,
+    "title": "[PC Version] Stellar Blade [MOD] Part5",
+    "content": "PC version Stellar Blade MOD discussion thread on 5ch",
     "comments": [
       {
         "id": 1,
-        "author": "MusicLover",
-        "content": "The boss fight BGM was really grand and good. It captured the tension of battle well.",
-        "timestamp": "4 hours ago"
-      },
-      {
-        "id": 2,
-        "author": "GameMusicFan",
-        "content": "The environmental sounds are really detailed, which increases immersion.",
-        "timestamp": "2 hours ago"
-      }
-    ],
-    "sourceURL": "https://5ch.net/games/stellarblade/thread3",
-    "discordURL": "https://discord.gg/meanwhile-gaming/stellarblade3",
-    "communityId": "5ch",
-    "projectId": "stellarblade"
-  },
-  {
-    "id": 4,
-    "title": "Clair Obscur: Expedition 33 campaign mode review",
-    "content": "I tried Clair Obscur: Expedition 33's campaign mode and it's really fun! The strategic elements and story are well integrated.",
-    "comments": [
-      {
-        "id": 1,
-        "author": "StrategyGamer",
-        "content": "I mainly use mage characters. Ranged attacks are powerful!",
+        "author": "#3074",
+        "content": "Gigas came back but can't beat it even with alpha cores?",
         "timestamp": "3 hours ago"
       },
       {
         "id": 2,
-        "author": "RPGLover",
-        "content": "Character customization is really detailed, which is great.",
+        "author": "#4267",
+        "content": "The Gigas from side quests was the hardest boss I struggled with",
+        "timestamp": "2 hours ago"
+      },
+      {
+        "id": 3,
+        "author": "#CC80",
+        "content": "Not 14700 but with 5080 you'll lack performance. Without DLSS, unless it's 5090, getting 144fps will be tough right?",
         "timestamp": "2 hours ago"
       }
     ],
-    "sourceURL": "https://reddit.com/r/clairobscur33/post4",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-4",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1396779291047493742",
+    "communityId": "5ch",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 3,
+    "title": "Don't forget to take the selfie BEFORE opening the crate.",
+    "content": "Be sure to take selfies with fish before opening fish boxes!",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#746E",
+        "content": "Actually you can take selfies after opening boxes too. Even if boxes are slightly blocking, as long as fish are visible it's fine. I confirmed this personally.",
+        "timestamp": "4 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "#ABA6",
+        "content": "I opened boxes first too and had no issues taking photos.",
+        "timestamp": "2 hours ago"
+      },
+      {
+        "id": 3,
+        "author": "#21E4",
+        "content": "Possible but definitely more annoying.",
+        "timestamp": "2 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399495525304107180",
+    "communityId": "reddit",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 4,
+    "title": "Which one is the best weapon for Maelle between those two?",
+    "content": "Wondering what's the optimal weapon for Maelle - between Lithium and Medallium, which is more effective?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#FE73",
+        "content": "If you're going for quick one-turn kills, Medallium is ideal. You can immediately enter Virtue stance and save turns. But in longer battles where you can't finish enemies immediately, Lithium maintains Virtue stance and preserves marks for sustained damage, making it shine.",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "#8F55",
+        "content": "I'm leaning toward Lithium. Especially in solo or duo Maelle builds that prioritize speed reduction and weakening marks. Plus removing initiative attacks allows maintaining Virtue stance on all counters and turns.",
+        "timestamp": "2 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399665469849468999",
     "communityId": "reddit",
     "projectId": "clairobscur33"
   },
   {
     "id": 5,
-    "title": "Clair Obscur: Expedition 33 multiplayer mode recommendation",
-    "content": "Clair Obscur: Expedition 33's multiplayer mode is really fun! Playing with friends makes it even more enjoyable.",
+    "title": "Clair Obscur: Expedition 33 - 5ch Thread",
+    "content": "Looking at 5ch threads about Clair Obscur: Expedition 33, there are various opinions.",
     "comments": [
       {
         "id": 1,
-        "author": "CoopGamer",
-        "content": "Playing with friends is really fun. Strategic communication is important.",
+        "author": "ParryMaster",
+        "content": "I understand parrying is important, but could they make the timing easier to understand?",
         "timestamp": "5 hours ago"
       },
       {
         "id": 2,
-        "author": "PartyGamer",
-        "content": "The difficulty adjustment is well done, so beginners can adapt immediately.",
+        "author": "#4BC9",
+        "content": "If you're going to lower difficulty with mods, they should adjust it in the main game.",
         "timestamp": "3 hours ago"
       }
     ],
-    "sourceURL": "https://steamcommunity.com/discussions/clairobscur33/post5",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-5",
-    "communityId": "steam",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1396779254477488159/1396779254477488159",
+    "communityId": "5ch",
     "projectId": "clairobscur33"
   },
   {
     "id": 6,
-    "title": "Clair Obscur: Expedition 33 character build recommendations",
-    "content": "I'm curious about which character builds are most effective in Clair Obscur: Expedition 33. Are there any builds you'd recommend for beginners?",
+    "title": "red screen during some cinematics",
+    "content": "Having an issue where red screens appear during some cinematics in the game. How can I fix this?",
     "comments": [
       {
         "id": 1,
-        "author": "BuildMaster",
-        "content": "For beginners, I recommend warrior builds. High survivability and simple controls.",
+        "author": "#5BDD",
+        "content": "I had screen tearing issues both in-game and on character screens, but clean installing NVIDIA graphics drivers fixed it.",
         "timestamp": "6 hours ago"
       },
       {
         "id": 2,
         "author": "33Master",
-        "content": "Mage is good too, but positioning is important so it can be difficult.",
+        "content": "I'm having this issue too, but NVIDIA driver updates don't seem to work.",
         "timestamp": "4 hours ago"
       }
     ],
-    "sourceURL": "https://5ch.net/games/clairobscur33/thread6",
-    "discordURL": "https://discord.gg/meanwhile-gaming/clairobscur33-6",
-    "communityId": "5ch",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399636725852012556",
+    "communityId": "steam",
     "projectId": "clairobscur33"
   },
   {
     "id": 7,
-    "title": "Delta Force beta test review",
-    "content": "I tried the Delta Force beta and it's really fun! The graphics are good and it's well optimized too.",
+    "title": "What does secret model mean?",
+    "content": "Curious about what 'Secret Model' means in Deluxe Season 3. What exactly does it mean, and is it rarer than other items?",
     "comments": [
       {
         "id": 1,
-        "author": "FPSManiac",
-        "content": "The tactical FPS concept is really good. Teamwork is important.",
+        "author": "#746E",
+        "content": "Yes, it's definitely rarer than other rare items.",
         "timestamp": "4 hours ago"
       },
       {
         "id": 2,
-        "author": "MilitaryGamer",
-        "content": "Weapon customization is quite detailed, which is great.",
+        "author": "#1980",
+        "content": "Don't really use decorations much, but that dragon decoration looks really cool.",
         "timestamp": "3 hours ago"
       },
       {
         "id": 3,
-        "author": "BetaTester",
-        "content": "Even though it's still beta, the completion level is high, so I'm looking forward to it!",
+        "author": "#AD61",
+        "content": "It does look really cool. My main question was just about rarity.",
         "timestamp": "1 hour ago"
       }
     ],
-    "sourceURL": "https://reddit.com/r/deltaforce/post7",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-7",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399547077113155745",
     "communityId": "reddit",
     "projectId": "deltaforce"
   },
   {
     "id": 8,
-    "title": "Delta Force weapon recommendations",
-    "content": "I'm curious about which weapons are best in Delta Force. Are there any weapons you'd recommend for beginners?",
+    "title": "LOL, all i do is die",
+    "content": "Seriously, am I the only one who can't get the hang of Warfare mode? Unless I'm sniping from long range, I always lose in 1v1 gunfights, and when I rush, I die without exception. Everyone else seems faster and less jittery than me. I honestly can't believe I'm this bad. In Operations, gunfights require more strategy and skill, so I'm pretty good unlike most people who play like Call of Duty. But Warfare? I'm really terrible.",
     "comments": [
       {
         "id": 1,
         "author": "WeaponExpert",
-        "content": "M4A1 is best for beginners. Low recoil and decent damage.",
+        "content": "It's tough when the enemy team is full of snipers, most of my matches are like that. Plus this game's hit registration and netcode don't seem very good.",
         "timestamp": "5 hours ago"
       },
       {
         "id": 2,
         "author": "FPSPro",
-        "content": "AK-47 is good too, but recoil control is difficult so it needs practice.",
+        "content": "You're not the only one; everyone (except hackers and streamers using soft hacks) keeps dying and barely gets one or two kills.",
         "timestamp": "3 hours ago"
       }
     ],
-    "sourceURL": "https://steamcommunity.com/discussions/deltaforce/post8",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-8",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399261570592411791",
     "communityId": "steam",
     "projectId": "deltaforce"
   },
   {
     "id": 9,
-    "title": "Delta Force map analysis",
-    "content": "Delta Force's maps seem really well made. I'm curious about each map's characteristics and strategies.",
+    "title": "DeltaForce ★14 [DeltaForce]",
+    "content": "Looking at DeltaForce discussions across various platforms, there are active conversations about gameplay situations and matchmaking. Topics include emulator usage precautions, differences between Google Play Games version and mobile version matchmaking, and controls on tablets.",
     "comments": [
       {
         "id": 1,
-        "author": "MapAnalyst",
-        "content": "Urban maps have a lot of close combat, so SMGs are advantageous.",
+        "author": "#C872",
+        "content": "Are the unranked players who frequently appear in Operation Dam bots?",
         "timestamp": "7 hours ago"
-      },
-      {
-        "id": 2,
-        "author": "Tactician",
-        "content": "Desert maps have many sniper points, so snipers are powerful.",
-        "timestamp": "5 hours ago"
       }
     ],
-    "sourceURL": "https://5ch.net/games/deltaforce/thread9",
-    "discordURL": "https://discord.gg/meanwhile-gaming/deltaforce-9",
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1398047484000993381",
     "communityId": "5ch",
     "projectId": "deltaforce"
   }
