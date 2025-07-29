@@ -5,13 +5,16 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  // Global ignores
+  { ignores: ["dist/**"] },
+
+  // Base config for all TS/TSX files
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: { ...globals.browser },
     },
     plugins: {
       "react-hooks": reactHooks,
@@ -23,7 +26,22 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
-      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-empty-object-type": "error",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-unused-vars": "off", // Turn off unused-vars for now
+    },
+  },
+
+  // Override for specific folders where multiple exports are allowed
+  {
+    files: [
+      "src/components/ui/**/*.tsx",
+      "src/contexts/**/*.tsx",
+      "src/lib/utils.ts",
+    ],
+    rules: {
+      "react-refresh/only-export-components": "off",
     },
   }
 );

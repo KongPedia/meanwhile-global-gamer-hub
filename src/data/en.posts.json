@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "title": "How to Open Map More Easily",
+    "content": "Looking for ways to open the game map more easily on PC, similar to PS5 touchpad. Can I change this in settings? Got help and now it's solved! Hope these tips help others too!",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#FE73",
+        "content": "Usually you can assign map opening to arrow keys in controller settings. Keyboard users should be similar.",
+        "timestamp": "2 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "#8F55",
+        "content": "Just reassign controller keys in settings. Left or right D-pad buttons are usually free and perfect for map shortcuts.",
+        "timestamp": "1 hour ago"
+      },
+      {
+        "id": 3,
+        "author": "#9907",
+        "content": "Try pressing 'M' key? Maps are usually 'M' by default.",
+        "timestamp": "30 minutes ago"
+      },
+      {
+        "id": 4,
+        "author": "#A44D",
+        "content": "Totally agree. Having a quick way to access maps directly without menus would be great. No direct shortcut is really annoying.",
+        "timestamp": "30 minutes ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399587644018786394",
+    "communityId": "steam",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 2,
+    "title": "[PC Version] Stellar Blade [MOD] Part5",
+    "content": "PC version Stellar Blade MOD discussion thread on 5ch",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#3074",
+        "content": "Gigas came back but can't beat it even with alpha cores?",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "#4267",
+        "content": "The Gigas from side quests was the hardest boss I struggled with",
+        "timestamp": "2 hours ago"
+      },
+      {
+        "id": 3,
+        "author": "#CC80",
+        "content": "Not 14700 but with 5080 you'll lack performance. Without DLSS, unless it's 5090, getting 144fps will be tough right?",
+        "timestamp": "2 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1396779291047493742",
+    "communityId": "5ch",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 3,
+    "title": "Don't forget to take the selfie BEFORE opening the crate.",
+    "content": "Be sure to take selfies with fish before opening fish boxes!",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#746E",
+        "content": "Actually you can take selfies after opening boxes too. Even if boxes are slightly blocking, as long as fish are visible it's fine. I confirmed this personally.",
+        "timestamp": "4 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "#ABA6",
+        "content": "I opened boxes first too and had no issues taking photos.",
+        "timestamp": "2 hours ago"
+      },
+      {
+        "id": 3,
+        "author": "#21E4",
+        "content": "Possible but definitely more annoying.",
+        "timestamp": "2 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399495525304107180",
+    "communityId": "reddit",
+    "projectId": "stellarblade"
+  },
+  {
+    "id": 4,
+    "title": "Which one is the best weapon for Maelle between those two?",
+    "content": "Wondering what's the optimal weapon for Maelle - between Lithium and Medallium, which is more effective?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#FE73",
+        "content": "If you're going for quick one-turn kills, Medallium is ideal. You can immediately enter Virtue stance and save turns. But in longer battles where you can't finish enemies immediately, Lithium maintains Virtue stance and preserves marks for sustained damage, making it shine.",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "#8F55",
+        "content": "I'm leaning toward Lithium. Especially in solo or duo Maelle builds that prioritize speed reduction and weakening marks. Plus removing initiative attacks allows maintaining Virtue stance on all counters and turns.",
+        "timestamp": "2 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399665469849468999",
+    "communityId": "reddit",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 5,
+    "title": "Clair Obscur: Expedition 33 - 5ch Thread",
+    "content": "Looking at 5ch threads about Clair Obscur: Expedition 33, there are various opinions.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "ParryMaster",
+        "content": "I understand parrying is important, but could they make the timing easier to understand?",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "#4BC9",
+        "content": "If you're going to lower difficulty with mods, they should adjust it in the main game.",
+        "timestamp": "3 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1396779254477488159/1396779254477488159",
+    "communityId": "5ch",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 6,
+    "title": "red screen during some cinematics",
+    "content": "Having an issue where red screens appear during some cinematics in the game. How can I fix this?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#5BDD",
+        "content": "I had screen tearing issues both in-game and on character screens, but clean installing NVIDIA graphics drivers fixed it.",
+        "timestamp": "6 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "33Master",
+        "content": "I'm having this issue too, but NVIDIA driver updates don't seem to work.",
+        "timestamp": "4 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399636725852012556",
+    "communityId": "steam",
+    "projectId": "clairobscur33"
+  },
+  {
+    "id": 7,
+    "title": "What does secret model mean?",
+    "content": "Curious about what 'Secret Model' means in Deluxe Season 3. What exactly does it mean, and is it rarer than other items?",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#746E",
+        "content": "Yes, it's definitely rarer than other rare items.",
+        "timestamp": "4 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "#1980",
+        "content": "Don't really use decorations much, but that dragon decoration looks really cool.",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "id": 3,
+        "author": "#AD61",
+        "content": "It does look really cool. My main question was just about rarity.",
+        "timestamp": "1 hour ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399547077113155745",
+    "communityId": "reddit",
+    "projectId": "deltaforce"
+  },
+  {
+    "id": 8,
+    "title": "LOL, all i do is die",
+    "content": "Seriously, am I the only one who can't get the hang of Warfare mode? Unless I'm sniping from long range, I always lose in 1v1 gunfights, and when I rush, I die without exception. Everyone else seems faster and less jittery than me. I honestly can't believe I'm this bad. In Operations, gunfights require more strategy and skill, so I'm pretty good unlike most people who play like Call of Duty. But Warfare? I'm really terrible.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "WeaponExpert",
+        "content": "It's tough when the enemy team is full of snipers, most of my matches are like that. Plus this game's hit registration and netcode don't seem very good.",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "id": 2,
+        "author": "FPSPro",
+        "content": "You're not the only one; everyone (except hackers and streamers using soft hacks) keeps dying and barely gets one or two kills.",
+        "timestamp": "3 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1399261570592411791",
+    "communityId": "steam",
+    "projectId": "deltaforce"
+  },
+  {
+    "id": 9,
+    "title": "DeltaForce ★14 [DeltaForce]",
+    "content": "Looking at DeltaForce discussions across various platforms, there are active conversations about gameplay situations and matchmaking. Topics include emulator usage precautions, differences between Google Play Games version and mobile version matchmaking, and controls on tablets.",
+    "comments": [
+      {
+        "id": 1,
+        "author": "#C872",
+        "content": "Are the unranked players who frequently appear in Operation Dam bots?",
+        "timestamp": "7 hours ago"
+      }
+    ],
+    "sourceURL": "",
+    "discordURL": "https://discord.com/channels/1388870376251199508/1398047484000993381",
+    "communityId": "5ch",
+    "projectId": "deltaforce"
+  }
+]

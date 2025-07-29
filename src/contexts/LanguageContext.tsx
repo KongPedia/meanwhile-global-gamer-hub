@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+// @refresh reset
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export type Language = 'ko' | 'en' | 'ja' | 'zh' | 'es';
 
@@ -22,11 +23,55 @@ interface LanguageProviderProps {
   children: ReactNode;
 }
 
+// Function to detect browser language
+const detectBrowserLanguage = (): Language => {
+  // Get browser language preferences
+  const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+  
+  // Extract language code (e.g., 'ko-KR' -> 'ko')
+  const langCode = browserLang.toLowerCase().split('-')[0];
+  // Map to supported languages
+  const supportedLanguages: Language[] = ['en', 'ja', 'zh', 'es'];
+  
+  // Check if detected language is supported
+  if (supportedLanguages.includes(langCode as Language)) {
+    console.log(langCode)
+    return langCode as Language;
+  }
+  
+  // Fallback logic based on region
+  const region = browserLang.toLowerCase().split('-')[1];
+  
+  if (region) {
+    // Asian regions default to appropriate languages
+    if (['kr', 'kp'].includes(region)) return 'ko';
+    if (['jp'].includes(region)) return 'ja';
+    if (['cn', 'tw', 'hk', 'mo'].includes(region)) return 'zh';
+    if (['es', 'mx', 'ar', 'co', 've', 'pe', 'cl', 'ec', 'gt', 'cu', 'bo', 'do', 'hn', 'py', 'sv', 'ni', 'cr', 'pa', 'uy', 'gq'].includes(region)) return 'es';
+  }
+  
+  // Default to English for unsupported languages
+  return 'en';
+};
+
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [language, setLanguage] = useState<Language>('ko');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Try to get saved language from localStorage first
+    const savedLanguage = localStorage.getItem('preferred-language') as Language;
+    if (savedLanguage && ['ko', 'en', 'ja', 'zh', 'es'].includes(savedLanguage)) {
+      return savedLanguage;
+    }
+    // Otherwise detect from browser
+    return detectBrowserLanguage();
+  });
+  
+  // Save language preference to localStorage when it changes
+  useEffect(() => {
+    localStorage.setItem('preferred-language', language);
+  }, [language]);
 
   const t = (key: string): string => {
-    return translations[language][key] || key;
+    return translations[language][key] || translations['en'][key] || key;
   };
 
   return (
@@ -94,17 +139,19 @@ const translations = {
     'community.stats.members': '활성 멤버',
     'community.stats.messages': '일일 메시지',
     'community.stats.rating': '만족도',
-    'community.discord.title': 'Discord 미리보기',
-    'community.discord.general': '일반 채팅',
-    'community.discord.game': '게임 토론',
-    'community.discord.trends': '트렌드 알림',
-    'community.discord.user1': '김게이머',
-    'community.discord.user2': 'GameMaster',
-    'community.discord.user3': 'TrendBot',
-    'community.discord.msg1': '새로운 패치 정보 나왔어요!',
-    'community.discord.msg2': '이번 업데이트 어떻게 생각하세요?',
-    'community.discord.msg3': '🔥 실시간 트렌드: 새로운 챔피언 관련 토론이 급증하고 있습니다',
     'community.cta': 'Discord 참여하기',
+    'community.discord.title': 'Discord 미리보기',
+    'community.discord.subtitle': '이미 수백 명의 게이머가 함께하고 있습니다',
+    'community.discord.footer': 'Meanwhile Global Gamer Hub',
+    'community.discord.view': 'Discord에서 보기',
+    'community.posts.title': '해외 여러 게임 커뮤니티를 여러분의 언어로 경험하세요',
+    'community.posts.subtitle': 'MeanWhile은 글로벌 게임 커뮤니티 데이터를 AI로 요약·번역해 Discord에서 공유합니다.',
+    
+    // Game Names
+    'game.stellarblade': '스텔라 블레이드',
+    'game.clairobscur33': '33 원정대',
+    'game.deltaforce': '델타포스',
+    'game.all': '전체 게임',
     
     // Footer
     'footer.title': 'MeanWhile',
@@ -165,22 +212,24 @@ const translations = {
     
     // Community Section
     'community.title': 'Meet us on Discord!',
-    'community.subtitle': 'Hundreds of gamers are already here',
+    'community.subtitle': 'Hundreds of gamers have already joined',
     'community.stats.members': 'Active Members',
     'community.stats.messages': 'Daily Messages',
     'community.stats.rating': 'Satisfaction',
-    'community.discord.title': 'Discord Preview',
-    'community.discord.general': 'general',
-    'community.discord.game': 'game-discussion',
-    'community.discord.trends': 'trend-alerts',
-    'community.discord.user1': 'KimGamer',
-    'community.discord.user2': 'GameMaster',
-    'community.discord.user3': 'TrendBot',
-    'community.discord.msg1': 'New patch info is out!',
-    'community.discord.msg2': 'What do you think about this update?',
-    'community.discord.msg3': '🔥 Real-time trend: Discussion about new champion is surging',
     'community.cta': 'Join Discord',
-    
+    'community.posts.title': 'Experience Global Gaming Communities in Your Language',
+    'community.posts.subtitle': 'MeanWhile summarizes and translates global gaming community data with AI, sharing it on Discord.',
+    'community.discord.title': 'Discord Preview',
+    'community.discord.subtitle': 'Hundreds of gamers are already here together',
+    'community.discord.footer': 'Meanwhile Global Gamer Hub',
+    'community.discord.view': 'View on Discord',
+
+    // Game Names
+    'game.stellarblade': 'Stellar Blade',
+    'game.clairobscur33': 'Clair Obscur: Expedition 33',
+    'game.deltaforce': 'Delta Force',
+    'game.all': 'All Games',
+
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': 'Global gamers\' voices in one place',
@@ -244,22 +293,18 @@ const translations = {
     'community.stats.members': 'アクティブメンバー',
     'community.stats.messages': '日次メッセージ',
     'community.stats.rating': '満足度',
-    'community.discord.title': 'Discordプレビュー',
-    'community.discord.general': '一般チャット',
-    'community.discord.game': 'ゲーム議論',
-    'community.discord.trends': 'トレンド通知',
-    'community.discord.user1': 'キムゲーマー',
-    'community.discord.user2': 'GameMaster',
-    'community.discord.user3': 'TrendBot',
-    'community.discord.msg1': '新しいパッチ情報が出ました！',
-    'community.discord.msg2': '今回のアップデートどう思いますか？',
-    'community.discord.msg3': '🔥 リアルタイムトレンド：新チャンピオン関連の議論が急増中',
     'community.cta': 'Discord参加',
+    'community.posts.title': 'グローバルゲームコミュニティをあなたの言語で体験しよう',
+    'community.posts.subtitle': 'MeanWhileはグローバルゲームコミュニティデータをAIで要約・翻訳し、Discordで共有します。',
+    'community.discord.title': 'Discordプレビュー',
+    'community.discord.subtitle': 'すでに数百人のゲーマーが参加しています',
+    'community.discord.footer': 'Meanwhile Global Gamer Hub',
+    'community.discord.view': 'Discordで見る',
     
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': '世界中のゲーマーの声を一つの場所で',
-    'footer.copyright': '© 2024 MeanWhile. All rights reserved.',
+    'footer.copyright': ' 2024 MeanWhile. All rights reserved.',
     'footer.made': 'グローバルゲーミングコミュニティのために❤️で作られました'
   },
   zh: {
@@ -319,7 +364,11 @@ const translations = {
     'community.stats.members': '活跃成员',
     'community.stats.messages': '日均消息',
     'community.stats.rating': '满意度',
+    'community.cta': '加入Discord',
+    'community.posts.title': '通过真实数据体验游戏社区',
+    'community.posts.subtitle': 'MeanWhile使用AI总结和翻译全球游戏社区数据，并在Discord上分享。',
     'community.discord.title': 'Discord预览',
+    'community.discord.subtitle': '已有数百名玩家在这里',
     'community.discord.general': '常规聊天',
     'community.discord.game': '游戏讨论',
     'community.discord.trends': '趋势通知',
@@ -329,7 +378,6 @@ const translations = {
     'community.discord.msg1': '新补丁信息发布了！',
     'community.discord.msg2': '您对这次更新有什么看法？',
     'community.discord.msg3': '🔥 实时趋势：新英雄相关讨论激增',
-    'community.cta': '加入Discord',
     
     // Footer
     'footer.title': 'MeanWhile',
