@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Users, MessageCircle, Star, ExternalLink, Hash } from "lucide-react";
+
+import { BarChart, Globe, Gamepad2, ExternalLink, MessageCircle, Hash, LayoutList } from "lucide-react";
+import { formatNumber } from "@/lib/utils";
+import statsData from '@/data/stats.json';
 import { useLanguage } from "@/contexts/LanguageContext";
 import { CommunityPost } from "@/types/post";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend, TooltipProps } from 'recharts';
+import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
+
+const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="p-2 bg-background/90 border border-border rounded-lg shadow-lg backdrop-blur-sm">
+        <p className="text-sm text-foreground">{`${payload[0].value?.toLocaleString()} posts`}</p>
+      </div>
+    );
+  }
+  return null;
+};
 
 const DEFAULT_PROJECT_ID = 'clairobscur33';
 const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
@@ -119,32 +135,173 @@ const CommunitySection = () => {
         </div>
         
         {/* Community Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {[
-            { icon: <Users className="w-6 h-6" />, number: "500+", label: t('community.stats.members') },
-            { icon: <MessageCircle className="w-6 h-6" />, number: "1,000+", label: t('community.stats.messages') },
-            { icon: <Star className="w-6 h-6" />, number: "4.9", label: t('community.stats.rating') }
-          ].map((stat, index) => (
-            <Card 
-              key={index}
-              className="p-6 bg-card/30 border-border text-center animate-fade-in-up"
-              style={{ animationDelay: `${index * 1}s` }}
-            >
-              <div className="text-primary mb-2 flex justify-center">
-                {stat.icon}
-              </div>
-              <div className="text-2xl font-bold text-foreground mb-1">
-                {stat.number}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {stat.label}
-              </div>
-            </Card>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {(() => {
+            if (!statsData || !statsData.projects || !statsData.total_summary) {
+              console.error('Invalid stats data structure');
+              return null; // or return a fallback UI
+            }
+            const { projects, total_summary } = statsData;
+            const gameData = Object.values(projects)
+              .map(p => ({ name: p.project_id, count: p.total_count }))
+              .sort((a, b) => b.count - a.count);
+
+            const platformFlags: { [key: string]: string } = {
+              reddit: '🇺🇸',
+              steam: '🇺🇸',
+              dcinside: '🇰🇷',
+              jeuxvideo: '🇫🇷',
+              inven: '🇰🇷',
+              '5ch': '🇯🇵',
+              etc: '🌐'
+            };
+
+            const platformDataRaw = Object.entries(total_summary.communities);
+            const majorPlatforms = platformDataRaw
+              .filter(([, count]) => count >= 1000)
+              .map(([name, count]) => ({ name, count }));
+
+            const etcCount = platformDataRaw
+              .filter(([, count]) => count < 1000)
+              .reduce((sum, [, count]) => sum + count, 0);
+
+            const platformData = [...majorPlatforms];
+            if (etcCount > 0) {
+              platformData.push({ name: 'etc', count: etcCount });
+            }
+            platformData.sort((a, b) => b.count - a.count);
+
+            const COLORS = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#6b7280'];
+
+            const StatCard = ({ icon, title, mainValue = null, items = null, delay }) => (
+              <Card 
+                className="p-6 bg-card/30 border-border flex flex-col animate-fade-in-up h-full"
+                style={{ animationDelay: `${delay * 0.1}s` }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="text-primary mr-3">{icon}</div>
+                  <h4 className="text-lg font-semibold text-foreground">{title}</h4>
+                </div>
+                {mainValue ? (
+                  <div className="text-5xl font-bold text-foreground my-auto text-center">{mainValue}</div>
+                 ) : title === t('community.stats.totalProjects') ? (
+                  <div className="space-y-3 text-sm overflow-y-auto pr-2 flex-grow flex flex-col justify-center">
+                    {items.slice(0, 3).map(item => {
+                      const maxCount = Math.max(...items.map(i => i.count));
+                      const barWidth = (item.count / maxCount) * 100;
+                      return (
+                        <div key={item.name} className="space-y-1">
+                          <div className="flex justify-between items-center text-muted-foreground">
+                            <span>{(() => {
+                              const gameTranslations = {
+                                clairobscur33: t('game.clairobscur33'),
+                                deltaforce: t('game.deltaforce'),
+                                stellarblade: t('game.stellarblade')
+                              };
+                              return gameTranslations[item.name.toLowerCase()] || item.name;
+                            })()}</span>
+                            <span className="font-bold text-foreground">{formatNumber(item.count)}</span>
+                          </div>
+                          <div className="w-full bg-primary/10 rounded-full h-2">
+                            <div 
+                              className="bg-primary h-2 rounded-full transition-all duration-300"
+                              style={{ width: `${barWidth}%` }}
+                            ></div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                    {(
+                      <div className="flex items-center justify-center p-3 mt-2 bg-muted/20 rounded-lg text-muted-foreground hover:bg-muted/30 transition-colors cursor-pointer group">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-medium">+ more games</span>
+                          <div className="w-1 h-1 rounded-full bg-primary/50 group-hover:bg-primary transition-colors"></div>
+                          <div className="w-1 h-1 rounded-full bg-primary/30 group-hover:bg-primary/70 transition-colors"></div>
+                          <div className="w-1 h-1 rounded-full bg-primary/20 group-hover:bg-primary/50 transition-colors"></div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : title === t('community.stats.totalCommunities') ? (
+                      <div className="h-64">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <PieChart>
+                        <Pie
+                          data={platformData}
+                          cx="50%"
+                          cy="45%"
+                          innerRadius={30}
+                          outerRadius={60}
+                          paddingAngle={2}
+                          dataKey="count"
+                          nameKey="name"
+                        >
+                          {platformData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                          ))}
+                        </Pie>
+                        <Legend
+                          verticalAlign="bottom"
+                          height={36}
+                          formatter={(value) => {
+                            const communityName = value;
+                            const flag = platformFlags[communityName] || '🌐';
+                            return <span className="text-xs text-muted-foreground">{`${flag} ${communityName}`}</span>;
+                          }}
+                          wrapperStyle={{
+                            paddingTop: '10px',
+                            fontSize: '12px'
+                          }}
+                        />
+                        <Tooltip
+                          cursor={{ fill: 'hsl(var(--accent) / 0.1)' }}
+                          content={<CustomTooltip />}
+                        />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  </div>
+                ) : (
+                  <div className="space-y-3 text-sm overflow-y-auto pr-2 flex-grow">
+                    {items.map(item => (
+                      <div key={item.name} className="flex items-center justify-between p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                        <div className="flex items-center gap-3">
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: item.color }}></div>
+                          <span className="font-medium">{item.name}</span>
+                        </div>
+                        <span className="font-bold text-foreground">{formatNumber(item.count)}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </Card>
+            );
+
+            return [
+              <StatCard
+                key="posts"
+                delay={0}
+                icon={<BarChart className="w-7 h-7" />}
+                title={t('community.stats.totalPosts')}
+                mainValue={formatNumber(total_summary.total_count)}
+              />,
+              <StatCard
+                key="games"
+                delay={1}
+                icon={<LayoutList className="w-7 h-7" />}
+                title={t('community.stats.totalProjects')}
+                items={gameData}
+              />,
+              <StatCard
+                key="platforms"
+                delay={2}
+                icon={<Globe className="w-7 h-7" />}
+                title={t('community.stats.totalCommunities')}
+                items={platformData}
+              />
+            ];
+          })()}
         </div>
         
-        
-
         {/* Community Posts Preview */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
@@ -152,42 +309,41 @@ const CommunitySection = () => {
           </h3>
           
           {/* Game Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {gameOptions.map((game) => (
+          <div className="flex gap-2 mb-4 items-center">
+            {gameOptions.slice(0, 3).map((game) => (
               <Button
                 key={game.id}
                 variant={selectedGame === game.id ? "default" : "outline"}
+                size="sm"
                 onClick={() => handleGameChange(game.id)}
-                className={`hover:scale-105 ${
-                  selectedGame === game.id 
-                    ? 'animate-pulse shadow-lg shadow-primary/50' 
-                    : ''
-                }`}
+                className="transition-all duration-200"
               >
                 {game.name}
               </Button>
             ))}
           </div>
+          
           {/* Dynamic Game Background Banner */}
-        <div className="relative mb-12 overflow-hidden rounded-2xl">
-          <div 
-            className="h-64 bg-cover bg-center bg-no-repeat transition-all duration-200 ease-in-out relative"
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${getGameBackground(selectedGame)})`,
-              opacity: bannerOpacity,
-              transition: 'opacity 0.3s ease-in-out'
-            }}
-          >
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-              <h2 className="text-4xl font-bold mb-4 text-center drop-shadow-lg">
-                {gameOptions.find(game => game.id === selectedGame)?.name}
-              </h2>
-              <p className="text-lg opacity-90 text-center max-w-2xl px-4 drop-shadow-md">
-                {t('community.posts.subtitle')}
-              </p>
+          <div className="relative mb-12 overflow-hidden rounded-2xl">
+            <div 
+              className="h-64 bg-cover bg-center bg-no-repeat transition-all duration-200 ease-in-out relative"
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${getGameBackground(selectedGame)})`,
+                opacity: bannerOpacity,
+                transition: 'opacity 0.3s ease-in-out'
+              }}
+            >
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+                <h2 className="text-4xl font-bold mb-4 text-center drop-shadow-lg">
+                  {gameOptions.find(game => game.id === selectedGame)?.name}
+                </h2>
+                <p className="text-lg opacity-90 text-center max-w-2xl px-4 drop-shadow-md">
+                  {t('community.posts.subtitle')}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ opacity: postsOpacity, transition: 'opacity 0.3s ease-in-out' }}>
             {posts.map((post, index) => (
               <Card 
@@ -223,7 +379,7 @@ const CommunitySection = () => {
                 {/* Display some comments */}
                 {post.comments && post.comments.length > 0 && (
                   <div className="mb-4 space-y-2">
-                    {post.comments.slice(0, 2).map((comment) => (
+                    {post.comments.map((comment) => (
                       <div key={comment.id} className="bg-muted/50 rounded-lg p-3 text-xs">
                         <div className="flex items-center justify-between mb-1">
                           <span className="font-medium text-foreground">{comment.author}</span>
@@ -232,11 +388,6 @@ const CommunitySection = () => {
                         <p className="text-muted-foreground line-clamp-2">{comment.content}</p>
                       </div>
                     ))}
-                    {post.comments.length > 2 && (
-                      <p className="text-xs text-muted-foreground text-center">
-                        +{post.comments.length - 2} more comments
-                      </p>
-                    )}
                   </div>
                 )}
                 
