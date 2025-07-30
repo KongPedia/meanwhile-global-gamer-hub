@@ -154,11 +154,9 @@ const translations = {
     'community.stats.totalCommunities': '커뮤니티',
     'community.stats.totalProjects': '등록된 게임',
     'community.stats.etc': '기타',
-    'game': {
-      'clairobscur33': '클레어옵스큐어: 33',
-      'deltaforce': '델타포스',
-      'stellarblade': '스텔라 블레이드',
-    },
+    'game.clairobscur33': '33 원정대',
+    'game.deltaforce': '델타포스',
+    'game.stellarblade': '스텔라 블레이드',
     'community.cta': 'Discord 참여하기',
     'community.discord.title': 'Discord 미리보기',
     'community.discord.subtitle': '이미 수백 명의 게이머가 함께하고 있습니다',
@@ -168,9 +166,6 @@ const translations = {
     'community.posts.subtitle': 'MeanWhile은 글로벌 게임 커뮤니티 데이터를 AI로 요약·번역해 Discord에서 공유합니다.',
     
     // Game Names
-    'game.stellarblade': '스텔라 블레이드',
-    'game.clairobscur33': '33 원정대',
-    'game.deltaforce': '델타포스',
     'game.all': '전체 게임',
     
     // Footer
@@ -251,11 +246,9 @@ const translations = {
     'community.stats.totalCommunities': 'Communities',
     'community.stats.totalProjects': 'Registered Games',
     'community.stats.etc': 'ETC',
-    'game': {
-      'clairobscur33': 'Clair Obscur: 33',
-      'deltaforce': 'Delta Force',
-      'stellarblade': 'Stellar Blade',
-    },
+    'game.clairobscur33': 'Clair Obscur: 33',
+    'game.deltaforce': 'Delta Force',
+    'game.stellarblade': 'Stellar Blade',
     'community.cta': 'Join Discord',
     'community.posts.title': 'Experience Global Gaming Communities in Your Language',
     'community.posts.subtitle': 'MeanWhile summarizes and translates global gaming community data with AI, sharing it on Discord.',
@@ -265,9 +258,6 @@ const translations = {
     'community.discord.view': 'View on Discord',
 
     // Game Names
-    'game.stellarblade': 'Stellar Blade',
-    'game.clairobscur33': 'Clair Obscur: Expedition 33',
-    'game.deltaforce': 'Delta Force',
     'game.all': 'All Games',
 
     // Footer
@@ -348,11 +338,9 @@ const translations = {
     'community.stats.totalCommunities': 'コミュニティ',
     'community.stats.totalProjects': '登録済みゲーム',
     'community.stats.etc': 'その他',
-    'game': {
-      'clairobscur33': 'クレアオブスキュア: 33',
-      'deltaforce': 'デルタフォース',
-      'stellarblade': 'ステラブレード',
-    },
+    'game.clairobscur33': 'クレアオブスキュア: 33',
+    'game.deltaforce': 'デルタフォース',
+    'game.stellarblade': 'ステラブレード',
     'community.cta': 'Discord参加',
     'community.posts.subtitle': 'MeanWhileはグローバルゲームコミュニティデータをAIで要約・翻訳し、Discordで共有します。',
     'community.discord.title': 'Discordプレビュー',
