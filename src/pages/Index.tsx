@@ -5,6 +5,7 @@ import VideoExampleSection from "@/components/VideoExampleSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import PartnerSection from "@/components/PartnerSection";
 import CommunitySection from "@/components/CommunitySection";
+import ReportSection from "@/components/ReportSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <ProblemSection />
       <SolutionSection />
       <VideoExampleSection />
+      <ReportSection />
       <BenefitsSection />
       <PartnerSection />
       <Footer />

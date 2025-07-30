@@ -168,6 +168,34 @@ const translations = {
     // Game Names
     'game.all': '전체 게임',
     
+    // Report Section
+    'report.badge': '새로운 기능',
+    'report.title': '게임 커뮤니티 핫이슈 리포트',
+    'report.subtitle': '특정 기간 동안 게임 커뮤니티에서 가장 활발하게 논의되는 주제들을 AI가 분석하여 한눈에 볼 수 있는 인사이트 리포트를 제공합니다.',
+    'report.example.title': 'ex) Mystic Legends 핫이슈 ',
+    'report.example.period': '2025-01-15 09:00 ~ 18:00',
+    'report.example.summary': '신작 RPG \'Mystic Legends\' 커뮤니티에서 새로운 업데이트에 대한 논의가 활발합니다. 특히 새로운 던전의 난이도와 보상 시스템에 대한 의견이 분분합니다.',
+    'report.example.hotTopic.title': '새 던전 난이도 논란',
+    'report.example.hotTopic.sentimentLabel': '부정적',
+    'report.example.hotTopic.timeRange': '14:30 ~ 17:45',
+    'report.example.hotTopic.post1.title': '새 던전이 너무 어려워요',
+    'report.example.hotTopic.post1.content': '일반 유저들이 클리어하기 어려운 난이도에 대한 불만',
+    'report.example.hotTopic.post2.title': '보상이 너무 짜다',
+    'report.example.hotTopic.post2.content': '어려운 던전에 비해 보상이 부족하다는 의견',
+    'report.stats.mentions': '총 언급',
+    'report.stats.active': '활발한 시간',
+    'report.relatedPosts': '관련 게시물:',
+    'report.features.title': '인사이트 리포트',
+    'report.features.subtitle': '게임 커뮤니티의 트렌드를 한눈에',
+    'report.features.trending.title': '핫토픽 분석',
+    'report.features.trending.description': '가장 많이 언급되는 주제와 트렌드를 실시간으로 파악',
+    'report.features.sentiment.title': '감정 분석',
+    'report.features.sentiment.description': '커뮤니티 반응의 긍정/부정 지수를 수치화하여 제공',
+    'report.features.realtime.title': '실시간 모니터링',
+    'report.features.realtime.description': '특정 시간대별 활발한 논의 시점을 추적',
+    'report.features.insights.title': '깊이 있는 인사이트',
+    'report.features.insights.description': '단순한 데이터를 넘어 의미 있는 통찰력 제공',
+    
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': '전 세계 게이머들의 목소리를 한 곳에서',
@@ -259,6 +287,34 @@ const translations = {
 
     // Game Names
     'game.all': 'All Games',
+    
+    // Report Section
+    'report.badge': 'New Feature',
+    'report.title': 'Gaming Community Hot Issue Reports',
+    'report.subtitle': 'AI analyzes the most actively discussed topics in gaming communities during specific periods, providing comprehensive insight reports at a glance.',
+    'report.example.title': 'ex) Mystic Legends Hot Issue Report',
+    'report.example.period': '2025-01-15 09:00 ~ 18:00',
+    'report.example.summary': 'Active discussions about the new update in the \'Mystic Legends\' RPG community. Opinions are divided on the difficulty of new dungeons and the reward system.',
+    'report.example.hotTopic.title': 'New Dungeon Difficulty Controversy',
+    'report.example.hotTopic.sentimentLabel': 'Negative',
+    'report.example.hotTopic.timeRange': '14:30 ~ 17:45',
+    'report.example.hotTopic.post1.title': 'New dungeon is too difficult',
+    'report.example.hotTopic.post1.content': 'Complaints about difficulty level that\'s hard for casual players to clear',
+    'report.example.hotTopic.post2.title': 'Rewards are too stingy',
+    'report.example.hotTopic.post2.content': 'Opinion that rewards are insufficient compared to difficult dungeons',
+    'report.stats.mentions': 'Total Mentions',
+    'report.stats.active': 'Active Hours',
+    'report.relatedPosts': 'Related Posts:',
+    'report.features.title': 'Insight Reports',
+    'report.features.subtitle': 'Gaming community trends at a glance',
+    'report.features.trending.title': 'Hot Topic Analysis',
+    'report.features.trending.description': 'Real-time identification of most mentioned topics and trends',
+    'report.features.sentiment.title': 'Sentiment Analysis',
+    'report.features.sentiment.description': 'Quantified positive/negative sentiment indices of community reactions',
+    'report.features.realtime.title': 'Real-time Monitoring',
+    'report.features.realtime.description': 'Track active discussion periods by specific time ranges',
+    'report.features.insights.title': 'Deep Insights',
+    'report.features.insights.description': 'Meaningful insights beyond simple data',
 
     // Footer
     'footer.title': 'MeanWhile',
@@ -348,9 +404,40 @@ const translations = {
     'community.discord.footer': 'Meanwhile Global Gamer Hub',
     'community.discord.view': 'Discordで見る',
     
+    // Game Names
+    'game.all': '全てのゲーム',
+    
+    // Report Section
+    'report.badge': '新機能',
+    'report.title': 'ゲームコミュニティホットイシューレポート',
+    'report.subtitle': '特定期間中にゲームコミュニティで最も活発に議論されるトピックをAIが分析し、一目でわかるインサイトレポートを提供します。',
+    'report.example.title': 'ex) Mystic Legends ホットイシューレポート',
+    'report.example.period': '2025-01-15 09:00 ~ 18:00',
+    'report.example.summary': '新作RPG「Mystic Legends」コミュニティで新しいアップデートについての議論が活発です。特に新しいダンジョンの難易度と報酬システムについて意見が分かれています。',
+    'report.example.hotTopic.title': '新ダンジョン難易度論争',
+    'report.example.hotTopic.sentimentLabel': 'ネガティブ',
+    'report.example.hotTopic.timeRange': '14:30 ~ 17:45',
+    'report.example.hotTopic.post1.title': '新ダンジョンが難しすぎる',
+    'report.example.hotTopic.post1.content': '一般ユーザーがクリアするには難しい難易度への不満',
+    'report.example.hotTopic.post2.title': '報酬が少なすぎる',
+    'report.example.hotTopic.post2.content': '難しいダンジョンに比べて報酬が不足しているという意見',
+    'report.stats.mentions': '総言及数',
+    'report.stats.active': 'アクティブな時間',
+    'report.relatedPosts': '関連投稿:',
+    'report.features.title': 'インサイトレポート',
+    'report.features.subtitle': 'ゲームコミュニティのトレンドを一目で',
+    'report.features.trending.title': 'ホットトピック分析',
+    'report.features.trending.description': '最も多く言及されるトピックとトレンドをリアルタイムで把握',
+    'report.features.sentiment.title': '感情分析',
+    'report.features.sentiment.description': 'コミュニティ反応のポジティブ/ネガティブ指数を数値化して提供',
+    'report.features.realtime.title': 'リアルタイムモニタリング',
+    'report.features.realtime.description': '特定時間帯別の活発な議論時点を追跡',
+    'report.features.insights.title': '深いインサイト',
+    'report.features.insights.description': '単純なデータを超えた意味のある洞察力を提供',
+    
     // Footer
     'footer.title': 'MeanWhile',
-    'footer.subtitle': '世界中のゲーマーの声を一つの場所で',
+    'footer.subtitle': '全世界のゲーマーの声を一つの場所で',
     'footer.copyright': ' 2024 MeanWhile. All rights reserved.',
     'footer.made': 'グローバルゲーミングコミュニティのために❤️で作られました'
   },
@@ -405,6 +492,20 @@ const translations = {
     'partner.innovation.title': '创新解决方案',
     'partner.innovation.desc': '利用最新AI技术为游戏社区管理设立新标准',
     
+    // Video Example Section
+    'videoExample.title': '视频摘要',
+    'videoExample.subtitle': '快速掌握长视频的要点。',
+    'videoExample.original': '原始视频',
+    'videoExample.analyzed': '主要内容',
+    'videoExample.videoTitle': "示例) 新游戏 '时空航行者' 游戏视频",
+    'videoExample.summary': "本视频介绍了以时间旅行为主题的开放世界RPG游戏'时空航行者'的主要特色和前期攻略。",
+    'videoExample.part1.title': '时间操控能力使用技巧',
+    'videoExample.part1.content': "展示如何在战斗和解谜中使用主角的核心能力'时间回溯'和'未来预知'。",
+    'videoExample.part2.title': '穿越古代与未来的冒险',
+    'videoExample.part2.content': '介绍主线任务，探索从古代遗迹到超现代未来城市的各种时间线。',
+    'videoExample.part3.title': '伙伴招募与队伍组合',
+    'videoExample.part3.content': '探索来自不同时间线的伙伴特性、推荐队伍组合和强力连击技能。',
+    
     // Community Section
     'community.title': '在Discord相见！',
     'community.subtitle': '已有数百名玩家加入',
@@ -430,7 +531,34 @@ const translations = {
     'footer.title': 'MeanWhile',
     'footer.subtitle': '全球玩家的声音汇聚一处',
     'footer.copyright': '© 2024 MeanWhile. 保留所有权利。',
-    'footer.made': '为全球游戏社区用❤️制作'
+    'footer.made': '为全球游戏社区用❤️制作',
+    
+    // Report Section
+    'report.badge': '新功能',
+    'report.title': '游戏社区热点报告',
+    'report.subtitle': 'AI分析特定时间段游戏社区最活跃讨论的话题，提供一目了然的热点洞察报告。',
+    'report.example.title': '示例) Mystic Legends 热点报告',
+    'report.example.period': '2025-01-15 09:00 ~ 18:00',
+    'report.example.summary': 'RPG游戏\'Mystic Legends\'社区正在积极讨论新更新。特别是新地下城的难度和奖励系统意见分歧较大。',
+    'report.example.hotTopic.title': '新地下城难度争议',
+    'report.example.hotTopic.sentimentLabel': '负面',
+    'report.example.hotTopic.timeRange': '14:30 ~ 17:45',
+    'report.example.hotTopic.post1.title': '新地下城太难了',
+    'report.example.hotTopic.post1.content': '休闲玩家难以通关的难度引发抱怨',
+    'report.example.hotTopic.post2.title': '奖励太少',
+    'report.example.hotTopic.post2.content': '与难度地下城相比奖励不足的意见',
+    'report.stats.mentions': '总提及',
+    'report.relatedPosts': '相关帖子:',
+    'report.features.title': '洞察报告',
+    'report.features.subtitle': '游戏社区趋势一目了然',
+    'report.features.trending.title': '热点分析',
+    'report.features.trending.description': '实时识别最热门的话题和趋势',
+    'report.features.sentiment.title': '情感分析',
+    'report.features.sentiment.description': '量化社区反应的正负面情感指数',
+    'report.features.realtime.title': '实时监控',
+    'report.features.realtime.description': '按特定时间段追踪活跃讨论时间点',
+    'report.features.insights.title': '深度洞察',
+    'report.features.insights.description': '提供超越数据的深度洞察'
   },
   es: {
     // Hero Section
@@ -481,7 +609,21 @@ const translations = {
     'partner.efficiency.title': 'Eficiencia Operacional',
     'partner.efficiency.desc': 'Reduce costos de gestión comunitaria y mejora significativamente la eficiencia operacional',
     'partner.innovation.title': 'Soluciones Innovadoras',
-    'partner.innovation.desc': 'Establece nuevos estándares para gestión de comunidades gaming usando tecnología IA de vanguardia',
+    'partner.innovation.desc': 'Establece nuevos estándares para la gestión de comunidades gaming usando tecnología IA de vanguardia',
+    
+    // Video Example Section
+    'videoExample.title': 'Resumen de Video',
+    'videoExample.subtitle': 'Comprende rápidamente los puntos clave de videos largos.',
+    'videoExample.original': 'Video Original',
+    'videoExample.analyzed': 'Contenido Principal',
+    'videoExample.videoTitle': "ej) Video de Gameplay del Nuevo Juego 'Chronoscape Voyagers'",
+    'videoExample.summary': "Este video cubre las características principales y estrategias tempranas del juego para 'Chronoscape Voyagers', un RPG de mundo abierto con tema de viaje temporal.",
+    'videoExample.part1.title': 'Cómo Usar las Habilidades de Manipulación Temporal',
+    'videoExample.part1.content': "Muestra cómo usar las habilidades principales del protagonista, 'Rebobinar Tiempo' y 'Visión Futura', en combate y acertijos.",
+    'videoExample.part2.title': 'Aventuras a Través de Eras Antiguas y Futuras',
+    'videoExample.part2.content': 'Presenta la línea principal de misiones, explorando varias líneas temporales desde ruinas antiguas hasta ciudades futuras hipermodernas.',
+    'videoExample.part3.title': 'Reclutamiento de Compañeros y Composición de Grupo',
+    'videoExample.part3.content': 'Explora las características de compañeros de diferentes líneas temporales, composiciones de grupo recomendadas, y habilidades de combo poderosas.',
     
     // Community Section
     'community.title': '¡Encuéntranos en Discord!',
@@ -505,6 +647,33 @@ const translations = {
     'footer.title': 'MeanWhile',
     'footer.subtitle': 'Las voces de gamers globales en un lugar',
     'footer.copyright': '© 2024 MeanWhile. Todos los derechos reservados.',
-    'footer.made': 'Hecho con ❤️ para la comunidad gaming global'
+    'footer.made': 'Hecho con ❤️ para la comunidad gaming global',
+    
+    // Report Section
+    'report.badge': 'Nueva Función',
+    'report.title': 'Informes de Temas Candentes de Comunidades Gaming',
+    'report.subtitle': 'La IA analiza los temas más discutidos activamente en comunidades gaming durante períodos específicos, proporcionando informes de perspectivas integrales de un vistazo.',
+    'report.example.title': 'ej) Informe de Temas Candentes de Mystic Legends',
+    'report.example.period': '2025-01-15 09:00 ~ 18:00',
+    'report.example.summary': 'Discusiones activas sobre la nueva actualización en la comunidad del RPG \'Mystic Legends\'. Las opiniones están divididas sobre la dificultad de las nuevas mazmorras y el sistema de recompensas.',
+    'report.example.hotTopic.title': 'Controversia sobre la Dificultad de Nueva Mazmorra',
+    'report.example.hotTopic.sentimentLabel': 'Negativo',
+    'report.example.hotTopic.timeRange': '14:30 ~ 17:45',
+    'report.example.hotTopic.post1.title': 'La nueva mazmorra es muy difícil',
+    'report.example.hotTopic.post1.content': 'Quejas sobre el nivel de dificultad que es difícil de superar para jugadores casuales',
+    'report.example.hotTopic.post2.title': 'Las recompensas son muy escasas',
+    'report.example.hotTopic.post2.content': 'Opinión de que las recompensas son insuficientes en comparación con mazmorras difíciles',
+    'report.stats.mentions': 'Menciones Totales',
+    'report.relatedPosts': 'Publicaciones Relacionadas:',
+    'report.features.title': 'Informes de Perspectivas',
+    'report.features.subtitle': 'Tendencias de comunidades gaming a un vistazo',
+    'report.features.trending.title': 'Análisis de Temas Candentes',
+    'report.features.trending.description': 'Identificación en tiempo real de los temas y tendencias más mencionados',
+    'report.features.sentiment.title': 'Análisis de Sentimiento',
+    'report.features.sentiment.description': 'Índices de sentimiento positivo/negativo cuantificados de las reacciones de la comunidad',
+    'report.features.realtime.title': 'Monitoreo en Tiempo Real',
+    'report.features.realtime.description': 'Seguimiento de períodos de discusión activa por rangos de tiempo específicos',
+    'report.features.insights.title': 'Perspectivas Profundas',
+    'report.features.insights.description': 'Proporciona perspectivas significativas más allá de los datos simples'
   }
 };
