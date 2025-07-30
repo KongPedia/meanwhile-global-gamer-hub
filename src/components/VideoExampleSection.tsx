@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Play, FileText } from "lucide-react";
+import { Play } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const VideoExampleSection = () => {

@@ -149,10 +149,16 @@ const translations = {
     
     // Community Section
     'community.title': 'Discord에서 만나요!',
-    'community.subtitle': '이미 수백 명의 게이머가 함께하고 있습니다',
-    'community.stats.members': '활성 멤버',
-    'community.stats.messages': '일일 메시지',
-    'community.stats.rating': '만족도',
+    'community.subtitle': '전 세계 게임 커뮤니티의 데이터를 실시간으로 분석합니다',
+    'community.stats.totalPosts': '총 게시물',
+    'community.stats.totalCommunities': '커뮤니티',
+    'community.stats.totalProjects': '등록된 게임',
+    'community.stats.etc': '기타',
+    'game': {
+      'clairobscur33': '클레어옵스큐어: 33',
+      'deltaforce': '델타포스',
+      'stellarblade': '스텔라 블레이드',
+    },
     'community.cta': 'Discord 참여하기',
     'community.discord.title': 'Discord 미리보기',
     'community.discord.subtitle': '이미 수백 명의 게이머가 함께하고 있습니다',
@@ -170,7 +176,7 @@ const translations = {
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': '전 세계 게이머들의 목소리를 한 곳에서',
-    'footer.copyright': '© 2024 MeanWhile. All rights reserved.',
+    'footer.copyright': ' 2024 MeanWhile. All rights reserved.',
     'footer.made': 'Made with ❤️ for global gaming community'
   },
   en: {
@@ -240,10 +246,16 @@ const translations = {
     
     // Community Section
     'community.title': 'Meet us on Discord!',
-    'community.subtitle': 'Hundreds of gamers have already joined',
-    'community.stats.members': 'Active Members',
-    'community.stats.messages': 'Daily Messages',
-    'community.stats.rating': 'Satisfaction',
+    'community.subtitle': 'Real-time analysis of global gaming community data',
+    'community.stats.totalPosts': 'Total Posts',
+    'community.stats.totalCommunities': 'Communities',
+    'community.stats.totalProjects': 'Registered Games',
+    'community.stats.etc': 'ETC',
+    'game': {
+      'clairobscur33': 'Clair Obscur: 33',
+      'deltaforce': 'Delta Force',
+      'stellarblade': 'Stellar Blade',
+    },
     'community.cta': 'Join Discord',
     'community.posts.title': 'Experience Global Gaming Communities in Your Language',
     'community.posts.subtitle': 'MeanWhile summarizes and translates global gaming community data with AI, sharing it on Discord.',
@@ -261,7 +273,7 @@ const translations = {
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': 'Global gamers\' voices in one place',
-    'footer.copyright': '© 2024 MeanWhile. All rights reserved.',
+    'footer.copyright': ' 2024 MeanWhile. All rights reserved.',
     'footer.made': 'Made with ❤️ for global gaming community'
   },
   ja: {
@@ -313,8 +325,8 @@ const translations = {
     'partner.efficiency.title': '運営効率性',
     'partner.efficiency.desc': 'コミュニティ管理コストを削減し運営効率を大幅向上',
     'partner.innovation.title': '革新的ソリューション',
-    'partner.innovation.desc': '最新AI技術を活用したゲームコミュニティ管理の新基準を提示',
-
+    'partner.innovation.desc': 'ゲームコミュニティ管理の新基準を提示',
+    
     // Video Example Section
     'videoExample.title': '動画要約',
     'videoExample.subtitle': '長い動画の要点を素早く把握します。',
@@ -325,18 +337,23 @@ const translations = {
     'videoExample.part1.title': '時間操作能力の活用法',
     'videoExample.part1.content': '主人公の核心能力である「時間巻き戻し」と「未来予知」を戦闘とパズルでどう活用するかを見せます。',
     'videoExample.part2.title': '古代と未来を行き来する冒険',
-    'videoExample.part2.content': '古代文明の遺跡から超現代的な未来都市まで、様々な時代を探検しながら経験する主なクエストラインを紹介します。',
+    'videoExample.part2.content': '古代文明の遺跡から超現代的な未来都市まで、様々な時間帯を探検しながら経験する主なクエストラインを紹介します。',
     'videoExample.part3.title': '仲間集めとパーティ編成',
     'videoExample.part3.content': 'それぞれ異なる時代から来た仲間の特徴と推奨パーティ編成、そして強力な連携スキルを解説します。',
-
+    
     // Community Section
     'community.title': 'Discordで会いましょう！',
-    'community.subtitle': 'すでに数百人のゲーマーが参加しています',
-    'community.stats.members': 'アクティブメンバー',
-    'community.stats.messages': '日次メッセージ',
-    'community.stats.rating': '満足度',
+    'community.subtitle': '世界のゲームコミュニティデータをリアルタイムで分析',
+    'community.stats.totalPosts': '総投稿数',
+    'community.stats.totalCommunities': 'コミュニティ',
+    'community.stats.totalProjects': '登録済みゲーム',
+    'community.stats.etc': 'その他',
+    'game': {
+      'clairobscur33': 'クレアオブスキュア: 33',
+      'deltaforce': 'デルタフォース',
+      'stellarblade': 'ステラブレード',
+    },
     'community.cta': 'Discord参加',
-    // ...
     'community.posts.subtitle': 'MeanWhileはグローバルゲームコミュニティデータをAIで要約・翻訳し、Discordで共有します。',
     'community.discord.title': 'Discordプレビュー',
     'community.discord.subtitle': 'すでに数百人のゲーマーが参加しています',
