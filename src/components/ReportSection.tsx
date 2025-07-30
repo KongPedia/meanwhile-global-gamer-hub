@@ -55,7 +55,57 @@ const ReportSection = () => {
 
         {/* Main Content Layout */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left Side - Report Preview */}
+            {/* Left Side - Features & Benefits */}
+          <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            {/* Hero Image */}
+            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 p-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-24 h-24 mx-auto mb-6 bg-primary/20 rounded-full flex items-center justify-center">
+                  <FileText className="w-12 h-12 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">{t('report.features.title')}</h3>
+                <p className="text-muted-foreground">{t('report.features.subtitle')}</p>
+              </div>
+            </div>
+
+            {/* Key Features */}
+            <div className="grid gap-4">
+              {[
+                {
+                  icon: <TrendingUp className="w-5 h-5" />,
+                  title: t('report.features.trending.title'),
+                  description: t('report.features.trending.description')
+                },
+                {
+                  icon: <BarChart3 className="w-5 h-5" />,
+                  title: t('report.features.sentiment.title'),
+                  description: t('report.features.sentiment.description')
+                },
+                {
+                  icon: <Clock className="w-5 h-5" />,
+                  title: t('report.features.realtime.title'),
+                  description: t('report.features.realtime.description')
+                },
+                {
+                  icon: <MessageSquare className="w-5 h-5" />,
+                  title: t('report.features.insights.title'),
+                  description: t('report.features.insights.description')
+                }
+              ].map((feature, index) => (
+                <Card key={index} className="p-4 bg-card/30 border-border hover:bg-card/50 transition-colors">
+                  <div className="flex items-start gap-3">
+                    <div className="text-primary mt-1">{feature.icon}</div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
+                      <p className="text-sm text-muted-foreground">{feature.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+          {/* Right Side - Report Preview */}
           <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             {/* Report Header */}
             <Card className="p-6 bg-card/50 border-border">
@@ -116,56 +166,7 @@ const ReportSection = () => {
             </Card>
           </div>
 
-          {/* Right Side - Features & Benefits */}
-          <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            {/* Hero Image */}
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 p-8">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
-              <div className="relative z-10 text-center">
-                <div className="w-24 h-24 mx-auto mb-6 bg-primary/20 rounded-full flex items-center justify-center">
-                  <FileText className="w-12 h-12 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">{t('report.features.title')}</h3>
-                <p className="text-muted-foreground">{t('report.features.subtitle')}</p>
-              </div>
-            </div>
-
-            {/* Key Features */}
-            <div className="grid gap-4">
-              {[
-                {
-                  icon: <TrendingUp className="w-5 h-5" />,
-                  title: t('report.features.trending.title'),
-                  description: t('report.features.trending.description')
-                },
-                {
-                  icon: <BarChart3 className="w-5 h-5" />,
-                  title: t('report.features.sentiment.title'),
-                  description: t('report.features.sentiment.description')
-                },
-                {
-                  icon: <Clock className="w-5 h-5" />,
-                  title: t('report.features.realtime.title'),
-                  description: t('report.features.realtime.description')
-                },
-                {
-                  icon: <MessageSquare className="w-5 h-5" />,
-                  title: t('report.features.insights.title'),
-                  description: t('report.features.insights.description')
-                }
-              ].map((feature, index) => (
-                <Card key={index} className="p-4 bg-card/30 border-border hover:bg-card/50 transition-colors">
-                  <div className="flex items-start gap-3">
-                    <div className="text-primary mt-1">{feature.icon}</div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
-                      <p className="text-sm text-muted-foreground">{feature.description}</p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
