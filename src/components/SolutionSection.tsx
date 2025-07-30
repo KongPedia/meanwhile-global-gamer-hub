@@ -30,14 +30,13 @@ const SolutionSection = () => {
     <section className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
             {t('solution.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
             {t('solution.subtitle')}
           </p>
         </div>
-        
         <div className="grid lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <Card 
@@ -51,10 +50,10 @@ const SolutionSection = () => {
                     {solution.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground">
+                <h3 className="text-xl font-bold mb-4 text-foreground whitespace-pre-line">
                   {solution.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                   {solution.description}
                 </p>
               </div>

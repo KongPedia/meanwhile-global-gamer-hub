@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-import { BarChart, Globe, Gamepad2, ExternalLink, MessageCircle, Hash, LayoutList } from "lucide-react";
+import { BarChart, Globe, ExternalLink, MessageCircle, Hash, LayoutList } from "lucide-react";
 import { formatNumber } from "@/lib/utils";
 import statsData from '@/data/stats.json';
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -122,14 +122,42 @@ const CommunitySection = () => {
     window.open(sourceURL, '_blank');
   };
 
+  const platformFlags: { [key: string]: string } = {
+    reddit: '🇺🇸',
+    steam: '🎮',
+    dcinside: '🇰🇷',
+    jeuxvideo: '🇫🇷',
+    inven: '🇰🇷',
+    '5ch': '🇯🇵',
+    etc: '🌐'
+  };
+
+  const renderCustomLegend = (props: any) => {
+    const { payload } = props;
+    return (
+      <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-muted-foreground mt-4">
+        {payload.map((entry: any, index: number) => {
+          const communityName = entry.value;
+          const flag = platformFlags[communityName] || '🌐';
+          return (
+            <div key={`item-${index}`} className="flex items-center">
+              <div style={{ width: 12, height: 12, backgroundColor: entry.color, marginRight: 8 }}></div>
+              <span>{`${flag} ${communityName}`}</span>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
   return (
     <section id="community" className="py-20 px-4 bg-gradient-hero">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
             {t('community.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line leading-tight">
             {t('community.subtitle')}
           </p>
         </div>
@@ -146,15 +174,6 @@ const CommunitySection = () => {
               .map(p => ({ name: p.project_id, count: p.total_count }))
               .sort((a, b) => b.count - a.count);
 
-            const platformFlags: { [key: string]: string } = {
-              reddit: '🇺🇸',
-              steam: '🇺🇸',
-              dcinside: '🇰🇷',
-              jeuxvideo: '🇫🇷',
-              inven: '🇰🇷',
-              '5ch': '🇯🇵',
-              etc: '🌐'
-            };
 
             const platformDataRaw = Object.entries(total_summary.communities);
             const majorPlatforms = platformDataRaw
@@ -240,19 +259,7 @@ const CommunitySection = () => {
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                           ))}
                         </Pie>
-                        <Legend
-                          verticalAlign="bottom"
-                          height={36}
-                          formatter={(value) => {
-                            const communityName = value;
-                            const flag = platformFlags[communityName] || '🌐';
-                            return <span className="text-xs text-muted-foreground">{`${flag} ${communityName}`}</span>;
-                          }}
-                          wrapperStyle={{
-                            paddingTop: '10px',
-                            fontSize: '12px'
-                          }}
-                        />
+                        <Legend content={renderCustomLegend} />
                         <Tooltip
                           cursor={{ fill: 'hsl(var(--accent) / 0.1)' }}
                           content={<CustomTooltip />}
@@ -304,19 +311,19 @@ const CommunitySection = () => {
         
         {/* Community Posts Preview */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-foreground whitespace-pre-line md:whitespace-normal">
             {t('community.posts.title') || '최신 커뮤니티 게시글'}
           </h3>
           
           {/* Game Filter Buttons */}
-          <div className="flex gap-2 mb-4 items-center">
+          <div className="flex gap-2 mb-4 items-center overflow-x-auto pb-2">
             {gameOptions.slice(0, 3).map((game) => (
               <Button
                 key={game.id}
                 variant={selectedGame === game.id ? "default" : "outline"}
                 size="sm"
                 onClick={() => handleGameChange(game.id)}
-                className="transition-all duration-200"
+                className="transition-all duration-200 flex-shrink-0"
               >
                 {game.name}
               </Button>
@@ -334,10 +341,10 @@ const CommunitySection = () => {
               }}
             >
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-                <h2 className="text-4xl font-bold mb-4 text-center drop-shadow-lg">
+                <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-center drop-shadow-lg">
                   {gameOptions.find(game => game.id === selectedGame)?.name}
                 </h2>
-                <p className="text-lg opacity-90 text-center max-w-2xl px-4 drop-shadow-md">
+                <p className="text-base md:text-lg opacity-90 text-center max-w-2xl px-4 drop-shadow-md whitespace-pre-line md:whitespace-normal">
                   {t('community.posts.subtitle')}
                 </p>
               </div>
