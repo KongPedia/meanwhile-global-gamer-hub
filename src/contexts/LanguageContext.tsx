@@ -159,7 +159,7 @@ const translations = {
     'game.stellarblade': '스텔라 블레이드',
     'community.cta': 'Discord 참여하기',
     'community.posts.title': '해외 여러 게임 커뮤니티를 여러분의 언어로 경험하세요',
-    'community.posts.subtitle': 'MeanWhile은 글로벌 게임 커뮤니티 데이터를\nAI가 요약하고 번역하여 Discord에서 공유합니다',
+    'community.posts.subtitle': 'MeanWhile은\n글로벌 게임 커뮤니티 데이터를\nAI가 요약하고 번역하여\nDiscord에서 공유합니다',
     'community.discord.title': 'Discord 미리보기',
     'community.discord.subtitle': '이미 수백 명의 게이머가 함께하고 있습니다',
     'community.discord.footer': 'Meanwhile Global Gamer Hub',
@@ -203,13 +203,13 @@ const translations = {
   en: {
     // Hero Section
     'hero.title': 'Global Gamers\' Voices\nin One Place',
-    'hero.subtitle': 'MeanWhile summarizes global community data\nwith AI, sharing it on Discord.',
+    'hero.subtitle': 'MeanWhile summarizes\nglobal community data on Discord.',
     'hero.cta.discord': 'Join Discord Community',
     'hero.cta.learn': 'Learn More',
     
     // Problem Section
     'problem.title': 'Challenges Gamers Face',
-    'problem.subtitle': 'Are you missing out on what\'s happening in global\ngaming communities?',
+    'problem.subtitle': 'Are you missing out on\nwhat\'s happening in global\ngaming communities?',
     'problem.fragmentation.title': 'Information Fragmentation',
     'problem.fragmentation.desc': 'Important news gets lost\ndue to scattered information across platforms',
     'problem.language.title': 'Language Barriers',
@@ -221,11 +221,11 @@ const translations = {
     'solution.title': 'AI-Powered\nInnovative Solutions',
     'solution.subtitle': 'Experience global gaming communities\nin a new way with MeanWhile\'s AI technology',
     'solution.ai.title': 'AI Summary & Translation',
-    'solution.ai.desc': 'AI summarizes and translates game community posts\nin multiple languages in real-time',
+    'solution.ai.desc': 'AI summarizes and translates game community posts\nin multiple languages\nin real-time',
     'solution.timeline.title': 'Unified Game Timeline',
-    'solution.timeline.desc': 'Organize scattered game information\ninto one timeline for easy viewing',
+    'solution.timeline.desc': 'Organize scattered game info\ninto a timeline for easy viewing',
     'solution.trends.title': 'Real-time Trend Detection',
-    'solution.trends.desc': 'AI analyzes latest issues and trends\nin gaming communities in real-time',
+    'solution.trends.desc': 'Analyzes latest issues & trends\nin communities in real-time',
     
     // Benefits Section
     'benefits.title': 'A New Gaming\nCommunity Experience',
@@ -386,7 +386,7 @@ const translations = {
     
     // Community Section
     'community.title': 'Discordで\n会いましょう！',
-    'community.subtitle': '世界のゲームコミュニティデータをリアルタイムで分析',
+    'community.subtitle': '世界のゲームコミュニティデータを\nリアルタイムで分析',
     'community.stats.totalPosts': '総投稿数',
     'community.stats.totalCommunities': 'コミュニティ投稿',
     'community.stats.totalProjects': '登録済みゲームの投稿',
