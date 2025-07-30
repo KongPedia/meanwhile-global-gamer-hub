@@ -1,5 +1,7 @@
-import { MessageCircle, Github, Twitter } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -16,22 +18,15 @@ const Footer = () => {
               {t('footer.subtitle')}
             </p>
           </div>
-          
-          <div className="flex justify-center space-x-6 mb-8">
-            <a href="#" className="text-muted-foreground hover:text-discord transition-colors">
+          <div className="flex flex-col items-center space-y-2 mb-8">
+            <a href={DISCORD_INVITE_LINK} className="text-discord hover:text-discord-foreground transition-colors">
               <MessageCircle className="w-6 h-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-secondary transition-colors">
-              <Twitter className="w-6 h-6" />
-            </a>
+            <p className="text-sm text-white">Discord</p>
           </div>
           
           <div className="text-sm text-muted-foreground">
             <p>{t('footer.copyright')}</p>
-            <p className="mt-2">{t('footer.made')}</p>
           </div>
         </div>
       </div>

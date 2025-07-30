@@ -32,10 +32,10 @@ const BenefitsSection = () => {
     <section className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
             {t('benefits.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
             {t('benefits.subtitle')}
           </p>
         </div>
@@ -51,10 +51,10 @@ const BenefitsSection = () => {
                 <div className="mb-4 text-primary flex justify-center">
                   {benefit.icon}
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">
+                <h3 className="text-lg font-bold mb-2 text-foreground whitespace-pre-line md:whitespace-normal">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                   {benefit.description}
                 </p>
               </div>
