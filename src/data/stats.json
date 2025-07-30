@@ -1,0 +1,50 @@
+{
+    "projects": {
+        "clairobscur33": {
+            "project_id": "clairobscur33",
+            "total_count": 6796,
+            "communities": {
+                "reddit": 5719,
+                "steam": 557,
+                "dcinside": 339,
+                "jeuxvideo": 116,
+                "inven": 49,
+                "5ch": 16
+            }
+        },
+        "deltaforce": {
+            "project_id": "deltaforce",
+            "total_count": 2464,
+            "communities": {
+                "reddit": 1043,
+                "dcinside": 849,
+                "steam": 561,
+                "5ch": 11
+            }
+        },
+        "stellarblade": {
+            "project_id": "stellarblade",
+            "total_count": 1922,
+            "communities": {
+                "dcinside": 778,
+                "reddit": 584,
+                "steam": 460,
+                "inven": 54,
+                "jeuxvideo": 26,
+                "5ch": 20
+            }
+        }
+    },
+    "total_summary": {
+        "total_count": 13793,
+        "total_communities": 6,
+        "communities": {
+            "reddit": 9792,
+            "dcinside": 1966,
+            "steam": 1731,
+            "jeuxvideo": 142,
+            "inven": 103,
+            "5ch": 59
+        }
+    }
+}
