@@ -27,10 +27,10 @@ const ProblemSection = () => {
     <section className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
             {t('problem.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
             {t('problem.subtitle')}
           </p>
         </div>
@@ -49,7 +49,7 @@ const ProblemSection = () => {
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   {problem.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                   {problem.description}
                 </p>
               </div>
