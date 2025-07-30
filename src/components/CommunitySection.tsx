@@ -132,11 +132,11 @@ const CommunitySection = () => {
     etc: '🌐'
   };
 
-  const renderCustomLegend = (props: any) => {
+  const renderCustomLegend = (props: { payload: Array<{ value: string; color: string }> }) => {
     const { payload } = props;
     return (
       <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-muted-foreground mt-4">
-        {payload.map((entry: any, index: number) => {
+        {payload.map((entry, index) => {
           const communityName = entry.value;
           const flag = platformFlags[communityName] || '🌐';
           return (
