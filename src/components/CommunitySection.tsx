@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
 import { BarChart, Globe, Gamepad2, ExternalLink, MessageCircle, Hash, LayoutList } from "lucide-react";
 import { formatNumber } from "@/lib/utils";
 import statsData from '@/data/stats.json';
@@ -137,8 +137,11 @@ const CommunitySection = () => {
         {/* Community Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {(() => {
+            if (!statsData || !statsData.projects || !statsData.total_summary) {
+              console.error('Invalid stats data structure');
+              return null; // or return a fallback UI
+            }
             const { projects, total_summary } = statsData;
-
             const gameData = Object.values(projects)
               .map(p => ({ name: p.project_id, count: p.total_count }))
               .sort((a, b) => b.count - a.count);
