@@ -170,9 +170,9 @@ const translations = {
     
     // Report Section
     'report.badge': '새로운 기능',
-    'report.title': '게임 커뮤니티 핫이슈 리포트',
+    'report.title': '게임 인사이트 리포트',
     'report.subtitle': '게임 커뮤니티에서 가장 활발하게 논의되는 주제들을 분석하여 한눈에 볼 수 있는 인사이트 리포트를 제공합니다.',
-    'report.example.title': 'ex) Mystic Legends 핫이슈 ',
+    'report.example.title': 'ex) Mystic Legends 핫이슈 리포트 ',
     'report.example.period': '2025-01-15 09:00 ~ 18:00',
     'report.example.summary': '신작 RPG \'Mystic Legends\' 커뮤니티에서 새로운 업데이트에 대한 논의가 활발합니다. 특히 새로운 던전의 난이도와 보상 시스템에 대한 의견이 분분합니다.',
     'report.example.hotTopic.title': '새 던전 난이도 논란',
@@ -411,7 +411,7 @@ const translations = {
     'report.badge': '新機能',
     'report.title': 'ゲームコミュニティホットイシューレポート',
     'report.subtitle': '特定期間中にゲームコミュニティで最も活発に議論されるトピックをAIが分析し、一目でわかるインサイトレポートを提供します。',
-    'report.example.title': 'ex) Mystic Legends ホットイシューレポート',
+    'report.example.title': 'ex) Mystic Legends イシューレポート',
     'report.example.period': '2025-01-15 09:00 ~ 18:00',
     'report.example.summary': '新作RPG「Mystic Legends」コミュニティで新しいアップデートについての議論が活発です。特に新しいダンジョンの難易度と報酬システムについて意見が分かれています。',
     'report.example.hotTopic.title': '新ダンジョン難易度論争',
