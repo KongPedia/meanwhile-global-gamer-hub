@@ -131,7 +131,21 @@ const translations = {
     'partner.efficiency.title': '운영 효율성',
     'partner.efficiency.desc': '커뮤니티 관리 비용을 절감하고 운영 효율성을 크게 향상시킵니다',
     'partner.innovation.title': '혁신적 솔루션',
-    'partner.innovation.desc': '최신 AI 기술을 활용한 게임 커뮤니티 관리의 새로운 표준을 제시합니다',
+    'partner.innovation.desc': '게임 커뮤니티 관리의 새로운 표준을 제시합니다',
+    
+    // Video Example Section
+    'videoExample.title': '동영상 요약',
+    'videoExample.subtitle': '긴 동영상의 핵심만 빠르게 파악하세요.',
+    'videoExample.original': '원본 영상',
+    'videoExample.analyzed': '주요 내용',
+    'videoExample.videoTitle': "ex) 신작 '크로노스케이프 보이저' 플레이 영상",
+    'videoExample.summary': "시간 여행을 테마로 한 오픈월드 RPG, '크로노스케이프 보이저'의 주요 특징과 초반 공략을 담았습니다.",
+    'videoExample.part1.title': '시간 조작 능력 활용법',
+    'videoExample.part1.content': "주인공의 핵심 능력인 '시간 되감기'와 '미래 예지'를 전투와 퍼즐에서 어떻게 활용하는지 보여줍니다.",
+    'videoExample.part2.title': '고대와 미래를 넘나드는 모험',
+    'videoExample.part2.content': '고대 문명 유적부터 초현대적 미래 도시까지, 다양한 시간대를 탐험하며 겪는 주요 퀘스트 라인을 소개합니다.',
+    'videoExample.part3.title': '동료 영입과 파티 조합',
+    'videoExample.part3.content': '각기 다른 시간대에서 온 동료들의 특징과 추천 파티 조합, 그리고 강력한 연계 스킬을 알아봅니다.',
     
     // Community Section
     'community.title': 'Discord에서 만나요!',
@@ -210,6 +224,20 @@ const translations = {
     'partner.innovation.title': 'Innovative Solutions',
     'partner.innovation.desc': 'Set new standards for game community management using cutting-edge AI technology',
     
+    // Video Example Section
+    'videoExample.title': 'Video Summary',
+    'videoExample.subtitle': 'Quickly grasp the key points of long videos.',
+    'videoExample.original': 'Original Video',
+    'videoExample.analyzed': 'Key Content',
+    'videoExample.videoTitle': "ex) New Game 'Chronoscape Voyagers' Gameplay Video",
+    'videoExample.summary': "This video covers the main features and early-game strategies for 'Chronoscape Voyagers', an open-world RPG with a time-travel theme.",
+    'videoExample.part1.title': 'How to Use Time Manipulation Abilities',
+    'videoExample.part1.content': "Shows how to use the protagonist's core abilities, 'Time Rewind' and 'Future Sight', in combat and puzzles.",
+    'videoExample.part2.title': 'Adventures Across Ancient and Future Eras',
+    'videoExample.part2.content': 'Introduces the main questline, exploring various timelines from ancient ruins to hyper-modern future cities.',
+    'videoExample.part3.title': 'Companion Recruitment and Party Composition',
+    'videoExample.part3.content': 'Explores the characteristics of companions from different timelines, recommended party compositions, and powerful combo skills.',
+    
     // Community Section
     'community.title': 'Meet us on Discord!',
     'community.subtitle': 'Hundreds of gamers have already joined',
@@ -286,15 +314,29 @@ const translations = {
     'partner.efficiency.desc': 'コミュニティ管理コストを削減し運営効率を大幅向上',
     'partner.innovation.title': '革新的ソリューション',
     'partner.innovation.desc': '最新AI技術を活用したゲームコミュニティ管理の新基準を提示',
-    
+
+    // Video Example Section
+    'videoExample.title': '動画要約',
+    'videoExample.subtitle': '長い動画の要点を素早く把握します。',
+    'videoExample.original': '元の動画',
+    'videoExample.analyzed': '主な内容',
+    'videoExample.videoTitle': '新作「クロノスケープ・ボイジャー」プレイ動画',
+    'videoExample.summary': '時間旅行をテーマにしたオープンワールドRPG「クロノスケープ・ボイジャー」の主な特徴と序盤の攻略を収録しました。',
+    'videoExample.part1.title': '時間操作能力の活用法',
+    'videoExample.part1.content': '主人公の核心能力である「時間巻き戻し」と「未来予知」を戦闘とパズルでどう活用するかを見せます。',
+    'videoExample.part2.title': '古代と未来を行き来する冒険',
+    'videoExample.part2.content': '古代文明の遺跡から超現代的な未来都市まで、様々な時代を探検しながら経験する主なクエストラインを紹介します。',
+    'videoExample.part3.title': '仲間集めとパーティ編成',
+    'videoExample.part3.content': 'それぞれ異なる時代から来た仲間の特徴と推奨パーティ編成、そして強力な連携スキルを解説します。',
+
     // Community Section
-    'community.title': 'Discordでお会いしましょう！',
+    'community.title': 'Discordで会いましょう！',
     'community.subtitle': 'すでに数百人のゲーマーが参加しています',
     'community.stats.members': 'アクティブメンバー',
     'community.stats.messages': '日次メッセージ',
     'community.stats.rating': '満足度',
     'community.cta': 'Discord参加',
-    'community.posts.title': 'グローバルゲームコミュニティをあなたの言語で体験しよう',
+    // ...
     'community.posts.subtitle': 'MeanWhileはグローバルゲームコミュニティデータをAIで要約・翻訳し、Discordで共有します。',
     'community.discord.title': 'Discordプレビュー',
     'community.discord.subtitle': 'すでに数百人のゲーマーが参加しています',
