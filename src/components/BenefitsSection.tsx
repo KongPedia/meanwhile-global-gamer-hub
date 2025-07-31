@@ -61,7 +61,7 @@ const BenefitsSection = () => {
                         <h3 className="text-base font-bold mb-2 text-foreground">
                           {benefit.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line md:whitespace-normal">
                           {benefit.description}
                         </p>
                       </div>
