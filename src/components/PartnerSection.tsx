@@ -62,7 +62,7 @@ const PartnerSection = () => {
                           <h3 className="text-lg font-bold mb-3 text-foreground">
                             {benefit.title}
                           </h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
+                          <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line md:whitespace-normal">
                             {benefit.description}
                           </p>
                         </div>

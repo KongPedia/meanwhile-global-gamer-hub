@@ -347,26 +347,25 @@ const translations = {
     'solution.timeline.desc': '散らばったコミュニティ情報を\n一つのタイムラインで一目で確認',
     'solution.trends.title': 'リアルタイムトレンド検出',
     'solution.trends.desc': 'ゲームの最新の問題とトレンドを\nAIがリアルタイムで分析',
-    
-    // Benefits Section
-    'benefits.title': '新しいゲーミングコミュニティ体験',
-    'benefits.subtitle': 'ROMユーザーもグローバルゲーマーになれます',
+
+    'benefits.title': 'グローバルのための\n新しいコミュニティ体験',
+    'benefits.subtitle': 'ROM ユーザーも\nグローバルゲーマーになれます',
     'benefits.search.title': '高速検索',
-    'benefits.search.desc': 'AI要約で\n欲しい情報を素早く見つけましょう',
+    'benefits.search.desc': 'AI要約で\n欲しい情報を素早く見つける',
     'benefits.translation.title': '翻訳サポート',
     'benefits.translation.desc': '言語の壁なく世界中のゲーマーと\nコミュニケーション',
     'benefits.community.title': 'コミュニティ接続',
-    'benefits.community.desc': '同じ興味を持つグローバルゲーマーと\n繋がりましょう',
+    'benefits.community.desc': '同じ興味を持つ\nグローバルゲーマーと\n繋がりましょう',
     'benefits.culture.title': '健全な文化',
     'benefits.culture.desc': 'AIモデレーションで\n健全なコミュニティを作ります',
     
     // Partner Section
-    'partner.title': 'ゲーム会社向け特別なメリット',
-    'partner.subtitle': 'MeanWhileと一緒により良いゲーム運営が可能です',
+    'partner.title': 'ゲーム会社向け\n特別なメリット',
+    'partner.subtitle': 'MeanWhileと一緒により\n良いゲーム運営が可能です',
     'partner.monitoring.title': 'リアルタイムモニタリング',
     'partner.monitoring.desc': 'ゲーム関連のバグや問題を\n早期発見し迅速な対応が可能',
     'partner.analytics.title': '深層分析',
-    'partner.analytics.desc': 'プレイヤーの意見とフィードバックを\n体系的に分析しインサイトを提供',
+    'partner.analytics.desc': 'ユーザーの意見とフィードバックを\n体系的に分析しインサイトを提供',
     'partner.efficiency.title': '運営効率性',
     'partner.efficiency.desc': 'コミュニティ管理コストを削減し\n運営効率を大幅向上',
     'partner.innovation.title': '革新的ソリューション',
@@ -427,7 +426,7 @@ const translations = {
     'report.features.title': 'インサイトレポート',
     'report.features.subtitle': 'ゲームコミュニティのトレンドを一目で',
     'report.features.trending.title': 'ホットトピック分析',
-    'report.features.trending.description': '最も多く言及されるトピックとトレンドを\nリアルタイムで把握',
+    'report.features.trending.description': '最も多く言及されるトピックを\nリアルタイムで把握',
     'report.features.sentiment.title': '感情分析',
     'report.features.sentiment.description': 'コミュニティ反応の\nポジティブ/ネガティブ指数を\n数値化して提供',
     'report.features.realtime.title': 'リアルタイムモニタリング',
@@ -437,7 +436,7 @@ const translations = {
     
     // Footer
     'footer.title': 'MeanWhile',
-    'footer.subtitle': '全世界のゲーマーの声を一つの場所で',
+    'footer.subtitle': 'グローバルゲーマーの声を\n一か所に',
     'footer.discord': 'Discordコミュニティに参加'
   },
   zh: {
