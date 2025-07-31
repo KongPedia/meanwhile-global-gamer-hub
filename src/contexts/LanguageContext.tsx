@@ -171,7 +171,7 @@ const translations = {
     // Report Section
     'report.badge': '새로운 기능',
     'report.title': '게임 인사이트 리포트',
-    'report.subtitle': '게임 커뮤니티에서\n가장 활발하게 논의되는 주제들을 분석하여\n한눈에 볼 수 있는 인사이트 리포트를 제공합니다.',
+    'report.subtitle': '커뮤니티에서가장 활발하게\n논의되는 주제들을 분석하여\n한눈에 볼 수 있는\n인사이트 리포트를 제공합니다.',
     'report.example.title': 'ex) Mystic Legends 핫이슈 리포트 ',
     'report.example.period': '2025-01-15 09:00 ~ 18:00',
     'report.example.summary': '신작 RPG \'Mystic Legends\' 커뮤니티에서 새로운 업데이트에 대한 논의가 활발합니다. 특히 새로운 던전의 난이도와 보상 시스템에 대한 의견이 분분합니다.',
