@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
@@ -18,11 +18,15 @@ const Footer = () => {
               {t('footer.subtitle')}
             </p>
           </div>
-          <div className="flex flex-col items-center space-y-2 mb-8">
-            <a href={DISCORD_INVITE_LINK} className="text-discord hover:text-discord-foreground transition-colors">
-              <MessageCircle className="w-6 h-6" />
-            </a>
-            <p className="text-sm text-white">Discord</p>
+          <div className="flex justify-center mb-8">
+            <Button 
+              variant="discord" 
+              size="lg"
+              className="animate-pulse-neon text-lg px-8 py-4"
+              onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
+            >
+              {t('footer.discord')}
+            </Button>
           </div>
           
           <div className="text-sm text-muted-foreground">
