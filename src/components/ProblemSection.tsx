@@ -1,9 +1,15 @@
 import { Card } from "@/components/ui/card";
 import { MessageSquareX, Globe, AlertTriangle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const ProblemSection = () => {
   const { t } = useLanguage();
+  const [problemsEmblaRef] = useEmblaCarousel(
+    { loop: true, align: 'center' },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  );
   
   const problems = [
     {
@@ -35,26 +41,54 @@ const ProblemSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
-          {problems.map((problem, index) => (
-            <Card 
-              key={index}
-              className="p-8 bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-gaming animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="text-center">
-                <div className="mb-6 text-secondary flex justify-center">
-                  {problem.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground">
-                  {problem.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                  {problem.description}
-                </p>
+        <div className="max-w-5xl mx-auto">
+          {/* Mobile Carousel */}
+          <div className="md:hidden -mx-4">
+            <div className="overflow-hidden" ref={problemsEmblaRef}>
+              <div className="flex">
+                {problems.map((problem, index) => (
+                  <div key={index} className="flex-[0_0_85%] min-w-0 px-4">
+                    <Card className="p-6 bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-gaming h-full">
+                      <div className="text-center">
+                        <div className="mb-4 text-secondary flex justify-center">
+                          {problem.icon}
+                        </div>
+                        <h3 className="text-lg font-bold mb-3 text-foreground">
+                          {problem.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {problem.description}
+                        </p>
+                      </div>
+                    </Card>
+                  </div>
+                ))}
               </div>
-            </Card>
-          ))}
+            </div>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-8">
+            {problems.map((problem, index) => (
+              <Card 
+                key={index}
+                className="p-8 bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-gaming animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="text-center">
+                  <div className="mb-6 text-secondary flex justify-center">
+                    {problem.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-foreground">
+                    {problem.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                    {problem.description}
+                  </p>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -170,7 +170,7 @@ const CommunitySection = () => {
   };
 
   return (
-    <section id="community" className="py-20 px-4 bg-gradient-hero">
+    <section id="community" className="py-20 px-0 bg-gradient-hero">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
@@ -334,7 +334,7 @@ const CommunitySection = () => {
         </div>
         
         {/* Desktop Grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
           {(() => {
             if (!statsData || !statsData.projects || !statsData.total_summary) {
               console.error('Invalid stats data structure');
@@ -481,7 +481,7 @@ const CommunitySection = () => {
         </div>
         
         {/* Community Posts Preview */}
-        <div className="mb-12">
+        <div className="mb-12 max-w-5xl mx-auto">
           <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-foreground whitespace-pre-line md:whitespace-normal">
             {t('community.posts.title') || '최신 커뮤니티 게시글'}
           </h3>
@@ -688,7 +688,7 @@ const CommunitySection = () => {
             <Button 
               variant="discord" 
               size="lg"
-              className="text-xl px-10 py-4 animate-pulse-neon whitespace-nowrap mb-4"
+              className="text-lg px-8 py-4 animate-pulse-neon whitespace-nowrap mb-4"
               onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
             >
               {t('community.cta') || 'Discord 커뮤니티 합류하기'}
