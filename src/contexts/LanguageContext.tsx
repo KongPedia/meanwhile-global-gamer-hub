@@ -199,6 +199,7 @@ const translations = {
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': '전 세계 게이머들의 목소리를 한 곳에서',
+    'footer.discord': 'Discord 참여하기',
   },
   en: {
     // Hero Section
@@ -318,6 +319,7 @@ const translations = {
     'footer.title': 'MeanWhile',
     'footer.subtitle': 'Global gamers\' voices in one place',
     'footer.copyright': ' 2025 MeanWhile. All rights reserved.',
+    'footer.discord': 'Join Discord'
   },
   ja: {
     // Hero Section
@@ -436,6 +438,7 @@ const translations = {
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': '全世界のゲーマーの声を一つの場所で',
+    'footer.discord': 'Discordコミュニティに参加'
   },
   zh: {
     // Hero Section
@@ -529,6 +532,7 @@ const translations = {
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': '全球玩家的声音汇聚一处',
+    'footer.discord': '加入Discord',
     
     // Report Section
     'report.badge': '新功能',
@@ -640,6 +644,7 @@ const translations = {
     // Footer
     'footer.title': 'MeanWhile',
     'footer.subtitle': 'Las voces de gamers globales en un lugar',
+    'footer.discord': 'Unirse a Discord',
     
     // Report Section
     'report.badge': 'Nueva Función',
