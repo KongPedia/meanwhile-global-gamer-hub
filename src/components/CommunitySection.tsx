@@ -680,7 +680,7 @@ const CommunitySection = () => {
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 {t('community.discord.title') || 'Discord 커뮤니티 참여하기'}
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground whitespace-pre-line">
                 {t('community.discord.subtitle') || '실시간으로 전 세계 게이머들과 소통하고 최신 정보를 받아보세요'}
               </p>
             </div>
