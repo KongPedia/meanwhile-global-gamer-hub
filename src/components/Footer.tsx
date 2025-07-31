@@ -1,41 +1,33 @@
+import { MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
 
 const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-card/50 border-t border-border py-12 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4 text-foreground">
-              MeanWhile
+    <footer className="py-12 px-4 border-t border-border">
+      <div className="container mx-auto">
+        <div className="text-center">
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
+              {t('footer.title')}
             </h3>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
-              {t('footer.description')}
+            <p className="text-muted-foreground">
+              {t('footer.subtitle')}
             </p>
           </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4 text-foreground">Links</h4>
-            <div className="space-y-2">
-              <p className="text-muted-foreground text-sm cursor-pointer hover:text-foreground transition-colors">
-                {t('footer.contact')}
-              </p>
-              <p className="text-muted-foreground text-sm cursor-pointer hover:text-foreground transition-colors">
-                {t('footer.privacy')}
-              </p>
-              <p className="text-muted-foreground text-sm cursor-pointer hover:text-foreground transition-colors">
-                {t('footer.terms')}
-              </p>
-            </div>
+          <div className="flex flex-col items-center space-y-2 mb-8">
+            <a href={DISCORD_INVITE_LINK} className="text-discord hover:text-discord-foreground transition-colors">
+              <MessageCircle className="w-6 h-6" />
+            </a>
+            <p className="text-sm text-white">Discord</p>
           </div>
-        </div>
-        
-        <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-muted-foreground text-sm">
-            {t('footer.rights')}
-          </p>
+          
+          <div className="text-sm text-muted-foreground">
+            <p>{t('footer.copyright')}</p>
+          </div>
         </div>
       </div>
     </footer>
