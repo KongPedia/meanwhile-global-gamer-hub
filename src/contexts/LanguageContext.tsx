@@ -188,11 +188,11 @@ const translations = {
     'report.features.title': '인사이트 리포트',
     'report.features.subtitle': '게임 커뮤니티의 트렌드를 한눈에',
     'report.features.trending.title': '핫토픽 분석',
-    'report.features.trending.description': '가장 많이 언급되는 주제와 트렌드를\n실시간으로 파악',
+    'report.features.trending.description': '많이 언급되는 주제와 트렌드를\n실시간으로 파악',
     'report.features.sentiment.title': '감정 분석',
     'report.features.sentiment.description': '커뮤니티 반응의 긍정/부정 지수를\n수치화하여 제공',
     'report.features.realtime.title': '실시간 모니터링',
-    'report.features.realtime.description': '특정 시간대별 활발한 논의 시점을 추적',
+    'report.features.realtime.description': '특정 시간대별\n활발한 논의 시점을 추적',
     'report.features.insights.title': '깊이 있는 인사이트',
     'report.features.insights.description': '단순한 데이터를 넘어 의미 있는\n통찰력 제공',
     

@@ -118,7 +118,7 @@ const ReportSection = () => {
                               <h3 className="text-lg font-bold mb-3 text-foreground">
                                 {feature.title}
                               </h3>
-                              <p className="text-sm text-muted-foreground leading-relaxed">
+                              <p className="text-sm leading-relaxed whitespace-pre-line">
                                 {feature.description}
                               </p>
                             </div>
@@ -167,7 +167,7 @@ const ReportSection = () => {
                       <h3 className="text-lg font-bold mb-3 text-foreground">
                         {feature.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                         {feature.description}
                       </p>
                     </div>
