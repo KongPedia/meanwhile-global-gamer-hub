@@ -533,10 +533,10 @@ const CommunitySection = () => {
               }}
             >
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-                <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-center drop-shadow-lg">
+                <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-center drop-shadow-lg whitespace-pre-line">
                   {gameOptions.find(game => game.id === selectedGame)?.name}
                 </h2>
-                <p className="text-base md:text-lg opacity-90 text-center max-w-2xl px-4 drop-shadow-md whitespace-pre-line md:whitespace-normal">
+                <p className="text-base md:text-base opacity-90 text-center max-w-2xl px-4 drop-shadow-md whitespace-pre-line md:whitespace-normal">
                   {t('community.posts.subtitle')}
                 </p>
               </div>
