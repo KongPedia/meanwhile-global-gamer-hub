@@ -392,7 +392,7 @@ const translations = {
     'community.stats.totalCommunities': 'コミュニティ投稿',
     'community.stats.totalProjects': '登録済みゲームの投稿',
     'community.stats.etc': 'その他',
-    'game.clairobscur33': 'クレアオブスキュア: 33',
+    'game.clairobscur33': 'クレールオブスキュール：\nエクスペディション33',
     'game.deltaforce': 'デルタフォース',
     'game.stellarblade': 'ステラブレード',
     'community.cta': 'Discord参加',
