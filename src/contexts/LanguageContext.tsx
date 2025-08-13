@@ -37,7 +37,6 @@ export const detectBrowserLanguage = (): Language => {
   const langCode = browserLang.toLowerCase().split('-')[0];
   // Check if detected language is supported via translations keys
   if (isSupportedLangCode(langCode)) {
-    console.log(langCode)
     return langCode as Language;
   }
   

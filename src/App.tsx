@@ -75,7 +75,6 @@ const App = () => (
               <Route index element={<Index />} />
               <Route path="*" element={<NotFound />} />
             </Route>
-            <Route path="*" element={<RootRedirect />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

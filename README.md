@@ -114,13 +114,14 @@ npm run dev
 
 ## 라우팅 구조
 
-- `/` → `Index` (랜딩/소개)
+- `/` → 브라우저 언어 감지 후 `/:lang`으로 리다이렉트
+- `/:lang` → `Index` (언어별 랜딩 페이지)
 - `*` → `NotFound` (404)
 
-## i18n(다국어) 동작 방식
+지원 언어: `ko`, `en`, `ja`, `zh`, `es`
 
 - `contexts/LanguageContext.tsx`에서 언어 상태 및 번역 리소스 관리
-  - 초기 언어: `localStorage('preferred-language')` → 없으면 브라우저 언어 추론
+  - 초기 언어: `localStorage.getItem('preferred-language')` → 없으면 브라우저 언어 추론
   - 수동 변경: `LanguageSelector`에서 변경 시 `localStorage`에 저장
 - 번역 키 사용: 섹션 컴포넌트에서 `const { t } = useLanguage();`로 접근하여 `t('hero.title')` 형태로 사용
 
@@ -128,7 +129,7 @@ npm run dev
 
 1) `Language` 타입에 언어 코드 추가
 2) `translations` 객체에 해당 언어 리소스 추가
-3) `LanguageSelector.tsx`의 `languages` 맵에 라벨/깃발 추가
+3) `LanguageSelector.tsx`의 `LANGUAGE_LABELS` 맵에 라벨/깃발 추가
 
 ## 스타일과 테마
 
