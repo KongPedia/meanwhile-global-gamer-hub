@@ -83,6 +83,7 @@ Discord 버튼 링크는 아래 키를 통해 주입됩니다.
 ```env
 # .env (루트)
 VITE_DISCORD_INVITE_LINK="https://discord.gg/your-invite"
+VITE_SITE_URL="https://meanwhile.games"
 ```
 
 `Hero`와 `Footer`의 CTA에서 `import.meta.env.VITE_DISCORD_INVITE_LINK`를 사용합니다.
@@ -154,6 +155,12 @@ npm run build
 - 새로운 섹션 추가: `components/YourSection.tsx` 작성 → `pages/Index.tsx`에 임포트/배치
 - UI 일관성: `components/ui/*`와 Tailwind 토큰(`index.css`) 재사용
 - 데이터 연결: 실제 백엔드/데이터 연동 시 `@tanstack/react-query`를 `App.tsx`의 Provider 하에서 사용
+
+### 검색엔진(단기 SEO) 설정
+
+- 라우트 변경 시 언어/링크 메타 자동 주입: `src/lib/seo.ts` 사용해 `<html lang>`, canonical, hreflang, `og:locale` 설정
+- 사이트 URL 설정: `.env`에 `VITE_SITE_URL` 지정(없으면 `window.location.origin` 사용)
+- robots.txt: `public/robots.txt` 유지, 필요 시 `Sitemap: https://meanwhile.games/sitemap.xml` 추가 권장
 
 ## 라이선스
 
