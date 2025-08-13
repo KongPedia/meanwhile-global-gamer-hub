@@ -44,7 +44,7 @@ function mapOgLocale(lang: string): string {
   }
 }
 
-function replaceFirstPathSegment(pathname: string, newLang: string): string {
+export function replaceFirstPathSegment(pathname: string, newLang: string): string {
   const segments = pathname.split('/').filter(Boolean);
   if (segments.length === 0) return `/${newLang}`;
   segments[0] = newLang;

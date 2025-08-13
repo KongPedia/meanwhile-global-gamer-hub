@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { replaceFirstPathSegment } from '@/lib/seo';
 import { Button } from '@/components/ui/button';
 import { 
   DropdownMenu, 
@@ -27,15 +28,8 @@ const LanguageSelector = () => {
   const handleLanguageChange = (newLang: Language) => {
     setLanguage(newLang);
     // replace first path segment with the new language, preserving rest
-    const currentPath = location.pathname;
-    const segments = currentPath.split('/').filter(Boolean);
-    if (segments.length === 0) {
-      navigate(`/${newLang}`, { replace: true });
-    } else {
-      segments[0] = newLang;
-      const nextPath = `/${segments.join('/')}${location.search}${location.hash}`;
-      navigate(nextPath, { replace: true });
-    }
+    const nextPath = `${replaceFirstPathSegment(location.pathname, newLang)}${location.search}${location.hash}`;
+    navigate(nextPath, { replace: true });
     setIsOpen(false);
   };
 
