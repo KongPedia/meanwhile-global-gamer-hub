@@ -24,17 +24,19 @@ interface LanguageProviderProps {
 }
 
 // Function to detect browser language
-const detectBrowserLanguage = (): Language => {
+export function isSupportedLangCode(code: string | null | undefined): code is Language {
+  if (!code) return false;
+  return Object.prototype.hasOwnProperty.call(translations, code);
+}
+
+export const detectBrowserLanguage = (): Language => {
   // Get browser language preferences
   const browserLang = navigator.language || navigator.languages?.[0] || 'en';
   
   // Extract language code (e.g., 'ko-KR' -> 'ko')
   const langCode = browserLang.toLowerCase().split('-')[0];
-  // Map to supported languages
-  const supportedLanguages: Language[] = ['en', 'ja', 'zh', 'es'];
-  
-  // Check if detected language is supported
-  if (supportedLanguages.includes(langCode as Language)) {
+  // Check if detected language is supported via translations keys
+  if (isSupportedLangCode(langCode)) {
     console.log(langCode)
     return langCode as Language;
   }
@@ -58,7 +60,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState<Language>(() => {
     // Try to get saved language from localStorage first
     const savedLanguage = localStorage.getItem('preferred-language') as Language;
-    if (savedLanguage && ['ko', 'en', 'ja', 'zh', 'es'].includes(savedLanguage)) {
+    if (isSupportedLangCode(savedLanguage)) {
       return savedLanguage;
     }
     // Otherwise detect from browser
@@ -673,3 +675,7 @@ const translations = {
     'report.features.insights.description': 'Proporciona perspectivas significativas más allá de los datos simples'
   }
 };
+
+export function getSupportedLanguageCodes(): Language[] {
+  return Object.keys(translations) as Language[];
+}
