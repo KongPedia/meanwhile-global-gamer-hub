@@ -2,11 +2,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useNavigate, useParams, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useParams, Outlet, useLocation } from "react-router-dom";
 import { LanguageProvider, useLanguage, isSupportedLangCode, detectBrowserLanguage } from "@/contexts/LanguageContext";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import { getSupportedLanguageCodes } from "@/contexts/LanguageContext";
+import { updateI18nSeo } from "@/lib/seo";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +36,7 @@ function LangLayout() {
   const langParam = params.lang;
   const { language, setLanguage } = useLanguage();
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (!isSupportedLangCode(langParam)) {
@@ -44,7 +47,17 @@ function LangLayout() {
     if (language !== langParam) {
       setLanguage(langParam);
     }
-  }, [langParam, language, setLanguage, navigate]);
+    // Update SEO tags when language or path changes
+    updateI18nSeo({
+      currentLang: langParam!,
+      supportedLangs: getSupportedLanguageCodes(),
+      defaultLang: DEFAULT_LANG,
+      siteUrl: import.meta.env.VITE_SITE_URL,
+      pathname: location.pathname,
+      search: location.search,
+      hash: location.hash,
+    });
+  }, [langParam, language, setLanguage, navigate, location.pathname, location.search, location.hash]);
 
   return <Outlet />;
 }
