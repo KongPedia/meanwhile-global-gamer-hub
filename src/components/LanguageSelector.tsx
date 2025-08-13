@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { replaceFirstPathSegment } from '@/lib/seo';
 import { Button } from '@/components/ui/button';
 import { 
   DropdownMenu, 
@@ -7,9 +9,9 @@ import {
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
 import { Languages } from 'lucide-react';
-import { useLanguage, Language } from '@/contexts/LanguageContext';
+import { useLanguage, Language, getSupportedLanguageCodes } from '@/contexts/LanguageContext';
 
-const languages = {
+const LANGUAGE_LABELS: Record<Language, { name: string; flag: string }> = {
   ko: { name: '한국어', flag: '🇰🇷' },
   en: { name: 'English', flag: '🇺🇸' },
   ja: { name: '日本語', flag: '🇯🇵' },
@@ -19,10 +21,15 @@ const languages = {
 
 const LanguageSelector = () => {
   const { language, setLanguage } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLanguageChange = (newLang: Language) => {
     setLanguage(newLang);
+    // replace first path segment with the new language, preserving rest
+    const nextPath = `${replaceFirstPathSegment(location.pathname, newLang)}${location.search}${location.hash}`;
+    navigate(nextPath, { replace: true });
     setIsOpen(false);
   };
 
@@ -36,10 +43,10 @@ const LanguageSelector = () => {
         >
           <Languages className="h-4 w-4 flex-shrink-0" />
           <span className="hidden sm:inline text-sm font-medium">
-            {languages[language].flag} {languages[language].name}
+            {LANGUAGE_LABELS[language].flag} {LANGUAGE_LABELS[language].name}
           </span>
           <span className="sm:hidden text-sm">
-            {languages[language].flag}
+            {LANGUAGE_LABELS[language].flag}
           </span>
         </Button>
       </DropdownMenuTrigger>
@@ -47,7 +54,7 @@ const LanguageSelector = () => {
         align="end" 
         className="w-44 bg-card/95 backdrop-blur-md border-border/50"
       >
-        {Object.entries(languages).map(([code, lang]) => (
+        {getSupportedLanguageCodes().map((code) => (
           <DropdownMenuItem
             key={code}
             onClick={() => handleLanguageChange(code as Language)}
@@ -57,8 +64,8 @@ const LanguageSelector = () => {
                 : 'hover:bg-muted/50'
             }`}
           >
-            <span className="text-base">{lang.flag}</span>
-            <span className="flex-1">{lang.name}</span>
+            <span className="text-base">{LANGUAGE_LABELS[code as Language].flag}</span>
+            <span className="flex-1">{LANGUAGE_LABELS[code as Language].name}</span>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
