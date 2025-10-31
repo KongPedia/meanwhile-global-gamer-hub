@@ -56,7 +56,7 @@ export default function DailyReportPreview() {
         </div>
 
         {/* Report Cards */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {reports.map((report, index) => (
             <Card 
               key={report.id}

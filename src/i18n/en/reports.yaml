@@ -12,6 +12,16 @@ daily:
   mentions: 'mentions'
   issues: 'Top Issues'
   quotes: 'Community Quotes'
+  community:
+    metrics: 'Community Metrics'
+    totalPosts: 'Total Posts'
+    comments: 'Comments'
+    sentimentAnalysis: 'Sentiment Analysis'
+    positiveMentions: 'Positive Mentions'
+    improvementMentions: 'Improvement Mentions'
+    neutral: 'Neutral'
+  preview:
+    view: 'View Full Report'
   severity:
     high: 'high'
     medium: 'medium'
@@ -28,6 +38,10 @@ milestone:
   notFoundDesc: 'The requested report could not be found.'
   backToHome: 'Back to Home'
   back: 'Back'
+  preview:
+    title: 'Milestone Performance Analysis'
+    badge: 'Milestone Performance Analysis'
+    subtitle: 'Organize update and event performance for retrospectives and next planning'
   executiveSummary: 'Executive Summary'
   featureFeedback: 'Feature Feedback'
   comparison: 'Period Comparison'

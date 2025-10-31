@@ -111,8 +111,8 @@ export default function MilestoneReportPage() {
         </script>
       </Helmet>
       
-      {/* Header */}
-      <header className="border-b">
+      {/* Header (sticky) */}
+      <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-6 max-w-4xl">
           <div className="flex items-center justify-between mb-4">
             <Button variant="ghost" onClick={() => navigate(`/${lang}`)} className="gap-2">
@@ -134,23 +134,17 @@ export default function MilestoneReportPage() {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Executive Summary */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">
-            {language === 'ko' ? '📊 핵심 요약' : language === 'ja' ? '📊 要約' : '📊 Executive Summary'}
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">📊 {t('reports.milestone.executiveSummary')}</h2>
           
           {/* Overall Metrics */}
           <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-muted/30 rounded-lg">
             <div className="text-center">
               <p className="text-2xl font-bold text-primary">{report.overallMetrics.totalPosts.toLocaleString()}</p>
-              <p className="text-xs text-muted-foreground">
-                {language === 'ko' ? '총 게시물' : language === 'ja' ? '総投稿数' : 'Total Posts'}
-              </p>
+              <p className="text-xs text-muted-foreground">{t('reports.milestone.metrics.totalPosts')}</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-primary">{report.overallMetrics.totalLikes}</p>
-              <p className="text-xs text-muted-foreground">
-                {language === 'ko' ? '총 좋아요' : language === 'ja' ? '総いいね' : 'Total Likes'}
-              </p>
+              <p className="text-xs text-muted-foreground">{t('reports.milestone.metrics.totalLikes')}</p>
             </div>
             <div className="text-center">
               <p className={`text-2xl font-bold ${
@@ -164,9 +158,7 @@ export default function MilestoneReportPage() {
                   ? t('reports.milestone.sentiment.negative')
                   : t('reports.milestone.sentiment.neutral')}
               </p>
-              <p className="text-xs text-muted-foreground">
-                {language === 'ko' ? '전반적 감성' : language === 'ja' ? '全体的感性' : 'Overall Sentiment'}
-              </p>
+              <p className="text-xs text-muted-foreground">{t('reports.milestone.metrics.sentimentLabel')}</p>
             </div>
           </div>
 
@@ -189,9 +181,7 @@ export default function MilestoneReportPage() {
 
         {/* Feature Feedback */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">
-            {language === 'ko' ? '👍 기능별 반응' : language === 'ja' ? '👍 機能別反応' : '👍 Feature Feedback'}
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">👍 {t('reports.milestone.featureFeedback')}</h2>
           <div className="space-y-6">
             {report.featureFeedback.map((feedback, index) => (
               <div key={index} className="border rounded-lg p-6">
@@ -250,9 +240,7 @@ export default function MilestoneReportPage() {
 
                 {/* Top comments */}
                 <div>
-                  <p className="text-sm font-medium mb-2">
-                    {language === 'ko' ? '주요 의견' : language === 'ja' ? '主要意見' : 'Top Comments'}
-                  </p>
+                  <p className="text-sm font-medium mb-2">{t('reports.milestone.topComments')}</p>
                   <ul className="list-disc list-inside space-y-1">
                     {feedback.topComments.map((comment, idx) => (
                       <li key={idx} className="text-sm text-muted-foreground">{getLocalizedText(comment, language)}</li>
@@ -266,14 +254,8 @@ export default function MilestoneReportPage() {
 
         {/* Before/After Comparison */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">
-            {language === 'ko' ? '📈 업데이트 전후 반응 비교' : language === 'ja' ? '📈 アップデート前後反応比較' : '📈 Before/After Response Comparison'}
-          </h2>
-          <p className="text-sm text-muted-foreground mb-4">
-            {language === 'ko' ? '기대감 대비 만족도 변화' : 
-             language === 'ja' ? '期待感対満足度変化' : 
-             'Expectation vs Satisfaction Change'}
-          </p>
+          <h2 className="text-2xl font-bold mb-4">📈 {t('reports.milestone.comparisonTitle')}</h2>
+          <p className="text-sm text-muted-foreground mb-4">{t('reports.milestone.comparisonCaption')}</p>
           <div className="space-y-3">
             {report.beforeAfterComparison.map((comp, index) => {
               // Convert -1~1 to 0~100
@@ -307,9 +289,7 @@ export default function MilestoneReportPage() {
                   
                   {/* Before Bar */}
                   <div className="mb-3">
-                    <div className="text-xs mb-1 text-muted-foreground">
-                      {language === 'ko' ? '업데이트 전 (기대감)' : language === 'ja' ? 'アップデート前 (期待感)' : 'Before (Expectation)'}
-                    </div>
+                    <div className="text-xs mb-1 text-muted-foreground">{t('reports.milestone.beforeLabel')}</div>
                     <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                       <div 
                         className="h-full bg-blue-400 rounded-full transition-all"
@@ -320,9 +300,7 @@ export default function MilestoneReportPage() {
 
                   {/* After Bar */}
                   <div>
-                    <div className="text-xs mb-1 text-muted-foreground">
-                      {language === 'ko' ? '업데이트 후 (만족도)' : language === 'ja' ? 'アップデート後 (満足度)' : 'After (Satisfaction)'}
-                    </div>
+                    <div className="text-xs mb-1 text-muted-foreground">{t('reports.milestone.afterLabel')}</div>
                     <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                       <div 
                         className={`h-full rounded-full transition-all ${

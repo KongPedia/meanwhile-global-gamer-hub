@@ -151,8 +151,8 @@ export default function DailyReportPage() {
         </script>
       </Helmet>
       
-      {/* Header */}
-      <header className="border-b">
+      {/* Header (sticky) */}
+      <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-6 max-w-4xl">
           <div className="flex items-center justify-between mb-4">
             <Button variant="ghost" onClick={() => navigate(`/${lang}`)} className="gap-2">
@@ -174,9 +174,7 @@ export default function DailyReportPage() {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Summary */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">
-            {language === 'ko' ? '📋 요약' : language === 'ja' ? '📋 要約' : '📋 Summary'}
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">📋 {t('reports.daily.summary')}</h2>
           <ul className="space-y-2">
             {report.summary.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
@@ -189,9 +187,7 @@ export default function DailyReportPage() {
 
         {/* Positive Keywords */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">
-            {language === 'ko' ? ' 긍정 키워드' : language === 'ja' ? ' 肯定的キーワード' : 'Positive Keywords'}
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">{t('reports.daily.keywords')}</h2>
           <div className="space-y-3">
             {report.positiveKeywords.map((item, index) => (
               <div key={index} className="border rounded-lg p-4 hover:border-primary/50 transition-colors">
@@ -222,17 +218,13 @@ export default function DailyReportPage() {
 
         {/* Community Metrics */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">
-            {language === 'ko' ? ' 커뮤니티 지표' : language === 'ja' ? ' コミュニティ指標' : 'Community Metrics'}
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">{t('reports.daily.community.metrics')}</h2>
           
           {/* Posts and Comments */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <div className="border rounded-lg p-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-muted-foreground">
-                  {language === 'ko' ? '전체 게시글 수' : language === 'ja' ? '総投稿数' : 'Total Posts'}
-                </span>
+                <span className="text-sm text-muted-foreground">{t('reports.daily.community.totalPosts')}</span>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl font-bold">{report.communityMetrics.totalPosts.toLocaleString()}</span>
                   <span className={`text-sm font-medium flex items-center gap-1 ${
@@ -248,9 +240,7 @@ export default function DailyReportPage() {
             
             <div className="border rounded-lg p-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-muted-foreground">
-                  {language === 'ko' ? '댓글 수' : language === 'ja' ? 'コメント数' : 'Comments'}
-                </span>
+                <span className="text-sm text-muted-foreground">{t('reports.daily.community.comments')}</span>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl font-bold">{report.communityMetrics.totalComments.toLocaleString()}</span>
                   <span className={`text-sm font-medium flex items-center gap-1 ${
@@ -267,15 +257,11 @@ export default function DailyReportPage() {
 
           {/* Sentiment Distribution */}
           <div className="border rounded-lg p-4">
-            <h3 className="text-sm font-medium mb-3">
-              {language === 'ko' ? '여론 분석' : language === 'ja' ? '世論分析' : 'Sentiment Analysis'}
-            </h3>
+            <h3 className="text-sm font-medium mb-3">{t('reports.daily.community.sentimentAnalysis')}</h3>
             <div className="space-y-3">
               <div>
                 <div className="flex items-center justify-between text-sm mb-1">
-                  <span className="text-muted-foreground">
-                    {language === 'ko' ? '긍정 언급' : language === 'ja' ? '肯定的言及' : 'Positive Mentions'}
-                  </span>
+                  <span className="text-muted-foreground">{t('reports.daily.community.positiveMentions')}</span>
                   <span className="font-medium">
                     {report.communityMetrics.positiveMentions.toFixed(1)}%
                     <span className={`ml-2 text-xs ${report.communityMetrics.positiveDelta >= 0 ? 'text-green-600' : 'text-red-600'}`}>
@@ -290,9 +276,7 @@ export default function DailyReportPage() {
               
               <div>
                 <div className="flex items-center justify-between text-sm mb-1">
-                  <span className="text-muted-foreground">
-                    {language === 'ko' ? '개선/건의 언급' : language === 'ja' ? '改善/提案言及' : 'Improvement Mentions'}
-                  </span>
+                  <span className="text-muted-foreground">{t('reports.daily.community.improvementMentions')}</span>
                   <span className="font-medium">
                     {report.communityMetrics.improvementMentions.toFixed(1)}%
                     <span className={`ml-2 text-xs ${report.communityMetrics.improvementDelta >= 0 ? 'text-orange-600' : 'text-blue-600'}`}>
@@ -307,9 +291,7 @@ export default function DailyReportPage() {
               
               <div>
                 <div className="flex items-center justify-between text-sm mb-1">
-                  <span className="text-muted-foreground">
-                    {language === 'ko' ? '중립' : language === 'ja' ? '中立' : 'Neutral'}
-                  </span>
+                  <span className="text-muted-foreground">{t('reports.daily.community.neutral')}</span>
                   <span className="font-medium">
                     {report.communityMetrics.neutralMentions.toFixed(1)}%
                     <span className={`ml-2 text-xs ${report.communityMetrics.neutralDelta >= 0 ? 'text-gray-600' : 'text-gray-600'}`}>
@@ -327,9 +309,7 @@ export default function DailyReportPage() {
 
         {/* Issues */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">
-            {language === 'ko' ? ' 주요 이슈' : language === 'ja' ? ' 主要問題' : 'Key Issues'}
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">{t('reports.daily.issues')}</h2>
           <div className="space-y-3">
             {report.issues.map((issue, index) => (
               <div key={index} className="border rounded-lg p-4">
@@ -340,15 +320,13 @@ export default function DailyReportPage() {
                     issue.severity === 'medium' ? 'bg-orange-100 text-orange-700' :
                     'bg-gray-100 text-gray-700'
                   }`}>
-                    {issue.severity === 'high' ? (language === 'ko' ? '높음' : language === 'ja' ? '高' : 'High') :
-                     issue.severity === 'medium' ? (language === 'ko' ? '중간' : language === 'ja' ? '中' : 'Medium') :
-                     (language === 'ko' ? '낮음' : language === 'ja' ? '低' : 'Low')}
+                    {issue.severity === 'high' ? t('reports.daily.severity.high') :
+                     issue.severity === 'medium' ? t('reports.daily.severity.medium') :
+                     t('reports.daily.severity.low')}
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground mb-2">{getLocalizedText(issue.description, language)}</p>
-                <span className="text-xs text-muted-foreground">
-                  {language === 'ko' ? '언급' : language === 'ja' ? '言及' : 'Mentions'}: {issue.mentions}
-                </span>
+                <span className="text-xs text-muted-foreground">{t('reports.daily.mentions')}: {issue.mentions}</span>
               </div>
             ))}
           </div>

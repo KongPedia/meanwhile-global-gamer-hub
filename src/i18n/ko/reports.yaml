@@ -12,6 +12,16 @@ daily:
   mentions: '언급'
   issues: '주요 이슈'
   quotes: '커뮤니티 의견'
+  community:
+    metrics: '커뮤니티 지표'
+    totalPosts: '전체 게시글 수'
+    comments: '댓글 수'
+    sentimentAnalysis: '여론 분석'
+    positiveMentions: '긍정 언급'
+    improvementMentions: '개선/건의 언급'
+    neutral: '중립'
+  preview:
+    view: '전체 보고서 보기'
   severity:
     high: '높음'
     medium: '중간'
@@ -28,6 +38,10 @@ milestone:
   notFoundDesc: '요청하신 리포트를 찾을 수 없습니다.'
   backToHome: '홈으로 돌아가기'
   back: '뒤로'
+  preview:
+    title: '마일스톤 성과 분석'
+    badge: '마일스톤 성과 분석'
+    subtitle: '업데이트, 이벤트 단위의 성과와 문제를 정리하여 회고 및 다음 계획에 활용합니다'
   executiveSummary: '경영진 요약'
   featureFeedback: '기능 피드백'
   comparison: '기간 비교'
@@ -44,3 +58,11 @@ milestone:
     slightlyNegative: '조금 부정적'
     veryNegative: '매우 부정적'
     mixed: '복합적'
+  metrics:
+    totalPosts: '총 게시물'
+    totalLikes: '총 좋아요'
+    sentimentLabel: '전반적 감성'
+  comparisonTitle: '업데이트 전후 반응 비교'
+  comparisonCaption: '기대감 대비 만족도 변화'
+  beforeLabel: '업데이트 전 (기대감)'
+  afterLabel: '업데이트 후 (만족도)'

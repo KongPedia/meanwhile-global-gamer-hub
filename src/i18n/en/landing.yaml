@@ -1,49 +1,55 @@
 # Landing page translations for English
 hero:
-  title: 'Global Gamers'' Voices\nin One Place'
-  subtitle: 'MeanWhile summarizes\nglobal community data on Discord.'
+  badge: "Analytics Platform for Game Companies"
+  title: "At‑a‑Glance Update Impact\n& Community Sentiment"
+  subtitle: "Teams grasp today's performance, issues, and actions in 1–3 minutes"
   cta:
+    freeTrial: "Start Free Trial"
+    demo: "View Demo"
     discord: 'Contact via Discord'
     learn: 'Learn More'
 
 problem:
-  title: 'Challenges Gamers Face'
-  subtitle: 'Are you missing out on\nwhat''s happening in global\ngaming communities?'
+  title: 'Challenges Game Companies Face'
+  subtitle: 'Are you wasting time browsing multiple platforms\nto understand community reactions after updates?'
   fragmentation:
     title: 'Information Fragmentation'
-    desc: 'Important news gets lost\ndue to scattered information across platforms'
-  language:
-    title: 'Language Barriers'
-    desc: 'Difficulty understanding global information\nwritten in various languages'
-  toxic:
-    title: 'Toxic Culture'
-    desc: 'Unhealthy community culture\nmakes participation difficult'
+    desc: 'Difficult to check scattered reactions\nacross Reddit, Steam, DCInside, etc.\none by one'
+  delay:
+    title: 'Response Delays'
+    desc: 'Late issue detection leads to\nmissed timing for hotfixes\nand announcements'
+  manual:
+    title: 'Manual Analysis'
+    desc: 'Manual sentiment analysis and\nkeyword extraction makes\nobjective judgment difficult'
 
 solution:
-  title: 'AI-Powered\nInnovative Solutions'
-  subtitle: 'Experience global gaming communities\nin a new way with MeanWhile''s AI technology'
-  ai:
-    title: 'AI Summary & Translation'
-    desc: 'AI summarizes and translates game community posts\nin multiple languages\nin real-time'
-  timeline:
-    title: 'Unified Game Timeline'
-    desc: 'Organize scattered game info\ninto a timeline for easy viewing'
-  trends:
-    title: 'Real-time Trend Detection'
-    desc: 'Analyzes latest issues & trends\nin communities in real-time'
+  title: 'AI-Based\nIntegrated Analytics Solution'
+  subtitle: 'Support data-driven decision making\nwith MeanWhile''s one-stop solution'
+  daily:
+    title: 'Daily Analysis'
+    desc: 'AI automatically summarizes\nmajor community reactions every morning\ndelivering only key insights'
+  update:
+    title: 'Game Update Community Analysis'
+    desc: 'Track public opinion changes\nin real-time after updates or events\nfor immediate response'
+  newsletter:
+    title: 'Newsletter'
+    desc: 'Automatically generate newsletters\nfor customer communication\nbased on data insights'
+  chatbot:
+    title: 'Chatbot'
+    desc: 'Ask questions about community data\nthrough AI chatbot and get\ninstant insights'
 
 benefits:
-  title: 'A New Gaming\nCommunity Experience'
-  subtitle: 'Even lurkers can become\nglobal gamers'
-  search:
-    title: 'Fast Search'
-    desc: 'Find desired information quickly\nwith AI summaries'
-  translation:
-    title: 'Translation Support'
-    desc: 'Communicate with global gamers\nwithout language barriers'
-  community:
-    title: 'Community Connection'
-    desc: 'Connect with global gamers\nwho share your interests'
+  title: 'Core Value Proposition\nfor Game Companies'
+  subtitle: 'Maximize game operation efficiency\nwith data-driven decision making'
+  efficiency:
+    title: 'Improved Operational Efficiency'
+    desc: 'Improve decision-making speed 10x\nby grasping key information within 1-3 minutes'
+  datadriven:
+    title: 'Data-Driven Actions'
+    desc: 'Quickly decide on hotfixes, announcements,\nand rewards with objective data'
+  communication:
+    title: 'Enhanced Customer Trust'
+    desc: 'Strengthen trust relationships with customers\nthrough transparent communication via CM newsletters'
   culture:
     title: 'Healthy Culture'
     desc: 'Build healthy communities\nwith AI moderation'
@@ -149,7 +155,7 @@ chatSimulator:
   note: '💡 This is a simulation. Real assistant analyzes live community data.'
 
 newsletter:
-  badge: 'Weekly Newsletter'
-  title: 'CM Lia''s Weekly Pulse'
-  subtitle: 'Weekly community insights delivered with a friendly voice'
+  badge: 'Daily Newsletter'
+  title: 'CM Lia''s Daily Pulse'
+  subtitle: 'Daily community insights delivered with a friendly voice'
   readMore: 'Read Full Newsletter →'

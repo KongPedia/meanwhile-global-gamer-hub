@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
-import heroImage from "@/assets/hero-gaming.jpg";
+import heroImage from "@/assets/hero-rebranding.png";
 
 const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
 
@@ -10,8 +10,8 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Language Selector */}
-      <div className="absolute top-6 right-6 z-20">
+      {/* Language Selector (fixed on home) */}
+      <div className="fixed top-4 right-12 z-50">
         <LanguageSelector />
       </div>
 
@@ -42,20 +42,6 @@ const Hero = () => {
               onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
             >
               {t('landing.hero.cta.discord')}
-            </Button>
-            
-            <Button 
-              variant="neon" 
-              size="lg"
-              className="text-lg px-8 py-4 whitespace-nowrap"
-              onClick={() => {
-                const communitySection = document.getElementById('community');
-                if (communitySection) {
-                  communitySection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              {t('landing.hero.cta.learn')}
             </Button>
           </div>
         </div>
