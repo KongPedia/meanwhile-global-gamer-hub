@@ -33,12 +33,14 @@ export default function ChatSimulator() {
   const [typingText, setTypingText] = useState('');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
+  const simulationTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const isSimulatingRef = useRef(false);
 
   const questions: Question[] = [
     {
       ko: '신규 업데이트에 대해 플레이어들은 어떻게 말하고 있나요?',
       en: 'What are players saying about the new update?',
-      ja: '新しいアップデートについてプレイヤーは何と言っていますか？',
+      ja: '新しいパッチノートについてプレイヤーは何と言っていますか？',
       response: {
         ko: '레딧, 디시인사이드, 스팀커뮤니티의 2,847개 게시물을 분석한 결과, 커뮤니티 감정은 복합적입니다 (6.2/10). 주요 우려사항: 난이도 밸런스 (논의의 68%). 긍정적 피드백: 보스 메카닉이 보편적으로 칭찬받음.',
         en: 'Based on 2,847 posts across Reddit, DCInside, and Steam Community, the community sentiment is mixed (6.2/10). Main concerns: difficulty balance (68% of discussions). Positive feedback: boss mechanics praised universally.',
@@ -68,23 +70,56 @@ export default function ChatSimulator() {
   ];
 
   useEffect(() => {
-    // Start simulation after component mount or language change
+    // Clear any existing simulation when language changes
+    isSimulatingRef.current = false;
+    if (simulationTimerRef.current) {
+      clearTimeout(simulationTimerRef.current);
+      simulationTimerRef.current = null;
+    }
+    
+    // Reset state
+    setMessages([]);
+    setCurrentStep('idle');
+    setTypingText('');
+    setIsAnimating(false);
+    setCurrentQuestionIndex(0);
+    
+    // Start new simulation after component mount or language change
     const startTimer = setTimeout(() => {
       startSimulation();
     }, 1000);
 
-    return () => clearTimeout(startTimer);
+    return () => {
+      isSimulatingRef.current = false;
+      clearTimeout(startTimer);
+      if (simulationTimerRef.current) {
+        clearTimeout(simulationTimerRef.current);
+        simulationTimerRef.current = null;
+      }
+    };
   }, [language]); // Add language dependency
 
   const startSimulation = async () => {
+    // Set simulation flag to true
+    isSimulatingRef.current = true;
     setIsAnimating(true);
     setMessages([]);
     setCurrentQuestionIndex(0);
     
     // Process all 3 questions
     for (let i = 0; i < questions.length; i++) {
+      // Check if simulation was cancelled
+      if (!isSimulatingRef.current) {
+        return;
+      }
+      
       setCurrentQuestionIndex(i);
       await processQuestion(questions[i]);
+      
+      // Check again after processing
+      if (!isSimulatingRef.current) {
+        return;
+      }
       
       // Pause between questions (except after last one)
       if (i < questions.length - 1) {
@@ -94,9 +129,17 @@ export default function ChatSimulator() {
 
     setIsAnimating(false);
 
+    // Check before restarting
+    if (!isSimulatingRef.current) {
+      return;
+    }
+
     // Restart simulation after showing all results
-    await delay(10000);
-    startSimulation();
+    simulationTimerRef.current = setTimeout(() => {
+      if (isSimulatingRef.current) {
+        startSimulation();
+      }
+    }, 10000);
   };
 
   const processQuestion = async (question: Question) => {
@@ -109,12 +152,26 @@ export default function ChatSimulator() {
     
     // Type out the question character by character
     for (let i = 0; i <= questionText.length; i++) {
+      // Check if simulation was cancelled
+      if (!isSimulatingRef.current) {
+        return;
+      }
       setTypingText(questionText.slice(0, i));
       await delay(50); // 50ms per character
     }
 
+    // Check if simulation was cancelled
+    if (!isSimulatingRef.current) {
+      return;
+    }
+
     // Step 2: "Send" the message
     await delay(300);
+    
+    if (!isSimulatingRef.current) {
+      return;
+    }
+    
     setCurrentStep('userQuestion');
     setMessages(prev => [...prev, {
       role: 'user',
@@ -124,14 +181,29 @@ export default function ChatSimulator() {
 
     // Step 3: Thinking
     await delay(800);
+    
+    if (!isSimulatingRef.current) {
+      return;
+    }
+    
     setCurrentStep('thinking');
 
     // Step 4: Analyzing
     await delay(1500);
+    
+    if (!isSimulatingRef.current) {
+      return;
+    }
+    
     setCurrentStep('analyzing');
 
     // Step 5: Show result
     await delay(2000);
+    
+    if (!isSimulatingRef.current) {
+      return;
+    }
+    
     setCurrentStep('result');
     setMessages(prev => [...prev, {
       role: 'assistant',

@@ -54,22 +54,18 @@ export default function MilestoneReportPreview() {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <Badge variant="secondary" className="mb-4">
-            Milestone Performance Analysis
+            {t('reports.milestone.preview.badge')}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            {language === 'ko' ? '마일스톤 성과 분석' : 
-             language === 'ja' ? 'マイルストーン成果分析' :
-             'Milestone Performance Analysis'}
+            {t('reports.milestone.preview.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            {language === 'ko' ? '업데이트, 이벤트 단위의 성과와 문제를 정리하여 회고 및 다음 계획에 활용합니다' :
-             language === 'ja' ? 'アップデート、イベント単位の成果と問題を整理し、振り返りと次の計画に活用します' :
-             'Organize update and event performance for retrospectives and future planning'}
+            {t('reports.milestone.preview.subtitle')}
           </p>
         </div>
 
         {/* Report Cards */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {reports.map((report, index) => (
             <Card 
               key={report.id}

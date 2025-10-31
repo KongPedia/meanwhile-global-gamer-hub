@@ -22,12 +22,16 @@ daily:
     neutral: '中立'
 
 milestone:
-  title: 'マイルストーンレポート'
+  title: 'アップデートレポート'
   loading: 'レポート読み込み中...'
   notFound: 'レポートが見つかりません'
   notFoundDesc: 'リクエストされたレポートが見つかりませんでした。'
   backToHome: 'ホームに戻る'
   back: '戻る'
+  preview:
+    title: 'アップデート成果分析'
+    badge: 'アップデート成果分析'
+    subtitle: 'アップデート・イベント単位の成果と課題を整理し、振り返りと次の計画に活用します'
   executiveSummary: 'エグゼクティブサマリー'
   featureFeedback: '機能フィードバック'
   comparison: '期間比較'
