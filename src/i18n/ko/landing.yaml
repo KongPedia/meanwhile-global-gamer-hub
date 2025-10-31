@@ -1,0 +1,162 @@
+# Landing page translations for Korean
+hero:
+  badge: "게임사 전용 분석 플랫폼"
+  title: "한 눈에 파악하는\n업데이트 영향과 여론 변화"
+  subtitle: "게임 실무자가 1~3분 내에 오늘의 성과·이슈·액션을 파악할 수 있도록 제공합니다"
+  cta:
+    freeTrial: "무료 체험 시작"
+    demo: "데모 보기"
+    discord: 'Discord로 문의하기'
+    learn: '더 알아보기'
+
+problem:
+  title: '게임사 실무자들이\n마주하는 현실'
+  subtitle: '업데이트 후 커뮤니티 반응을 파악하기 위해\n여러 플랫폼을 돌아다니며 시간을 낭비하고 계신가요?'
+  fragmentation:
+    title: '정보 파편화'
+    desc: '레딧, 스팀, 디시인사이드 등\n각 플랫폼마다 흩어진 반응들을\n일일이 확인하기 어렵습니다'
+  delay:
+    title: '대응 지연'
+    desc: '이슈 발견이 늦어져\n핫픽스나 공지 타이밍을\n놓치는 경우가 발생합니다'
+  manual:
+    title: '수동 분석'
+    desc: '감에 의존한 분석과 키워드 추출을\n수동으로 진행하여\n객관적 판단이 어렵습니다'
+
+solution:
+  title: 'AI 기반\n통합 분석 솔루션'
+  subtitle: 'MeanWhile이 제공하는 원스톱 솔루션으로\n데이터 기반 의사결정을 지원합니다'
+  daily:
+    title: '일일 분석'
+    desc: '매일 오전 주요 커뮤니티 반응을\nAI가 자동으로 요약하여\n핵심 인사이트만 전달합니다'
+  update:
+    title: '게임 업데이트별 커뮤니티 분석'
+    desc: '업데이트나 이벤트 후\n실시간으로 여론 변화를 추적하여\n즉시 대응할 수 있게 합니다'
+  newsletter:
+    title: '뉴스레터'
+    desc: '데이터 인사이트를 바탕으로\n고객 소통용 뉴스레터를\n자동으로 생성합니다'
+  chatbot:
+    title: '챗봇'
+    desc: 'AI 챗봇을 통해\n커뮤니티 데이터를 질문하고\n즉시 인사이트를 얻을 수 있습니다'
+
+benefits:
+  title: '게임사를 위한\n핵심 가치 제안'
+  subtitle: '데이터 기반 의사결정으로\n게임 운영 효율성을 극대화하세요'
+  efficiency:
+    title: '운영 효율성 향상'
+    desc: '1~3분 내 핵심 정보 파악으로\n의사결정 속도를 10배 향상시킵니다'
+  datadriven:
+    title: '데이터 기반 액션'
+    desc: '객관적 데이터로 핫픽스, 공지,\n보상 등의 액션을 신속하게 결정합니다'
+  communication:
+    title: '고객 신뢰도 제고'
+    desc: 'CM 뉴스레터로 투명한 소통을 통해\n고객과의 신뢰 관계를 강화합니다'
+  culture:
+    title: '건전한 문화'
+    desc: 'AI 모더레이션으로\n건전한 커뮤니티를 만들어갑니다'
+
+partner:
+  title: '게임사를 위한\n파트너십'
+  subtitle: 'MeanWhile과 함께\n글로벌 커뮤니티를 관리하세요'
+  monitoring:
+    title: '24/7 모니터링'
+    desc: '글로벌 커뮤니티를\n실시간으로 모니터링합니다'
+  analytics:
+    title: '심층 분석'
+    desc: '커뮤니티 데이터를\n상세하게 분석합니다'
+  efficiency:
+    title: '효율성 증대'
+    desc: 'AI 자동화로\n업무 효율을 높입니다'
+  innovation:
+    title: '혁신적 인사이트'
+    desc: '데이터 기반의\n전략적 인사이트를 제공합니다'
+
+videoExample:
+  title: 'AI 비디오 분석'
+  subtitle: '게임 영상을 AI가 자동으로 분석합니다'
+  original: '원본 영상'
+  analyzed: 'AI 분석 결과'
+  videoTitle: '[스텔라 블레이드] 신규 보스 공략 영상'
+  summary: '이 영상은 스텔라 블레이드의 신규 보스 공략법을 다룹니다. 주요 패턴 3가지와 효과적인 대응 전략을 소개하며, 초보자도 쉽게 따라할 수 있는 팁을 제공합니다.'
+  part1:
+    title: '보스 패턴 분석'
+    content: '3가지 주요 공격 패턴과 회피 타이밍'
+  part2:
+    title: '추천 장비'
+    content: '효과적인 무기와 스킬 조합'
+  part3:
+    title: '공략 팁'
+    content: '초보자를 위한 실전 팁'
+
+report:
+  badge: '데일리 리포트'
+  title: '매일 업데이트되는\n커뮤니티 리포트'
+  subtitle: 'AI가 분석한 글로벌 게임 커뮤니티의\n주요 이슈와 트렌드를 확인하세요'
+  features:
+    title: '주요 기능'
+    subtitle: '데이터 기반의 인사이트를 제공합니다'
+    trending:
+      title: '트렌딩 토픽'
+      description: '실시간 인기 주제 분석'
+    sentiment:
+      title: '감성 분석'
+      description: '커뮤니티 반응 측정'
+    realtime:
+      title: '실시간 업데이트'
+      description: '24시간 모니터링'
+    insights:
+      title: 'AI 인사이트'
+      description: '자동 요약 및 분석'
+  example:
+    title: '데일리 리포트'
+    period: '2024-01-15 09:00 ~ 18:00'
+    summary: '오늘 커뮤니티에서 가장 뜨거운 주제는 신규 업데이트에 대한 논의였습니다.'
+    hotTopic:
+      title: '난이도 밸런스 논란'
+      sentimentLabel: '부정적'
+      timeRange: '최근 24시간'
+      post1:
+        title: '신규 보스 너무 어려움'
+        content: '일반 난이도인데도 클리어가 불가능할 정도로 어렵습니다...'
+      post2:
+        title: '밸런스 패치 필요'
+        content: '보상 대비 난이도가 너무 높아요. 조정이 필요합니다.'
+  stats:
+    mentions: '언급 수'
+  relatedPosts: '관련 게시글'
+
+community:
+  title: 'Discord에서 만나요!'
+  subtitle: '전 세계 게임 커뮤니티의 데이터를\n실시간으로 분석합니다'
+  cta: 'Discord로 문의하기'
+  stats:
+    totalPosts: '총 게시물'
+    totalCommunities: '커뮤니티 게시물'
+    totalProjects: '등록된 게임 게시물'
+    etc: '기타'
+  posts:
+    title: '해외 여러 게임 커뮤니티를\n여러분의 언어로 경험하세요'
+    subtitle: 'MeanWhile은\n글로벌 게임 커뮤니티 데이터를\nAI가 요약하고 번역하여\nDiscord에서 공유합니다'
+  discord:
+    title: 'Discord'
+    subtitle: '이미 수백 명의 게이머가\n함께하고 있습니다'
+    footer: 'Meanwhile Global Gamer Hub'
+    view: 'Discord에서 보기'
+
+chatSimulator:
+  badge: 'AI 어시스턴트'
+  title: '인사이트 어시스턴트'
+  subtitle: '게임 커뮤니티에 대해 질문하고 즉시 인사이트를 받아보세요'
+  assistantName: '인사이트 어시스턴트'
+  assistantStatus: '온라인 • 커뮤니티 분석 중'
+  userQuestion: '신규 업데이트에 대해 플레이어들은 어떻게 말하고 있나요?'
+  thinking: '생각 중...'
+  analyzing: '2,847개의 커뮤니티 게시물 분석 중...'
+  assistantResponse: 'Reddit, Steam, Discord의 2,847개 게시물을 분석한 결과, 커뮤니티 감정은 복합적입니다 (6.2/10). 주요 우려사항: 난이도 밸런스 (논의의 68%). 긍정적 피드백: 보스 메카닉이 보편적으로 칭찬받음. 주요 이슈: 보상이 난이도에 맞지 않음.'
+  note: '💡 이것은 시뮬레이션입니다. 실제 어시스턴트는 라이브 커뮤니티 데이터를 분석합니다.'
+
+newsletter:
+  badge: '일일 뉴스레터'
+  title: 'CM 리아의 일일 펄스'
+  subtitle: '친근한 목소리로 전달되는 일일 커뮤니티 인사이트'
+  readMore: '전체 뉴스레터 읽기 →'
+  hotTopics: '오늘의 핫토픽'

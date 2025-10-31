@@ -12,10 +12,10 @@ const Footer = () => {
         <div className="text-center">
           <div className="mb-8">
             <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-              {t('footer.title')}
+              {t('common.footer.title')}
             </h3>
             <p className="text-muted-foreground">
-              {t('footer.subtitle')}
+              {t('common.footer.subtitle')}
             </p>
           </div>
           <div className="flex justify-center mb-8">
@@ -25,12 +25,12 @@ const Footer = () => {
               className="animate-pulse-neon text-lg px-8 py-4"
               onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
             >
-              {t('footer.discord')}
+              {t('common.footer.discord')}
             </Button>
           </div>
           
           <div className="text-sm text-muted-foreground">
-            <p>{t('footer.copyright')}</p>
+            <p>{t('common.footer.copyright')}</p>
           </div>
         </div>
       </div>

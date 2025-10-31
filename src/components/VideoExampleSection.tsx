@@ -21,18 +21,18 @@ const VideoExampleSection = () => {
 
   const parts = [
     {
-      title: t('videoExample.part1.title'),
-      content: t('videoExample.part1.content'),
+      title: t('landing.videoExample.part1.title'),
+      content: t('landing.videoExample.part1.content'),
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
-      title: t('videoExample.part2.title'),
-      content: t('videoExample.part2.content'),
+      title: t('landing.videoExample.part2.title'),
+      content: t('landing.videoExample.part2.content'),
       image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
-      title: t('videoExample.part3.title'),
-      content: t('videoExample.part3.content'),
+      title: t('landing.videoExample.part3.title'),
+      content: t('landing.videoExample.part3.content'),
       image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     }
   ];
@@ -42,11 +42,11 @@ const VideoExampleSection = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            {t('videoExample.title')}
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line">
+            {t('landing.videoExample.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('videoExample.subtitle')}
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto whitespace-pre-line">
+            {t('landing.videoExample.subtitle')}
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const VideoExampleSection = () => {
               <Card className="p-4 md:p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 animate-fade-in-up">
                 <div className="text-center mb-4 md:mb-6">
                   <Badge variant="secondary" className="mb-2 md:mb-4 text-xs md:text-sm">
-                    {t('videoExample.original')}
+                    {t('landing.videoExample.original')}
                   </Badge>
                 </div>
                 
@@ -82,7 +82,7 @@ const VideoExampleSection = () => {
 
                 <div className="space-y-2 md:space-y-3">
                   <h4 className="font-semibold text-foreground line-clamp-2 text-sm md:text-base">
-                    {t('videoExample.videoTitle')}
+                    {t('landing.videoExample.videoTitle')}
                   </h4>
                 </div>
               </Card>
@@ -93,20 +93,20 @@ const VideoExampleSection = () => {
               <Card className="p-4 md:p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <div className="mb-4 md:mb-6">
                   <Badge variant="default" className="mb-2 md:mb-4 bg-gradient-primary text-xs md:text-sm">
-                    {t('videoExample.analyzed')}
+                    {t('landing.videoExample.analyzed')}
                   </Badge>
                 </div>
 
                 {/* Summary */}
                 <div className="bg-muted/30 rounded-lg p-3 md:p-4 mb-4 md:mb-6">
                   <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">
-                    {t('videoExample.videoTitle')}
+                    {t('landing.videoExample.videoTitle')}
                   </h4>
 
                   <div className="border-l-4 border-primary pl-3 md:pl-4">
                     <h4 className="font-medium text-foreground mb-2 text-sm md:text-base">Summary:</h4>
                     <p className="text-xs md:text-sm text-muted-foreground">
-                      {t('videoExample.summary')}
+                      {t('landing.videoExample.summary')}
                     </p>
                   </div>
                 </div>

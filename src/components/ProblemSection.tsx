@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { MessageSquareX, Globe, AlertTriangle } from "lucide-react";
+import { MessageSquareX, Clock, Settings } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
@@ -14,18 +14,18 @@ const ProblemSection = () => {
   const problems = [
     {
       icon: <MessageSquareX className="w-8 h-8" />,
-      title: t('problem.fragmentation.title'),
-      description: t('problem.fragmentation.desc')
+      title: t('landing.problem.fragmentation.title'),
+      description: t('landing.problem.fragmentation.desc')
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: t('problem.language.title'),
-      description: t('problem.language.desc')
+      icon: <Clock className="w-8 h-8" />,
+      title: t('landing.problem.delay.title'),
+      description: t('landing.problem.delay.desc')
     },
     {
-      icon: <AlertTriangle className="w-8 h-8" />,
-      title: t('problem.toxic.title'),
-      description: t('problem.toxic.desc')
+      icon: <Settings className="w-8 h-8" />,
+      title: t('landing.problem.manual.title'),
+      description: t('landing.problem.manual.desc')
     }
   ];
 
@@ -33,11 +33,11 @@ const ProblemSection = () => {
     <section className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('problem.title')}
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-foreground whitespace-pre-line">
+            {t('landing.problem.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
-            {t('problem.subtitle')}
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line">
+            {t('landing.problem.subtitle')}
           </p>
         </div>
         

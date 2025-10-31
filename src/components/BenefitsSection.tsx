@@ -14,23 +14,23 @@ const BenefitsSection = () => {
   const benefits = [
     {
       icon: <Search className="w-8 h-8" />,
-      title: t('benefits.search.title'),
-      description: t('benefits.search.desc')
+      title: t('landing.benefits.search.title'),
+      description: t('landing.benefits.search.desc')
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: t('benefits.translation.title'),
-      description: t('benefits.translation.desc')
+      title: t('landing.benefits.translation.title'),
+      description: t('landing.benefits.translation.desc')
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: t('benefits.community.title'),
-      description: t('benefits.community.desc')
+      title: t('landing.benefits.community.title'),
+      description: t('landing.benefits.community.desc')
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: t('benefits.culture.title'),
-      description: t('benefits.culture.desc')
+      title: t('landing.benefits.culture.title'),
+      description: t('landing.benefits.culture.desc')
     }
   ];
 
@@ -39,10 +39,10 @@ const BenefitsSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('benefits.title')}
+            {t('landing.benefits.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
-            {t('benefits.subtitle')}
+            {t('landing.benefits.subtitle')}
           </p>
         </div>
         

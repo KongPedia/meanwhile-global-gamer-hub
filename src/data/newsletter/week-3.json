@@ -1,0 +1,134 @@
+{
+  "id": "newsletter-game-b-w3-2025",
+  "gameId": "game-b",
+  "gameName": "Game B",
+  "date": "2025-01-31",
+  "weekNumber": 3,
+  "title": {
+    "ko": "주간 커뮤니티 펄스 - Week 3",
+    "en": "Weekly Community Pulse - Week 3",
+    "ja": "週刊コミュニティパルス - Week 3"
+  },
+  "summary": {
+    "ko": "업데이트 지연과 용량 문제로 불편을 겪으신 분들이 많으셨고, 신규 캐릭터의 활용성에 대해서도 뜨거운 논의가 있었습니다. 하지만 시즌 이벤트와 신규 코스튬에 대해서는 '역대급!'이라는 칭찬이 자자했습니다.",
+    "en": "Many experienced inconvenience due to update delays and file size issues, with heated discussions about new character versatility. However, the seasonal event and new costumes received overwhelming praise as 'the best ever!'",
+    "ja": "アップデートの遅延と容量問題で不便を経験した方が多く、新キャラクターの活用性についても熱い議論がありました。しかし、シーズンイベントと新コスチュームについては「歴代級！」という称賛が相次ぎました。"
+  },
+  "highlights": [
+    {
+      "title": {
+        "ko": "업데이트 지연 및 용량 문제",
+        "en": "Update Delay and File Size Issues",
+        "ja": "アップデート遅延と容量問題"
+      },
+      "description": {
+        "ko": "업데이트 패치 지연으로 일일 보상을 놓친 플레이어가 많았고, 업데이트 파일 용량이 너무 크다는 의견이 다수 제기되었습니다.",
+        "en": "Many players missed daily rewards due to patch delays, and numerous complaints about excessive update file size were raised.",
+        "ja": "パッチ遅延により日次報酬を逃したプレイヤーが多く、アップデートファイルサイズが大きすぎるという意見が多数提起されました。"
+      },
+      "sentiment": "negative"
+    },
+    {
+      "title": {
+        "ko": "신규 캐릭터 활용성 논란",
+        "en": "New Character Versatility Debate",
+        "ja": "新キャラクター活用性論争"
+      },
+      "description": {
+        "ko": "PvP에서는 강력하지만 다른 콘텐츠에서의 활용도가 제한적이라는 평가가 많았습니다. '특정 콘텐츠 전용 캐릭터'라는 지적도 있었습니다.",
+        "en": "While powerful in PvP, limited usability in other content was noted. Some criticized it as a 'content-specific character.'",
+        "ja": "PvPでは強力ですが、他のコンテンツでの活用度が制限的という評価が多かったです。「特定コンテンツ専用キャラクター」という指摘もありました。"
+      },
+      "sentiment": "mixed"
+    },
+    {
+      "title": {
+        "ko": "시즌 이벤트 & 코스튬 대호평",
+        "en": "Seasonal Event & Costumes Highly Praised",
+        "ja": "シーズンイベント&コスチューム大好評"
+      },
+      "description": {
+        "ko": "시즌 테마 이벤트와 신규 코스튬 디자인이 '역대급', '너무 귀엽다'는 찬사를 받았습니다. 커뮤니티 만족도가 매우 높았습니다.",
+        "en": "Seasonal themed event and new costume designs received praise as 'the best ever' and 'so cute.' Community satisfaction was very high.",
+        "ja": "シーズンテーマイベントと新コスチュームデザインが「歴代級」「とても可愛い」という称賛を受けました。コミュニティ満足度が非常に高かったです。"
+      },
+      "sentiment": "positive"
+    }
+  ],
+  "topIssues": [
+    {
+      "title": {
+        "ko": "업데이트 배포 지연",
+        "en": "Update Deployment Delay",
+        "ja": "アップデート配信遅延"
+      },
+      "description": {
+        "ko": "업데이트 패치 지연으로 인해 많은 플레이어가 일일 보상을 놓쳤습니다",
+        "en": "Many players missed daily rewards due to update patch delays",
+        "ja": "アップデートパッチ遅延により多くのプレイヤーが日次報酬を逃しました"
+      },
+      "severity": "high",
+      "mentions": 1847
+    },
+    {
+      "title": {
+        "ko": "PvP 진입 장벽",
+        "en": "PvP Entry Barrier",
+        "ja": "PvP参入障壁"
+      },
+      "description": {
+        "ko": "신규 플레이어들이 PvP 콘텐츠 진입에 어려움을 겪고 있으며, 가이드 부족을 호소하고 있습니다",
+        "en": "New players are struggling to enter PvP content and requesting more guidance",
+        "ja": "新規プレイヤーがPvPコンテンツ参入に困難を経験しており、ガイド不足を訴えています"
+      },
+      "severity": "medium",
+      "mentions": 923
+    }
+  ],
+  "communityMood": "mixed",
+  "liaNote": {
+    "main": {
+      "ko": "안녕하세요 여러분! CM 리아입니다! 🌟\n\n오늘도 커뮤니티에서 활발한 이야기들이 오갔네요! 업데이트 관련해서 불편을 겪으신 분들께는 정말 죄송하고, 신규 캐릭터와 시즌 이벤트에 대한 뜨거운 반응들을 보며 많은 것을 느꼈어요.\n\n여러분의 소중한 의견들을 하나하나 읽어보고 있으니, 언제든 편하게 이야기해주세요! 💕",
+      "en": "Hello everyone! I'm CM Lia! 🌟\n\nLots of active discussions in the community today! I'm truly sorry for those who experienced inconvenience with the update, and I've learned a lot from your passionate reactions about the new character and seasonal event.\n\nI'm reading all your precious feedback, so please feel free to share your thoughts anytime! 💕",
+      "ja": "皆さんこんにちは！CM リアです！🌟\n\n今日もコミュニティで活発な議論がありましたね！アップデートで不便をおかけした方々には本当に申し訳なく、新キャラクターとシーズンイベントへの熱い反応を見て多くのことを学びました。\n\n皆さんの貴重なご意見を一つ一つ読んでいますので、いつでもお気軽にお話しください！💕"
+    },
+    "threads": [
+      {
+        "title": {
+          "ko": "업데이트, 무슨 일 있었던 거죠? 😰",
+          "en": "What happened with the update? 😰",
+          "ja": "アップデート、何があったんですか？😰"
+        },
+        "content": {
+          "ko": "업데이트 지연으로 일일 보상을 놓치신 분들이 많아 정말 죄송해요. 파일 용량 문제와 모바일 데이터 걱정까지... 😔\n\n앞으로는 배포 과정을 더 꼼꼼히 확인하고, 지연 시에는 빠른 사전 공지를 드릴게요!",
+          "en": "Sorry for the update delays that caused many to miss daily rewards. File size issues and mobile data concerns too... 😔\n\nWe'll check deployment more carefully and provide faster advance notices!",
+          "ja": "アップデート遅延で日次報酬を逃した方が多く、本当に申し訳ありません。ファイルサイズ問題とモバイルデータの心配まで... 😔\n\n今後は配信プロセスをより綿密に確認し、遅延時は迅速な事前通知をします！"
+        }
+      },
+      {
+        "title": {
+          "ko": "신규 캐릭터, 다양한 콘텐츠에서 활약할 수 있을까요? 🤔",
+          "en": "Can the new character shine in various content? 🤔",
+          "ja": "新キャラクター、様々なコンテンツで活躍できるでしょうか？🤔"
+        },
+        "content": {
+          "ko": "신규 캐릭터가 PvP에서는 강력하지만 다른 콘텐츠에서 활용도가 아쉽다는 의견이 많았어요. 🤔\n\n다양한 콘텐츠에서 활약할 수 있도록 밸런스 조정을 검토해보겠습니다!",
+          "en": "New character is strong in PvP but limited in other content. We'll consider balance adjustments for broader usability! 🤔",
+          "ja": "新キャラクターはPvPでは強力ですが、他のコンテンツでの活用度が限定的です。より幅広い活用のためのバランス調整を検討します！🤔"
+        }
+      },
+      {
+        "title": {
+          "ko": "시즌 이벤트 & 코스튬, 완전 대박! 🎉",
+          "en": "Seasonal Event & Costumes, Absolutely Amazing! 🎉",
+          "ja": "シーズンイベント&コスチューム、完全大当たり！🎉"
+        },
+        "content": {
+          "ko": "시즌 이벤트와 신규 코스튬에 대한 반응이 정말 뜨거웠어요! '너무 귀엽다'는 칭찬이 가득해서 기뻤습니다. 🎉\n\n앞으로도 여러분의 마음을 사로잡을 매력적인 이벤트와 코스튬을 준비할게요!",
+          "en": "The seasonal event and new costumes received amazing feedback! So happy to see all the 'so cute' comments. 🎉\n\nWe'll keep creating captivating events and costumes for you!",
+          "ja": "シーズンイベントと新コスチュームへの反応が素晴らしかったです！「とても可愛い」というコメントがたくさんで嬉しかったです。🎉\n\n今後も魅力的なイベントとコスチュームを作り続けます！"
+        }
+      }
+    ]
+  }
+}

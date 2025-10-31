@@ -1,0 +1,93 @@
+{
+	"meta": {
+		"generatedAt": "2025-10-31T02:56:08.283Z",
+		"tasksAnalyzed": 10,
+		"totalTasks": 10,
+		"analysisCount": 10,
+		"thresholdScore": 5,
+		"projectName": "Taskmaster",
+		"usedResearch": false
+	},
+	"complexityAnalysis": [
+		{
+			"taskId": 1,
+			"taskTitle": "i18n 구조 리팩터링 및 YAML 로더 도입",
+			"complexityScore": 7,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "i18n 구조 리팩터링 및 YAML 로더 도입 작업을 Vite 설정, 파일 구조 생성, 동적 로더 구현, 유틸리티 함수 개발, 단위 테스트 작성의 5개 하위 작업으로 분해해 주세요.",
+			"reasoning": "새로운 라이브러리 도입, Vite 빌드 설정 변경, 비동기 데이터 로딩, 핵심 유틸리티 함수(`t`) 구현 등 프로젝트의 근간이 되는 아키텍처 변경 작업입니다. 단순 UI 개발보다 기술적 난이도가 높고, 후속 작업에 미치는 영향이 크기 때문에 복잡도를 높게 책정했습니다."
+		},
+		{
+			"taskId": 2,
+			"taskTitle": "리포트 및 뉴스레터 샘플 데이터 모델 정의 및 JSON 파일 생성",
+			"complexityScore": 2,
+			"recommendedSubtasks": 0,
+			"expansionPrompt": "이 작업은 타입 정의와 JSON 파일 생성으로 구성되어 있으며, 복잡도가 낮아 하위 작업으로 분해할 필요가 없습니다.",
+			"reasoning": "주요 작업이 TypeScript 타입 정의와 정적 JSON 데이터 작성으로, 기술적인 도전 과제나 복잡한 로직 구현이 거의 없습니다. 작업 범위가 명확하고 예측 가능성이 매우 높습니다."
+		},
+		{
+			"taskId": 3,
+			"taskTitle": "데일리/마일스톤 리포트 상세 페이지 라우트 및 템플릿 구현",
+			"complexityScore": 4,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "리포트 상세 페이지 구현 작업을 '데일리 리포트 페이지 구현'과 '마일스톤 리포트 페이지 구현'의 2개 하위 작업으로 분해해 주세요. 각 하위 작업은 라우팅 설정, 데이터 로딩, 기본 템플릿 렌더링을 포함해야 합니다.",
+			"reasoning": "React Router를 이용한 동적 라우팅 설정과 URL 파라미터를 기반으로 한 데이터 로딩은 표준적인 웹 개발 작업입니다. 다만, 동적 import 처리와 데이터 부재 시 예외 처리 등 고려할 부분이 있어 중간 정도의 복잡도를 부여했습니다."
+		},
+		{
+			"taskId": 4,
+			"taskTitle": "랜딩 페이지 IA 재구성 및 B2B 카피/CTA 톤 적용",
+			"complexityScore": 5,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "랜딩 페이지 재구성 작업을 '섹션 구조 재배치', 'B2B 카피라이팅 및 YAML 파일 업데이트', '기존 텍스트를 t() 함수로 교체'의 3개 하위 작업으로 분해해 주세요.",
+			"reasoning": "단순한 텍스트 교체를 넘어 페이지의 정보 구조(IA)를 변경하는 JSX 리팩터링이 포함됩니다. 또한, 페이지 내 모든 텍스트를 Task 1의 i18n 시스템과 연동해야 하므로 작업 범위가 넓고 꼼꼼함이 요구됩니다."
+		},
+		{
+			"taskId": 5,
+			"taskTitle": "인사이트 어시스턴트(챗봇 시뮬레이터) 및 뉴스레터 통합 섹션 개발",
+			"complexityScore": 6,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "통합 섹션 개발 작업을 '인터랙티브 챗봇 시뮬레이터 컴포넌트 개발'과 '뉴스레터 샘플 카드 섹션 개발'의 2개 하위 작업으로 분해해 주세요.",
+			"reasoning": "챗봇 시뮬레이터는 `setTimeout`과 상태 관리를 이용한 순차적 애니메이션 구현이 필요하며, 이는 디버깅과 상태 관리를 복잡하게 만듭니다. 또한 ARIA 속성을 이용한 웹 접근성 구현도 고려해야 하므로 일반적인 정적 컴포넌트 개발보다 난이도가 높습니다."
+		},
+		{
+			"taskId": 6,
+			"taskTitle": "리포트 상세 페이지 SEO 최적화 (JSON-LD, Meta Tags)",
+			"complexityScore": 5,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "SEO 최적화 작업을 'react-helmet-async 설정 및 기본 메타 태그 동적 생성', '다국어 지원을 위한 canonical/hreflang 태그 구현', '구조화된 데이터를 위한 JSON-LD 스크립트 생성'의 3개 하위 작업으로 분해해 주세요.",
+			"reasoning": "라이브러리를 사용하지만, canonical, hreflang, JSON-LD 등 SEO 관련 전문 지식이 필요합니다. 특히 동적 데이터를 기반으로 정확한 메타데이터와 구조화된 데이터를 생성해야 하므로 세심한 구현이 요구됩니다."
+		},
+		{
+			"taskId": 7,
+			"taskTitle": "리포트 상세 페이지용 데이터 시각화 컴포넌트 개발",
+			"complexityScore": 6,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "데이터 시각화 컴포넌트 개발 작업을 `ReportKPI`, `DeltaBar`, `KeywordTable`, `IssueTable`, `QuoteList` 컴포넌트를 각각 개발하는 5개의 하위 작업으로 분해해 주세요.",
+			"reasoning": "여러 개의 재사용 가능한 UI 컴포넌트를 개발해야 하므로 전체적인 작업량이 많습니다. 각 컴포넌트는 props에 따라 다르게 렌더링되어야 하고, 데이터가 없는 경우 등 다양한 케이스를 처리해야 하므로 복잡도가 있습니다."
+		},
+		{
+			"taskId": 8,
+			"taskTitle": "주요 랜딩 섹션에 모바일 캐로셀 기능 확대 적용",
+			"complexityScore": 3,
+			"recommendedSubtasks": 0,
+			"expansionPrompt": "이 작업은 재사용 가능한 반응형 캐로셀 래퍼 컴포넌트를 구현하고 이를 여러 섹션에 적용하는 단일 흐름의 작업이므로 하위 작업으로 분해할 필요가 적습니다.",
+			"reasoning": "캐로셀 라이브러리를 활용하고, 화면 너비에 따라 조건부로 렌더링하는 로직이 포함됩니다. 기술적으로 새롭지는 않지만, 여러 섹션에 일관되게 적용하고 반응형 디자인을 검증하는 데 시간이 소요됩니다."
+		},
+		{
+			"taskId": 9,
+			"taskTitle": "SSG/프리렌더링 설정 및 빌드 최적화",
+			"complexityScore": 8,
+			"recommendedSubtasks": 4,
+			"expansionPrompt": "SSG 설정 작업을 'SSG 라이브러리 선정 및 기본 설정', '동적 경로 생성을 위한 스크립트 구현', '빌드 파이프라인 통합 및 검증', '사이트맵 및 robots.txt 자동 생성 설정'의 4개 하위 작업으로 분해해 주세요.",
+			"reasoning": "프로젝트의 빌드 및 배포 파이프라인을 근본적으로 변경하는 고난이도 작업입니다. SSG 라이브러리 설정, 동적 라우트 생성 스크립트 작성 등 전문적인 지식이 필요하며, 빌드 시 발생하는 문제를 디버깅하기 까다로울 수 있습니다."
+		},
+		{
+			"taskId": 10,
+			"taskTitle": "최종 QA 및 마이그레이션 체크리스트 검증",
+			"complexityScore": 8,
+			"recommendedSubtasks": 6,
+			"expansionPrompt": "최종 QA 작업을 '핵심 기능 플로우 E2E 테스트', '다국어(i18n) 전체 검증', '성능(Lighthouse) 및 로딩 속도 측정', '웹 접근성(키보드, 스크린리더) 검증', 'SEO 설정 최종 검증', '크로스 브라우저 호환성 테스트'의 6개 하위 작업으로 분해해 주세요.",
+			"reasoning": "코딩의 복잡성보다는 검증해야 할 범위의 광범함 때문에 복잡도가 높습니다. 기능, 성능, 접근성, SEO 등 여러 분야에 걸쳐 종합적인 테스트를 수행해야 하며, 모든 선행 작업에 대한 의존성을 가집니다. 프로젝트의 최종 품질을 결정하는 중요한 단계입니다."
+		}
+	]
+}

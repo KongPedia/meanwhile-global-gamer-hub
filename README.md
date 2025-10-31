@@ -7,12 +7,13 @@
 ## 주요 기능
 
 - 다국어 지원: `ko | en | ja | zh | es` 자동 감지 및 수동 전환 (`localStorage`에 선호 언어 저장)
+- i18n 리소스: `/src/i18n/<lang>/{common,landing,reports}.yaml` 동적 로딩
 - 반응형 UI: Tailwind 기반 현대적 테마/애니메이션, 네온/그라데이션 스타일
-- 섹션 구성: `Hero`, `Community`, `Problem`, `Solution`, `VideoExample`, `Report`, `Benefits`, `Partner`, `Footer`
+- 섹션 구성: `Hero`, `Problem`, `Solution`, `DailyReportPreview`, `MilestoneReportPreview`, `NewsletterSection`, `ChatSimulator`, `Benefits`, `Partner`, `Footer`
 - Discord 연동: `.env`의 초대 링크로 이동하는 CTA 버튼
-- 라우팅: `react-router-dom` 기반 `/`와 `*`(404) 라우트
+- 라우팅: `react-router-dom` 기반 다국어 루트 및 리포트 상세 라우트
 - 상태/툴링: `@tanstack/react-query` Provider 세팅, `shadcn-ui` + `radix-ui` 컴포넌트 사용
-- 유틸리티: 클래스 병합(`clsx`, `tailwind-merge`), 숫자 포맷팅 유틸
+- 유틸리티: 클래스 병합(`clsx`, `tailwind-merge`), 숫자/문자열 포맷(`lib/utils`), i18n 텍스트 선택(`lib/i18n-utils`), SEO 태그(`lib/seo`)
 
 ## 기술 스택
 
@@ -39,41 +40,47 @@ meanwhile-global-gamer-hub/
     App.css                  # 추가 전역 스타일(필요 시)
 
     pages/
-      Index.tsx             # 랜딩 페이지, 섹션 조립
+      Index.tsx             # 랜딩 페이지, 섹션 조립 (프리뷰/뉴스레터/챗봇 포함)
       NotFound.tsx          # 404 페이지
 
     components/
-      Hero.tsx              # 히어로 섹션 + 언어 선택 + CTA
-      CommunitySection.tsx  # 커뮤니티 미리보기/통계(모의 데이터 기반)
-      ProblemSection.tsx    # 문제 정의 섹션
-      SolutionSection.tsx   # 솔루션 소개 섹션
-      VideoExampleSection.tsx # 동영상 요약 예시
-      ReportSection.tsx     # 인사이트 리포트 예시
-      BenefitsSection.tsx   # 사용자 혜택
-      PartnerSection.tsx    # 파트너/게임사 대상 가치
-      Footer.tsx            # 푸터(Discord CTA)
-      LanguageSelector.tsx  # 언어 드롭다운
+      Hero.tsx                 # 히어로 섹션 + 언어 선택 + CTA
+      ProblemSection.tsx       # 문제 정의 섹션
+      SolutionSection.tsx      # 솔루션 소개 섹션
+      DailyReportPreview.tsx   # 일일 리포트 미리보기 (정적 import로 레이아웃 시프트 방지)
+      MilestoneReportPreview.tsx # 마일스톤 리포트 미리보기 (정적 import)
+      NewsletterSection.tsx    # CM ‘Lia’ 뉴스레터 샘플/스레드 (모바일/데스크톱 대응)
+      ChatSimulator.tsx        # 챗봇 인사이트 시뮬레이터 (언어 변경 시 중복 방지, 분석 아이콘 스핀)
+      BenefitsSection.tsx      # 사용자 혜택
+      PartnerSection.tsx       # 파트너/게임사 대상 가치
+      Footer.tsx               # 푸터(Discord CTA)
+      LanguageSelector.tsx     # 언어 드롭다운
 
       ui/                   # shadcn-ui 기반 공용 UI 컴포넌트
         button.tsx, dialog.tsx, ...
 
     contexts/
-      LanguageContext.tsx   # 언어 상태, 브라우저 언어 감지, 번역 리소스 관리
+      LanguageContext.tsx   # 언어 상태, 브라우저 언어 감지, YAML 리소스 동적 로딩
 
     hooks/
       use-mobile.tsx        # 모바일 뷰포트 판별 훅
 
     data/
-      en.posts.json, ja.posts.json, ko.posts.json, stats.json # 데모용 데이터
+      reports/
+        daily/*.json        # DailyReport 데이터 (title 포함)
+        milestone/*.json    # MilestoneReport 데이터
+      newsletter/*.json     # Newsletter 샘플 데이터
 
     assets/                 # 이미지/정적 자원
       hero-gaming.jpg, ...
 
     lib/
       utils.ts              # 숫자 포맷팅, 클래스 병합(`cn`)
+      i18n-utils.ts         # I18nText에서 언어에 맞는 텍스트 선택
+      seo.ts                # 언어/경로 기반 메타 태그 관리
 
     types/
-      post.ts               # 커뮤니티 포스트 타입 정의
+      reports.ts            # DailyReport/MilestoneReport/Newsletter 타입 정의
 ```
 
 ## 환경 변수
@@ -116,19 +123,21 @@ npm run dev
 
 - `/` → 브라우저 언어 감지 후 `/:lang`으로 리다이렉트
 - `/:lang` → `Index` (언어별 랜딩 페이지)
+- `/:lang/reports/daily/:game/:date` → Daily Report 상세
+- `/:lang/reports/milestone/:game/:milestoneId` → Milestone Report 상세
 - `*` → `NotFound` (404)
 
 지원 언어: `ko`, `en`, `ja`, `zh`, `es`
 
-- `contexts/LanguageContext.tsx`에서 언어 상태 및 번역 리소스 관리
+- `contexts/LanguageContext.tsx`에서 언어 상태 및 번역 리소스 관리 (YAML 동적 로딩)
   - 초기 언어: `localStorage.getItem('preferred-language')` → 없으면 브라우저 언어 추론
   - 수동 변경: `LanguageSelector`에서 변경 시 `localStorage`에 저장
-- 번역 키 사용: 섹션 컴포넌트에서 `const { t } = useLanguage();`로 접근하여 `t('hero.title')` 형태로 사용
+- 번역 키 사용: `const { t } = useLanguage();` 후 `t('landing.hero.title')` 등으로 접근
 
 언어 추가 시 체크리스트:
 
 1) `Language` 타입에 언어 코드 추가
-2) `translations` 객체에 해당 언어 리소스 추가
+2) `/src/i18n/<lang>/{common,landing,reports}.yaml` 파일 추가
 3) `LanguageSelector.tsx`의 `LANGUAGE_LABELS` 맵에 라벨/깃발 추가
 
 ## 스타일과 테마
@@ -156,6 +165,8 @@ npm run build
 - 새로운 섹션 추가: `components/YourSection.tsx` 작성 → `pages/Index.tsx`에 임포트/배치
 - UI 일관성: `components/ui/*`와 Tailwind 토큰(`index.css`) 재사용
 - 데이터 연결: 실제 백엔드/데이터 연동 시 `@tanstack/react-query`를 `App.tsx`의 Provider 하에서 사용
+- 뒤로 가기 UX: 리포트 상세의 뒤로 버튼은 브라우저 히스토리(`navigate(-1)`)를 사용, 히스토리 없을 시 홈으로 폴백
+- 레이아웃 시프트 방지: 홈 프리뷰/뉴스레터 데이터는 정적 import로 즉시 렌더링
 
 ### 검색엔진(단기 SEO) 설정
 

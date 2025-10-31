@@ -174,10 +174,10 @@ const CommunitySection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('community.title')}
+            {t('landing.community.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line leading-tight">
-            {t('community.subtitle')}
+            {t('landing.community.subtitle')}
           </p>
         </div>
         
@@ -225,7 +225,7 @@ const CommunitySection = () => {
                       </div>
                       {mainValue ? (
                         <div className="text-5xl font-bold text-foreground my-auto text-center">{mainValue}</div>
-                       ) : title === t('community.stats.totalProjects') ? (
+                       ) : title === t('landing.community.stats.totalProjects') ? (
                         <div className="space-y-3 text-sm overflow-y-auto pr-2 flex-grow flex flex-col justify-center">
                           {items.slice(0, 3).map(item => {
                             const maxCount = Math.max(...items.map(i => i.count));
@@ -261,7 +261,7 @@ const CommunitySection = () => {
                             </div>
                           </div>
                         </div>
-                      ) : title === t('community.stats.totalCommunities') ? (
+                      ) : title === t('landing.community.stats.totalCommunities') ? (
                             <div className="h-64">
                           <ResponsiveContainer width="100%" height="100%">
                             <PieChart>
@@ -309,21 +309,21 @@ const CommunitySection = () => {
                     key="posts"
                     delay={0}
                     icon={<BarChart className="w-7 h-7" />}
-                    title={t('community.stats.totalPosts')}
+                    title={t('landing.community.stats.totalPosts')}
                     mainValue={formatNumber(total_summary.total_count)}
                   />,
                   <StatCard
                     key="games"
                     delay={1}
                     icon={<LayoutList className="w-7 h-7" />}
-                    title={t('community.stats.totalProjects')}
+                    title={t('landing.community.stats.totalProjects')}
                     items={gameData}
                   />,
                   <StatCard
                     key="platforms"
                     delay={2}
                     icon={<Globe className="w-7 h-7" />}
-                    title={t('community.stats.totalCommunities')}
+                    title={t('landing.community.stats.totalCommunities')}
                     items={platformData}
                   />
                 ];
@@ -374,7 +374,7 @@ const CommunitySection = () => {
                 </div>
                 {mainValue ? (
                   <div className="text-5xl font-bold text-foreground my-auto text-center">{mainValue}</div>
-                 ) : title === t('community.stats.totalProjects') ? (
+                 ) : title === t('landing.community.stats.totalProjects') ? (
                   <div className="space-y-3 text-sm overflow-y-auto pr-2 flex-grow flex flex-col justify-center">
                     {items.slice(0, 3).map(item => {
                       const maxCount = Math.max(...items.map(i => i.count));
@@ -412,7 +412,7 @@ const CommunitySection = () => {
                       </div>
                     )}
                   </div>
-                ) : title === t('community.stats.totalCommunities') ? (
+                ) : title === t('landing.community.stats.totalCommunities') ? (
                       <div className="h-64">
                     <ResponsiveContainer width="100%" height="100%">
                       <PieChart>
@@ -459,21 +459,21 @@ const CommunitySection = () => {
                 key="posts"
                 delay={0}
                 icon={<BarChart className="w-7 h-7" />}
-                title={t('community.stats.totalPosts')}
+                title={t('landing.community.stats.totalPosts')}
                 mainValue={formatNumber(total_summary.total_count)}
               />,
               <StatCard
                 key="games"
                 delay={1}
                 icon={<LayoutList className="w-7 h-7" />}
-                title={t('community.stats.totalProjects')}
+                title={t('landing.community.stats.totalProjects')}
                 items={gameData}
               />,
               <StatCard
                 key="platforms"
                 delay={2}
                 icon={<Globe className="w-7 h-7" />}
-                title={t('community.stats.totalCommunities')}
+                title={t('landing.community.stats.totalCommunities')}
                 items={platformData}
               />
             ];
@@ -483,7 +483,7 @@ const CommunitySection = () => {
         {/* Community Posts Preview */}
         <div className="mb-12 max-w-5xl mx-auto">
           <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('community.posts.title') || '최신 커뮤니티 게시글'}
+            {t('landing.community.posts.title') || '최신 커뮤니티 게시글'}
           </h3>
           
           {/* Game Filter Buttons */}
@@ -537,7 +537,7 @@ const CommunitySection = () => {
                   {gameOptions.find(game => game.id === selectedGame)?.name}
                 </h2>
                 <p className="text-base md:text-base opacity-90 text-center max-w-2xl px-4 drop-shadow-md whitespace-pre-line md:whitespace-normal">
-                  {t('community.posts.subtitle')}
+                  {t('landing.community.posts.subtitle')}
                 </p>
               </div>
             </div>
@@ -600,7 +600,7 @@ const CommunitySection = () => {
                         </div>
                         <div className="flex items-center gap-1 text-discord">
                           <Hash className="w-3 h-3" />
-                          <span>{t('community.discord.view')}</span>
+                          <span>{t('landing.community.discord.view')}</span>
                         </div>
                       </div>
                     </Card>
@@ -665,7 +665,7 @@ const CommunitySection = () => {
                   </div>
                   <div className="flex items-center gap-1 text-discord">
                     <Hash className="w-3 h-3" />
-                    <span>{t('community.discord.view')}</span>
+                    <span>{t('landing.community.discord.view')}</span>
                   </div>
                 </div>
               </Card>
@@ -678,10 +678,10 @@ const CommunitySection = () => {
           <div className="text-center">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                {t('community.discord.title') || 'Discord 커뮤니티 참여하기'}
+                {t('landing.community.discord.title') || 'Discord 커뮤니티 참여하기'}
               </h3>
               <p className="text-muted-foreground whitespace-pre-line">
-                {t('community.discord.subtitle') || '실시간으로 전 세계 게이머들과 소통하고 최신 정보를 받아보세요'}
+                {t('landing.community.discord.subtitle') || '실시간으로 전 세계 게이머들과 소통하고 최신 정보를 받아보세요'}
               </p>
             </div>
             
@@ -691,11 +691,11 @@ const CommunitySection = () => {
               className="text-lg px-8 py-4 animate-pulse-neon whitespace-nowrap mb-4"
               onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
             >
-              {t('community.cta') || 'Discord 커뮤니티 합류하기'}
+              {t('landing.community.cta') || 'Discord 커뮤니티 합류하기'}
             </Button>
             
             <p className="text-sm text-muted-foreground">
-              {t('community.discord.footer') || '무료로 시작하고, 언제든지 나갈 수 있습니다'}
+              {t('landing.community.discord.footer') || '무료로 시작하고, 언제든지 나갈 수 있습니다'}
             </p>
           </div>
         </Card>

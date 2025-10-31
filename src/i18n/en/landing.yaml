@@ -1,0 +1,162 @@
+# Landing page translations for English
+hero:
+  badge: "Analytics Platform for Game Companies"
+  title: "At‑a‑Glance Update Impact\n& Community Sentiment"
+  subtitle: "Teams grasp today's performance, issues, and actions in 1–3 minutes"
+  cta:
+    freeTrial: "Start Free Trial"
+    demo: "View Demo"
+    discord: 'Contact via Discord'
+    learn: 'Learn More'
+
+problem:
+  title: 'Challenges Game Companies Face'
+  subtitle: 'Are you wasting time browsing multiple platforms\nto understand community reactions after updates?'
+  fragmentation:
+    title: 'Information Fragmentation'
+    desc: 'Difficult to check scattered reactions\nacross Reddit, Steam, DCInside, etc. one by one'
+  delay:
+    title: 'Response Delays'
+    desc: 'Late issue detection leads to\nmissed timing for hotfixes\nand announcements'
+  manual:
+    title: 'Manual Analysis'
+    desc: 'Manual sentiment analysis and\nkeyword extraction makes\nobjective judgment difficult'
+
+solution:
+  title: 'AI-Based\nIntegrated Analytics Solution'
+  subtitle: 'Support data-driven decision making\nwith MeanWhile''s one-stop solution'
+  daily:
+    title: 'Daily Analysis'
+    desc: 'AI automatically summarizes\nmajor community reactions every morning\ndelivering only key insights'
+  update:
+    title: 'Game Update Community Analysis'
+    desc: 'Track public opinion changes\nin real-time after updates or events\nfor immediate response'
+  newsletter:
+    title: 'Newsletter'
+    desc: 'Automatically generate newsletters\nfor customer communication\nbased on data insights'
+  chatbot:
+    title: 'Chatbot'
+    desc: 'Ask questions about community data\nthrough AI chatbot and get\ninstant insights'
+
+benefits:
+  title: 'Core Value Proposition\nfor Game Companies'
+  subtitle: 'Maximize game operation efficiency\nwith data-driven decision making'
+  efficiency:
+    title: 'Improved Operational Efficiency'
+    desc: 'Improve decision-making speed 10x\nby grasping key information within 1-3 minutes'
+  datadriven:
+    title: 'Data-Driven Actions'
+    desc: 'Quickly decide on hotfixes, announcements,\nand rewards with objective data'
+  communication:
+    title: 'Enhanced Customer Trust'
+    desc: 'Strengthen trust relationships with customers\nthrough transparent communication via CM newsletters'
+  culture:
+    title: 'Healthy Culture'
+    desc: 'Build healthy communities\nwith AI moderation'
+
+partner:
+  title: 'Partnership\nfor Game Studios'
+  subtitle: 'Manage global communities\nwith MeanWhile'
+  monitoring:
+    title: '24/7 Monitoring'
+    desc: 'Real-time monitoring of\nglobal communities'
+  analytics:
+    title: 'Deep Analytics'
+    desc: 'Detailed analysis of\ncommunity data'
+  efficiency:
+    title: 'Increased Efficiency'
+    desc: 'Boost productivity with\nAI automation'
+  innovation:
+    title: 'Innovative Insights'
+    desc: 'Data-driven strategic\ninsights'
+
+videoExample:
+  title: 'AI Video Analysis'
+  subtitle: 'AI automatically analyzes game videos'
+  original: 'Original Video'
+  analyzed: 'AI Analysis Result'
+  videoTitle: '[Stellar Blade] New Boss Strategy Guide'
+  summary: 'This video covers strategies for the new boss in Stellar Blade. It introduces 3 main attack patterns and effective counter strategies, with tips that even beginners can follow.'
+  part1:
+    title: 'Boss Pattern Analysis'
+    content: '3 main attack patterns and dodge timing'
+  part2:
+    title: 'Recommended Equipment'
+    content: 'Effective weapon and skill combinations'
+  part3:
+    title: 'Strategy Tips'
+    content: 'Practical tips for beginners'
+
+report:
+  badge: 'Daily Report'
+  title: 'Daily Updated\nCommunity Reports'
+  subtitle: 'Check key issues and trends in\nglobal gaming communities analyzed by AI'
+  features:
+    title: 'Key Features'
+    subtitle: 'Data-driven insights'
+    trending:
+      title: 'Trending Topics'
+      description: 'Real-time popular topic analysis'
+    sentiment:
+      title: 'Sentiment Analysis'
+      description: 'Measure community reactions'
+    realtime:
+      title: 'Real-time Updates'
+      description: '24-hour monitoring'
+    insights:
+      title: 'AI Insights'
+      description: 'Automatic summary and analysis'
+  example:
+    title: 'Daily Report'
+    period: '2024-01-15 09:00 ~ 18:00'
+    summary: 'Today''s hottest topic in the community was discussion about the new update.'
+    hotTopic:
+      title: 'Difficulty Balance Controversy'
+      sentimentLabel: 'Negative'
+      timeRange: 'Last 24 hours'
+      post1:
+        title: 'New boss is too difficult'
+        content: 'It''s impossible to clear even on normal difficulty...'
+      post2:
+        title: 'Balance patch needed'
+        content: 'Difficulty is too high for the rewards. Adjustment needed.'
+  stats:
+    mentions: 'Mentions'
+  relatedPosts: 'Related Posts'
+
+community:
+  title: 'See You\non Discord!'
+  subtitle: 'Real-time analysis of\nglobal gaming community data'
+  cta: 'Contact via Discord'
+  stats:
+    totalPosts: 'Total Posts'
+    totalCommunities: 'Community Posts'
+    totalProjects: 'Game Posts'
+    etc: 'ETC'
+  posts:
+    title: 'Experience Global Communities\nin Your Language'
+    subtitle: 'MeanWhile summarizes\nglobal community data\nwith AI, sharing it on Discord'
+  discord:
+    title: 'Discord Preview'
+    subtitle: 'Hundreds of gamers are\nalready here together'
+    footer: 'Meanwhile Global Gamer Hub'
+    view: 'View on Discord'
+
+chatSimulator:
+  badge: 'AI Assistant'
+  title: 'Insight Assistant'
+  subtitle: 'Ask questions about your game community and get instant insights'
+  assistantName: 'Insight Assistant'
+  assistantStatus: 'Online • Analyzing communities'
+  userQuestion: 'What are players saying about the new update?'
+  thinking: 'Thinking...'
+  analyzing: 'Analyzing 2,847 community posts...'
+  assistantResponse: 'Based on 2,847 posts across Reddit, Steam, and Discord, the community sentiment is mixed (6.2/10). Main concerns: difficulty balance (68% of discussions). Positive feedback: boss mechanics praised universally. Top issue: rewards don''t match difficulty.'
+  note: '💡 This is a simulation. Real assistant analyzes live community data.'
+
+newsletter:
+  badge: 'Daily Newsletter'
+  title: 'CM Lia''s Daily Pulse'
+  subtitle: 'Daily community insights delivered with a friendly voice'
+  readMore: 'Read Full Newsletter →'
+  hotTopics: 'Today''s Hot Topics'

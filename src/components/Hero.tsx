@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
-import heroImage from "@/assets/hero-gaming.jpg";
+import heroImage from "@/assets/hero-rebranding.png";
 
 const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
 
@@ -10,8 +10,8 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Language Selector */}
-      <div className="absolute top-6 right-6 z-20">
+      {/* Language Selector (fixed on home) */}
+      <div className="fixed top-4 right-12 z-50">
         <LanguageSelector />
       </div>
 
@@ -27,11 +27,11 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="animate-fade-in">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight whitespace-pre-line">
-            {t('hero.title')}
+            {t('landing.hero.title')}
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed whitespace-pre-line">
-            {t('hero.subtitle')}
+            {t('landing.hero.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -41,21 +41,7 @@ const Hero = () => {
               className="animate-pulse-neon text-lg px-8 py-4 whitespace-nowrap"
               onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
             >
-              {t('hero.cta.discord')}
-            </Button>
-            
-            <Button 
-              variant="neon" 
-              size="lg"
-              className="text-lg px-8 py-4 whitespace-nowrap"
-              onClick={() => {
-                const communitySection = document.getElementById('community');
-                if (communitySection) {
-                  communitySection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              {t('hero.cta.learn')}
+              {t('landing.hero.cta.discord')}
             </Button>
           </div>
         </div>

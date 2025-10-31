@@ -1,0 +1,162 @@
+# Landing page translations for Japanese
+hero:
+  badge: "ゲーム会社専用分析プラットフォーム"
+  title: "ひと目でわかる\nゲームコミュニティ分析"
+  subtitle: "1〜3分で今日の成果・課題・アクションを把握"
+  cta:
+    freeTrial: "無料トライアル開始"
+    demo: "デモを見る"
+    discord: 'Discordでお問い合わせ'
+    learn: '詳しく見る'
+
+problem:
+  title: 'ゲーム会社実務者が\n直面する現実'
+  subtitle: 'アップデート後のコミュニティ反応を把握するために\n複数のプラットフォームを回って時間を無駄にしていませんか？'
+  fragmentation:
+    title: '情報の断片化'
+    desc: 'Reddit、Steam、DCインサイドなど\n各プラットフォームに散らばった反応を\n一つずつ確認するのは困難です'
+  delay:
+    title: '対応遅延'
+    desc: '問題発見が遅れて\nホットフィックスや告知のタイミングを\n逃すケースが発生します'
+  manual:
+    title: '手動分析'
+    desc: '感情分析やキーワード抽出を\n手動で行うため\n客観的判断が困難です'
+
+solution:
+  title: 'AI基盤\n統合分析ソリューション'
+  subtitle: 'MeanWhileのワンストップソリューションで\nデータ基盤の意思決定を支援します'
+  daily:
+    title: '日次分析'
+    desc: '毎朝主要コミュニティ反応を\nAIが自動で要約して\n核心インサイトのみ配信します'
+  update:
+    title: 'ゲームアップデート別コミュニティ分析'
+    desc: 'アップデートやイベント後\nリアルタイムで世論変化を追跡して\n即座に対応できるようにします'
+  newsletter:
+    title: 'ニュースレター'
+    desc: 'データインサイトを基に\n顧客コミュニケーション用ニュースレターを\n自動生成します'
+  chatbot:
+    title: 'チャットボット'
+    desc: 'AIチャットボットを通じて\nコミュニティデータを質問し\n即座にインサイトを取得できます'
+
+benefits:
+  title: 'ゲーム会社のための\n核心価値提案'
+  subtitle: 'データ基盤の意思決定で\nゲーム運営効率性を最大化してください'
+  efficiency:
+    title: '運営効率性向上'
+    desc: '1〜3分以内の核心情報把握で\n意思決定速度を10倍向上させます'
+  datadriven:
+    title: 'データ基盤アクション'
+    desc: '客観的データでホットフィックス、告知、\n報酬などのアクションを迅速に決定します'
+  communication:
+    title: '顧客信頼度向上'
+    desc: 'CMニュースレターで透明なコミュニケーションを通じて\n顧客との信頼関係を強化します'
+  culture:
+    title: '健全な文化'
+    desc: 'AIモデレーションで\n健全なコミュニティを作ります'
+
+partner:
+  title: 'ゲーム会社のための\nパートナーシップ'
+  subtitle: 'MeanWhileと一緒に\nグローバルコミュニティを管理'
+  monitoring:
+    title: '24/7モニタリング'
+    desc: 'グローバルコミュニティを\nリアルタイムでモニタリング'
+  analytics:
+    title: '詳細分析'
+    desc: 'コミュニティデータを\n詳細に分析'
+  efficiency:
+    title: '効率性向上'
+    desc: 'AI自動化で\n業務効率を向上'
+  innovation:
+    title: '革新的インサイト'
+    desc: 'データ駆動型の\n戦略的インサイトを提供'
+
+videoExample:
+  title: 'AI動画分析'
+  subtitle: 'ゲーム動画をAIが自動分析'
+  original: 'オリジナル動画'
+  analyzed: 'AI分析結果'
+  videoTitle: '[ステラブレード] 新ボス攻略動画'
+  summary: 'この動画はステラブレードの新ボス攻略法を扱います。主要パターン3つと効果的な対応戦略を紹介し、初心者でも簡単に従えるヒントを提供します。'
+  part1:
+    title: 'ボスパターン分析'
+    content: '3つの主要攻撃パターンと回避タイミング'
+  part2:
+    title: '推奨装備'
+    content: '効果的な武器とスキルの組み合わせ'
+  part3:
+    title: '攻略ヒント'
+    content: '初心者のための実戦ヒント'
+
+report:
+  badge: 'デイリーレポート'
+  title: '毎日更新される\nコミュニティレポート'
+  subtitle: 'AIが分析したグローバルゲームコミュニティの\n主要イシューとトレンドを確認'
+  features:
+    title: '主要機能'
+    subtitle: 'データ駆動型のインサイト'
+    trending:
+      title: 'トレンディングトピック'
+      description: 'リアルタイム人気トピック分析'
+    sentiment:
+      title: '感情分析'
+      description: 'コミュニティの反応測定'
+    realtime:
+      title: 'リアルタイム更新'
+      description: '24時間モニタリング'
+    insights:
+      title: 'AIインサイト'
+      description: '自動要約と分析'
+  example:
+    title: 'デイリーレポート'
+    period: '2024-01-15 09:00 ~ 18:00'
+    summary: '今日のコミュニティで最も熱いトピックは新規アップデートに関する議論でした。'
+    hotTopic:
+      title: '難易度バランス論争'
+      sentimentLabel: 'ネガティブ'
+      timeRange: '過去24時間'
+      post1:
+        title: '新ボスが難しすぎる'
+        content: '通常難易度でもクリア不可能なほど難しいです...'
+      post2:
+        title: 'バランスパッチが必要'
+        content: '報酬に比べて難易度が高すぎます。調整が必要です。'
+  stats:
+    mentions: '言及数'
+  relatedPosts: '関連投稿'
+
+community:
+  title: 'Discordで\n会いましょう！'
+  subtitle: '世界のゲームコミュニティデータを\nリアルタイムで分析'
+  cta: 'Discordでお問い合わせ'
+  stats:
+    totalPosts: '総投稿数'
+    totalCommunities: 'コミュニティ投稿'
+    totalProjects: '登録済みゲームの投稿'
+    etc: 'その他'
+  posts:
+    title: 'グローバルゲームコミュニティを\nあなたの言語で体験してみてください'
+    subtitle: 'MeanWhileは\nグローバルゲームコミュニティデータを\nAIで要約・翻訳しDiscordで共有します'
+  discord:
+    title: 'Discordプレビュー'
+    subtitle: 'すでに数百人のゲーマーが\n参加しています'
+    footer: 'Meanwhile Global Gamer Hub'
+    view: 'Discordで見る'
+
+chatSimulator:
+  badge: 'AIアシスタント'
+  title: 'インサイトアシスタント'
+  subtitle: 'ゲームコミュニティについて質問し、即座にインサイトを取得'
+  assistantName: 'インサイトアシスタント'
+  assistantStatus: 'オンライン • コミュニティ分析中'
+  userQuestion: '新しいアップデートについてプレイヤーは何と言っていますか？'
+  thinking: '考え中...'
+  analyzing: '2,847件のコミュニティ投稿を分析中...'
+  assistantResponse: 'Reddit、Steam、Discordの2,847件の投稿を分析した結果、コミュニティの感情は複雑です（6.2/10）。主な懸念：難易度バランス（議論の68％）。ポジティブなフィードバック：ボスメカニクスが普遍的に称賛されています。主な問題：報酬が難易度に見合わない。'
+  note: '💡 これはシミュレーションです。実際のアシスタントはライブコミュニティデータを分析します。'
+
+newsletter:
+  badge: 'ニュースレター'
+  title: 'CM リアのパルス'
+  subtitle: 'フレンドリーな声で届けられるコミュニティインサイト'
+  readMore: '完全なニュースレターを読む →'
+  hotTopics: '今日のホットトピック'

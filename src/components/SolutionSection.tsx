@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Brain, Clock, TrendingUp } from "lucide-react";
+import { BarChart3, Zap, Mail, Bot } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
@@ -13,22 +13,28 @@ const SolutionSection = () => {
   
   const solutions = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: t('solution.ai.title'),
-      description: t('solution.ai.desc'),
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: t('landing.solution.daily.title'),
+      description: t('landing.solution.daily.desc'),
       gradient: "bg-gradient-primary"
     },
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: t('solution.timeline.title'),
-      description: t('solution.timeline.desc'),
+      icon: <Zap className="w-8 h-8" />,
+      title: t('landing.solution.update.title'),
+      description: t('landing.solution.update.desc'),
       gradient: "bg-gradient-secondary"
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: t('solution.trends.title'),
-      description: t('solution.trends.desc'),
+      icon: <Mail className="w-8 h-8" />,
+      title: t('landing.solution.newsletter.title'),
+      description: t('landing.solution.newsletter.desc'),
       gradient: "bg-gradient-primary"
+    },
+    {
+      icon: <Bot className="w-8 h-8" />,
+      title: t('landing.solution.chatbot.title'),
+      description: t('landing.solution.chatbot.desc'),
+      gradient: "bg-gradient-secondary"
     }
   ];
 
@@ -37,13 +43,13 @@ const SolutionSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('solution.title')}
+            {t('landing.solution.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
-            {t('solution.subtitle')}
+            {t('landing.solution.subtitle')}
           </p>
         </div>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           {/* Mobile Carousel */}
           <div className="md:hidden">
             <div ref={solutionsEmblaRef}>
@@ -72,7 +78,7 @@ const SolutionSection = () => {
           </div>
 
           {/* Desktop Grid */}
-          <div className="hidden md:grid lg:grid-cols-3 gap-8">
+          <div className="hidden md:grid md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <Card 
                 key={index}
@@ -80,15 +86,15 @@ const SolutionSection = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="text-center">
-                  <div className={`inline-flex p-4 rounded-2xl ${solution.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`inline-flex p-4 rounded-2xl ${solution.gradient} mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <div className="text-white">
                       {solution.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-foreground whitespace-pre-line">
+                  <h3 className="text-xl font-bold mb-3 text-foreground whitespace-pre-line">
                     {solution.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                     {solution.description}
                   </p>
                 </div>
