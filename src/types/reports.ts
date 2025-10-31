@@ -64,6 +64,7 @@ export interface DailyReport {
   game: string;
   date: string; // YYYY-MM-DD
   period: string; // e.g., "09:00 ~ 18:00"
+  title: string | I18nText;
   summary: I18nText[];  // Array of summary points
   positiveKeywords: PositiveKeyword[];
   communityMetrics: CommunityMetrics;

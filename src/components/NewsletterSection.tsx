@@ -69,6 +69,7 @@ function MainMessageSection({ message, language }: { message: string; language: 
 // Threads Section Component with Carousel (Desktop) and List (Mobile)
 function ThreadsSection({ threads, language }: { threads: any[]; language: string }) {
   const [ref, isVisible] = useIntersectionObserver();
+  const { t } = useLanguage();
   const [threadsEmblaRef] = useEmblaCarousel(
     { loop: true, align: 'start' },
     [Autoplay({ delay: 5000, stopOnInteraction: false })]
@@ -84,7 +85,7 @@ function ThreadsSection({ threads, language }: { threads: any[]; language: strin
       <div>
         <hr className="border-border mb-6" />
         <h4 className="text-xl font-bold text-center text-foreground mb-6">
-          {language === 'ko' ? '🗣️ 오늘의 주요 이야기들' : language === 'ja' ? '🗣️ 今日の主要な話題' : '🗣️ Today\'s Hot Topics'}
+          {`🗣️ ${t('landing.newsletter.hotTopics')}`}
         </h4>
         
         {/* Mobile: List View */}

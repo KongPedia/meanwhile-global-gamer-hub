@@ -12,6 +12,10 @@ daily:
   mentions: '言及'
   issues: '主要な問題'
   quotes: 'コミュニティの意見'
+  preview:
+    badge: '日次運用ブリーフィング'
+    title: '日次運用ブリーフィング'
+    subtitle: '毎朝、主要課題3つとリスクシグナルを把握し、即時の運用アクションへ'
   severity:
     high: '高'
     medium: '中'

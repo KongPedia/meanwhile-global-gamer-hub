@@ -14,7 +14,7 @@ problem:
   subtitle: 'Are you wasting time browsing multiple platforms\nto understand community reactions after updates?'
   fragmentation:
     title: 'Information Fragmentation'
-    desc: 'Difficult to check scattered reactions\nacross Reddit, Steam, DCInside, etc.\none by one'
+    desc: 'Difficult to check scattered reactions\nacross Reddit, Steam, DCInside, etc. one by one'
   delay:
     title: 'Response Delays'
     desc: 'Late issue detection leads to\nmissed timing for hotfixes\nand announcements'
@@ -159,3 +159,4 @@ newsletter:
   title: 'CM Lia''s Daily Pulse'
   subtitle: 'Daily community insights delivered with a friendly voice'
   readMore: 'Read Full Newsletter →'
+  hotTopics: 'Today''s Hot Topics'

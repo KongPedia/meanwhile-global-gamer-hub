@@ -21,6 +21,9 @@ daily:
     improvementMentions: 'Improvement Mentions'
     neutral: 'Neutral'
   preview:
+    badge: 'Daily Operations Briefing'
+    title: 'Daily Operations Briefing'
+    subtitle: 'Identify 3 key issues and risk signals every morning for immediate operational action'
     view: 'View Full Report'
   severity:
     high: 'high'
@@ -32,15 +35,15 @@ daily:
     neutral: 'neutral'
 
 milestone:
-  title: 'Milestone Report'
+  title: 'Patch Report'
   loading: 'Loading report...'
   notFound: 'Report Not Found'
   notFoundDesc: 'The requested report could not be found.'
   backToHome: 'Back to Home'
   back: 'Back'
   preview:
-    title: 'Milestone Performance Analysis'
-    badge: 'Milestone Performance Analysis'
+    title: 'Patch Performance Analysis'
+    badge: 'Patch Performance Analysis'
     subtitle: 'Organize update and event performance for retrospectives and next planning'
   executiveSummary: 'Executive Summary'
   featureFeedback: 'Feature Feedback'

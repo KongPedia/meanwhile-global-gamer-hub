@@ -4,14 +4,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, TrendingDown, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { DailyReport } from "@/types/reports";
+import reportA from "@/data/reports/daily/game-a-2025-10-17.json";
+import reportB from "@/data/reports/daily/game-b-2025-10-25.json";
 import { getLocalizedText } from "@/lib/i18n-utils";
 
 export default function DailyReportPreview() {
   const { t, language } = useLanguage();
   const navigate = useNavigate();
-  const [reports, setReports] = useState<DailyReport[]>([]);
+  const reports = useMemo(() => [reportA as DailyReport, reportB as DailyReport], []);
 
   // Game identifier mapping
   const getGameLabel = (gameId: string) => {
@@ -22,18 +24,7 @@ export default function DailyReportPreview() {
     return gameMap[gameId]?.[language as 'ko' | 'en' | 'ja'] || gameId;
   };
 
-  useEffect(() => {
-    const loadReports = async () => {
-      try {
-        const reportA = await import("@/data/reports/daily/game-a-2025-10-17.json");
-        const reportB = await import("@/data/reports/daily/game-b-2025-10-25.json");
-        setReports([reportA.default as DailyReport, reportB.default as DailyReport]);
-      } catch (error) {
-        console.error("Failed to load daily reports:", error);
-      }
-    };
-    loadReports();
-  }, []);
+  // Synchronous JSON import avoids layout shift on back navigation
 
   return (
     <section id="daily-reports" className="py-20 px-4 bg-muted/30">
@@ -41,17 +32,13 @@ export default function DailyReportPreview() {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <Badge variant="secondary" className="mb-4">
-            Daily Operations Briefing
+            {t('reports.daily.preview.badge')}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            {language === 'ko' ? '일일 운영 브리핑' : 
-             language === 'ja' ? '日次運営ブリーフィング' :
-             'Daily Operations Briefing'}
+            {t('reports.daily.preview.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            {language === 'ko' ? '매일 아침 핵심 이슈 3가지와 위험 신호를 파악하여 즉각적인 운영 액션으로 연결합니다' :
-             language === 'ja' ? '毎朝主要な問題3つと危険信号を把握し、即座の運営アクションに繋げます' :
-             'Identify 3 key issues and risk signals every morning for immediate operational action'}
+            {t('reports.daily.preview.subtitle')}
           </p>
         </div>
 
@@ -69,9 +56,9 @@ export default function DailyReportPreview() {
                   <Calendar className="w-6 h-6 text-blue-500" />
                 </div>
                 <div className="flex-1">
-                  <Badge variant="outline" className="mb-2">Daily Report</Badge>
+                  <Badge variant="outline" className="mb-2">{getLocalizedText(report.title, language)}</Badge>
                   <h3 className="text-xl font-bold mb-1">
-                    {getGameLabel(report.game)} {language === 'ko' ? '일일 보고서' : language === 'ja' ? 'レポート' : 'Daily Report'}
+                    {getLocalizedText(report.title, language)}
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {report.date}
@@ -101,9 +88,7 @@ export default function DailyReportPreview() {
                       {report.communityMetrics.postsDelta > 0 && '+'}{report.communityMetrics.postsDelta.toFixed(1)}%
                     </span>
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    {language === 'ko' ? '게시글' : language === 'ja' ? '投稿' : 'Posts'}
-                  </p>
+                  <p className="text-xs text-muted-foreground">{t('reports.daily.community.totalPosts')}</p>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1 mb-1">
@@ -116,9 +101,7 @@ export default function DailyReportPreview() {
                       {report.communityMetrics.commentsDelta > 0 && '+'}{report.communityMetrics.commentsDelta.toFixed(1)}%
                     </span>
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    {language === 'ko' ? '댓글' : language === 'ja' ? 'コメント' : 'Comments'}
-                  </p>
+                  <p className="text-xs text-muted-foreground">{t('reports.daily.community.comments')}</p>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1 mb-1">
@@ -126,15 +109,13 @@ export default function DailyReportPreview() {
                       {report.communityMetrics.positiveMentions.toFixed(1)}%
                     </span>
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    {language === 'ko' ? '긍정' : language === 'ja' ? '肯定' : 'Positive'}
-                  </p>
+                  <p className="text-xs text-muted-foreground">{t('reports.daily.community.positiveMentions')}</p>
                 </div>
               </div>
 
               {/* CTA */}
               <Button variant="ghost" className="w-full group-hover:bg-primary/10">
-                {language === 'ko' ? '전체 보고서 보기' : language === 'ja' ? 'レポートを見る' : 'View Full Report'}
+                {t('reports.daily.preview.view')}
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Card>
