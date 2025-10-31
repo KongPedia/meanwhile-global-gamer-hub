@@ -39,3 +39,8 @@ milestone:
     positive: 'Positive'
     negative: 'Negative'
     neutral: 'Neutral'
+    veryPositive: 'Very Positive'
+    slightlyPositive: 'Slightly Positive'
+    slightlyNegative: 'Slightly Negative'
+    veryNegative: 'Very Negative'
+    mixed: 'Mixed'

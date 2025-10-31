@@ -5,6 +5,7 @@ import { Heart, TrendingUp, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Newsletter } from "@/types/reports";
 import { useNavigate } from "react-router-dom";
+import { getLocalizedText } from "@/lib/i18n-utils";
 
 interface NewsletterSectionProps {
   newsletters: Newsletter[];
@@ -43,13 +44,13 @@ export default function NewsletterSection({ newsletters }: NewsletterSectionProp
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <Badge variant="secondary" className="mb-4">
-            {t('newsletter.badge') || 'Weekly Newsletter'}
+            {t('landing.newsletter.badge') || 'Weekly Newsletter'}
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            {t('newsletter.title') || 'CM Lia\'s Weekly Pulse'}
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line">
+            {t('landing.newsletter.title') || 'CM Lia\'s Weekly Pulse'}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('newsletter.subtitle') || 'Weekly community insights delivered with a friendly voice'}
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto whitespace-pre-line">
+            {t('landing.newsletter.subtitle') || 'Weekly community insights delivered with a friendly voice'}
           </p>
         </div>
 
@@ -58,9 +59,8 @@ export default function NewsletterSection({ newsletters }: NewsletterSectionProp
           {newsletters.map((newsletter, index) => (
             <Card
               key={newsletter.id}
-              className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-gaming animate-fade-in-up cursor-pointer"
+              className="p-6 bg-card border-border transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => navigate(`/${language}/newsletter/${newsletter.gameId}/${newsletter.date}`)}
             >
               {/* Header */}
               <div className="mb-4">
@@ -75,45 +75,35 @@ export default function NewsletterSection({ newsletters }: NewsletterSectionProp
                     </span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{newsletter.title}</h3>
+                <h3 className="text-xl font-bold mb-2">{getLocalizedText(newsletter.title, language)}</h3>
                 <p className="text-sm text-muted-foreground">{newsletter.gameName} • {newsletter.date}</p>
               </div>
 
               {/* Summary */}
               <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                {newsletter.summary}
+                {getLocalizedText(newsletter.summary, language)}
               </p>
 
-              {/* Key Metrics */}
-              <div className="grid grid-cols-3 gap-4 mb-4 p-4 bg-muted/30 rounded-lg">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">{newsletter.keyMetrics.totalPosts}</p>
-                  <p className="text-xs text-muted-foreground">Posts</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">{newsletter.keyMetrics.activeUsers}</p>
-                  <p className="text-xs text-muted-foreground">Users</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">{newsletter.keyMetrics.sentimentScore}</p>
-                  <p className="text-xs text-muted-foreground">Sentiment</p>
-                </div>
-              </div>
 
-              {/* Lia's Note */}
+              {/* Lia's Note Preview */}
               {newsletter.liaNote && (
-                <div className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r">
-                  <p className="text-sm font-medium mb-1">💚 Lia's Note</p>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {newsletter.liaNote}
+                <div className="border-l-4 border-purple-500 pl-4 py-2 bg-purple-500/5 rounded-r">
+                  <p className="text-sm font-medium mb-1 flex items-center gap-1">
+                    <span>💌</span>
+                    <span>CM Lia</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground line-clamp-3">
+                    {getLocalizedText(newsletter.liaNote.main, language)}
                   </p>
                 </div>
               )}
 
-              {/* Read More */}
-              <Button variant="ghost" className="w-full mt-4">
-                {t('newsletter.readMore') || 'Read Full Newsletter →'}
-              </Button>
+              {/* Sample Badge */}
+              <div className="mt-4 text-center">
+                <Badge variant="secondary" className="text-xs">
+                  {language === 'ko' ? '📮 Discord에서 발행' : language === 'ja' ? '📮 Discordで発行' : '📮 Published on Discord'}
+                </Badge>
+              </div>
             </Card>
           ))}
         </div>

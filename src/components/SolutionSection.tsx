@@ -14,20 +14,20 @@ const SolutionSection = () => {
   const solutions = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: t('solution.ai.title'),
-      description: t('solution.ai.desc'),
+      title: t('landing.solution.ai.title'),
+      description: t('landing.solution.ai.desc'),
       gradient: "bg-gradient-primary"
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: t('solution.timeline.title'),
-      description: t('solution.timeline.desc'),
+      title: t('landing.solution.timeline.title'),
+      description: t('landing.solution.timeline.desc'),
       gradient: "bg-gradient-secondary"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: t('solution.trends.title'),
-      description: t('solution.trends.desc'),
+      title: t('landing.solution.trends.title'),
+      description: t('landing.solution.trends.desc'),
       gradient: "bg-gradient-primary"
     }
   ];
@@ -37,10 +37,10 @@ const SolutionSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('solution.title')}
+            {t('landing.solution.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
-            {t('solution.subtitle')}
+            {t('landing.solution.subtitle')}
           </p>
         </div>
         <div className="max-w-5xl mx-auto">

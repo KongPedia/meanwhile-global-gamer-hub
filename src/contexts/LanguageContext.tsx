@@ -70,7 +70,7 @@ export const detectBrowserLanguage = (): Language => {
 };
 
 // Load messages dynamically from YAML files
-const loadMessages = async (lang: Language, namespaces: string[] = ['common', 'landing']): Promise<Messages> => {
+const loadMessages = async (lang: Language, namespaces: string[] = ['common', 'landing', 'reports']): Promise<Messages> => {
   const messages: Messages = {};
   
   for (const ns of namespaces) {
@@ -115,14 +115,17 @@ const translateKey = (messages: Messages, key: string, vars?: Record<string, str
     return key;
   }
   
+  // Convert \n to actual newline characters
+  let result = value.replace(/\\n/g, '\n');
+  
   // Variable substitution: replace {varName} with vars.varName
   if (vars) {
-    return value.replace(/\{(\w+)\}/g, (match, varName) => {
+    result = result.replace(/\{(\w+)\}/g, (match, varName) => {
       return vars[varName] !== undefined ? vars[varName] : match;
     });
   }
   
-  return value;
+  return result;
 };
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {

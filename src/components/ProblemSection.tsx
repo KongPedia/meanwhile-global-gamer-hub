@@ -14,18 +14,18 @@ const ProblemSection = () => {
   const problems = [
     {
       icon: <MessageSquareX className="w-8 h-8" />,
-      title: t('problem.fragmentation.title'),
-      description: t('problem.fragmentation.desc')
+      title: t('landing.problem.fragmentation.title'),
+      description: t('landing.problem.fragmentation.desc')
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: t('problem.language.title'),
-      description: t('problem.language.desc')
+      title: t('landing.problem.language.title'),
+      description: t('landing.problem.language.desc')
     },
     {
       icon: <AlertTriangle className="w-8 h-8" />,
-      title: t('problem.toxic.title'),
-      description: t('problem.toxic.desc')
+      title: t('landing.problem.toxic.title'),
+      description: t('landing.problem.toxic.desc')
     }
   ];
 
@@ -34,10 +34,10 @@ const ProblemSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-2xl md:text-4xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('problem.title')}
+            {t('landing.problem.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
-            {t('problem.subtitle')}
+            {t('landing.problem.subtitle')}
           </p>
         </div>
         
