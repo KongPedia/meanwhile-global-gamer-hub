@@ -1,0 +1,12 @@
+# Common translations for Japanese
+game:
+  all: '全てのゲーム'
+  clairobscur33: 'クレールオブスキュール：\nエクスペディション33'
+  deltaforce: 'デルタフォース'
+  stellarblade: 'ステラブレード'
+
+footer:
+  title: 'MeanWhile'
+  subtitle: 'グローバルゲーマーの声を\n一か所に'
+  discord: 'Discordでお問い合わせ'
+  copyright: '© 2025 MeanWhile. All rights reserved.'

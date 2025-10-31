@@ -3,10 +3,16 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 
 export type Language = 'ko' | 'en' | 'ja' | 'zh' | 'es';
 
+interface Messages {
+  [key: string]: any;
+}
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, vars?: Record<string, string>) => string;
+  messages: Messages;
+  loading: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -23,10 +29,13 @@ interface LanguageProviderProps {
   children: ReactNode;
 }
 
+// Supported languages
+const SUPPORTED_LANGUAGES: Language[] = ['ko', 'en', 'ja', 'zh', 'es'];
+
 // Function to detect browser language
 export function isSupportedLangCode(code: string | null | undefined): code is Language {
   if (!code) return false;
-  return Object.prototype.hasOwnProperty.call(translations, code);
+  return SUPPORTED_LANGUAGES.includes(code as Language);
 }
 
 export const detectBrowserLanguage = (): Language => {
@@ -55,6 +64,62 @@ export const detectBrowserLanguage = (): Language => {
   return 'en';
 };
 
+// Load messages dynamically from YAML files
+const loadMessages = async (lang: Language, namespaces: string[] = ['common', 'landing']): Promise<Messages> => {
+  const messages: Messages = {};
+  
+  for (const ns of namespaces) {
+    try {
+      const module = await import(`../i18n/${lang}/${ns}.yaml`);
+      messages[ns] = module.default || module;
+    } catch (error) {
+      console.warn(`Failed to load ${lang}/${ns}.yaml:`, error);
+      // Fallback to English if available
+      if (lang !== 'en') {
+        try {
+          const fallbackModule = await import(`../i18n/en/${ns}.yaml`);
+          messages[ns] = fallbackModule.default || fallbackModule;
+        } catch (fallbackError) {
+          console.error(`Failed to load fallback en/${ns}.yaml:`, fallbackError);
+        }
+      }
+    }
+  }
+  
+  return messages;
+};
+
+// Translation function with variable substitution
+const translateKey = (messages: Messages, key: string, vars?: Record<string, string>): string => {
+  // Parse key path like 'landing.hero.title' or 'common.game.all'
+  const parts = key.split('.');
+  let value: any = messages;
+  
+  for (const part of parts) {
+    if (value && typeof value === 'object' && part in value) {
+      value = value[part];
+    } else {
+      console.warn(`Translation key not found: ${key}`);
+      return key;
+    }
+  }
+  
+  // If value is not a string, return the key
+  if (typeof value !== 'string') {
+    console.warn(`Translation value is not a string for key: ${key}`);
+    return key;
+  }
+  
+  // Variable substitution: replace {varName} with vars.varName
+  if (vars) {
+    return value.replace(/\{(\w+)\}/g, (match, varName) => {
+      return vars[varName] !== undefined ? vars[varName] : match;
+    });
+  }
+  
+  return value;
+};
+
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState<Language>(() => {
     // Try to get saved language from localStorage first
@@ -66,17 +131,44 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     return detectBrowserLanguage();
   });
   
+  const [messages, setMessages] = useState<Messages>({});
+  const [loading, setLoading] = useState(true);
+  
+  // Load messages when language changes
+  useEffect(() => {
+    let isMounted = true;
+    
+    const loadLanguageMessages = async () => {
+      setLoading(true);
+      const newMessages = await loadMessages(language);
+      
+      if (isMounted) {
+        setMessages(newMessages);
+        setLoading(false);
+      }
+    };
+    
+    loadLanguageMessages();
+    
+    return () => {
+      isMounted = false;
+    };
+  }, [language]);
+  
   // Save language preference to localStorage when it changes
   useEffect(() => {
     localStorage.setItem('preferred-language', language);
   }, [language]);
 
-  const t = (key: string): string => {
-    return translations[language][key] || translations['en'][key] || key;
+  const t = (key: string, vars?: Record<string, string>): string => {
+    if (loading) {
+      return key;
+    }
+    return translateKey(messages, key, vars);
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, messages, loading }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -139,8 +231,8 @@ const translations = {
     'videoExample.subtitle': '긴 동영상의 핵심만 빠르게 파악하세요.',
     'videoExample.original': '원본 영상',
     'videoExample.analyzed': '주요 내용',
-    'videoExample.videoTitle': "ex) 신작 '크로노스케이프 보이저' 플레이 영상",
-    'videoExample.summary': "시간 여행을 테마로 한 오픈월드 RPG, '크로노스케이프 보이저'의 주요 특징과 초반 공략을 담았습니다.",
+    'videoExample.videoTitle': "'스텔라 블레이드' 글로벌 커뮤니티 반응 요약 (18분 → 3분)",
+    'videoExample.summary': "Reddit, Steam, 5ch 등 7개 플랫폼의 18분 분량 게시글을 AI가 3분으로 압축. 핵심 이슈와 감정 트렌드를 한눈에 파악하세요.",
     'videoExample.part1.title': '시간 조작 능력 활용법',
     'videoExample.part1.content': "주인공의 핵심 능력인 '시간 되감기'와 '미래 예지'를 전투와 퍼즐에서 어떻게 활용하는지 보여줍니다.",
     'videoExample.part2.title': '고대와 미래를 넘나드는 모험',
@@ -173,7 +265,7 @@ const translations = {
     'report.badge': '새로운 기능',
     'report.title': '게임 인사이트 리포트',
     'report.subtitle': '커뮤니티에서가장 활발하게\n논의되는 주제들을 분석하여\n한눈에 볼 수 있는\n인사이트 리포트를 제공합니다.',
-    'report.example.title': 'ex) Mystic Legends 핫이슈 리포트 ',
+    'report.example.title': '스텔라 블레이드 핫이슈 리포트',
     'report.example.period': '2025-01-15 09:00 ~ 18:00',
     'report.example.summary': '신작 RPG \'Mystic Legends\' 커뮤니티에서 새로운 업데이트에 대한 논의가 활발합니다. 특히 새로운 던전의 난이도와 보상 시스템에 대한 의견이 분분합니다.',
     'report.example.hotTopic.title': '새 던전 난이도 논란',
@@ -258,8 +350,8 @@ const translations = {
     'videoExample.subtitle': 'Quickly grasp the key points of long videos.',
     'videoExample.original': 'Original Video',
     'videoExample.analyzed': 'Key Content',
-    'videoExample.videoTitle': "ex) New Game 'Chronoscape Voyagers' Gameplay Video",
-    'videoExample.summary': "This video covers the main features and early-game strategies for 'Chronoscape Voyagers', an open-world RPG with a time-travel theme.",
+    'videoExample.videoTitle': "'Stellar Blade' Global Community Reaction Summary (18min → 3min)",
+    'videoExample.summary': "AI compresses 18 minutes of posts from 7 platforms (Reddit, Steam, 5ch) into 3 minutes. Identify key issues and sentiment trends at a glance.",
     'videoExample.part1.title': 'How to Use Time Manipulation Abilities',
     'videoExample.part1.content': "Shows how to use the protagonist's core abilities, 'Time Rewind' and 'Future Sight', in combat and puzzles.",
     'videoExample.part2.title': 'Adventures Across Ancient and Future Eras',
@@ -292,7 +384,7 @@ const translations = {
     'report.badge': 'New Feature',
     'report.title': 'Gaming Community\nInsight Reports',
     'report.subtitle': 'Analyze the most actively discussed topics\nin gaming communities and provide insight reports\nat a glance',
-    'report.example.title': 'ex) Mystic Legends Hot Issue Report',
+    'report.example.title': 'Stellar Blade Hot Issue Report',
     'report.example.period': '2025-01-15 09:00 ~ 18:00',
     'report.example.summary': 'Active discussions about the new update in the \'Mystic Legends\' RPG community. Opinions are divided on the difficulty of new dungeons and the reward system.',
     'report.example.hotTopic.title': 'New Dungeon Difficulty Controversy',
@@ -377,8 +469,8 @@ const translations = {
     'videoExample.subtitle': '長い動画の要点を素早く把握します。',
     'videoExample.original': '元の動画',
     'videoExample.analyzed': '主な内容',
-    'videoExample.videoTitle': '新作「クロノスケープ・ボイジャー」プレイ動画',
-    'videoExample.summary': '時間旅行をテーマにしたオープンワールドRPG「クロノスケープ・ボイジャー」の主な特徴と序盤の攻略を収録しました。',
+    'videoExample.videoTitle': '「ステラブレード」グローバルコミュニティ反応要約 (18分→03分)',
+    'videoExample.summary': 'AIが7プラットフォーム(Reddit、Steam、5ch)の18分間の投稿を3分に圧縮。主要な問題と感情トレンドを一目で把握できます。',
     'videoExample.part1.title': '時間操作能力の活用法',
     'videoExample.part1.content': '主人公の核心能力である「時間巻き戻し」と「未来予知」を戦闘とパズルでどう活用するかを見せます。',
     'videoExample.part2.title': '古代と未来を行き来する冒険',
@@ -411,7 +503,7 @@ const translations = {
     'report.badge': '新機能',
     'report.title': 'コミュニティ \nインサイトレポート',
     'report.subtitle': 'ゲームコミュニティで最も活発に\n議論されているトピックをAIが分析し、\n一目でわかるレポートを提供します。',
-    'report.example.title': 'ex) Mystic Legends\nレポート',
+    'report.example.title': 'ステラブレードホットイシューレポート',
     'report.example.period': '2025-01-15\n09:00~18:00',
     'report.example.summary': '新作RPG「Mystic Legends」コミュニティで新しいアップデートについての議論が活発です。特に新しいダンジョンの難易度と報酬システムについて意見が分かれています。',
     'report.example.hotTopic.title': '新ダンジョン難易度論争',
