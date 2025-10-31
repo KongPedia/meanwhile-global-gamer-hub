@@ -1,0 +1,41 @@
+# Reports page translations for Japanese
+daily:
+  title: 'デイリーレポート'
+  loading: 'レポート読み込み中...'
+  notFound: 'レポートが見つかりません'
+  notFoundDesc: 'リクエストされたレポートが見つかりませんでした。'
+  backToHome: 'ホームに戻る'
+  back: '戻る'
+  summary: '要約'
+  kpi: '主要業績評価指標'
+  keywords: '主要キーワード'
+  mentions: '言及'
+  issues: '主要な問題'
+  quotes: 'コミュニティの意見'
+  severity:
+    high: '高'
+    medium: '中'
+    low: '低'
+  sentiment:
+    positive: 'ポジティブ'
+    negative: 'ネガティブ'
+    neutral: '中立'
+
+milestone:
+  title: 'マイルストーンレポート'
+  loading: 'レポート読み込み中...'
+  notFound: 'レポートが見つかりません'
+  notFoundDesc: 'リクエストされたレポートが見つかりませんでした。'
+  backToHome: 'ホームに戻る'
+  back: '戻る'
+  executiveSummary: 'エグゼクティブサマリー'
+  featureFeedback: '機能フィードバック'
+  comparison: '期間比較'
+  highlights: '主なハイライト'
+  recommendations: '推奨事項'
+  topComments: '主な意見:'
+  previous: '前回:'
+  sentiment:
+    positive: 'ポジティブ'
+    negative: 'ネガティブ'
+    neutral: '中立'
