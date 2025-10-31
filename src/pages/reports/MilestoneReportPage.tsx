@@ -69,6 +69,14 @@ export default function MilestoneReportPage() {
   const currentUrl = `${siteUrl}/${lang}/reports/milestone/${game}/${milestoneId}`;
   const supportedLangs = getSupportedLanguageCodes();
 
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate(`/${lang}`, { replace: true });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -115,7 +123,7 @@ export default function MilestoneReportPage() {
       <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-6 max-w-4xl">
           <div className="flex items-center justify-between mb-4">
-            <Button variant="ghost" onClick={() => navigate(`/${lang}`)} className="gap-2">
+            <Button variant="ghost" onClick={handleBack} className="gap-2">
               <ArrowLeft className="h-4 w-4" />
               {t('reports.milestone.back')}
             </Button>

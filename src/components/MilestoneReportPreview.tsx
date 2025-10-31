@@ -4,49 +4,30 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, TrendingDown, Target } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { MilestoneReport } from "@/types/reports";
 import { getLocalizedText } from "@/lib/i18n-utils";
+import reportA from "@/data/reports/milestone/game-a-anniversary-2025.json";
+import reportB from "@/data/reports/milestone/game-b-update-2025.json";
 
 export default function MilestoneReportPreview() {
   const { t, language } = useLanguage();
   const navigate = useNavigate();
-  const [reports, setReports] = useState<MilestoneReport[]>([]);
+  const reports = useMemo(() => [reportA as MilestoneReport, reportB as MilestoneReport], []);
 
   // Map sentiment score (-1~1) to localized label and color
   const getSentimentInfo = (score: number) => {
-    // Thresholds: >0.2 positive, <-0.2 negative, otherwise mixed/neutral
-    const abs = Math.abs(score);
-    let label = t('reports.milestone.sentiment.neutral');
-    let color = 'text-gray-600';
-
-    if (score > 0.2) {
-      label = t('reports.milestone.sentiment.positive');
-      color = 'text-green-600';
-    } else if (score < -0.2) {
-      label = t('reports.milestone.sentiment.negative');
-      color = 'text-red-600';
-    } else if (abs >= 0.05) {
-      // small leaning but not strong => mixed
-      label = t('reports.milestone.sentiment.mixed');
-      color = 'text-purple-600';
+    // Align with detail page thresholds: >0.1 positive, <-0.1 negative, else neutral
+    if (score > 0.1) {
+      return { label: t('reports.milestone.sentiment.positive'), color: 'text-green-600' };
     }
-
-    return { label, color };
+    if (score < -0.1) {
+      return { label: t('reports.milestone.sentiment.negative'), color: 'text-red-600' };
+    }
+    return { label: t('reports.milestone.sentiment.neutral'), color: 'text-gray-600' };
   };
 
-  useEffect(() => {
-    const loadReports = async () => {
-      try {
-        const reportA = await import("@/data/reports/milestone/game-a-anniversary-2025.json");
-        const reportB = await import("@/data/reports/milestone/game-b-update-2025.json");
-        setReports([reportA.default as MilestoneReport, reportB.default as MilestoneReport]);
-      } catch (error) {
-        console.error("Failed to load milestone reports:", error);
-      }
-    };
-    loadReports();
-  }, []);
+  // Synchronous JSON import avoids layout shift on back navigation
 
   return (
     <section id="milestone-reports" className="py-20 px-4 bg-background">

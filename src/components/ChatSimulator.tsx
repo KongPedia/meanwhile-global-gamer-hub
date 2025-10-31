@@ -251,7 +251,7 @@ export default function ChatSimulator() {
       case 'analyzing':
         return (
           <div className="flex items-center gap-2 text-sm text-primary" aria-live="polite">
-            <Sparkles className="w-4 h-4 animate-pulse" />
+            <Sparkles className="w-4 h-4 animate-spin" />
             <span>{getAnalyzingText()}</span>
           </div>
         );

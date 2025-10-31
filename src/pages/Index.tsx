@@ -6,26 +6,13 @@ import MilestoneReportPreview from "@/components/MilestoneReportPreview";
 import NewsletterSection from "@/components/NewsletterSection";
 import ChatSimulator from "@/components/ChatSimulator";
 import Footer from "@/components/Footer";
-import { useEffect, useState } from "react";
 import { Newsletter } from "@/types/reports";
+import newsletter3 from "@/data/newsletter/week-3.json";
+import newsletter2 from "@/data/newsletter/week-2.json";
 import { Helmet } from "react-helmet-async";
 
 const Index = () => {
-  const [newsletters, setNewsletters] = useState<Newsletter[]>([]);
-
-  useEffect(() => {
-    // Load newsletter samples
-    const loadNewsletters = async () => {
-      try {
-        const newsletter3 = await import("@/data/newsletter/week-3.json");
-        const newsletter2 = await import("@/data/newsletter/week-2.json");
-        setNewsletters([newsletter3.default as Newsletter, newsletter2.default as Newsletter]);
-      } catch (error) {
-        console.error("Failed to load newsletters:", error);
-      }
-    };
-    loadNewsletters();
-  }, []);
+  const newsletters: Newsletter[] = [newsletter3 as Newsletter, newsletter2 as Newsletter];
 
   return (
     <div className="min-h-screen bg-background">
