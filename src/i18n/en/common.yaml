@@ -1,0 +1,12 @@
+# Common translations for English
+game:
+  all: 'All Games'
+  clairobscur33: 'Clair Obscur: 33'
+  deltaforce: 'Delta Force'
+  stellarblade: 'Stellar Blade'
+
+footer:
+  title: 'MeanWhile'
+  subtitle: 'Global gamers'' voices in one place'
+  discord: 'Contact via Discord'
+  copyright: '© 2025 MeanWhile. All rights reserved.'

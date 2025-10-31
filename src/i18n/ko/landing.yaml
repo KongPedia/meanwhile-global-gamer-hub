@@ -1,0 +1,67 @@
+# Landing page translations for Korean
+hero:
+  title: '글로벌 게이머의\n목소리를 한 곳에'
+  subtitle: 'MeanWhile은 글로벌 게임 커뮤니티 데이터를\nAI가 요약하고 번역하여 Discord에서 공유합니다'
+  cta:
+    discord: 'Discord로 문의하기'
+    learn: '더 알아보기'
+
+problem:
+  title: '게이머들이\n마주하는 현실'
+  subtitle: '전 세계 게임 커뮤니티에서\n일어나는 일들을 놓치고 계신가요?'
+  fragmentation:
+    title: '정보 파편화'
+    desc: '각 플랫폼마다\n흩어진 정보들로 인해\n중요한 소식을 놓치게 됩니다'
+  language:
+    title: '언어 장벽'
+    desc: '다양한 언어로 작성된\n글로벌 커뮤니티의 정보를\n이해하기 어렵습니다'
+  toxic:
+    title: '독성 문화'
+    desc: '건전하지 못한\n커뮤니티 문화로 인해\n참여를 꺼리게 됩니다'
+
+solution:
+  title: 'AI가 제공하는\n혁신적 해결책'
+  subtitle: 'MeanWhile의 AI 기술로\n글로벌 게임 커뮤니티를\n새롭게 경험하세요'
+  ai:
+    title: 'AI 요약 & 번역'
+    desc: '여러 언어의 게임 커뮤니티 글을\nAI가 실시간으로\n요약하고 번역합니다'
+  timeline:
+    title: '통합 게임 타임라인'
+    desc: '흩어진 게임 정보들을\n하나의 타임라인으로 정리해\n한눈에 확인하세요'
+  trends:
+    title: '실시간 트렌드 감지'
+    desc: '게임 커뮤니티의\n최신 이슈와 트렌드를\nAI가 실시간으로 분석합니다'
+
+benefits:
+  title: '새로운 게이밍\n커뮤니티 경험'
+  subtitle: '눈팅 유저도\n글로벌 게이머가 될 수 있습니다'
+  search:
+    title: '빠른 탐색'
+    desc: 'AI 요약으로 원하는 정보를\n빠르게 찾아보세요'
+  translation:
+    title: '번역 지원'
+    desc: '언어 장벽 없이\n전 세계 게이머들과 소통하세요'
+  community:
+    title: '커뮤니티 연결'
+    desc: '관심사가 같은\n글로벌 게이머들과 연결되세요'
+  culture:
+    title: '건전한 문화'
+    desc: 'AI 모더레이션으로\n건전한 커뮤니티를 만들어갑니다'
+
+community:
+  title: 'Discord에서 만나요!'
+  subtitle: '전 세계 게임 커뮤니티의 데이터를\n실시간으로 분석합니다'
+  cta: 'Discord로 문의하기'
+  stats:
+    totalPosts: '총 게시물'
+    totalCommunities: '커뮤니티 게시물'
+    totalProjects: '등록된 게임 게시물'
+    etc: '기타'
+  posts:
+    title: '해외 여러 게임 커뮤니티를\n여러분의 언어로 경험하세요'
+    subtitle: 'MeanWhile은\n글로벌 게임 커뮤니티 데이터를\nAI가 요약하고 번역하여\nDiscord에서 공유합니다'
+  discord:
+    title: 'Discord'
+    subtitle: '이미 수백 명의 게이머가\n함께하고 있습니다'
+    footer: 'Meanwhile Global Gamer Hub'
+    view: 'Discord에서 보기'
