@@ -1,0 +1,47 @@
+{
+  "id": "newsletter-stellarblade-w3-2025",
+  "gameId": "stellarblade",
+  "gameName": "Stellar Blade",
+  "date": "2025-01-21",
+  "weekNumber": 3,
+  "title": "Stellar Blade Weekly Pulse - Week 3",
+  "summary": "This week saw intense discussions around the new dungeon update. While players love the challenge, there's growing concern about accessibility. The community remains highly engaged with 12K+ posts this week.",
+  "highlights": [
+    {
+      "title": "New Dungeon Divides Community",
+      "description": "The latest dungeon content is praised for its design but criticized for extreme difficulty. 68% of discussions mention difficulty concerns.",
+      "sentiment": "mixed"
+    },
+    {
+      "title": "Boss Fight Mechanics Win Hearts",
+      "description": "Despite difficulty complaints, the new boss mechanics are universally praised. Players call it 'the best boss fight in recent gaming history.'",
+      "sentiment": "positive"
+    },
+    {
+      "title": "Reward System Under Scrutiny",
+      "description": "Players feel the effort-to-reward ratio is unbalanced. This is becoming a trending topic across all platforms.",
+      "sentiment": "negative"
+    }
+  ],
+  "topIssues": [
+    {
+      "title": "Dungeon Difficulty Too High",
+      "description": "New dungeon content is inaccessible to casual players",
+      "severity": "high",
+      "mentions": 2847
+    },
+    {
+      "title": "Reward Balance Concerns",
+      "description": "Players report insufficient rewards for difficulty level",
+      "severity": "medium",
+      "mentions": 1923
+    }
+  ],
+  "communityMood": "mixed",
+  "keyMetrics": {
+    "totalPosts": 12456,
+    "activeUsers": 8934,
+    "sentimentScore": 6.2
+  },
+  "liaNote": "Hey everyone! 👋 This week's been quite a ride! I'm seeing so much passion from our community - you all LOVE the challenge, but I hear you loud and clear on the difficulty concerns. The dev team is definitely paying attention. Keep that feedback coming, and remember: we're all in this together! 💪✨"
+}

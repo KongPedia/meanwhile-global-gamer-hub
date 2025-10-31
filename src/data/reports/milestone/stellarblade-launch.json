@@ -1,0 +1,101 @@
+{
+  "id": "milestone-stellarblade-launch",
+  "game": "stellarblade",
+  "milestoneId": "launch",
+  "title": "Stellar Blade Global Launch Analysis",
+  "date": "2025-01-20",
+  "period": "2025-01-15 ~ 2025-01-20",
+  "executiveSummary": "Stellar Blade's global launch generated significant community engagement with over 50K posts across platforms. Overall sentiment is positive (7.8/10) with players praising graphics and combat mechanics, while expressing concerns about difficulty curve and endgame content.",
+  "featureFeedback": [
+    {
+      "feature": "Combat System",
+      "positiveCount": 8542,
+      "negativeCount": 1203,
+      "neutralCount": 2156,
+      "topComments": [
+        "Combat feels incredibly responsive and satisfying",
+        "Best action combat I've experienced in years",
+        "Learning curve is steep but rewarding"
+      ]
+    },
+    {
+      "feature": "Graphics & Art Direction",
+      "positiveCount": 9876,
+      "negativeCount": 432,
+      "neutralCount": 1789,
+      "topComments": [
+        "Visually stunning, next-gen graphics",
+        "Art style is unique and memorable",
+        "Performance is surprisingly good"
+      ]
+    },
+    {
+      "feature": "Difficulty Balance",
+      "positiveCount": 3421,
+      "negativeCount": 5678,
+      "neutralCount": 2901,
+      "topComments": [
+        "Too punishing for casual players",
+        "Need more difficulty options",
+        "Hardcore fans will love it but may alienate others"
+      ]
+    }
+  ],
+  "comparison": [
+    {
+      "metric": "Day 1 Posts",
+      "current": 12456,
+      "previous": 8932,
+      "change": 39.5
+    },
+    {
+      "metric": "Average Sentiment",
+      "current": 7.8,
+      "previous": 6.9,
+      "change": 13.0
+    },
+    {
+      "metric": "Engagement Rate",
+      "current": 15.2,
+      "previous": 11.3,
+      "change": 34.5
+    }
+  ],
+  "keywords": [
+    {
+      "term": "combat",
+      "frequency": 8945,
+      "sentiment": "positive",
+      "score": 8.5
+    },
+    {
+      "term": "graphics",
+      "frequency": 7823,
+      "sentiment": "positive",
+      "score": 9.1
+    },
+    {
+      "term": "difficulty",
+      "frequency": 6234,
+      "sentiment": "negative",
+      "score": 4.2
+    }
+  ],
+  "highlights": [
+    "Record-breaking launch with 50K+ community posts in first week",
+    "Combat system receives universal praise (87% positive)",
+    "Graphics quality exceeds player expectations",
+    "Difficulty balance is the primary concern requiring attention"
+  ],
+  "recommendations": [
+    "Consider adding difficulty options or assist features for accessibility",
+    "Expand endgame content roadmap communication",
+    "Leverage positive combat feedback in marketing materials",
+    "Address performance optimization for mid-range systems"
+  ],
+  "metadata": {
+    "totalPosts": 52341,
+    "platforms": ["Reddit", "Steam", "Discord", "Twitter", "YouTube"],
+    "languages": ["en", "ko", "ja", "zh"]
+  }
+}
