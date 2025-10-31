@@ -1,0 +1,172 @@
+<context>
+# Overview  
+기존 Meanwhile 랜딩(소개형, B2C 톤)에서 B2B 가치 중심(게임사/퍼블리셔 대상 인사이트 리포트)으로 리브랜딩. 핵심은 랜딩 IA 재구성, 리포트 상세 라우트 신설, 챗봇 시뮬레이터/CM 리아 뉴스레터를 랜딩 내 단일 섹션으로 통합, CTA/카피 톤 변경, i18n 리소스 YAML 분리 및 SEO 전략 정렬.
+
+- 대상: 게임사 운영/PM/CM/라이브옵스(핵심), 퍼블리셔 운영/분석, 경영진/프로듀서(준핵심)
+- 문제: 커뮤니티 피드백과 업데이트 영향 파악의 단절·속도 문제, 언어 장벽, 증빙 부족
+- 가치: 일일 브리핑, 마일스톤 분석, 감성/키워드 트렌드, CM 보이스 뉴스레터로 빠른 의사결정 지원
+
+# Before vs After (Change Map)  
+- **IA & Routes**
+  - Before: 단일 랜딩 중심, 데모 영상 개념, /reports/* 미구현, 뉴스레터/챗봇 별도 라우트 고려
+  - After: Hybrid. 랜딩은 섹션 앵커 내러티브 유지 + ‘인사이트 어시스턴트 & CM 리아’ 통합 섹션. 리포트 상세 신설 `/:lang/reports/daily/:game/:date`, `/:lang/reports/milestone/:game/:milestoneId`. 뉴스레터/챗봇 별도 라우트 제거
+- **i18n 구조**
+  - Before: LanguageContext에 하드코딩된 en/ko/ja 키 산재
+  - After: `src/i18n/{lang}/{common|landing|reports|community}.yaml` 분리 + 동적 로더 + `t(path, vars)` 도입
+- **CTA/카피 톤**
+  - Before: “Discord 합류하기” 중심의 B2C 톤
+  - After: “Discord로 문의하기” 중심의 B2B 톤, 섹션별 메시지 리라이트
+- **컴포넌트/레이아웃**
+  - Before: Community/Video/Report 일부만 캐로셀, 시뮬레이터 미구현, 프리뷰 가시성 낮음
+  - After: 랜딩 프리뷰-우선 IA, 모바일 캐로셀 확대(Problem/Solution/Partner/Benefits), `ChatSimulator`/`NewsletterSection` 신규
+- **SEO/메타**
+  - Before: 기본 메타 위주, 인덱싱 대상 불명확
+  - After: 리포트 상세만 인덱싱 + JSON-LD(Article/Breadcrumb), 랜딩은 앵커 공유. `updateI18nSeo`/hreflang/canonical 적용, SSG 권장
+- **데이터 모델**
+  - Before: 리포트 샘플 데이터 미정(일부 커뮤니티 포스트만 존재)
+  - After: `/src/data/reports/{daily|milestone}/*.json`, `/src/data/newsletter/*.json` 추가(뉴스레터 `gameId` 포함)
+
+# Core Features  
+각 항목은 “무엇/왜/어떻게(상위 설계)” 형식으로, 기존 대비 변경 사항을 명확화.
+
+- 랜딩 IA 재구성(Preview-First)
+  - 무엇: Hero + Daily/Milestone 프리뷰 + 인사이트 어시스턴트&뉴스레터 + How it works + Use Cases + FAQ + Contact
+  - 왜: 첫 스크린 내 증거/가치 노출 강화, 전환(샘플/문의) 유도
+  - 어떻게: 섹션 앵커(#daily-preview, #milestone-preview, #assistant-newsletter 등), 모바일 캐로셀(프리뷰 카드)
+  - 변경: 뉴스레터/챗봇 별도 라우트 제거 → 랜딩 내 통합 섹션
+
+- 리포트 상세 라우트(데이터/공유 가치 집중)
+  - 무엇: /:lang/reports/daily/:game/:date, /:lang/reports/milestone/:game/:milestoneId
+  - 왜: 인덱싱/공유/증빙 중심의 컨텐츠 대상으로 트래픽 품질 극대화
+  - 어떻게: 정적 샘플 JSON + KPI/Δ/키워드/인용 컴포넌트 구성
+  - 변경: 기존 단일 랜딩 중심 → 상세 페이지 신설
+
+- 챗봇 시뮬레이터(축약), CM 리아 뉴스레터(샘플)
+  - 무엇: 사고과정 시뮬레이션(typing→thinking→analyzing→result) + 뉴스레터 하이라이트 카드(모바일 캐로셀)
+  - 왜: 이해도/신뢰 향상, 친화적 톤으로 데이터 스토리텔링
+  - 어떻게: 접근성(ARIA live), 60fps/FMP≤5s, 카드형 하이라이트
+  - 변경: “데모 영상” → “인터랙티브 시뮬레이터”; 별도 목록/상세 라우트 삭제
+
+- i18n YAML 분리(페이지/섹션 네임스페이스)
+  - 무엇: src/i18n/{lang}/{common|landing|reports|community}.yaml
+  - 왜: 유지보수/협업/가독성 개선, 카피 워크플로우 확립
+  - 어떻게: 동적 임포트 + deep merge(common→페이지별), `t(path, vars)` 도입
+  - 변경: LanguageContext 하드코딩 객체 제거 → 로더 기반
+
+- SEO/메타 전략 정렬
+  - 무엇: 리포트 상세 인덱싱, 랜딩은 앵커 공유 중심
+  - 왜: 중복/카니벌라이제이션 회피, 고의도 트래픽 집중
+  - 어떻게: updateI18nSeo, JSON-LD(Article/Breadcrumb), hreflang/canonical, SSG 권장
+  - 변경: 메타/구조화 데이터 주입 대상 명확화
+
+- CTA/카피 톤
+  - 무엇: “Discord 합류하기” → “Discord로 문의하기”, B2B 톤으로 전체 리라이트
+  - 왜: 전환 의도(문의/샘플 요청) 명확화
+  - 어떻게: 섹션별 메시지 가이드 및 컴포넌트 카피 업데이트
+
+# User Experience  
+- 페르소나: 운영/PM/CM(핵심 사용자), 퍼블리셔 분석, 프로듀서/임원
+- 핵심 플로우:
+  1) 랜딩 진입 → 1스크린 내 프리뷰/CTA 노출
+  2) Daily/Milestone 프리뷰 확인 → 상세 리포트로 이동
+  3) 인사이트 어시스턴트 시뮬레이터/뉴스레터 샘플로 이해 강화
+  4) 문의/샘플 요청 전환
+- UI/UX 고려: 모바일 캐로셀(Embla), 접근성(ARIA/PWA 키보드), 성능(FMP≤5s), 카피 일관성, 섹션 앵커
+</context>
+
+<PRD>
+# Technical Architecture  
+- 시스템 구성
+  - FE: React + TypeScript + Vite, Tailwind + shadcn/ui + Radix, Embla Carousel, React Router
+  - 상태/데이터: 정적 JSON(리포트 샘플/뉴스레터), i18n YAML 로더, React Query(확장 여지)
+  - SEO: updateI18nSeo 유틸, JSON-LD 주입
+- 데이터 모델
+  - Daily/Milestone 샘플: KPI/Δ/키워드/이슈/인용 JSON
+  - Newsletter 샘플: { id, gameId, author, publishedAt, locale, headline, sections[], summary, cta }
+  - i18n: src/i18n/{lang}/{common|landing|reports|community}.yaml
+- API/연동: 필수 없음(MVP). 추후 분석/폼/ETL은 범위 외
+- 인프라: 정적 호스팅(SSG/프리렌더 권장), Sitemap/robots, hreflang/canonical
+
+# Development Roadmap  
+- MVP(리브랜딩 핵심)
+  - 랜딩 IA 재구성(프리뷰/앵커/CTA) 및 카피 톤 교체
+  - 인사이트 어시스턴트&뉴스레터 통합 섹션(시뮬레이터 축약)
+  - 리포트 상세 라우트/템플릿 2종(daily/milestone)
+  - i18n YAML 분리(landing/common 우선) + 로더 도입 + t() 적용
+  - SEO 메타/JSON-LD 적용(리포트 상세)
+  - 모바일 캐로셀 확대: Problem/Solution/Partner/Benefits (모바일 한정)
+- 이후 강화
+  - 리포트 샘플 확장/시각화 컴포넌트(DeltaBar/KeywordTable/IssueTable/QuoteList)
+  - 폼/분석 이벤트(시뮬레이터 시작/완료, 프리뷰→상세 전환)
+  - i18n reports/community 네임스페이스 전환 완료
+
+# Migration Checklist (Existing Project)  
+- 절대 신규 초기화 금지. 현 프로젝트를 리팩터링하여 반영.
+- Guardrails: Vite/TS/Tailwind/shadcn 구조 유지, 기존 폴더/라우터 구성 보존 후 증분 적용.
+
+1) 브랜치 생성
+- `feat/rebranding-mvp` 분기에서 작업, PR 단위(IA/i18n/routes/SEO)를 작게 유지
+
+2) i18n 전환(최우선)
+- 의존성 추가: `yaml`, `vite-plugin-yaml`
+- 폴더 생성: `src/i18n/{ko,en,ja}/{common,landing,reports,community}.yaml`
+- LanguageContext 리팩터: `loadMessages(lang, namespaces)`, `t(path, vars)` 구현
+- 초기 마이그레이션: 랜딩 Hero/CTA/프리뷰 키를 `common/landing.yaml`로 이전 후 컴포넌트에서 `t()` 사용
+
+3) 랜딩 IA 개편(Index.tsx)
+- 섹션 앵커 부여: `#daily-preview`, `#milestone-preview`, `#assistant-newsletter`, `#how-it-works`, `#use-cases`, `#contact`
+- ‘인사이트 어시스턴트 & CM 리아’ 통합 섹션 추가: `ChatSimulator`(축약) + `NewsletterSection`(샘플)
+- 모바일 캐로셀 확대: Problem/Solution/Partner/Benefits 섹션에 Embla 적용(모바일만)
+
+4) 리포트 상세 라우트 신설
+- 파일: `src/pages/reports/DailyReport.tsx`, `src/pages/reports/MilestoneReport.tsx`
+- 라우터 등록: React Router 설정 파일(예: `src/App.tsx` 또는 `src/main.tsx`)에 `/:lang/reports/daily/:game/:date`, `/:lang/reports/milestone/:game/:milestoneId` 추가
+
+5) 데이터 샘플 추가
+- `/src/data/reports/daily/*.json`, `/src/data/reports/milestone/*.json`, `/src/data/newsletter/*.json` 작성(뉴스레터 `gameId` 포함)
+
+6) SEO/메타 주입
+- 리포트 상세 마운트 시 `updateI18nSeo` 호출, JSON-LD(Article/Breadcrumb) 삽입, hreflang/canonical 적용
+
+7) 카피/CTA 전환
+- 전역 치환: “Discord 합류하기” → “Discord로 문의하기”
+- 섹션별 B2B 톤 리라이트 반영(Problem/Solution/Report/Benefits/Community/Footer)
+
+8) 불필요 라우트 제거/방지
+- 뉴스레터/챗봇 별도 라우트 생성 금지(랜딩 섹션 통합 원칙)
+
+9) QA 체크
+- i18n 누락 키 경고 및 기본값, 언어 스위치 플리커 없음
+- A11y(ARIA live/포커스), 성능(60fps, FMP≤5s), 모바일 캐로셀 동작
+- 프리뷰→상세 네비/이벤트 로깅(선택)
+
+10) Done 기준
+- 랜딩 1스크린 내 프리뷰/시뮬레이터 접근 가능, CTA 동작
+- 리포트 상세 2종 접속/SEO 메타/JSON-LD 정상
+- i18n YAML 구조 안정 및 주요 카피 전환 완료
+
+# Logical Dependency Chain  
+1) i18n 로더/폴더 생성 → 2) 랜딩 IA/카피 적용 → 3) 리포트 상세 라우트/템플릿 → 4) SEO 메타/구조화 데이터 → 5) 시뮬레이터/뉴스레터 섹션 → 6) 모바일 캐로셀 확대 → 7) 분석/폼 도입
+
+# Risks and Mitigations  
+- 데이터 신뢰/증빙 부족 → 인용/링크/근거 표기, 샘플 범위 명확화
+- i18n 누락 키/불일치 → t() 경고, 기본값/스켈레톤, QA 체크리스트
+- SEO 중복/카니벌 → 상세 인덱싱, 랜딩 앵커 공유 원칙 준수
+- 성능/접근성 → 60fps, FMP≤5s, 키보드/ARIA 준수, 이미지 최적화
+
+# Appendix  
+- 수용 기준(발췌)
+  - 랜딩: 첫 스크롤 내 프리뷰/시뮬레이터 접근, 모든 CTA 동작, A11y/성능 기준 충족
+  - Daily: 3~5문장 요약+KPI, 긍정 키워드/이슈/채널 분류, ‘마일스톤 보기’ CTA
+  - Milestone: Executive Summary, 기능별 반응, 전후 Δ, 키워드/어조, 액션
+- KPI(발췌)
+  - 랜딩 이탈률↓, 프리뷰→상세 클릭률↑, 시뮬레이터 시작률/완료율, 문의/샘플 전환율
+- 참고 문서
+  - PRD.txt v0.3(원문 세부 요구사항)
+  - docs/landingpage-anti-ai-audit.md(비주얼/카피 개선 가이드)
+- 작업 항목 샘플
+  - pages: reports/DailyReport.tsx, reports/MilestoneReport.tsx
+  - components: ChatSimulator.tsx, NewsletterSection.tsx, ReportKPI.tsx, DeltaBar.tsx, KeywordTable.tsx, IssueTable.tsx, QuoteList.tsx
+  - data: /src/data/reports/daily/*.json, /src/data/reports/milestone/*.json, /src/data/newsletter/*.json
+  - i18n: src/i18n/{ko,en,ja}/{common,landing,reports,community}.yaml
+</PRD>

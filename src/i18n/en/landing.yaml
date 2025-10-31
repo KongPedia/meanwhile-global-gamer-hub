@@ -1,0 +1,67 @@
+# Landing page translations for English
+hero:
+  title: 'Global Gamers'' Voices\nin One Place'
+  subtitle: 'MeanWhile summarizes\nglobal community data on Discord.'
+  cta:
+    discord: 'Contact via Discord'
+    learn: 'Learn More'
+
+problem:
+  title: 'Challenges Gamers Face'
+  subtitle: 'Are you missing out on\nwhat''s happening in global\ngaming communities?'
+  fragmentation:
+    title: 'Information Fragmentation'
+    desc: 'Important news gets lost\ndue to scattered information across platforms'
+  language:
+    title: 'Language Barriers'
+    desc: 'Difficulty understanding global information\nwritten in various languages'
+  toxic:
+    title: 'Toxic Culture'
+    desc: 'Unhealthy community culture\nmakes participation difficult'
+
+solution:
+  title: 'AI-Powered\nInnovative Solutions'
+  subtitle: 'Experience global gaming communities\nin a new way with MeanWhile''s AI technology'
+  ai:
+    title: 'AI Summary & Translation'
+    desc: 'AI summarizes and translates game community posts\nin multiple languages\nin real-time'
+  timeline:
+    title: 'Unified Game Timeline'
+    desc: 'Organize scattered game info\ninto a timeline for easy viewing'
+  trends:
+    title: 'Real-time Trend Detection'
+    desc: 'Analyzes latest issues & trends\nin communities in real-time'
+
+benefits:
+  title: 'A New Gaming\nCommunity Experience'
+  subtitle: 'Even lurkers can become\nglobal gamers'
+  search:
+    title: 'Fast Search'
+    desc: 'Find desired information quickly\nwith AI summaries'
+  translation:
+    title: 'Translation Support'
+    desc: 'Communicate with global gamers\nwithout language barriers'
+  community:
+    title: 'Community Connection'
+    desc: 'Connect with global gamers\nwho share your interests'
+  culture:
+    title: 'Healthy Culture'
+    desc: 'Build healthy communities\nwith AI moderation'
+
+community:
+  title: 'See You\non Discord!'
+  subtitle: 'Real-time analysis of\nglobal gaming community data'
+  cta: 'Contact via Discord'
+  stats:
+    totalPosts: 'Total Posts'
+    totalCommunities: 'Community Posts'
+    totalProjects: 'Game Posts'
+    etc: 'ETC'
+  posts:
+    title: 'Experience Global Communities\nin Your Language'
+    subtitle: 'MeanWhile summarizes\nglobal community data\nwith AI, sharing it on Discord'
+  discord:
+    title: 'Discord Preview'
+    subtitle: 'Hundreds of gamers are\nalready here together'
+    footer: 'Meanwhile Global Gamer Hub'
+    view: 'View on Discord'

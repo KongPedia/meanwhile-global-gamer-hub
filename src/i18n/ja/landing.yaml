@@ -1,0 +1,67 @@
+# Landing page translations for Japanese
+hero:
+  title: 'グローバルゲーマーの声を\n一か所に'
+  subtitle: 'MeanWhileは\nグローバルゲームコミュニティデータを\nAIで要約・翻訳しDiscordで共有します'
+  cta:
+    discord: 'Discordでお問い合わせ'
+    learn: '詳しく見る'
+
+problem:
+  title: 'ゲーマーが直面する現実'
+  subtitle: '世界のゲームコミュニティで\n起こっていることを\n見逃していませんか？'
+  fragmentation:
+    title: '情報の断片化'
+    desc: '情報が散らばっていて\n大事なニュースを\n見逃してしまうことがあります'
+  language:
+    title: '言語の壁'
+    desc: '様々な言語で\n書かれたコミュニティの情報を\n理解するのは困難です'
+  toxic:
+    title: '有害な文化'
+    desc: '健全でないコミュニティ文化により\n参加を躊躇してしまいます'
+
+solution:
+  title: 'AIが提供する\n革新的な解決策'
+  subtitle: 'MeanWhileのAI技術で\nグローバルゲームコミュニティを\n新しく体験してください'
+  ai:
+    title: 'AI要約・翻訳'
+    desc: '複数言語のコミュニティ投稿を\nAIがリアルタイムで要約・翻訳します'
+  timeline:
+    title: '統合タイムライン'
+    desc: '散らばったコミュニティ情報を\n一つのタイムラインで一目で確認'
+  trends:
+    title: 'リアルタイムトレンド検出'
+    desc: 'ゲームの最新の問題とトレンドを\nAIがリアルタイムで分析'
+
+benefits:
+  title: 'グローバルのための\n新しいコミュニティ体験'
+  subtitle: 'ROM ユーザーも\nグローバルゲーマーになれます'
+  search:
+    title: '高速検索'
+    desc: 'AI要約で\n欲しい情報を素早く見つける'
+  translation:
+    title: '翻訳サポート'
+    desc: '言語の壁なく世界中のゲーマーと\nコミュニケーション'
+  community:
+    title: 'コミュニティ接続'
+    desc: '同じ興味を持つ\nグローバルゲーマーと\n繋がりましょう'
+  culture:
+    title: '健全な文化'
+    desc: 'AIモデレーションで\n健全なコミュニティを作ります'
+
+community:
+  title: 'Discordで\n会いましょう！'
+  subtitle: '世界のゲームコミュニティデータを\nリアルタイムで分析'
+  cta: 'Discordでお問い合わせ'
+  stats:
+    totalPosts: '総投稿数'
+    totalCommunities: 'コミュニティ投稿'
+    totalProjects: '登録済みゲームの投稿'
+    etc: 'その他'
+  posts:
+    title: 'グローバルゲームコミュニティを\nあなたの言語で体験してみてください'
+    subtitle: 'MeanWhileは\nグローバルゲームコミュニティデータを\nAIで要約・翻訳しDiscordで共有します'
+  discord:
+    title: 'Discordプレビュー'
+    subtitle: 'すでに数百人のゲーマーが\n参加しています'
+    footer: 'Meanwhile Global Gamer Hub'
+    view: 'Discordで見る'

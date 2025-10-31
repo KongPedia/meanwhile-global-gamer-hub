@@ -1,0 +1,376 @@
+PRD — Meanwhile: 게임 커뮤니티 B2B 인사이트 리포트 서비스
+버전: v0.3  (작성일: 2025-10-31 KST)
+작성 목적: 기존 B2C 소개형 랜딩에서 전환하여, 게임사/퍼블리셔/스튜디오(운영·PM·CM·라이브옵스)에게 ‘커뮤니티 반응·업데이트 영향·이슈 요약’을 리포트 형태로 제공하는 B2B 가치 전달. 샘플 일일/마일스톤 보고서와 데모를 통해 리드(문의/견적/샘플 요청) 창출.
+ 스니펫
+  4) 챗봇 시뮬레이터 — Q 타이핑 → Thinking… → Analyzing… → 결과(랜딩 내 축약 연출)
+  5) How it works — 수집→분석→요약→리포트→Q&A
+  6) Use Cases — 운영/PM/CM 적용 시나리오(3카드)
+  7) CM 리아 뉴스레터 — 하이라이트 카드(모바일 캐로셀)
+  8) 신뢰/FAQ — 데이터 출처/언어 처리/주기/프라이버시
+  9) Contact — 이메일/Discord 문의(폼 또는 링크)
+
+- Daily Report 페이지:
+  헤더(날짜/게임/배지) → 요약 → KPI 스냅샷 → 긍정 키워드 표 → 주제별 이슈 → 채널별 분류/인용 → CTA(마일스톤 보기/문의)
+
+- Milestone Report 페이지:
+  헤더(버전/규모) → Executive Summary → 기능별 반응 → 전후 비교(Δ) → 키워드/어조 → 결론·액션 → CTA(문의)
+
+0) 변경 전 vs. 변경 후 요약
+- 변경 전
+  - 목적: Meanwhile 서비스의 개념 소개, 커뮤니티/기능 하이라이트, 디스코드 유입
+  - 핵심 가치: ‘AI가 다양한 커뮤니티 데이터를 요약·번역해 Discord로 공유’
+  - 콘텐츠: 히어로, 커뮤니티, 문제/솔루션, 비디오/리포트 예시, 베네핏, 파트너, 푸터
+- 변경 후
+  - 목적: ‘게임사가 커뮤니티 반응과 업데이트 영향(좋았던 점/나빴던 점)을 빠르게 파악하여 의사결정을 가속’
+  - 핵심 가치: ① 일일(Daily) 운영 브리핑, ② 마일스톤(업데이트/이벤트) 성과 분석, ③ 감성·키워드/이슈 트렌드, ④ CM 보이스 뉴스레터(대외 커뮤니케이션)
+  - 랜딩에 반드시 노출: 샘플 일일/마일스톤 보고서, 챗봇 시뮬레이터(축약), ‘Discord로 문의’/‘샘플 요청’ CTA
+
+1) 제품 목표(Goals)
+- 게임사 운영/PM/CM/라이브옵스가 ‘오늘/이번 마일스톤의 성과·이슈·액션’을 1~3분 내 파악
+- 업데이트/이벤트별 ‘잘한 점/부족한 점’과 영향 지표(감성·이슈·참여)를 시각화하여 액션(핫픽스, 공지, 보상, 콘텐츠 튜닝)을 유도
+- CM ‘리아’ 뉴스레터로 데이터 인사이트를 대외 커뮤니케이션에 활용(신뢰/참여도 제고)
+
+2) 타깃 사용자(Target Users)
+- 핵심: 게임사 운영/PM/CM/라이브옵스, 퍼블리셔 운영/분석 담당
+- 준핵심: 프로듀서/경영진, 데이터 애널리스트, 커뮤니티 대행사/파트너
+
+3) 가치 제안(Value Proposition)
+- “하루만에 파악하는 업데이트 영향과 여론 변화”
+- 일일 요약/업데이트 분석/감성·키워드 트렌드/CM 뉴스레터를 한 화면에서
+
+4) 범위(Scope)
+- In Scope (MVP)
+  - 랜딩 리라이트(샘플 리포트, 챗봇 시뮬레이터 포함)
+  - 일일보고서/업데이트 분석 샘플 페이지(정적/모의 데이터)
+  - 다국어(ko/en/ja 우선), 공유/SEO 메타
+  - 기본 지표 시각화(게시글/댓글/감성비율/증감)
+- Out of Scope (MVP 이후)
+  - 실시간 크롤링·ETL·모더레이션, 로그인/개인화, 결제, 장기 데이터 웨어하우스
+
+5) 핵심 기능 요구사항(Functional Requirements)
+5.1 랜딩 페이지(신규 IA 기반)
+ - Hero: “오늘의 업데이트 영향과 여론을 1분 요약” + 주요 지표 스냅샷 + CTA(‘샘플 리포트 보기’)
+ - 샘플 일일보고서 프리뷰: 1~2개의 카드/캐로셀(모바일), ‘전체보기’ 링크
+ - 마일스톤 분석 프리뷰: 전후 지표 변화(Δ), 긍/부정 Top 키워드 스니펫
+ - 챗봇 시뮬레이터: Q 타이핑 → Thinking → Analyzing → 결과 단계 애니메이션, 샘플 Q 3~4개
+ - How it works: 데이터 수집→분석→요약→리포트→Q&A
+ - 구독/CTA: 이메일 구독 + Discord로 문의하기(‘합류’ 대신 ‘문의’), ‘샘플 리포트 요청’
+ - FAQ/신뢰요소: 데이터 출처, 언어 처리, 업데이트 주기, 프라이버시
+
+수용 기준(Acceptance)
+ - 랜딩 첫 스크롤 내 샘플 리포트 섹션과 데모 영상 진입 가능
+ - 모든 CTA가 동작하며 샘플 상세 페이지로 연결
+ - 접근성: ARIA 라이브 리전으로 단계 공지, 키보드 탭 순서/포커스 표시
+ - 성능: 60fps 전환, 5초 내 FMP, 프리렌더/SSR 고려
+ - 랜딩: 축약형(10~15초)
+
+5.2 일일 보고서(Daily Report) 페이지(샘플)
+- 제공 가치(Value):
+  - 매일 아침 운영/CM/PM이 ‘핵심 3가지’와 위험 신호를 즉시 파악 → 공지/가이드/보상/모니터링 액션으로 연결
+  - 전일 대비 증감과 감성 변화로 ‘이상치/이슈 확산’ 조기 감지
+- 섹션(화면 구성):
+  - 헤더: 날짜/게임/요약 배지(상승/하락/주의)
+  - Executive Summary(3~5문장) + KPI 스냅샷(게시글/댓글/감성 비율/증감)
+  - 긍정 키워드 표(커뮤니티/키워드/전일/금일/비고)
+  - 주제별 이슈 테이블(오류/건의/일반/기타) + 관련 링크
+  - 채널별 분류(공식카페/레딧/디시/5ch 등) + 대표 인용(근거 중심)
+  - CTA: ‘마일스톤 보고서 보기’, ‘Discord로 문의’
+- 지표:
+  - 전체 게시물수, 댓글수, 감성 비율(긍정/중립/개선·건의), 전일 대비 증감, 핫토픽 언급량, 활성 시간대
+- 수용 기준:
+  - 모바일 1~3분 내 스캔 가능, KPI와 인사이트 3~5문장 제공, 관련 링크 정상 동작
+
+5.3 마일스톤 보고서(Milestone Report) 페이지(샘플)
+- 제공 가치(Value):
+  - 업데이트/이벤트/캠페인 단위로 ‘성과/문제/제언’을 정리하여 회고/다음 스프린트 계획에 직접 활용
+  - Before/After 비교로 영향 검증(Δ), 긍·부정 Top 기능/컨텐츠 파악
+- 섹션(화면 구성):
+  - 헤더: 마일스톤 정보(버전/날짜/규모/채널)
+  - Executive Summary(성과/문제/제언)
+  - 기능별 반응(긍정 Top3/부정 Top1) + 근거 인용
+  - 전후 비교(기대감 vs 만족도, KPI Δ)
+  - 키워드/어조 분석(질문/지지/좌절 등)
+  - 결론 및 다음 액션(핫픽스/공지/이벤트 조정 등)
+- 시각화: 기능별 감성 지수, 전후 만족도 변화, 키워드 빈도/어조, Δ 배지
+- 수용 기준: 상단에서 ‘성과/문제/제언’을 즉시 파악, 증거 링크 제공
+
+5.4 뉴스레터(Community Manager Newsletter)
+ - 범위: 랜딩 섹션으로 노출, 샘플 뉴스레터 하이라이트 카드 1~2개(모바일 캐로셀)
+ - 콘텐츠: 날짜/핫토픽/짧은 코멘트/반응 배지
+ - 수용 기준: 1) 랜딩에서 1스크롤 내 최신 뉴스레터 프리뷰 접근 2) 상세에서 2분 내 읽기/공감 가능 3) Discord 문의 CTA 제공
+
+5.5 구독/알림(경량)
+- 이메일/Discord 링크 기반 구독 유도(실제 배달은 MVP 외)
+
+5.6 다국어
+ - ko/en/ja 우선, 언어 스위치/브라우저 감지 유지, 주요 샘플 리포트 번역본 제공(요약 레벨)
+
+5.7 챗봇 시뮬레이터(랜딩 섹션)
+ - 단계: Q 타이핑 → Thinking… → Analyzing… → 결과(요약 목록/표/배지)
+ - 인터랙션: 샘플 Q 선택, 재생/일시정지/다시보기(시뮬레이터)
+ - 접근성: ARIA 라이브 리전으로 단계 공지, 키보드 탭 순서/포커스 표시
+ - 성능: 60fps 전환, 5초 내 FMP, 프리렌더/SSR 고려
+ - 랜딩: 축약형(10~15초)
+
+5.8 페이지별 화면 구성(와이어프레임 가이드)
+ - 랜딩(/:lang):
+  1) Hero(B2B 헤드라인+KPI 스냅샷) — CTA: ‘샘플 요청’, ‘Discord로 문의’
+  2) Daily Report 프리뷰 — 카드 1~2개(모바일 캐로셀), 핵심 인사이트 3줄, ‘전체보기’
+  3) Milestone Report 프리뷰 — Before/After Δ, 긍·부정 Top 스니펫
+  4) 인사이트 어시스턴트 & CM 리아 — 챗봇 시뮬레이터(축약) + 뉴스레터 샘플(한 섹션)
+  5) How it works — 수집→분석→요약→리포트→Q&A
+  6) Use Cases — 운영/PM/CM 적용 시나리오(3카드)
+  7) 신뢰/FAQ — 데이터 출처/언어 처리/주기/프라이버시
+  8) Contact — 이메일/Discord 문의(폼 또는 링크)
+
+5.9 라우팅 아키텍처 결정(Decision)
+ - 결론: Hybrid 권장.
+  - 랜딩은 한 페이지 스토리텔링(섹션 앵커) 유지. ‘인사이트 어시스턴트 & CM 리아’는 랜딩 내 단일 섹션으로 소개(별도 라우트 없음).
+  - 데이터·링커블 콘텐츠는 리포트(일일/마일스톤)만 별도 라우트로 분리.
+ - 비권장: /home, /section1 등 형식의 섹션 분할 라우팅 — i18n(/:lang)와 충돌·중복, SEO 이점 미미, 내러티브 단절.
+ - 섹션 앵커 제안(랜딩): #daily-preview, #milestone-preview, #assistant-newsletter, #how-it-works, #use-cases, #contact
+
+5.10 SEO 전략(요약)
+ - URL: 언어 세그먼트(/:lang) 고정. 인덱싱·공유 대상은 리포트 상세(/:lang/reports/*) 위주.
+ - hreflang/canonical: updateI18nSeo 활용. 랜딩과 리포트 상세에서 타이틀/디스크립션/og 메타 주입.
+ - 인덱싱: 리포트 상세는 인덱싱 허용. 랜딩은 섹션 앵커 공유만(중복 페이지 생성 지양). 뉴스레터 샘플/시뮬레이터는 랜딩 내 콘텐츠로 포함.
+ - 프리렌더/SSG(권장): /:lang, /:lang/reports/* 사전 렌더링.
+ - 구조화 데이터: 리포트 상세는 Article/BlogPosting, BreadcrumbList. 랜딩에는 hasPart(FAQ) 또는 Article 스니펫(뉴스레터 샘플 요약) 추가 가능.
+ - Sitemap/robots: 다국어 경로 포함 사이트맵 생성, robots.txt에 선언.
+
+6) 정보 구조(IA)·URL 설계
+ - /                                  : 랜딩(샘플 프리뷰/영상/CTA)
+ - /reports/daily/:game/:date         : 일일 보고서(샘플)
+ - /reports/milestone/:game/:milestoneId : 마일스톤 보고서(샘플)
+ - /about                             : 서비스 소개(선택)
+
+7) 데이터·지표 정의(요약)
+ - 활동 지표: 전체 게시글 수, 댓글 수, 전일 대비 증감(%)
+ - 감성 지표: 긍정/중립/개선·건의 비율, 평균 감성 지수(-1~1)
+ - 토픽/키워드: Top N 키워드, 주제별 이슈(예: 오류/건의/일반/기타)
+ - 업데이트 영향: 기능별 감성 지수, 전후 만족도 Δ, 긍·부정 Top 항목
+ - 커뮤니티 소스: 디시인사이드, 공식카페, Reddit, 5ch 등(샘플)
+
+8) UI/UX 원칙 및 컴포넌트
+ - 데이터 우선: 상단 1스크린에 핵심 요약/지표/CTA 배치
+ - 반응형: 모바일 캐로셀(샘플 프리뷰), 데스크톱 그리드
+ - 컴포넌트(예시):
+  - MetricCard(지표), KeywordList, IssueTable, SentimentBar, BeforeAfterDelta, QuoteList
+  - CTA: View Full Report, Try Simulator, Subscribe
+
+9) 챗봇 시뮬레이터 요구사항(랜딩)
+ - 단계: Q 타이핑 → Thinking… → Analyzing… → 결과(요약 목록/표/배지)
+ - 인터랙션: 샘플 Q 선택, 재생/일시정지/다시보기(시뮬레이터)
+ - 접근성: ARIA 라이브 리전으로 단계 공지, 키보드 탭 순서/포커스 표시
+ - 성능: 60fps 전환, 5초 내 FMP, 프리렌더/SSR 고려
+ - 랜딩: 축약형(10~15초)
+
+10) KPI/성공 지표
+ - 랜딩: 첫 스크린 이탈률, 시뮬레이터 상호작용 시작률, 샘플 리포트 클릭률, 구독/문의 전환율(샘플 요청/Discord 문의)
+ - 리포트: 평균 체류시간, 스크롤 깊이, ‘업데이트 보고서 보기’ 클릭률
+ - 시뮬레이터: 단계 완료율, 샘플 Q 클릭률
+ - 뉴스레터: 랜딩 프리뷰 클릭률, 상세 페이지 체류시간, Discord 문의 클릭률, 구독 증가율
+
+11) 리드 수집(경량)
+ - CTA: ‘샘플 리포트 요청’, ‘Discord로 문의’
+ - 폼(경량): 이메일/회사/직함/관심 게임(선택) — 제출 시 Discord 안내 또는 메일 발송(운영상 MVP는 수동 대응)
+
+11) 로드맵·마일스톤(제안)
+ - M0(이번 주): PRD 확정, 와이어프레임/카피 초안, 데모 스크립트
+ - M1(+1주): 랜딩 리라이트(샘플 프리뷰/CTA/영상 슬롯), /reports 템플릿
+ - M2(+2주): 일일보고서 샘플 2건(ko/en), 기본 차트 적용
+ - M3(+3주): 업데이트 분석 샘플 1건, Before/After Δ 시각화 강화
+ - M4(+4주): 챗봇 시뮬레이터 구현/삽입
+ - M5: 데이터 파이프라인 연동 계획 수립(범위/보안/비용)
+
+12) 리스크 & 오픈 이슈
+- 데이터 저작권/출처 표기 및 이용 약관 정합성
+- 감성 분류/토픽 모델의 오탐 관리와 검증 방법
+- 다국어 요약의 품질/일관성(ko/en/ja)
+- 데모와 실제 제공 기능 간 기대치 관리
+
+13) 부록 — 샘플 리포트 템플릿(요약)
+[A] 일일 보고서
+- 날짜/게임
+- 1) 요약(핵심 3~5문장)
+- 2) 활동/이슈 트렌드
+  - 긍정 키워드 표(커뮤니티/키워드/전일/금일/비고)
+  - 주제별 이슈(주요 주제/게시물 수/커뮤니티/내용 링크)
+  - 커뮤니티 지표(게시글/댓글/감성 비율, 증감)
+- 3) 커뮤니티 의견 분류(채널별 카테고리/주요 주제/건수/링크/인용)
+- CTA: ‘업데이트 보고서 보기’
+
+[B] 업데이트 분석 보고서
+- 업데이트 정보(날짜/규모)
+- Executive Summary(성과/문제/제언)
+- 1) 전반적 반응(화제성/여론 분석)
+- 2) 기능별 세부 반응(긍정 Top3/부정 Top1)
+- 3) 전후 비교(기대감 대비 만족도 변화)
+- 4) 키워드/어조 분석
+- 결론 및 액션(유저 관점 제언)
+
+14) 카피 톤 & 메시지 가이드(초안)
+- 헤드라인: “오늘의 업데이트, 커뮤니티 반응 한눈에”
+- 서브: “일일 요약·업데이트 영향·경쟁 비교 Q&A까지, 1분 요약”
+- CTA: “샘플 리포트 보기” / “데모 보기” / “Discord로 문의하기”
+
+15) 섹션 리라이트 — 컴포넌트별 요구사항
+- ProblemSection(게이머 현실):
+  - 현재: 분산/언어/독성 중심 문제 제시
+  - 변경: ‘정보 과잉·언어 장벽·패치 스트레스·PvP 밸런스 논쟁·FOMO’ 등 실감 나는 페인포인트 3~4개로 재구성. 각 항목에 ‘왜 문제인가(유저 영향)’ 1문장 포함.
+  - 수용 기준: 모바일 1분 내 스캔, 각 카드 80~120자 요약.
+- SolutionSection(AI 해결책):
+  - 현재: AI/타임라인/트렌드 요약
+  - 변경: ‘일일 요약, 업데이트 영향 분석(Δ), 감성/키워드, CM 리아 뉴스레터’ 4축으로 재배치. 각 축에 ‘무엇이 달라지나(효익)’ 명시.
+  - 수용 기준: 상단에 ‘오늘의 한 줄 요약’ 포함.
+- ReportSection(게임 인사이트):
+  - 현재: 예시 카드+핫 토픽 분석
+  - 변경: ‘Daily/Update’ 탭형 또는 카드 2분류 명확화, 전후 Δ 시각화 강조, 관련 게시물 인용 가독성 개선, ‘샘플 전체 보기’ CTA.
+- BenefitsSection(새로운 커뮤니티 경험):
+  - 현재: 글로벌 커뮤니티 경험(루커→글로벌 게이머)
+  - 변경: ‘번역/요약으로 눈팅→참여, 업데이트 이해도 상승, 정보 탐색 시간 단축, 커뮤니티 안전성’로 메시지 선명화.
+- CommunitySection(통계/프리뷰/CTA):
+  - CTA 문구 변경: “Discord 합류하기” → “Discord로 문의하기”. 서브 카피도 ‘문의/상담’ 톤으로 재작성.
+- Footer/CTA:
+  - Discord 링크는 ‘합류’가 아닌 ‘문의’ 목적 강조. 이메일 구독/문의 병행.
+- NewsletterSection(신규):
+  - 랜딩에 1~2개 하이라이트 카드(모바일 캐로셀). 카드에는 날짜/핫토픽/짧은 코멘트/반응 배지. 샘플 노출 전용(별도 라우트 없음).
+
+19) 코드베이스 실현성 분석(현재 저장소 기준)
+- 프론트엔드: React+Vite+TS. Index 단일 랜딩 구성. 다국어(i18n), Recharts, Embla 캐로셀, shadcn/ui 보유 — 샘플 리포트/뉴스레터 UI 구현 가능.
+- 미구현: /reports/* 라우트(상세), 리드 폼, 샘플 데이터(JSON) — 신규 생성 필요. 뉴스레터/시뮬레이터는 랜딩 섹션으로 구현.
+- 데이터: 정적 JSON으로 Daily/Milestone 샘플 구성 가능(감성·키워드·지표). Recharts로 KPI·Δ 시각화 가능.
+- CTA: 현재 Discord 링크 중심 — ‘문의’ 카피로 전환 가능, 폼은 경량 컴포넌트 추가 필요.
+- 결론: 백엔드 없이도 ‘샘플 리포트 데모+리드 수집’ 단계까지 구현 가능. 실제 프로덕션 연동은 후속(크롤링/ETL/DB/API) 범위.
+
+20) 파일/컴포넌트 작업 목록(제안)
+- pages
+  - reports/DailyReport.tsx, reports/MilestoneReport.tsx
+- components
+  - NewsletterSection.tsx, LeadFormModal.tsx, ReportKPI.tsx, DeltaBar.tsx, KeywordTable.tsx, IssueTable.tsx, QuoteList.tsx, ChatSimulator.tsx
+- data
+  - /src/data/reports/daily/*.json, /src/data/reports/milestone/*.json, /src/data/newsletter/*.json
+- i18n
+  - B2B 카피 리라이트( hero, community, report, benefits, partner, newsletter )
+
+16) i18n 업데이트(키 제안)
+- community.cta: “Discord 합류하기” → “Discord로 문의하기”
+- community.discord.title/subtitle: ‘참여’ → ‘문의/상담’ 방향으로 조정
+- 신규 키: newsletter.title, newsletter.subtitle, newsletter.cta.viewAll, newsletter.reactions.like/wow/etc
+
+17) 뉴스레터 데이터 모델(샘플)
+{
+  "id": "2025-10-31",
+  "gameId": "1",
+  "author": "CM 리아",
+  "publishedAt": "2025-10-31T09:03:00+09:00",
+  "locale": "ko",
+  "headline": "CM 리아의 긴급 브리핑! 업데이트 & 니프티, 할로윈",
+  "sections": [
+    { "type": "hotTopic", "title": "업데이트 지연/용량", "links": ["https://..."] },
+    { "type": "character", "title": "니프티 활용성", "links": ["https://..."] },
+    { "type": "event", "title": "할로윈 코스튬 호평", "links": ["https://..."] }
+  ],
+  "summary": "커뮤니티 전반의 핵심 이슈를 리아의 보이스로 요약",
+  "cta": { "discord": true, "subscribe": true }
+}
+
+18) 구현 체크리스트(요약)
+- 라우트 추가: /:lang/reports/daily/:game/:date, /:lang/reports/milestone/:game/:milestoneId
+- 랜딩 섹션: 인사이트 어시스턴트 & CM 리아(시뮬레이터+뉴스레터 샘플) 추가
+- 각 섹션 카피/구조 리라이트(Problem/Solution/Report/Benefits/Community/Footer)
+- CTA 교체: Discord 합류 → Discord 문의
+- 번역 리소스 갱신 및 QA(ko/en/ja)
+
+— End of PRD v0.3 —
+
+16) i18n 재구성(YAML 분리) 제안
+- 목표: LanguageContext 내부 하드코딩 키를 제거하고, 언어별 YAML 파일로 페이지/섹션 단위로 분리해 유지보수성/가독성/협업성을 향상.
+
+16.1 폴더 구조(제안)
+src/
+  i18n/
+    ko/
+      common.yaml           # 공통 버튼/라벨/CTA 등
+      landing.yaml          # 랜딩 전용(히어로/프리뷰/어시스턴트&뉴스레터/FAQ)
+      reports.yaml          # 리포트(일일/마일스톤) 페이지
+      community.yaml        # 커뮤니티 섹션/CTA
+    en/
+      common.yaml
+      landing.yaml
+      reports.yaml
+      community.yaml
+    ja/
+      common.yaml
+      landing.yaml
+      reports.yaml
+      community.yaml
+
+16.2 YAML 예시 스키마
+# src/i18n/ko/landing.yaml
+hero:
+  title: "오늘의 업데이트, 커뮤니티 반응 한눈에"
+  subtitle: "일일 요약·업데이트 영향·경쟁 비교 Q&A까지, 1분 요약"
+  cta:
+    sample: "샘플 리포트 보기"
+    contact: "Discord로 문의하기"
+
+assistantNewsletter:
+  title: "인사이트 어시스턴트 & CM 리아"
+  simulator:
+    start: "질문 입력 중…"
+    thinking: "답변 생각중…"
+    analyzing: "분석 중…"
+    result: "요약 결과"
+  newsletter:
+    title: "CM 리아 뉴스레터"
+    viewMore: "샘플 더 보기"
+
+16.3 로더/번들링 전략
+- YAML 파싱: `yaml` + `vite-plugin-yaml` 또는 `vite-plugin-vue-i18n`의 YAML 로더만 활용. React 환경에서도 문제없음.
+- 동적 임포트: 언어 코드와 페이지 키를 조합해 지연 로드.
+  예) `const messages = await import(`@/i18n/${lang}/${namespace}.yaml`);`
+- 병합 규칙: namespace 순서대로 deep merge(common → landing → reports → community).
+
+16.4 LanguageContext 변경
+- 기존: 객체 상수로 모든 키 보유 → 제거.
+- 신규 API:
+  - `loadMessages(lang: LanguageCode, namespaces: string[]): Promise<Record<string, string>>`
+  - `t(path: string, vars?: Record<string, string|number>): string` (dot-path 지원)
+- 초기화: 랜딩은 `['common','landing']`, 리포트 상세는 `['common','reports']` 등 페이지 라우트에서 네임스페이스 배열 전달.
+- SEO: `updateI18nSeo`는 기존 그대로, 단 title/description을 로드된 메시지에서 주입.
+
+16.5 키 네이밍 원칙
+- `page.section.element.state` 포맷 권장. 예: `landing.hero.cta.sample`, `reports.daily.kpi.posts`.
+- 변수 치환은 Mustache 스타일 `{{var}}` 사용.
+
+16.6 마이그레이션 단계
+1) 도입: Vite YAML 로더 설치(`yaml`, `vite-plugin-yaml`).
+2) 폴더 생성 및 최소 스켈레톤 작성(ko/en/ja 각 `common.yaml`, `landing.yaml`).
+3) LanguageContext에 `loadMessages` 구현 + 기존 하드코딩 키 10~20개를 우선 이전.
+4) 랜딩(히어로/CTA/프리뷰/어시스턴트&뉴스레터)부터 YAML로 전환.
+5) 리포트 키(reports.yaml) 전환 후 남은 섹션(common/community) 이전.
+6) 기존 상수 제거, 빌드/런타임 검증.
+
+16.7 도구/의존성
+- `yaml` (파서)
+- `vite-plugin-yaml` (권장) 또는 단순 `?raw` 로드 후 파싱
+- 선택: `zod`로 메시지 스키마 검증(선호 시)
+
+16.8 QA 체크리스트
+- 언어 스위치 시 플리커 없음(프리로딩 또는 스켈레톤 표시)
+- 미번역/누락 키는 `t()`에서 경고 로그 + 기본값 노출
+- 섹션별 네임스페이스 병합 순서 확인(common → 페이지별)
+- SEO 타이틀/디스크립션이 올바른 언어로 주입되는지 확인
+- 빌드 시 YAML 파싱 에러/유니코드 이슈 무
+
+16.9 성능/캐싱
+- 동적 임포트된 YAML을 언어별 메모리 캐시
+- 언어 변경 시에만 네임스페이스 재로딩
+
+16.10 운영 가이드(카피 협업)
+- 카피라이터는 `src/i18n/{lang}/` 아래 YAML만 수정
+- 키 추가 시 한국어 기준으로 먼저 작성 → en/ja는 TODO 주석 남김
+- PR 규칙: YAML 변경에는 미리보기 스크린샷 첨부
+
+— End of PRD v0.3 —
