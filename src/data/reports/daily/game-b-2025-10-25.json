@@ -1,0 +1,187 @@
+{
+  "id": "daily-game-b-20251025",
+  "game": "game-b",
+  "date": "2025-10-25",
+  "period": "2025-10-25 00:00 ~ 23:59 KST",
+  "summary": [
+    {
+      "ko": "긍정 언급 비율 큰 폭 상승(+8.6%p), 개선/건의 언급 비율 큰 폭 감소(-10.7%p)로 지표 개선.",
+      "en": "Significant improvement in metrics with positive mentions up (+8.6%p) and improvement/suggestion mentions down (-10.7%p).",
+      "ja": "肯定的言及率が大幅上昇(+8.6%p)、改善/提案言及率が大幅減少(-10.7%p)で指標改善。"
+    },
+    {
+      "ko": "게시글 수는 소폭 증가했으나, 댓글 수는 소폭 감소.",
+      "en": "Post count slightly increased, but comment count slightly decreased.",
+      "ja": "投稿数はわずかに増加したが、コメント数はわずかに減少。"
+    },
+    {
+      "ko": "레딧 커뮤니티 중심 콜로세움 AI 타게팅 관련 논의 발생.",
+      "en": "Discussion on Colosseum AI targeting centered on Reddit community.",
+      "ja": "Redditコミュニティを中心にコロシアムAIターゲティング関連の議論が発生。"
+    },
+    {
+      "ko": "디시인사이드에서는 팬아트, 아이템 교환 편의성 등 긍정 키워드 증가.",
+      "en": "Positive keywords such as fan art and item exchange convenience increased on DCInside.",
+      "ja": "DCインサイドではファンアート、アイテム交換の利便性など肯定的キーワードが増加。"
+    }
+  ],
+  "positiveKeywords": [
+    {
+      "community": {
+        "ko": "디시인사이드",
+        "en": "DCInside",
+        "ja": "DCインサイド"
+      },
+      "keyword": {
+        "ko": "캐릭터 팬아트",
+        "en": "Character Fan Art",
+        "ja": "キャラクターファンアート"
+      },
+      "previousCount": 0,
+      "currentCount": 3,
+      "note": {
+        "ko": "유명 작가의 팬아트 공유로 긍정적 반응 다수",
+        "en": "Positive reactions to fan art shared by famous artists",
+        "ja": "有名作家のファンアート共有で肯定的反応が多数"
+      }
+    },
+    {
+      "community": {
+        "ko": "디시인사이드",
+        "en": "DCInside",
+        "ja": "DCインサイド"
+      },
+      "keyword": {
+        "ko": "아이템 교환",
+        "en": "Item Exchange",
+        "ja": "アイテム交換"
+      },
+      "previousCount": 0,
+      "currentCount": 1,
+      "note": {
+        "ko": "한 번에 교환이 완료되는 편의성 개선에 만족",
+        "en": "Satisfaction with convenience improvement of one-time exchange completion",
+        "ja": "一度に交換が完了する利便性改善に満足"
+      }
+    },
+    {
+      "community": {
+        "ko": "디시인사이드",
+        "en": "DCInside",
+        "ja": "DCインサイド"
+      },
+      "keyword": {
+        "ko": "메탈 박스",
+        "en": "Metal Box",
+        "ja": "メタルボックス"
+      },
+      "previousCount": 0,
+      "currentCount": 1,
+      "note": {
+        "ko": "복귀 유저의 전용 무기 획득을 위한 재화 활용에 긍정적",
+        "en": "Positive about resource utilization for returning users to obtain exclusive weapons",
+        "ja": "復帰ユーザーの専用武器獲得のための資源活用に肯定的"
+      }
+    },
+    {
+      "community": {
+        "ko": "다음공식카페",
+        "en": "Daum Official Cafe",
+        "ja": "Daum公式カフェ"
+      },
+      "keyword": {
+        "ko": "무료 뽑기",
+        "en": "Free Gacha",
+        "ja": "無料ガチャ"
+      },
+      "previousCount": 0,
+      "currentCount": 1,
+      "note": {
+        "ko": "무료 뽑기 결과에 대한 만족감 표현",
+        "en": "Expression of satisfaction with free gacha results",
+        "ja": "無料ガチャ結果への満足感表現"
+      }
+    },
+    {
+      "community": {
+        "ko": "레딧",
+        "en": "Reddit",
+        "ja": "Reddit"
+      },
+      "keyword": {
+        "ko": "캐릭터 투자",
+        "en": "Character Investment",
+        "ja": "キャラクター投資"
+      },
+      "previousCount": 0,
+      "currentCount": 1,
+      "note": {
+        "ko": "신규 캐릭터의 레이드 활용성에 대한 긍정적 논의",
+        "en": "Positive discussion on new character's raid utility",
+        "ja": "新キャラクターのレイド活用性に関する肯定的議論"
+      }
+    },
+    {
+      "community": {
+        "ko": "5채널",
+        "en": "5ch",
+        "ja": "5チャンネル"
+      },
+      "keyword": {
+        "ko": "수련방 무기",
+        "en": "Training Room Weapon",
+        "ja": "修練場武器"
+      },
+      "previousCount": 0,
+      "currentCount": 1,
+      "note": {
+        "ko": "수련방 시스템을 통한 무기 수급 편의성에 대한 긍정 언급",
+        "en": "Positive mention of weapon acquisition convenience through training room system",
+        "ja": "修練場システムを通じた武器需給の利便性に関する肯定的言及"
+      }
+    }
+  ],
+  "communityMetrics": {
+    "totalPosts": 178,
+    "postsDelta": 1.7,
+    "totalComments": 409,
+    "commentsDelta": -1.4,
+    "positiveMentions": 34.3,
+    "positiveDelta": 8.6,
+    "improvementMentions": 25.3,
+    "improvementDelta": -10.7,
+    "neutralMentions": 40.4,
+    "neutralDelta": 2.2
+  },
+  "issues": [
+    {
+      "title": {
+        "ko": "타게팅/락온",
+        "en": "Targeting/Lock-on",
+        "ja": "ターゲティング/ロックオン"
+      },
+      "description": {
+        "ko": "콜로세움에서 특정 캐릭터가 의도치 않은 대상을 계속 공격하는 AI 관련 이슈 제기",
+        "en": "AI issue raised where specific character continuously attacks unintended target in Colosseum",
+        "ja": "コロシアムで特定キャラクターが意図しない対象を継続的に攻撃するAI関連問題提起"
+      },
+      "severity": "medium",
+      "mentions": 1
+    }
+  ],
+  "quotes": [
+    {
+      "text": {
+        "ko": "콜로세움 타게팅 이슈가 제기되었으나, 전반적인 긍정 언급 비율은 크게 상승함",
+        "en": "Colosseum targeting issue was raised, but overall positive mention ratio increased significantly",
+        "ja": "コロシアムターゲティング問題が提起されたが、全体的な肯定的言及率は大幅に上昇"
+      },
+      "source": "Community Analysis",
+      "sentiment": "positive"
+    }
+  ],
+  "metadata": {
+    "platforms": ["DCInside", "Daum Official Cafe", "Reddit", "5ch"],
+    "languages": ["ko", "en", "ja"]
+  }
+}

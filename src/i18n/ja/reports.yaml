@@ -39,3 +39,8 @@ milestone:
     positive: 'ポジティブ'
     negative: 'ネガティブ'
     neutral: '中立'
+    veryPositive: '非常にポジティブ'
+    slightlyPositive: 'やや肯定的'
+    slightlyNegative: 'やや否定的'
+    veryNegative: '非常にネガティブ'
+    mixed: '複合的'

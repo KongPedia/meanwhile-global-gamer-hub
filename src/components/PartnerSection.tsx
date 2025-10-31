@@ -14,23 +14,23 @@ const PartnerSection = () => {
   const benefits = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: t('partner.monitoring.title'),
-      description: t('partner.monitoring.desc')
+      title: t('landing.partner.monitoring.title'),
+      description: t('landing.partner.monitoring.desc')
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: t('partner.analytics.title'),
-      description: t('partner.analytics.desc')
+      title: t('landing.partner.analytics.title'),
+      description: t('landing.partner.analytics.desc')
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: t('partner.efficiency.title'),
-      description: t('partner.efficiency.desc')
+      title: t('landing.partner.efficiency.title'),
+      description: t('landing.partner.efficiency.desc')
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
-      title: t('partner.innovation.title'),
-      description: t('partner.innovation.desc')
+      title: t('landing.partner.innovation.title'),
+      description: t('landing.partner.innovation.desc')
     }
   ];
 
@@ -39,10 +39,10 @@ const PartnerSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('partner.title')}
+            {t('landing.partner.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
-            {t('partner.subtitle')}
+            {t('landing.partner.subtitle')}
           </p>
         </div>
         

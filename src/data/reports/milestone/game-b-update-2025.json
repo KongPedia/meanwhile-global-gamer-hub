@@ -1,0 +1,307 @@
+{
+  "id": "milestone-game-b-update-2025",
+  "game": "game-b",
+  "milestoneId": "update-2025",
+  "title": {
+    "ko": "신규 핵심 콘텐츠 및 시스템 개편 커뮤니티 반응 분석",
+    "en": "New Core Content and System Overhaul Community Response Analysis",
+    "ja": "新規コアコンテンツとシステム改編コミュニティ反応分析"
+  },
+  "date": "2025-03-12",
+  "period": "2025-03-12 ~ 2025-03-19",
+  "scale": {
+    "ko": "대규모",
+    "en": "Major",
+    "ja": "大規模"
+  },
+  "summary": {
+    "achievement": {
+      "ko": "성과: 신규 핵심 콘텐츠가 높은 화제성을 기록하며 업데이트의 중심축 역할을 했으나, 평가는 긍정과 부정이 혼재되었습니다.",
+      "en": "Achievement: New core content recorded high buzz and served as the centerpiece of the update, though evaluations were mixed between positive and negative.",
+      "ja": "成果: 新規コアコンテンツが高い話題性を記録し、アップデートの中心軸の役割を果たしましたが、評価は肯定と否定が混在しました。"
+    },
+    "problem": {
+      "ko": "문제: 신규 캐릭터 연계 이벤트의 타이머 시스템과 스킨 획득 시스템의 과금 모델이 강한 부정 반응을 유발했습니다.",
+      "en": "Problem: The timer system in new character-linked events and the monetization model of the skin acquisition system triggered strong negative reactions.",
+      "ja": "問題: 新規キャラクター連携イベントのタイマーシステムとスキン獲得システムの課金モデルが強い否定的反応を引き起こしました。"
+    },
+    "recommendation": {
+      "ko": "제언: 단기적으로 이벤트의 스트레스 요소를 완화하고, 중장기적으로 스킨 획득 시스템에 대한 개선 로드맵을 제시하여 부정 여론을 관리할 필요가 있습니다.",
+      "en": "Recommendation: Short-term stress factors in events should be mitigated, and a mid-to-long-term improvement roadmap for the skin acquisition system should be presented to manage negative sentiment.",
+      "ja": "提言: 短期的にイベントのストレス要素を緩和し、中長期的にスキン獲得システムに対する改善ロードマップを提示して否定的世論を管理する必要があります。"
+    }
+  },
+  "overallMetrics": {
+    "totalPosts": 1416,
+    "totalLikes": 8271,
+    "sentimentScore": 0.06
+  },
+  "featureFeedback": [
+    {
+      "feature": {
+        "ko": "캐릭터 관련 시스템",
+        "en": "Character-Related Systems",
+        "ja": "キャラクター関連システム"
+      },
+      "sentimentScore": 0.75,
+      "description": {
+        "ko": "신규 캐릭터들의 상호작용 및 설정에 대한 긍정 반응",
+        "en": "Positive response to new character interactions and settings",
+        "ja": "新規キャラクターの相互作用と設定に対する肯定的反応"
+      },
+      "positiveCount": 856,
+      "negativeCount": 124,
+      "neutralCount": 234,
+      "topComments": [
+        {
+          "ko": "캐릭터 간 상호작용이 정말 좋아요",
+          "en": "Character interactions are really great",
+          "ja": "キャラクター間の相互作用が本当に良い"
+        },
+        {
+          "ko": "스토리 설정이 잘 짜여있어요",
+          "en": "Story settings are well crafted",
+          "ja": "ストーリー設定がよく練られている"
+        },
+        {
+          "ko": "캐릭터 개성이 뚜렷해요",
+          "en": "Character personalities are distinct",
+          "ja": "キャラクターの個性が明確"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "ko": "길드 시스템 개선",
+        "en": "Guild System Improvements",
+        "ja": "ギルドシステム改善"
+      },
+      "sentimentScore": 0.40,
+      "description": {
+        "ko": "길드 편의성 개선에 대한 긍정적 평가",
+        "en": "Positive evaluation of guild convenience improvements",
+        "ja": "ギルド利便性改善に対する肯定的評価"
+      },
+      "positiveCount": 523,
+      "negativeCount": 178,
+      "neutralCount": 289,
+      "topComments": [
+        {
+          "ko": "길드 관리가 훨씬 편해졌어요",
+          "en": "Guild management is much easier now",
+          "ja": "ギルド管理がずっと楽になった"
+        },
+        {
+          "ko": "새로운 기능들이 유용해요",
+          "en": "New features are useful",
+          "ja": "新機能が便利"
+        },
+        {
+          "ko": "길드원 소통이 좋아졌어요",
+          "en": "Guild member communication improved",
+          "ja": "ギルドメンバーとのコミュニケーションが良くなった"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "ko": "신규 스킨/외형",
+        "en": "New Skins/Appearance",
+        "ja": "新規スキン/外観"
+      },
+      "sentimentScore": 0.20,
+      "description": {
+        "ko": "테마 신규 외형 아이템에 대한 높은 관심",
+        "en": "High interest in themed new appearance items",
+        "ja": "テーマ新規外観アイテムに対する高い関心"
+      },
+      "positiveCount": 678,
+      "negativeCount": 345,
+      "neutralCount": 412,
+      "topComments": [
+        {
+          "ko": "테마 디자인이 예뻐요",
+          "en": "Theme design is beautiful",
+          "ja": "テーマデザインが綺麗"
+        },
+        {
+          "ko": "다양한 옵션이 좋아요",
+          "en": "Love the variety of options",
+          "ja": "様々なオプションが良い"
+        },
+        {
+          "ko": "획득 방법이 아쉬워요",
+          "en": "Acquisition method is disappointing",
+          "ja": "獲得方法が残念"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "ko": "비즈니스 모델",
+        "en": "Business Model",
+        "ja": "ビジネスモデル"
+      },
+      "sentimentScore": -0.90,
+      "description": {
+        "ko": "신규 캐릭터 및 스킨 획득 난이도에 대한 강한 불만",
+        "en": "Strong complaints about difficulty in acquiring new characters and skins",
+        "ja": "新規キャラクターとスキン獲得難易度に対する強い不満"
+      },
+      "positiveCount": 123,
+      "negativeCount": 1234,
+      "neutralCount": 234,
+      "topComments": [
+        {
+          "ko": "가격이 너무 비싸요",
+          "en": "Prices are too expensive",
+          "ja": "価格が高すぎる"
+        },
+        {
+          "ko": "무과금 유저는 힘들어요",
+          "en": "Difficult for free-to-play users",
+          "ja": "無課金ユーザーには厳しい"
+        },
+        {
+          "ko": "획득 확률이 낮아요",
+          "en": "Acquisition rates are low",
+          "ja": "獲得確率が低い"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "ko": "신규 캐릭터 연계 이벤트",
+        "en": "New Character-Linked Event",
+        "ja": "新規キャラクター連携イベント"
+      },
+      "sentimentScore": -0.50,
+      "description": {
+        "ko": "미니게임의 타이머 시스템에 대한 부정적 경험",
+        "en": "Negative experience with mini-game timer system",
+        "ja": "ミニゲームのタイマーシステムに対する否定的経験"
+      },
+      "positiveCount": 234,
+      "negativeCount": 789,
+      "neutralCount": 345,
+      "topComments": [
+        {
+          "ko": "타이머가 너무 짧아요",
+          "en": "Timer is too short",
+          "ja": "タイマーが短すぎる"
+        },
+        {
+          "ko": "스트레스 받는 시스템이에요",
+          "en": "Stressful system",
+          "ja": "ストレスを感じるシステム"
+        },
+        {
+          "ko": "보상이 노력에 비해 부족해요",
+          "en": "Rewards don't match the effort",
+          "ja": "報酬が努力に見合わない"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "ko": "스킨 획득 시스템 개선",
+        "en": "Skin Acquisition System Improvements",
+        "ja": "スキン獲得システム改善"
+      },
+      "sentimentScore": -0.33,
+      "description": {
+        "ko": "레전더리 스킨 가격 및 획득 방식에 대한 비판",
+        "en": "Criticism of legendary skin pricing and acquisition methods",
+        "ja": "レジェンダリースキン価格と獲得方式に対する批判"
+      },
+      "positiveCount": 345,
+      "negativeCount": 678,
+      "neutralCount": 234,
+      "topComments": [
+        {
+          "ko": "레전더리 스킨이 너무 비싸요",
+          "en": "Legendary skins are too expensive",
+          "ja": "レジェンダリースキンが高すぎる"
+        },
+        {
+          "ko": "획득 방법이 제한적이에요",
+          "en": "Acquisition methods are limited",
+          "ja": "獲得方法が限定的"
+        },
+        {
+          "ko": "일부 개선은 좋아요",
+          "en": "Some improvements are good",
+          "ja": "一部の改善は良い"
+        }
+      ]
+    }
+  ],
+  "beforeAfterComparison": [
+    {
+      "feature": {
+        "ko": "왕국 생산 시스템",
+        "en": "Kingdom Production System",
+        "ja": "王国生産システム"
+      },
+      "before": 0.65,
+      "after": -0.15
+    },
+    {
+      "feature": {
+        "ko": "신규 캐릭터 연계 이벤트",
+        "en": "New Character-Linked Event",
+        "ja": "新規キャラクター連携イベント"
+      },
+      "before": 0.58,
+      "after": -0.22
+    },
+    {
+      "feature": {
+        "ko": "신규 캐릭터",
+        "en": "New Characters",
+        "ja": "新規キャラクター"
+      },
+      "before": 0.15,
+      "after": 0.13
+    },
+    {
+      "feature": {
+        "ko": "스킨 획득 시스템",
+        "en": "Skin Acquisition System",
+        "ja": "スキン獲得システム"
+      },
+      "before": -0.25,
+      "after": -0.15
+    }
+  ],
+  "keywords": [
+    {
+      "term": "new character",
+      "frequency": 2847,
+      "sentiment": "neutral",
+      "score": 5.2
+    },
+    {
+      "term": "retry",
+      "frequency": 1923,
+      "sentiment": "negative",
+      "score": 3.8
+    },
+    {
+      "term": "return",
+      "frequency": 1456,
+      "sentiment": "positive",
+      "score": 6.5
+    },
+    {
+      "term": "event",
+      "frequency": 1234,
+      "sentiment": "positive",
+      "score": 7.1
+    }
+  ],
+  "metadata": {
+    "platforms": ["Community Forum", "Official Community", "Social Media", "Video Platform"],
+    "languages": ["ko", "en", "ja"]
+  }
+}

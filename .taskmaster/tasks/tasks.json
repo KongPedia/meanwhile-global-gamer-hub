@@ -27,7 +27,7 @@
         "id": 3,
         "title": "데일리/마일스톤 리포트 상세 페이지 라우트 및 템플릿 구현",
         "description": "신규 B2B 가치 증빙을 위해 데일리 리포트와 마일스톤 리포트 상세 페이지를 생성합니다. React Router를 사용하여 동적 라우트를 추가하고, 각 페이지의 기본 템플릿을 구성합니다.",
-        "status": "in-progress",
+        "status": "done",
         "dependencies": [
           2
         ],
@@ -40,7 +40,7 @@
         "id": 4,
         "title": "랜딩 페이지 IA 재구성 및 B2B 카피/CTA 톤 적용",
         "description": "랜딩 페이지의 정보 구조(IA)를 B2B 가치 중심(Hero → 프리뷰 → 기능 소개)으로 재구성하고, 전체 카피와 CTA를 B2C 톤에서 B2B 톤('문의하기' 중심)으로 변경합니다.",
-        "status": "pending",
+        "status": "done",
         "dependencies": [
           1
         ],
@@ -53,7 +53,7 @@
         "id": 5,
         "title": "인사이트 어시스턴트(챗봇 시뮬레이터) 및 뉴스레터 통합 섹션 개발",
         "description": "랜딩 페이지 내에 사용자의 이해를 돕기 위한 '인사이트 어시스턴트 & CM 리아' 통합 섹션을 개발합니다. 여기에는 인터랙티브한 챗봇 시뮬레이터와 뉴스레터 샘플 카드가 포함됩니다.",
-        "status": "pending",
+        "status": "done",
         "dependencies": [
           2,
           4
@@ -67,7 +67,7 @@
         "id": 6,
         "title": "리포트 상세 페이지 SEO 최적화 (JSON-LD, Meta Tags)",
         "description": "검색 엔진 최적화를 위해 리포트 상세 페이지에만 인덱싱을 적용하고, 구조화된 데이터(JSON-LD) 및 다국어 관련 메타 태그(hreflang, canonical)를 동적으로 주입합니다.",
-        "status": "pending",
+        "status": "done",
         "dependencies": [
           3
         ],
@@ -80,7 +80,7 @@
         "id": 7,
         "title": "리포트 상세 페이지용 데이터 시각화 컴포넌트 개발",
         "description": "리포트 상세 페이지에서 KPI, 키워드, 이슈 등의 핵심 데이터를 효과적으로 보여주기 위한 재사용 가능한 UI 컴포넌트들(`ReportKPI`, `DeltaBar`, `KeywordTable` 등)을 개발합니다.",
-        "status": "pending",
+        "status": "done",
         "dependencies": [
           3
         ],
@@ -194,7 +194,7 @@
     ],
     "metadata": {
       "created": "2025-10-31T02:47:03.677Z",
-      "updated": "2025-10-31T03:13:07.431Z",
+      "updated": "2025-10-31T04:08:14.671Z",
       "description": "Tasks for master context"
     }
   }

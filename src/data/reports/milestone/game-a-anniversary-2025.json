@@ -1,0 +1,250 @@
+{
+  "id": "milestone-game-a-anniversary-2025",
+  "game": "game-a",
+  "milestoneId": "anniversary-2025",
+  "title": {
+    "ko": "대규모 기념 업데이트 커뮤니티 반응 분석",
+    "en": "Major Anniversary Update Community Response Analysis",
+    "ja": "大規模記念アップデートコミュニティ反応分析"
+  },
+  "date": "2025-01-15",
+  "period": "2025-01-15 ~ 2025-01-22",
+  "scale": {
+    "ko": "대규모",
+    "en": "Major",
+    "ja": "大規模"
+  },
+  "summary": {
+    "achievement": {
+      "ko": "성과: 기념 업데이트는 총 7,301건의 게시물을 생성하며 폭발적인 화제성을 기록했고, 특히 신규 캐릭터가 여론을 주도했습니다.",
+      "en": "Achievement: The anniversary update generated 7,301 posts with explosive buzz, particularly driven by new character discussions.",
+      "ja": "成果: 記念アップデートは合計7,301件の投稿を生成し、爆発的な話題性を記録し、特に新キャラクターが世論を主導しました。"
+    },
+    "problem": {
+      "ko": "문제: 높은 화제성에도 불구하고 전반적인 긍정/부정 비율이 비슷하며, '좌절감' 어조와 '재도전' 키워드가 높게 나타나 신규 콘텐츠 획득 과정에서의 부정적 경험이 많았음을 시사합니다.",
+      "en": "Problem: Despite high engagement, positive/negative ratios are similar, with 'frustrated' tone and 'retry' keywords appearing frequently, suggesting negative experiences in acquiring new content.",
+      "ja": "問題: 高い話題性にもかかわらず、全体的な肯定/否定比率が類似しており、「挫折感」トーンと「再挑戦」キーワードが高く現れ、新規コンテンツ獲得過程での否定的経験が多かったことを示唆しています。"
+    },
+    "recommendation": {
+      "ko": "제언: 신규 콘텐츠 획득 스트레스 완화를 위한 지원 이벤트를 진행하고, 부정적 반응이 감지된 '편의성 개선' 항목에 대한 추가 개선을 고려해야 합니다.",
+      "en": "Recommendation: Support events should be conducted to ease new content acquisition stress, and additional improvements to 'convenience features' that received negative feedback should be considered.",
+      "ja": "提言: 新規コンテンツ獲得ストレス緩和のための支援イベントを実施し、否定的反応が検出された「利便性改善」項目に対する追加改善を検討する必要があります。"
+    }
+  },
+  "overallMetrics": {
+    "totalPosts": 7301,
+    "totalLikes": 30,
+    "sentimentScore": 0.14
+  },
+  "featureFeedback": [
+    {
+      "feature": {
+        "ko": "커스터마이징/외형",
+        "en": "Customization/Appearance",
+        "ja": "カスタマイズ/外観"
+      },
+      "sentimentScore": 0.26,
+      "description": {
+        "ko": "테마 스킨 및 꾸미기 아이템 추가",
+        "en": "Themed skins and decoration items added",
+        "ja": "テーマスキンと装飾アイテム追加"
+      },
+      "positiveCount": 1245,
+      "negativeCount": 234,
+      "neutralCount": 521,
+      "topComments": [
+        {
+          "ko": "신규 꾸미기 아이템이 정말 멋져요!",
+          "en": "New cosmetic items are amazing!",
+          "ja": "新しい装飾アイテムが素晴らしい!"
+        },
+        {
+          "ko": "테마 장식이 마음에 들어요",
+          "en": "Love the themed decorations",
+          "ja": "テーマ装飾が気に入りました"
+        },
+        {
+          "ko": "커스터마이징 옵션이 다양해요",
+          "en": "Great variety of customization options",
+          "ja": "カスタマイズオプションが豊富"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "ko": "비즈니스 모델",
+        "en": "Business Model",
+        "ja": "ビジネスモデル"
+      },
+      "sentimentScore": 0.19,
+      "description": {
+        "ko": "신규/복귀 유저 대상 점핑 패키지 및 스타터 패키지 리뉴얼",
+        "en": "Jump packages and starter package renewal for new/returning users",
+        "ja": "新規/復帰ユーザー向けジャンプパッケージとスターターパッケージリニューアル"
+      },
+      "positiveCount": 892,
+      "negativeCount": 345,
+      "neutralCount": 423,
+      "topComments": [
+        {
+          "ko": "스타터 패키지가 정말 유용해요",
+          "en": "Starter packages are very helpful",
+          "ja": "スターターパッケージが本当に便利"
+        },
+        {
+          "ko": "복귀 유저에게 좋은 가치",
+          "en": "Good value for returning players",
+          "ja": "復帰ユーザーに良い価値"
+        },
+        {
+          "ko": "합리적인 가격",
+          "en": "Reasonable pricing",
+          "ja": "合理的な価格"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "ko": "신규 캐릭터 출시",
+        "en": "New Character Release",
+        "ja": "新キャラクター発売"
+      },
+      "sentimentScore": 0.19,
+      "description": {
+        "ko": "신규 최고 등급 캐릭터 등 2종 출시",
+        "en": "Release of 2 new highest-grade characters",
+        "ja": "新規最高等級キャラクターなど2種発売"
+      },
+      "positiveCount": 1567,
+      "negativeCount": 1234,
+      "neutralCount": 892,
+      "topComments": [
+        {
+          "ko": "캐릭터 디자인이 훌륭해요",
+          "en": "Character design is excellent",
+          "ja": "キャラクターデザインが素晴らしい"
+        },
+        {
+          "ko": "획득 확률이 너무 낮아요",
+          "en": "Acquisition rate is too low",
+          "ja": "獲得確率が低すぎる"
+        },
+        {
+          "ko": "성능은 밸런스가 잘 맞아요",
+          "en": "Performance is balanced",
+          "ja": "性能はバランスが良い"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "ko": "편의성 개선",
+        "en": "Convenience Features",
+        "ja": "利便性改善"
+      },
+      "sentimentScore": -0.005,
+      "description": {
+        "ko": "스토리 스킵, 전투 환경 설정, 자동 선적 등 QoL 업데이트",
+        "en": "QoL updates including story skip, battle settings, auto-loading",
+        "ja": "ストーリースキップ、戦闘環境設定、自動積載などQoLアップデート"
+      },
+      "positiveCount": 456,
+      "negativeCount": 678,
+      "neutralCount": 234,
+      "topComments": [
+        {
+          "ko": "아직 더 많은 개선이 필요해요",
+          "en": "Still needs more improvements",
+          "ja": "まだ多くの改善が必要"
+        },
+        {
+          "ko": "일부 기능은 도움이 돼요",
+          "en": "Some features are helpful",
+          "ja": "一部の機能は役立つ"
+        },
+        {
+          "ko": "QoL 업데이트가 부족해요",
+          "en": "Not enough QoL updates",
+          "ja": "QoLアップデートが不足"
+        }
+      ]
+    }
+  ],
+  "beforeAfterComparison": [
+    {
+      "feature": {
+        "ko": "신규 캐릭터 출시",
+        "en": "New Character Release",
+        "ja": "新キャラクター発売"
+      },
+      "before": 0.14,
+      "after": 0.13
+    },
+    {
+      "feature": {
+        "ko": "대규모 기념 이벤트",
+        "en": "Major Anniversary Event",
+        "ja": "大規模記念イベント"
+      },
+      "before": 0.16,
+      "after": 0.12
+    },
+    {
+      "feature": {
+        "ko": "신규 월드 탐험",
+        "en": "New World Exploration",
+        "ja": "新規ワールド探検"
+      },
+      "before": 0.04,
+      "after": 0.23
+    },
+    {
+      "feature": {
+        "ko": "기존 콘텐츠 변경",
+        "en": "Existing Content Changes",
+        "ja": "既存コンテンツ変更"
+      },
+      "before": 0.23,
+      "after": 0.12
+    },
+    {
+      "feature": {
+        "ko": "캐릭터 성장",
+        "en": "Character Growth",
+        "ja": "キャラクター成長"
+      },
+      "before": 0.17,
+      "after": 0.12
+    }
+  ],
+  "keywords": [
+    {
+      "term": "new character",
+      "frequency": 2847,
+      "sentiment": "neutral",
+      "score": 5.2
+    },
+    {
+      "term": "retry",
+      "frequency": 1923,
+      "sentiment": "negative",
+      "score": 3.8
+    },
+    {
+      "term": "return",
+      "frequency": 1456,
+      "sentiment": "positive",
+      "score": 6.5
+    },
+    {
+      "term": "event",
+      "frequency": 1234,
+      "sentiment": "positive",
+      "score": 7.1
+    }
+  ],
+  "metadata": {
+    "platforms": ["Community Forum", "Official Community", "Social Media", "Video Platform"],
+    "languages": ["ko", "en", "ja"]
+  }
+}

@@ -28,26 +28,26 @@ const ReportSection = () => {
 
   // 예시 리포트 데이터
   const reportData = {
-    title: t('report.example.title'),
-    period: t('report.example.period'),
+    title: t('landing.report.example.title'),
+    period: t('landing.report.example.period'),
     game: 'Mystic Legends',
-    summary: t('report.example.summary'),
+    summary: t('landing.report.example.summary'),
     hotTopic: {
-      title: t('report.example.hotTopic.title'),
+      title: t('landing.report.example.hotTopic.title'),
       mentions: 127,
       sentiment: -0.32,
-      sentimentLabel: t('report.example.hotTopic.sentimentLabel'),
-      timeRange: t('report.example.hotTopic.timeRange'),
+      sentimentLabel: t('landing.report.example.hotTopic.sentimentLabel'),
+      timeRange: t('landing.report.example.hotTopic.timeRange'),
       posts: [
         {
           platform: 'Reddit',
-          title: t('report.example.hotTopic.post1.title'),
-          content: t('report.example.hotTopic.post1.content')
+          title: t('landing.report.example.hotTopic.post1.title'),
+          content: t('landing.report.example.hotTopic.post1.content')
         },
         {
           platform: 'Steam',
-          title: t('report.example.hotTopic.post2.title'),
-          content: t('report.example.hotTopic.post2.content')
+          title: t('landing.report.example.hotTopic.post2.title'),
+          content: t('landing.report.example.hotTopic.post2.content')
         }
       ]
     }
@@ -61,14 +61,14 @@ const ReportSection = () => {
           <div className="flex items-center justify-center gap-2 mb-4">
             <FileText className="w-8 h-8 text-primary" />
             <Badge variant="secondary" className="text-sm font-medium">
-              {t('report.badge')}
+              {t('landing.report.badge')}
             </Badge>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
-            {t('report.title')}
+            {t('landing.report.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto whitespace-pre-line md:whitespace-normal">
-            {t('report.subtitle')}
+            {t('landing.report.subtitle')}
           </p>
         </div>
 
@@ -77,8 +77,8 @@ const ReportSection = () => {
           {/* Features Section */}
           <div className="space-y-6 md:space-y-8 animate-fade-in-up mb-12" style={{ animationDelay: '0.4s' }}>
             <div className="text-center space-y-2">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground">{t('report.features.title')}</h3>
-              <p className="text-muted-foreground md:text-lg">{t('report.features.subtitle')}</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">{t('landing.report.features.title')}</h3>
+              <p className="text-muted-foreground md:text-lg">{t('landing.report.features.subtitle')}</p>
             </div>
 
               {/* Key Features */}
@@ -89,23 +89,23 @@ const ReportSection = () => {
                     {[
                       {
                         icon: <TrendingUp className="w-8 h-8" />,
-                        title: t('report.features.trending.title'),
-                        description: t('report.features.trending.description'),
+                        title: t('landing.report.features.trending.title'),
+                        description: t('landing.report.features.trending.description'),
                       },
                       {
                         icon: <BarChart3 className="w-8 h-8" />,
-                        title: t('report.features.sentiment.title'),
-                        description: t('report.features.sentiment.description'),
+                        title: t('landing.report.features.sentiment.title'),
+                        description: t('landing.report.features.sentiment.description'),
                       },
                       {
                         icon: <Clock className="w-8 h-8" />,
-                        title: t('report.features.realtime.title'),
-                        description: t('report.features.realtime.description'),
+                        title: t('landing.report.features.realtime.title'),
+                        description: t('landing.report.features.realtime.description'),
                       },
                       {
                         icon: <MessageSquare className="w-8 h-8" />,
-                        title: t('report.features.insights.title'),
-                        description: t('report.features.insights.description'),
+                        title: t('landing.report.features.insights.title'),
+                        description: t('landing.report.features.insights.description'),
                       }
                     ].map((feature, index) => (
                       <div key={index} className="flex-[0_0_85%] min-w-0 px-4">
@@ -135,23 +135,23 @@ const ReportSection = () => {
               {[
                 {
                   icon: <TrendingUp className="w-8 h-8" />,
-                  title: t('report.features.trending.title'),
-                  description: t('report.features.trending.description'),
+                  title: t('landing.report.features.trending.title'),
+                  description: t('landing.report.features.trending.description'),
                 },
                 {
                   icon: <BarChart3 className="w-8 h-8" />,
-                  title: t('report.features.sentiment.title'),
-                  description: t('report.features.sentiment.description'),
+                  title: t('landing.report.features.sentiment.title'),
+                  description: t('landing.report.features.sentiment.description'),
                 },
                 {
                   icon: <Clock className="w-8 h-8" />,
-                  title: t('report.features.realtime.title'),
-                  description: t('report.features.realtime.description'),
+                  title: t('landing.report.features.realtime.title'),
+                  description: t('landing.report.features.realtime.description'),
                 },
                 {
                   icon: <MessageSquare className="w-8 h-8" />,
-                  title: t('report.features.insights.title'),
-                  description: t('report.features.insights.description'),
+                  title: t('landing.report.features.insights.title'),
+                  description: t('landing.report.features.insights.description'),
                 }
               ].map((feature, index) => (
                 <Card 
@@ -220,7 +220,7 @@ const ReportSection = () => {
                               <MessageSquare className="w-4 h-4 text-blue-500" />
                             </div>
                             <div className="text-xl font-bold text-foreground">{reportData.hotTopic.mentions}</div>
-                            <div className="text-xs text-muted-foreground">{t('report.stats.mentions')}</div>
+                            <div className="text-xs text-muted-foreground">{t('landing.report.stats.mentions')}</div>
                           </div>
                           <div className="text-center p-2 bg-muted/30 rounded-lg">
                             <div className="flex items-center justify-center gap-1 mb-1">
@@ -234,7 +234,7 @@ const ReportSection = () => {
                         {/* Related Posts */}
                         <div className="flex-grow flex flex-col justify-end">
                           <div className="space-y-2">
-                            <h5 className="text-sm font-medium text-foreground">{t('report.relatedPosts')}</h5>
+                            <h5 className="text-sm font-medium text-foreground">{t('landing.report.relatedPosts')}</h5>
                             {reportData.hotTopic.posts.slice(0, 2).map((post, index) => (
                               <div key={index} className="p-2 bg-muted/20 rounded-lg border-l-4 border-primary/30">
                                 <div className="flex items-center gap-2 mb-1">

@@ -27,11 +27,11 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="animate-fade-in">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight whitespace-pre-line">
-            {t('hero.title')}
+            {t('landing.hero.title')}
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed whitespace-pre-line">
-            {t('hero.subtitle')}
+            {t('landing.hero.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -41,7 +41,7 @@ const Hero = () => {
               className="animate-pulse-neon text-lg px-8 py-4 whitespace-nowrap"
               onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
             >
-              {t('hero.cta.discord')}
+              {t('landing.hero.cta.discord')}
             </Button>
             
             <Button 
@@ -55,7 +55,7 @@ const Hero = () => {
                 }
               }}
             >
-              {t('hero.cta.learn')}
+              {t('landing.hero.cta.learn')}
             </Button>
           </div>
         </div>
