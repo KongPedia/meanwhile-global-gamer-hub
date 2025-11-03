@@ -68,30 +68,20 @@ const Hero = () => {
         chatbotContainerRef.current
       ].filter(Boolean);
 
-      // Set will-change hints for all animated elements
+      // Minimal pre-set for containers only (cards/messages set during animation)
       if (animatedContainers.length) {
-        gsap.set(animatedContainers, { willChange: "transform, opacity" });
-      }
-      if (dailyCards.length) {
-        gsap.set(dailyCards, { 
-          willChange: "transform, opacity",
-          force3D: true,
-          backfaceVisibility: "hidden"
-        });
-      }
-      if (chatMessages.length) {
-        gsap.set(chatMessages, { 
+        gsap.set(animatedContainers, { 
           willChange: "transform, opacity",
           force3D: true,
           backfaceVisibility: "hidden"
         });
       }
 
-      const timeline = gsap.timeline({ defaults: { duration: 1.2, ease: "power3.out" } });
+      const timeline = gsap.timeline({ defaults: { duration: 0.9, ease: "power3.out" } });
 
       // Hero text animation
       if (heroTextRef.current) {
-        timeline.from(heroTextRef.current, { opacity: 0, y: 30, duration: 0.8 });
+        timeline.from(heroTextRef.current, { opacity: 0, y: 30, duration: 0.6 });
       }
 
       // 1. Milestone container animation (오른쪽 위에서 왼쪽 아래로 떨어지듯이)
@@ -106,9 +96,9 @@ const Hero = () => {
           x: 600,
           y: -400,
           scale: 0.8,
-          duration: 1.2,
+          duration: 0.9,
           ease: "power3.out"
-        }, "-=0.2");
+        }, "-=0.1");
       }
 
       // 2. Milestone cards animation (순차적으로)
@@ -116,11 +106,16 @@ const Hero = () => {
       if (milestoneCards.length) {
         timeline.from(milestoneCards, {
           opacity: 0,
-          scale: 0.95,
-          stagger: 0.05,
-          duration: 0.6,
-          ease: "power2.out"
-        }, "-=0.6"); // Start 0.6s before container finishes (overlap for smooth transition)
+          stagger: 0.04,
+          duration: 0.4,
+          ease: "power2.out",
+          onStart: () => {
+            gsap.set(milestoneCards, { willChange: "opacity", force3D: true });
+          },
+          onComplete: () => {
+            gsap.set(milestoneCards, { clearProps: "willChange" });
+          }
+        }, "-=0.2"); // Reduced overlap for performance
       }
 
       // 3. Daily Report container animation (마일스톤 완료 후 시작)
@@ -135,27 +130,26 @@ const Hero = () => {
           x: 600,
           y: -400,
           scale: 0.8,
-          duration: 1.2,
+          duration: 0.9,
           ease: "power3.out"
-        }, "-=0.3"); // Start before previous animation finishes for faster sequence
+        }, "-=0.15"); // Reduced overlap, snappy timing
       }
 
       // 4. Daily cards stagger animation (개별 카드 순차 애니메이션)
-      // Optimized with minimal stagger and GPU acceleration
+      // Optimized: opacity only, will-change during animation
       if (dailyCards.length) {
         timeline.from(dailyCards, {
           opacity: 0,
-          scale: 0.95,
-          stagger: 0.05, // Reduced from 0.08s for faster sequence
-          duration: 0.6, // Shorter duration for snappier feel
+          stagger: 0.04,
+          duration: 0.4,
           ease: "power2.out",
+          onStart: () => {
+            gsap.set(dailyCards, { willChange: "opacity", force3D: true });
+          },
           onComplete: () => {
-            // Clear will-change after animation
-            dailyCards.forEach(card => {
-              if (card) gsap.set(card, { clearProps: "willChange" });
-            });
+            gsap.set(dailyCards, { clearProps: "willChange" });
           }
-        }, "-=0.6"); // Start 0.6s before container finishes (overlap for smooth transition)
+        }, "-=0.2"); // Reduced overlap for performance
       }
 
       // 5. Chatbot container animation (일일 보고서 완료 후 시작)
@@ -170,27 +164,26 @@ const Hero = () => {
           x: 600,
           y: -400,
           scale: 0.8,
-          duration: 1.2,
+          duration: 0.9,
           ease: "power3.out"
-        }, "-=0.3"); // Start before previous animation finishes for faster sequence
+        }, "-=0.15"); // Reduced overlap, snappy timing
       }
 
       // 6. Chatbot messages stagger animation (챗봇 메시지 순차 애니메이션)
-      // Optimized with minimal stagger and GPU acceleration
+      // Optimized: opacity only, will-change during animation
       if (chatMessages.length) {
         timeline.from(chatMessages, {
           opacity: 0,
-          scale: 0.95,
-          stagger: 0.05,
-          duration: 0.6,
+          stagger: 0.04,
+          duration: 0.4,
           ease: "power2.out",
+          onStart: () => {
+            gsap.set(chatMessages, { willChange: "opacity", force3D: true });
+          },
           onComplete: () => {
-            // Clear will-change after animation
-            chatMessages.forEach(msg => {
-              if (msg) gsap.set(msg, { clearProps: "willChange" });
-            });
+            gsap.set(chatMessages, { clearProps: "willChange" });
           }
-        }, "-=0.6"); // Start 0.6s before container finishes (overlap for smooth transition)
+        }, "-=0.2"); // Reduced overlap for performance
       }
 
       timeline.call(() => {
@@ -254,7 +247,7 @@ const Hero = () => {
             {/* Bottom Layer: Milestone Report (50% opacity with blur overlay) */}
             <div 
               ref={milestoneContainerRef}
-              className="absolute grid grid-cols-2 gap-0 bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden shadow-2xl opacity-50 flex-shrink-0"
+              className="absolute bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden shadow-2xl opacity-50 flex-shrink-0"
               style={{ 
                 width: '1600px',
                 height: '400px',
@@ -266,72 +259,118 @@ const Hero = () => {
                 zIndex: 1
               }}
             >
-              {/* Milestone Report Sections */}
-              <div ref={milestoneCard1Ref} className="border-r border-b border-border/20">
-                <div className="p-5">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="p-2 rounded-lg bg-purple-500/10">
-                      <Target className="w-5 h-5 text-purple-500" />
-                    </div>
-                    <div className="flex-1">
-                      <Badge variant="outline" className="mb-2">Milestone Report</Badge>
-                      <h3 className="text-lg font-bold mb-1">{getLocalizedText(milestoneReport.title, language)}</h3>
-                      <p className="text-xs text-muted-foreground">{milestoneReport.date} • {milestoneReport.period}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-1.5">
-                    <h4 className="text-sm font-semibold mb-2">🎯 {t('reports.milestone.executiveSummary')}</h4>
-                    <div className="text-xs">
-                      <p className="line-clamp-1">• {t('reports.milestone.metrics.totalPosts')}: {milestoneReport.overallMetrics.totalPosts.toLocaleString()}</p>
-                      <p className="line-clamp-1">• {t('reports.milestone.metrics.totalLikes')}: {milestoneReport.overallMetrics.totalLikes}</p>
-                    </div>
-                  </div>
+              <div className="p-6 h-full overflow-hidden">
+                {/* Header */}
+                <div ref={milestoneCard1Ref} className="mb-4">
+                  <h2 className="text-2xl font-bold mb-1">{getLocalizedText(milestoneReport.title, language)}</h2>
+                  <p className="text-sm text-muted-foreground">{milestoneReport.game} • {milestoneReport.date} • {milestoneReport.period}</p>
                 </div>
-              </div>
-              <div ref={milestoneCard2Ref} className="border-b border-border/20">
-                <div className="p-5">
-                  <h3 className="text-lg font-bold mb-3">{t('reports.milestone.metrics.sentimentLabel')}</h3>
-                  <div className="space-y-2">
-                    <div className="border rounded-lg p-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-muted-foreground">{t('reports.milestone.sentiment.positive')}</span>
-                        <span className={`text-lg font-bold ${
-                          milestoneReport.overallMetrics.sentimentScore > 0.1 ? 'text-green-600' : 
-                          milestoneReport.overallMetrics.sentimentScore < -0.1 ? 'text-red-600' : 
-                          'text-gray-600'
+
+                {/* Executive Summary Section */}
+                <div ref={milestoneCard2Ref} className="mb-4">
+                  <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+                    <span className="text-xl">📊</span> {t('reports.milestone.executiveSummary')}
+                  </h3>
+                  
+                  {/* Metrics Grid */}
+                  <div className="grid grid-cols-3 gap-3 mb-3">
+                    <div className="text-center p-2 bg-muted/30 rounded">
+                      <p className="text-2xl font-bold text-blue-500">{milestoneReport.overallMetrics.totalPosts.toLocaleString()}</p>
+                      <p className="text-xs text-muted-foreground">{language === 'ko' ? '총 게시물' : 'Total Posts'}</p>
+                    </div>
+                    <div className="text-center p-2 bg-muted/30 rounded">
+                      <p className="text-2xl font-bold text-blue-500">{milestoneReport.overallMetrics.totalLikes}</p>
+                      <p className="text-xs text-muted-foreground">{language === 'ko' ? '총 좋아요' : 'Total Likes'}</p>
+                    </div>
+                    <div className="text-center p-2 bg-muted/30 rounded">
+                      <p className={`text-2xl font-bold ${
+                        milestoneReport.overallMetrics.sentimentScore > 0.1 ? 'text-green-600' : 
+                        milestoneReport.overallMetrics.sentimentScore < -0.1 ? 'text-red-600' : 
+                        'text-gray-600'
+                      }`}>
+                        {milestoneReport.overallMetrics.sentimentScore > 0.1 
+                          ? (language === 'ko' ? '긍정적' : 'Positive')
+                          : milestoneReport.overallMetrics.sentimentScore < -0.1
+                          ? (language === 'ko' ? '부정적' : 'Negative')
+                          : (language === 'ko' ? '중립적' : 'Neutral')}
+                      </p>
+                      <p className="text-xs text-muted-foreground">{language === 'ko' ? '전반적 감성' : 'Sentiment'}</p>
+                    </div>
+                  </div>
+
+                  {/* Summary Points */}
+                  <ul className="space-y-1.5 text-xs">
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 mt-0.5">✓</span>
+                      <span className="line-clamp-1">{getLocalizedText(milestoneReport.summary.achievement, language)}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-0.5">✗</span>
+                      <span className="line-clamp-1">{getLocalizedText(milestoneReport.summary.problem, language)}</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Feature Feedback Section */}
+                <div ref={milestoneCard3Ref}>
+                  <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+                    <span className="text-xl">👍</span> {t('reports.milestone.featureFeedback')}
+                  </h3>
+                  {milestoneReport.featureFeedback.slice(0, 1).map((feedback, idx) => (
+                    <div key={idx} ref={milestoneCard4Ref} className="border rounded-lg p-3 bg-background/50">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-semibold text-sm line-clamp-1">{getLocalizedText(feedback.feature, language)}</h4>
+                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
+                          feedback.sentimentScore > 0.1 ? 'bg-green-100 text-green-700' : 
+                          feedback.sentimentScore < -0.1 ? 'bg-red-100 text-red-700' : 
+                          'bg-gray-100 text-gray-700'
                         }`}>
-                          {milestoneReport.overallMetrics.sentimentScore > 0.1 
-                            ? t('reports.milestone.sentiment.positive')
-                            : milestoneReport.overallMetrics.sentimentScore < -0.1
-                            ? t('reports.milestone.sentiment.negative')
-                            : t('reports.milestone.sentiment.neutral')}
+                          {feedback.sentimentScore > 0.1 
+                            ? (language === 'ko' ? '긍정적' : 'Positive')
+                            : feedback.sentimentScore < -0.1
+                            ? (language === 'ko' ? '부정적' : 'Negative')
+                            : (language === 'ko' ? '중립적' : 'Neutral')}
                         </span>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div ref={milestoneCard3Ref} className="border-r border-border/20">
-                <div className="p-5">
-                  <h3 className="text-lg font-bold mb-3">{t('reports.milestone.featureFeedback')}</h3>
-                  <div className="space-y-2">
-                    {milestoneReport.featureFeedback.slice(0, 1).map((feature, idx) => (
-                      <div key={idx} className="border rounded-lg p-3 text-sm">
-                        <p className="font-semibold line-clamp-1">{getLocalizedText(feature.feature, language)}</p>
-                        <p className="text-xs text-muted-foreground line-clamp-1">{getLocalizedText(feature.description, language)}</p>
+                      
+                      {/* Sentiment Bars */}
+                      <div className="space-y-1.5">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs w-12">{language === 'ko' ? '긍정적' : 'Positive'}</span>
+                          <div className="flex-1 bg-gray-200 rounded-full h-4">
+                            <div 
+                              className="bg-green-500 h-4 rounded-full flex items-center justify-end pr-1"
+                              style={{ width: `${(feedback.positiveCount / (feedback.positiveCount + feedback.negativeCount + feedback.neutralCount)) * 100}%` }}
+                            >
+                              <span className="text-xs text-white font-medium">{feedback.positiveCount}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs w-12">{language === 'ko' ? '부정적' : 'Negative'}</span>
+                          <div className="flex-1 bg-gray-200 rounded-full h-4">
+                            <div 
+                              className="bg-red-500 h-4 rounded-full flex items-center justify-end pr-1"
+                              style={{ width: `${(feedback.negativeCount / (feedback.positiveCount + feedback.negativeCount + feedback.neutralCount)) * 100}%` }}
+                            >
+                              <span className="text-xs text-white font-medium">{feedback.negativeCount}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs w-12">{language === 'ko' ? '중립적' : 'Neutral'}</span>
+                          <div className="flex-1 bg-gray-200 rounded-full h-4">
+                            <div 
+                              className="bg-gray-400 h-4 rounded-full flex items-center justify-end pr-1"
+                              style={{ width: `${(feedback.neutralCount / (feedback.positiveCount + feedback.negativeCount + feedback.neutralCount)) * 100}%` }}
+                            >
+                              <span className="text-xs text-white font-medium">{feedback.neutralCount}</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div ref={milestoneCard4Ref}>
-                <div className="p-5">
-                  <h3 className="text-lg font-bold mb-3">{t('reports.milestone.executiveSummary')}</h3>
-                  <div className="space-y-2">
-                    <div className="border rounded-lg p-3 text-sm">
-                      <p className="font-semibold line-clamp-2">{getLocalizedText(milestoneReport.summary.recommendation, language)}</p>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
