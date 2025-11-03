@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { MilestoneReport } from '@/types/reports';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet-async';
 import { getSupportedLanguageCodes } from '@/contexts/LanguageContext';
 import { getLocalizedText } from '@/lib/i18n-utils';
 import LanguageSelector from '@/components/LanguageSelector';
+import { useReportAnimations } from '@/hooks/useReportAnimations';
 
 export default function MilestoneReportPage() {
   const { lang, game, milestoneId } = useParams<{ lang: string; game: string; milestoneId: string }>();
@@ -16,6 +17,12 @@ export default function MilestoneReportPage() {
   const [report, setReport] = useState<MilestoneReport | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // Animation refs
+  const headerRef = useRef<HTMLDivElement>(null);
+  const summaryRef = useRef<HTMLElement>(null);
+  const feedbackRef = useRef<HTMLElement>(null);
+  const comparisonRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const loadReport = async () => {
@@ -38,6 +45,46 @@ export default function MilestoneReportPage() {
       loadReport();
     }
   }, [game, milestoneId]);
+
+  // GSAP animations on mount using custom hook
+  useReportAnimations(loading, report, {
+    headerRef,
+    sectionRefs: [summaryRef, feedbackRef, comparisonRef],
+    itemSelectors: [
+      {
+        ref: summaryRef,
+        selector: '.metric-card',
+        animation: {
+          from: { scale: 0.9, opacity: 0 },
+          to: { scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.5 }
+        }
+      },
+      {
+        ref: summaryRef,
+        selector: 'ul > li',
+        animation: {
+          from: { x: -20, opacity: 0 },
+          to: { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, delay: 0.7 }
+        }
+      },
+      {
+        ref: feedbackRef,
+        selector: '.feedback-card',
+        animation: {
+          from: { y: 40, opacity: 0 },
+          to: { y: 0, opacity: 1, duration: 0.7, stagger: 0.15, delay: 0.9 }
+        }
+      },
+      {
+        ref: comparisonRef,
+        selector: '.comparison-card',
+        animation: {
+          from: { x: 30, opacity: 0 },
+          to: { x: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 1.1 }
+        }
+      }
+    ]
+  });
 
   if (loading) {
     return (
@@ -120,7 +167,7 @@ export default function MilestoneReportPage() {
       </Helmet>
       
       {/* Header (sticky) */}
-      <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header ref={headerRef} className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-6 max-w-4xl">
           <div className="flex items-center justify-between mb-4">
             <Button variant="ghost" onClick={handleBack} className="gap-2">
@@ -141,20 +188,20 @@ export default function MilestoneReportPage() {
       {/* Content */}
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Executive Summary */}
-        <section className="mb-8">
+        <section ref={summaryRef} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">📊 {t('reports.milestone.executiveSummary')}</h2>
           
           {/* Overall Metrics */}
           <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-muted/30 rounded-lg">
-            <div className="text-center">
+            <div className="metric-card text-center">
               <p className="text-2xl font-bold text-primary">{report.overallMetrics.totalPosts.toLocaleString()}</p>
               <p className="text-xs text-muted-foreground">{t('reports.milestone.metrics.totalPosts')}</p>
             </div>
-            <div className="text-center">
+            <div className="metric-card text-center">
               <p className="text-2xl font-bold text-primary">{report.overallMetrics.totalLikes}</p>
               <p className="text-xs text-muted-foreground">{t('reports.milestone.metrics.totalLikes')}</p>
             </div>
-            <div className="text-center">
+            <div className="metric-card text-center">
               <p className={`text-2xl font-bold ${
                 report.overallMetrics.sentimentScore > 0.1 ? 'text-green-600' : 
                 report.overallMetrics.sentimentScore < -0.1 ? 'text-red-600' : 
@@ -188,11 +235,11 @@ export default function MilestoneReportPage() {
         </section>
 
         {/* Feature Feedback */}
-        <section className="mb-8">
+        <section ref={feedbackRef} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">👍 {t('reports.milestone.featureFeedback')}</h2>
           <div className="space-y-6">
             {report.featureFeedback.map((feedback, index) => (
-              <div key={index} className="border rounded-lg p-6">
+              <div key={index} className="feedback-card border rounded-lg p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold">{getLocalizedText(feedback.feature, language)}</h3>
                   <span className={`text-sm font-bold px-3 py-1 rounded-full ${
@@ -261,7 +308,7 @@ export default function MilestoneReportPage() {
         </section>
 
         {/* Before/After Comparison */}
-        <section className="mb-8">
+        <section ref={comparisonRef} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">📈 {t('reports.milestone.comparisonTitle')}</h2>
           <p className="text-sm text-muted-foreground mb-4">{t('reports.milestone.comparisonCaption')}</p>
           <div className="space-y-3">
@@ -280,7 +327,7 @@ export default function MilestoneReportPage() {
               };
 
               return (
-                <div key={index} className="border rounded-lg p-4">
+                <div key={index} className="comparison-card border rounded-lg p-4">
                   <div className="flex items-center justify-between mb-3">
                     <p className="font-medium">{getLocalizedText(comp.feature, language)}</p>
                     <span className={`text-sm font-bold px-3 py-1 rounded-full ${

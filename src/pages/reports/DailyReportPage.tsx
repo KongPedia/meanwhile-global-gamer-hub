@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { DailyReport } from '@/types/reports';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, TrendingUp, TrendingDown } from 'lucide-react';
@@ -9,6 +9,7 @@ import { getSupportedLanguageCodes } from '@/contexts/LanguageContext';
 import { getLocalizedText } from '@/lib/i18n-utils';
 import LanguageSelector from '@/components/LanguageSelector';
 import ReportKPI from '@/components/reports/ReportKPI';
+import { useReportAnimations } from '@/hooks/useReportAnimations';
 import DeltaBar from '@/components/reports/DeltaBar';
 import KeywordTable from '@/components/reports/KeywordTable';
 import IssueTable from '@/components/reports/IssueTable';
@@ -21,6 +22,13 @@ export default function DailyReportPage() {
   const [report, setReport] = useState<DailyReport | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // Animation refs
+  const headerRef = useRef<HTMLDivElement>(null);
+  const summaryRef = useRef<HTMLElement>(null);
+  const keywordsRef = useRef<HTMLElement>(null);
+  const metricsRef = useRef<HTMLElement>(null);
+  const issuesRef = useRef<HTMLElement>(null);
 
   // Localized game label mapping
   const getGameLabel = (gameId: string) => {
@@ -52,6 +60,46 @@ export default function DailyReportPage() {
       loadReport();
     }
   }, [game, date]);
+
+  // GSAP animations on mount using custom hook
+  useReportAnimations(loading, report, {
+    headerRef,
+    sectionRefs: [summaryRef, keywordsRef, metricsRef, issuesRef],
+    itemSelectors: [
+      {
+        ref: summaryRef,
+        selector: 'ul > li',
+        animation: {
+          from: { x: -20, opacity: 0 },
+          to: { x: 0, opacity: 1, duration: 0.5, stagger: 0.08, delay: 0.5 }
+        }
+      },
+      {
+        ref: keywordsRef,
+        selector: '.keyword-card',
+        animation: {
+          from: { scale: 0.9, opacity: 0 },
+          to: { scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.7 }
+        }
+      },
+      {
+        ref: metricsRef,
+        selector: '.metric-card',
+        animation: {
+          from: { y: 30, opacity: 0 },
+          to: { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.9 }
+        }
+      },
+      {
+        ref: issuesRef,
+        selector: '.issue-card',
+        animation: {
+          from: { x: 30, opacity: 0 },
+          to: { x: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 1.1 }
+        }
+      }
+    ]
+  });
 
   if (loading) {
     return (
@@ -160,7 +208,7 @@ export default function DailyReportPage() {
       </Helmet>
       
       {/* Header (sticky) */}
-      <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header ref={headerRef} className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-6 max-w-4xl">
           <div className="flex items-center justify-between mb-4">
             <Button variant="ghost" onClick={handleBack} className="gap-2">
@@ -181,7 +229,7 @@ export default function DailyReportPage() {
       {/* Content */}
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Summary */}
-        <section className="mb-8">
+        <section ref={summaryRef} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">📋 {t('reports.daily.summary')}</h2>
           <ul className="space-y-2">
             {report.summary.map((item, index) => (
@@ -194,11 +242,11 @@ export default function DailyReportPage() {
         </section>
 
         {/* Positive Keywords */}
-        <section className="mb-8">
+        <section ref={keywordsRef} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">{t('reports.daily.keywords')}</h2>
           <div className="space-y-3">
             {report.positiveKeywords.map((item, index) => (
-              <div key={index} className="border rounded-lg p-4 hover:border-primary/50 transition-colors">
+              <div key={index} className="keyword-card border rounded-lg p-4 hover:border-primary/50 transition-colors">
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
@@ -225,12 +273,12 @@ export default function DailyReportPage() {
         </section>
 
         {/* Community Metrics */}
-        <section className="mb-8">
+        <section ref={metricsRef} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">{t('reports.daily.community.metrics')}</h2>
           
           {/* Posts and Comments */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div className="border rounded-lg p-4">
+            <div className="metric-card border rounded-lg p-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-muted-foreground">{t('reports.daily.community.totalPosts')}</span>
                 <div className="flex items-center gap-2">
@@ -246,7 +294,7 @@ export default function DailyReportPage() {
               </div>
             </div>
             
-            <div className="border rounded-lg p-4">
+            <div className="metric-card border rounded-lg p-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-muted-foreground">{t('reports.daily.community.comments')}</span>
                 <div className="flex items-center gap-2">
@@ -264,7 +312,7 @@ export default function DailyReportPage() {
           </div>
 
           {/* Sentiment Distribution */}
-          <div className="border rounded-lg p-4">
+          <div className="metric-card border rounded-lg p-4">
             <h3 className="text-sm font-medium mb-3">{t('reports.daily.community.sentimentAnalysis')}</h3>
             <div className="space-y-3">
               <div>
@@ -316,11 +364,11 @@ export default function DailyReportPage() {
         </section>
 
         {/* Issues */}
-        <section className="mb-8">
+        <section ref={issuesRef} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">{t('reports.daily.issues')}</h2>
           <div className="space-y-3">
             {report.issues.map((issue, index) => (
-              <div key={index} className="border rounded-lg p-4">
+              <div key={index} className="issue-card border rounded-lg p-4">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="font-semibold">{getLocalizedText(issue.title, language)}</h3>
                   <span className={`text-xs px-2 py-1 rounded-full ${

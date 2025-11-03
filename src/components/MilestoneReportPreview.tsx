@@ -50,7 +50,7 @@ export default function MilestoneReportPreview() {
           {reports.map((report, index) => (
             <Card 
               key={report.id}
-              className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-gaming animate-fade-in-up cursor-pointer group"
+              className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-gaming animate-fade-in-up cursor-pointer group flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => navigate(`/${language}/reports/milestone/${report.game}/${report.milestoneId}`)}
             >
@@ -104,7 +104,7 @@ export default function MilestoneReportPreview() {
               </div>
 
               {/* CTA */}
-              <Button variant="ghost" className="w-full group-hover:bg-primary/10">
+              <Button variant="ghost" className="w-full group-hover:bg-primary/10 mt-auto">
                 {language === 'ko' ? '전체 보고서 보기' : language === 'ja' ? 'レポートを見る' : 'View Full Report'}
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
