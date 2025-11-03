@@ -12,10 +12,19 @@ daily:
   mentions: '言及'
   issues: '主要な問題'
   quotes: 'コミュニティの意見'
+  community:
+    metrics: 'コミュニティ指標'
+    totalPosts: '総投稿数'
+    comments: 'コメント数'
+    sentimentAnalysis: '感情分析'
+    positiveMentions: 'ポジティブな言及'
+    improvementMentions: '改善提案'
+    neutral: '中立'
   preview:
     badge: '日次運用ブリーフィング'
     title: '日次運用ブリーフィング'
     subtitle: '毎朝、主要課題3つとリスクシグナルを把握し、即時の運用アクションへ'
+    view: 'レポート全体を見る'
   severity:
     high: '高'
     medium: '中'
@@ -39,10 +48,18 @@ milestone:
   executiveSummary: 'エグゼクティブサマリー'
   featureFeedback: '機能フィードバック'
   comparison: '期間比較'
+  comparisonTitle: 'アップデート前後の反応比較'
+  comparisonCaption: '期待感と満足度の変化'
+  beforeLabel: 'アップデート前（期待感）'
+  afterLabel: 'アップデート後（満足度）'
   highlights: '主なハイライト'
   recommendations: '推奨事項'
   topComments: '主な意見:'
   previous: '前回:'
+  metrics:
+    totalPosts: '総投稿数'
+    totalLikes: '総いいね数'
+    sentimentLabel: '全体的な感情'
   sentiment:
     positive: 'ポジティブ'
     negative: 'ネガティブ'

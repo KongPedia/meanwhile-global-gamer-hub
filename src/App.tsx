@@ -48,9 +48,22 @@ function LangLayout() {
       navigate(`/${target}`, { replace: true });
       return;
     }
+
+    // Check if user has a saved language preference
+    const savedLang = localStorage.getItem("preferred-language");
+    
+    // If saved language exists and differs from URL, redirect to saved language
+    if (isSupportedLangCode(savedLang) && savedLang !== langParam) {
+      const newPath = location.pathname.replace(`/${langParam}`, `/${savedLang}`);
+      navigate(`${newPath}${location.search}${location.hash}`, { replace: true });
+      return;
+    }
+
+    // Sync context language with URL parameter
     if (language !== langParam) {
       setLanguage(langParam);
     }
+
     // Update SEO tags when language or path changes
     updateI18nSeo({
       currentLang: langParam!,

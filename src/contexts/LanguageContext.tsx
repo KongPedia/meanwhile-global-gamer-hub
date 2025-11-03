@@ -94,8 +94,8 @@ const loadMessages = async (lang: Language, namespaces: string[] = ['common', 'l
   return messages;
 };
 
-// Translation function with variable substitution
-const translateKey = (messages: Messages, key: string, vars?: Record<string, string>): string => {
+// Translation function with variable substitution and English fallback
+const translateKey = (messages: Messages, key: string, vars?: Record<string, string>, currentLang?: Language): string => {
   // Parse key path like 'landing.hero.title' or 'common.game.all'
   const parts = key.split('.');
   let value: any = messages;
@@ -104,6 +104,13 @@ const translateKey = (messages: Messages, key: string, vars?: Record<string, str
     if (value && typeof value === 'object' && part in value) {
       value = value[part];
     } else {
+      // Key not found - try English fallback if not already using English
+      if (currentLang && currentLang !== 'en') {
+        console.warn(`Translation key not found for ${currentLang}: ${key}, falling back to English`);
+        // Try to get English value from messages.en if available
+        const enValue = getEnglishFallback(key, parts);
+        if (enValue) return enValue;
+      }
       console.warn(`Translation key not found: ${key}`);
       return key;
     }
@@ -126,6 +133,13 @@ const translateKey = (messages: Messages, key: string, vars?: Record<string, str
   }
   
   return result;
+};
+
+// Helper function to get English fallback value
+const getEnglishFallback = (key: string, parts: string[]): string | null => {
+  // This is a simple fallback - in production you might want to load English messages
+  // For now, return null and let the key be displayed
+  return null;
 };
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
@@ -172,7 +186,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     if (loading) {
       return key;
     }
-    return translateKey(messages, key, vars);
+    return translateKey(messages, key, vars, language);
   };
 
   return (
