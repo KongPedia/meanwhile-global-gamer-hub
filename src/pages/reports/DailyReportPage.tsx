@@ -30,6 +30,10 @@ export default function DailyReportPage() {
   const metricsRef = useRef<HTMLElement>(null);
   const issuesRef = useRef<HTMLElement>(null);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
+
   // Localized game label mapping
   const getGameLabel = (gameId: string) => {
     const map: Record<string, { ko: string; en: string; ja: string }> = {

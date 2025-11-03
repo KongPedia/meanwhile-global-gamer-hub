@@ -45,7 +45,7 @@ const SolutionSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
             {t('landing.solution.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line md:whitespace-normal">
             {t('landing.solution.subtitle')}
           </p>
         </div>
@@ -63,10 +63,10 @@ const SolutionSection = () => {
                             <div className="w-8 h-8">{solution.icon}</div>
                           </div>
                         </div>
-                        <h3 className="text-lg font-bold mb-3 text-foreground">
+                        <h3 className="text-lg font-bold mb-3 text-foreground whitespace-pre-line">
                           {solution.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                           {solution.description}
                         </p>
                       </div>

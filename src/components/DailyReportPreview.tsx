@@ -37,7 +37,7 @@ export default function DailyReportPreview() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
             {t('reports.daily.preview.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto whitespace-pre-line">
             {t('reports.daily.preview.subtitle')}
           </p>
         </div>
@@ -56,8 +56,8 @@ export default function DailyReportPreview() {
                   <Calendar className="w-6 h-6 text-blue-500" />
                 </div>
                 <div className="flex-1">
-                  <Badge variant="outline" className="mb-2">{getLocalizedText(report.title, language)}</Badge>
-                  <h3 className="text-xl font-bold mb-1">
+                  <Badge variant="outline" className="mb-2 text-[10px] px-2 py-0.5">{getLocalizedText(report.title, language)}</Badge>
+                  <h3 className="text-xl font-bold mb-1 whitespace-pre-line md:whitespace-normal">
                     {getLocalizedText(report.title, language)}
                   </h3>
                   <p className="text-sm text-muted-foreground">
@@ -76,40 +76,52 @@ export default function DailyReportPreview() {
               </div>
 
               {/* Metrics Preview */}
-              <div className="grid grid-cols-3 gap-2 mb-4 p-3 bg-muted/30 rounded-lg">
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-1 mb-1">
-                    {report.communityMetrics.postsDelta > 0 ? (
-                      <TrendingUp className="w-3 h-3 text-green-500" />
-                    ) : (
-                      <TrendingDown className="w-3 h-3 text-red-500" />
-                    )}
-                    <span className={`text-xs font-bold ${report.communityMetrics.postsDelta > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                      {report.communityMetrics.postsDelta > 0 && '+'}{report.communityMetrics.postsDelta.toFixed(1)}%
-                    </span>
+              <div className="mb-4 p-3 bg-muted/30 rounded-lg">
+                {/* Mobile: 2 top + 1 bottom, Desktop: 3 columns horizontal */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                  {/* Total Posts */}
+                  <div className="text-center">
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="flex items-center gap-1">
+                        {report.communityMetrics.postsDelta > 0 ? (
+                          <TrendingUp className="w-3 h-3 text-green-500" />
+                        ) : (
+                          <TrendingDown className="w-3 h-3 text-red-500" />
+                        )}
+                        <span className={`text-xs font-bold ${report.communityMetrics.postsDelta > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                          {report.communityMetrics.postsDelta > 0 && '+'}{report.communityMetrics.postsDelta.toFixed(1)}%
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground whitespace-pre-line text-center">{t('reports.daily.community.totalPosts')}</p>
+                    </div>
                   </div>
-                  <p className="text-xs text-muted-foreground">{t('reports.daily.community.totalPosts')}</p>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-1 mb-1">
-                    {report.communityMetrics.commentsDelta > 0 ? (
-                      <TrendingUp className="w-3 h-3 text-green-500" />
-                    ) : (
-                      <TrendingDown className="w-3 h-3 text-red-500" />
-                    )}
-                    <span className={`text-xs font-bold ${report.communityMetrics.commentsDelta > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                      {report.communityMetrics.commentsDelta > 0 && '+'}{report.communityMetrics.commentsDelta.toFixed(1)}%
-                    </span>
+                  
+                  {/* Comments */}
+                  <div className="text-center">
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="flex items-center gap-1">
+                        {report.communityMetrics.commentsDelta > 0 ? (
+                          <TrendingUp className="w-3 h-3 text-green-500" />
+                        ) : (
+                          <TrendingDown className="w-3 h-3 text-red-500" />
+                        )}
+                        <span className={`text-xs font-bold ${report.communityMetrics.commentsDelta > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                          {report.communityMetrics.commentsDelta > 0 && '+'}{report.communityMetrics.commentsDelta.toFixed(1)}%
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground whitespace-pre-line text-center">{t('reports.daily.community.comments')}</p>
+                    </div>
                   </div>
-                  <p className="text-xs text-muted-foreground">{t('reports.daily.community.comments')}</p>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-1 mb-1">
-                    <span className="text-xs font-bold text-primary">
-                      {report.communityMetrics.positiveMentions.toFixed(1)}%
-                    </span>
+                  
+                  {/* Positive Mentions - Full width on mobile, 1/3 on desktop */}
+                  <div className="text-center col-span-2 md:col-span-1">
+                    <div className="flex flex-col items-center gap-1">
+                      <span className="text-xs font-bold text-primary">
+                        {report.communityMetrics.positiveMentions.toFixed(1)}%
+                      </span>
+                      <p className="text-xs text-muted-foreground whitespace-pre-line text-center">{t('reports.daily.community.positiveMentions')}</p>
+                    </div>
                   </div>
-                  <p className="text-xs text-muted-foreground">{t('reports.daily.community.positiveMentions')}</p>
                 </div>
               </div>
 

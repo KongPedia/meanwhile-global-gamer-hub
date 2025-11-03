@@ -23,7 +23,7 @@ daily:
   preview:
     badge: '일일 운영 브리핑'
     title: '일일 운영 브리핑'
-    subtitle: '매일 아침 핵심 이슈 3가지와 위험 신호를 파악하여 즉각적인 운영 액션으로 연결합니다'
+    subtitle: '매일 아침 핵심 이슈 3가지와\n위험 신호를 파악하여\n즉각적인 운영 액션으로 연결합니다'
     view: '전체 보고서 보기'
   severity:
     high: '높음'
@@ -44,7 +44,7 @@ milestone:
   preview:
     title: '마일스톤 성과 분석'
     badge: '마일스톤 성과 분석'
-    subtitle: '업데이트, 이벤트 단위의 성과와 문제를 정리하여 회고 및 다음 계획에 활용합니다'
+    subtitle: '업데이트, 이벤트 단위의\n성과와 문제를 정리하여\n회고 및 다음 계획에 활용합니다'
   executiveSummary: '경영진 요약'
   featureFeedback: '기능 피드백'
   comparison: '기간 비교'
