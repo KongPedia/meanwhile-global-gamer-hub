@@ -246,7 +246,7 @@ const Hero = () => {
           </div>
           
           {/* 3D Stacked Container */}
-          <div className="relative w-full py-12 overflow-visible mx-auto md:ml-12 xl:ml-12" style={{ perspective: '3000px', width: '1600px',  maxWidth: 'none' }}>
+          <div className="relative w-full py-12 overflow-visible md:ml-20 xl:ml-40" style={{ perspective: '3000px', width: '1600px',  maxWidth: 'none' }}>
             
             {/* Bottom Layer: Milestone Report */}
             <div 
