@@ -145,6 +145,75 @@ export default {
 					'50%': {
 						transform: 'translateY(-10px)'
 					}
+				},
+				'slide-in-1': {
+					'0%': {
+						opacity: '0',
+						transform: 'rotate(-6deg) scale(1.2) translateY(20%)'
+					},
+					'100%': {
+						opacity: '0.2',
+						transform: 'rotate(-6deg) scale(1.2) translateY(10%)'
+					}
+				},
+				'slide-in-2': {
+					'0%': {
+						opacity: '0',
+						transform: 'rotate(-4deg) scale(1.15) translateY(15%)'
+					},
+					'100%': {
+						opacity: '0.3',
+						transform: 'rotate(-4deg) scale(1.15) translateY(5%)'
+					}
+				},
+				'slide-in-3': {
+					'0%': {
+						opacity: '0',
+						transform: 'rotate(-2deg) scale(1.1) translateY(10%)'
+					},
+					'100%': {
+						opacity: '0.4',
+						transform: 'rotate(-2deg) scale(1.1) translateY(2%)'
+					}
+				},
+				'card-fall-1': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-50%) translateY(-100px) rotate(-6deg) scale(0.8)'
+					},
+					'60%': {
+						transform: 'translateX(-50%) translateY(25px) rotate(-6deg) scale(1.02)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(-50%) translateY(20px) rotate(-6deg) scale(1)'
+					}
+				},
+				'card-fall-2': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-50%) translateY(-100px) rotate(-3deg) scale(0.8)'
+					},
+					'60%': {
+						transform: 'translateX(-50%) translateY(18px) rotate(-3deg) scale(1.02)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(-50%) translateY(15px) rotate(-3deg) scale(1)'
+					}
+				},
+				'card-fall-3': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-50%) translateY(-100px) rotate(0deg) scale(0.8)'
+					},
+					'60%': {
+						transform: 'translateX(-50%) translateY(12px) rotate(0deg) scale(1.02)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(-50%) translateY(10px) rotate(0deg) scale(1)'
+					}
 				}
 			},
 			animation: {
@@ -154,7 +223,13 @@ export default {
 				'fade-in-up': 'fade-in-up 0.4s ease-out',
 				'scale-in': 'scale-in 0.3s ease-out',
 				'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'slide-in-1': 'slide-in-1 1.2s ease-out forwards',
+				'slide-in-2': 'slide-in-2 1s ease-out 0.2s forwards',
+				'slide-in-3': 'slide-in-3 0.8s ease-out 0.4s forwards',
+				'card-fall-1': 'card-fall-1 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards',
+				'card-fall-2': 'card-fall-2 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s forwards',
+				'card-fall-3': 'card-fall-3 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1s forwards'
 			}
 		}
 	},

@@ -27,6 +27,9 @@ const Index = () => {
       
       {/* Solution: AI 기반 통합 분석 솔루션 */}
       <SolutionSection />
+
+      {/* 챗봇 에이전트 섹션 */}
+      <ChatSimulator />
       
       {/* 일일 운영 브리핑 섹션 */}
       <DailyReportPreview />
@@ -37,8 +40,6 @@ const Index = () => {
       {/* CM 리아 뉴스레터 섹션 */}
       <NewsletterSection newsletters={newsletters} />
       
-      {/* 챗봇 에이전트 섹션 */}
-      <ChatSimulator />
       
       {/* CTA */}
       <Footer />

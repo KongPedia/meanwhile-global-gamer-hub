@@ -8,6 +8,30 @@ hero:
     demo: "デモを見る"
     discord: 'Discordでお問い合わせ'
     learn: '詳しく見る'
+  cards:
+    daily:
+      title: '日次運営ブリーフィング'
+      desc: '毎朝主要コミュニティ反応要約'
+      posts: '投稿数'
+      comments: 'コメント'
+      positive: 'ポジティブ'
+    milestone:
+      title: 'マイルストーン成果分析'
+      desc: 'アップデート別コミュニティ反応追跡'
+      posts: '投稿数'
+      likes: 'いいね'
+      sentiment: 'ポジティブ'
+      sentimentLabel: '感情'
+    newsletter:
+      title: 'CMリアのパルス'
+      desc: '親しみやすい声で届けるインサイト'
+      posts: '投稿数'
+      positive: 'ポジティブ'
+      growth: '成長'
+    chatbot:
+      title: 'AIインサイトチャットボット'
+      desc: 'コミュニティデータについて質問'
+      example: '"新規アップデートの反応は？"'
 
 problem:
   title: 'ゲーム会社実務者が\n直面する現実'

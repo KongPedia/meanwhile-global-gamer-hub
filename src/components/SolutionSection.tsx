@@ -13,6 +13,12 @@ const SolutionSection = () => {
   
   const solutions = [
     {
+      icon: <Bot className="w-8 h-8" />,
+      title: t('landing.solution.chatbot.title'),
+      description: t('landing.solution.chatbot.desc'),
+      gradient: "bg-gradient-secondary"
+    },
+    {
       icon: <BarChart3 className="w-8 h-8" />,
       title: t('landing.solution.daily.title'),
       description: t('landing.solution.daily.desc'),
@@ -30,16 +36,10 @@ const SolutionSection = () => {
       description: t('landing.solution.newsletter.desc'),
       gradient: "bg-gradient-primary"
     },
-    {
-      icon: <Bot className="w-8 h-8" />,
-      title: t('landing.solution.chatbot.title'),
-      description: t('landing.solution.chatbot.desc'),
-      gradient: "bg-gradient-secondary"
-    }
   ];
 
   return (
-    <section id="solution" className="py-16 md:py-24 overflow-hidden bg-muted/30">
+    <section id="solution" className="py-16 md:py-24 overflow-hidden bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground whitespace-pre-line md:whitespace-normal">
