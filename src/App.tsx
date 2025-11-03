@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useNavigate, useParams, Outlet, useLocati
 import { LanguageProvider, useLanguage, isSupportedLangCode, detectBrowserLanguage } from "@/contexts/LanguageContext";
 import { HelmetProvider } from "react-helmet-async";
 import { useEffect } from "react";
+import ReactGA from 'react-ga4'
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import DailyReportPage from "./pages/reports/DailyReportPage";
@@ -74,7 +75,46 @@ function LangLayout() {
       search: location.search,
       hash: location.hash,
     });
+
+    // Track pageview with Google Analytics
+    if (import.meta.env.REACT_APP_GA_MEASUREMENT_ID) {
+      ReactGA.send({
+        hitType: 'pageview',
+        page: location.pathname + location.search,
+        title: document.title
+      });
+    }
   }, [langParam, language, setLanguage, navigate, location.pathname, location.search, location.hash]);
+
+  // Scroll depth tracking
+  useEffect(() => {
+    if (!import.meta.env.REACT_APP_GA_MEASUREMENT_ID) return;
+
+    let scrollDepths = [25, 50, 75, 90];
+    let hasTracked = new Set<number>();
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollPercent = Math.round((scrollTop / (documentHeight - windowHeight)) * 100);
+
+      scrollDepths.forEach(depth => {
+        if (scrollPercent >= depth && !hasTracked.has(depth)) {
+          ReactGA.event({
+            category: 'scroll',
+            action: 'scroll_depth',
+            label: `${depth}%`,
+            value: depth
+          });
+          hasTracked.add(depth);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return <Outlet />;
 }

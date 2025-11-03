@@ -9,6 +9,7 @@ import { getSupportedLanguageCodes } from '@/contexts/LanguageContext';
 import { getLocalizedText } from '@/lib/i18n-utils';
 import LanguageSelector from '@/components/LanguageSelector';
 import { useReportAnimations } from '@/hooks/useReportAnimations';
+import ReactGA from 'react-ga4';
 
 export default function MilestoneReportPage() {
   const { lang, game, milestoneId } = useParams<{ lang: string; game: string; milestoneId: string }>();
@@ -49,6 +50,18 @@ export default function MilestoneReportPage() {
       loadReport();
     }
   }, [game, milestoneId]);
+
+  // Track page view when report is loaded
+  useEffect(() => {
+    if (report && !loading && import.meta.env.REACT_APP_GA_MEASUREMENT_ID) {
+      ReactGA.event({
+        category: 'page_view',
+        action: 'milestone_report_view',
+        label: `${game}-${milestoneId}-${lang}`,
+        value: 1
+      });
+    }
+  }, [report, loading, game, milestoneId, lang]);
 
   // GSAP animations on mount using custom hook
   useReportAnimations(loading, report, {

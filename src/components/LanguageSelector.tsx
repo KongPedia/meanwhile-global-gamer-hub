@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Languages } from 'lucide-react';
 import { useLanguage, Language, getSupportedLanguageCodes } from '@/contexts/LanguageContext';
+import ReactGA from 'react-ga4';
 
 const LANGUAGE_LABELS: Record<Language, { name: string; flag: string }> = {
   ko: { name: '한국어', flag: '🇰🇷' },
@@ -26,6 +27,16 @@ const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLanguageChange = (newLang: Language) => {
+    // Track language change event
+    if (import.meta.env.REACT_APP_GA_MEASUREMENT_ID) {
+      ReactGA.event({
+        category: 'user_interaction',
+        action: 'language_change',
+        label: `${language}_to_${newLang}`,
+        value: 1
+      });
+    }
+
     setLanguage(newLang);
     // replace first path segment with the new language, preserving rest
     const nextPath = `${replaceFirstPathSegment(location.pathname, newLang)}${location.search}${location.hash}`;

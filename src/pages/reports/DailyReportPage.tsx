@@ -14,6 +14,7 @@ import DeltaBar from '@/components/reports/DeltaBar';
 import KeywordTable from '@/components/reports/KeywordTable';
 import IssueTable from '@/components/reports/IssueTable';
 import QuoteList from '@/components/reports/QuoteList';
+import ReactGA from 'react-ga4';
 
 export default function DailyReportPage() {
   const { lang, game, date } = useParams<{ lang: string; game: string; date: string }>();
@@ -64,6 +65,18 @@ export default function DailyReportPage() {
       loadReport();
     }
   }, [game, date]);
+
+  // Track page view when report is loaded
+  useEffect(() => {
+    if (report && !loading && import.meta.env.REACT_APP_GA_MEASUREMENT_ID) {
+      ReactGA.event({
+        category: 'page_view',
+        action: 'daily_report_view',
+        label: `${game}-${date}-${lang}`,
+        value: 1
+      });
+    }
+  }, [report, loading, game, date, lang]);
 
   // GSAP animations on mount using custom hook
   useReportAnimations(loading, report, {

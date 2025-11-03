@@ -11,6 +11,7 @@ import { DailyReport, MilestoneReport } from "@/types/reports";
 import reportData from "@/data/reports/daily/game-a-2025-10-17.json";
 import milestoneData from "@/data/reports/milestone/game-a-anniversary-2025.json";
 import { getLocalizedText } from "@/lib/i18n-utils";
+import ReactGA from 'react-ga4'
 
 const DISCORD_INVITE_LINK = import.meta.env.VITE_DISCORD_INVITE_LINK;
 
@@ -238,7 +239,16 @@ const Hero = () => {
                 variant="discord" 
                 size="lg"
                 className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 whitespace-nowrap"
-                onClick={() => window.open(DISCORD_INVITE_LINK, '_blank')}
+                onClick={() => {
+                  // Track CTA click event
+                  ReactGA.event({
+                    category: 'engagement',
+                    action: 'click',
+                    label: 'discord_cta_hero',
+                    value: 1
+                  });
+                  window.open(DISCORD_INVITE_LINK, '_blank');
+                }}
               >
                 {t('landing.hero.cta.discord')}
               </Button>
