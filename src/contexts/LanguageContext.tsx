@@ -1,5 +1,5 @@
 // @refresh reset
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 
 export type Language = 'ko' | 'en' | 'ja' | 'zh' | 'es';
 
@@ -182,12 +182,12 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     localStorage.setItem('preferred-language', language);
   }, [language]);
 
-  const t = (key: string, vars?: Record<string, string>): string => {
+  const t = useCallback((key: string, vars?: Record<string, string>): string => {
     if (loading) {
       return key;
     }
     return translateKey(messages, key, vars, language);
-  };
+  }, [loading, messages, language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t, messages, loading }}>

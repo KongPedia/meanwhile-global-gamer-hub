@@ -1,8 +1,8 @@
 # Landing page translations for English
 hero:
-  badge: "Analytics Platform for Game Companies"
-  title: "At‑a‑Glance Update Impact\n& Community Sentiment"
-  subtitle: "Teams grasp today's performance, issues, and actions in 1–3 minutes"
+  badge: "AI Analytics for Game Studios"
+  title: "See update impact,\nTrack community sentiment in real time"
+  subtitle: "Grasp today’s key issues in 1–3 minutes Move\nwith clear, actionable steps"
   cta:
     freeTrial: "Start Free Trial"
     demo: "View Demo"
@@ -31,68 +31,70 @@ hero:
     chatbot:
       title: 'AI Insights Chatbot'
       desc: 'Ask about community data'
-      example: '"How are players reacting to the new update?"'
+      example: 'What is the event participation rate?'
+      response: 'Based on 1,523 posts from Naver Cafe, DCInside, and Reddit, the event participation rate is 34.2%. Naver Cafe shows the highest engagement (58.7%), while Reddit participation is comparatively lower.'
+      inputPreview: 'What is the event participation'
 
 problem:
-  title: 'Challenges Game Companies Face'
-  subtitle: 'Are you wasting time browsing multiple platforms\nto understand community reactions after updates?'
+  title: 'Daily challenges\nof live-ops teams'
+  subtitle: 'Are you spending countless hours hopping across platforms\nto understand player reactions after each update?'
   fragmentation:
-    title: 'Information Fragmentation'
-    desc: 'Difficult to check scattered reactions\nacross Reddit, Steam, DCInside, etc. one by one'
+    title: 'Scattered signals'
+    desc: 'Feedback is fragmented across Reddit, Steam, DCInside, and more—\nmanual collection is inefficient and error-prone'
   delay:
-    title: 'Response Delays'
-    desc: 'Late issue detection leads to\nmissed timing for hotfixes\nand announcements'
+    title: 'Delayed response'
+    desc: 'Late issue detection leads to missed hotfix and announcement windows\nand erodes player trust'
   manual:
-    title: 'Manual Analysis'
-    desc: 'Manual sentiment analysis and\nkeyword extraction makes\nobjective judgment difficult'
+    title: 'Gut-driven analysis'
+    desc: 'Decisions made without objective data\nincrease risk and uncertainty'
 
 solution:
-  title: 'AI-Based\nIntegrated Analytics Solution'
-  subtitle: 'Support data-driven decision making\nwith MeanWhile''s one-stop solution'
+  title: 'AI-powered\nCommunity Intelligence'
+  subtitle: 'Make faster, data-driven decisions\nwith MeanWhile’s all-in-one solution'
   daily:
-    title: 'Daily Analysis'
-    desc: 'AI automatically summarizes\nmajor community reactions every morning\ndelivering only key insights'
+    title: 'Daily Operations Briefing'
+    desc: 'Start your morning with an auto-generated summary\nof key community issues for fast response'
   update:
-    title: 'Game Update Community Analysis'
-    desc: 'Track public opinion changes\nin real-time after updates or events\nfor immediate response'
+    title: 'Update Impact Analysis'
+    desc: 'Track reactions in real time after patches and events\nand catch risks early'
   newsletter:
-    title: 'Newsletter'
-    desc: 'Automatically generate newsletters\nfor customer communication\nbased on data insights'
+    title: 'Auto-generated CM Newsletter'
+    desc: 'Turn data insights into player-friendly language\nfor trustworthy communications'
   chatbot:
-    title: 'Chatbot'
-    desc: 'Ask questions about community data\nthrough AI chatbot and get\ninstant insights'
+    title: 'AI Insights Chatbot'
+    desc: 'Ask questions—AI analyzes community data\nand answers instantly'
 
 benefits:
-  title: 'Core Value Proposition\nfor Game Companies'
-  subtitle: 'Maximize game operation efficiency\nwith data-driven decision making'
+  title: 'Why studios choose MeanWhile'
+  subtitle: 'Maximize performance with data-driven operations'
   efficiency:
-    title: 'Improved Operational Efficiency'
-    desc: 'Improve decision-making speed 10x\nby grasping key information within 1-3 minutes'
+    title: '10× operational efficiency'
+    desc: 'Reduce two hours of monitoring to three minutes\nand focus on high-impact work'
   datadriven:
-    title: 'Data-Driven Actions'
-    desc: 'Quickly decide on hotfixes, announcements,\nand rewards with objective data'
+    title: 'Faster, data-backed actions'
+    desc: 'Confidently decide on hotfixes, compensation, and announcements\nwith real data—not guesswork'
   communication:
-    title: 'Enhanced Customer Trust'
-    desc: 'Strengthen trust relationships with customers\nthrough transparent communication via CM newsletters'
+    title: 'Build player trust'
+    desc: 'Communicate transparently with data-driven updates\nand strengthen long-term relationships'
   culture:
-    title: 'Healthy Culture'
-    desc: 'Build healthy communities\nwith AI moderation'
+    title: 'Healthy community culture'
+    desc: 'Foster positive, safe communities\nwith AI moderation'
 
 partner:
-  title: 'Partnership\nfor Game Studios'
+  title: 'Partnerships\nfor game studios'
   subtitle: 'Manage global communities\nwith MeanWhile'
   monitoring:
     title: '24/7 Monitoring'
-    desc: 'Real-time monitoring of\nglobal communities'
+    desc: 'Monitor global communities\nin real time'
   analytics:
     title: 'Deep Analytics'
-    desc: 'Detailed analysis of\ncommunity data'
+    desc: 'Analyze community data\nin depth'
   efficiency:
     title: 'Increased Efficiency'
-    desc: 'Boost productivity with\nAI automation'
+    desc: 'Boost productivity\nwith AI automation'
   innovation:
     title: 'Innovative Insights'
-    desc: 'Data-driven strategic\ninsights'
+    desc: 'Data-driven, strategic\ninsights'
 
 videoExample:
   title: 'AI Video Analysis'
@@ -112,12 +114,12 @@ videoExample:
     content: 'Practical tips for beginners'
 
 report:
-  badge: 'Daily Report'
-  title: 'Daily Updated\nCommunity Reports'
-  subtitle: 'Check key issues and trends in\nglobal gaming communities analyzed by AI'
+  badge: 'Daily Operations Briefing'
+  title: 'Get your core community report\nevery morning'
+  subtitle: 'Understand key issues and trends analyzed by AI\nin under three minutes'
   features:
     title: 'Key Features'
-    subtitle: 'Data-driven insights'
+    subtitle: 'Insights you can act on immediately'
     trending:
       title: 'Trending Topics'
       description: 'Real-time popular topic analysis'
@@ -133,14 +135,14 @@ report:
   example:
     title: 'Daily Report'
     period: '2024-01-15 09:00 ~ 18:00'
-    summary: 'Today''s hottest topic in the community was discussion about the new update.'
+    summary: 'The hottest topic today is discussion around the new update.'
     hotTopic:
       title: 'Difficulty Balance Controversy'
       sentimentLabel: 'Negative'
       timeRange: 'Last 24 hours'
       post1:
         title: 'New boss is too difficult'
-        content: 'It''s impossible to clear even on normal difficulty...'
+        content: "It's impossible to clear even on normal difficulty..."
       post2:
         title: 'Balance patch needed'
         content: 'Difficulty is too high for the rewards. Adjustment needed.'
@@ -149,8 +151,8 @@ report:
   relatedPosts: 'Related Posts'
 
 community:
-  title: 'See You\non Discord!'
-  subtitle: 'Real-time analysis of\nglobal gaming community data'
+  title: 'Get started now'
+  subtitle: 'Analyze and leverage global community data\nin real time'
   cta: 'Contact via Discord'
   stats:
     totalPosts: 'Total Posts'
@@ -158,29 +160,38 @@ community:
     totalProjects: 'Game Posts'
     etc: 'ETC'
   posts:
-    title: 'Experience Global Communities\nin Your Language'
-    subtitle: 'MeanWhile summarizes\nglobal community data\nwith AI, sharing it on Discord'
+    title: 'See global communities\nin your language, in real time'
+    subtitle: 'AI auto-translates and summarizes Reddit, Steam, and more—\ndelivered instantly to Discord'
   discord:
-    title: 'Discord Preview'
-    subtitle: 'Hundreds of gamers are\nalready here together'
+    title: 'Discord Community'
+    subtitle: 'Hundreds of industry professionals\nare already sharing insights together'
     footer: 'Meanwhile Global Gamer Hub'
     view: 'View on Discord'
 
 chatSimulator:
   badge: 'AI Assistant'
-  title: 'Insight Assistant'
-  subtitle: 'Ask questions about your game community and get instant insights'
+  title: 'Community Insights Chatbot'
+  subtitle: 'Ask anything—AI provides instant,\ndata-backed answers'
   assistantName: 'Insight Assistant'
   assistantStatus: 'Online • Analyzing communities'
-  userQuestion: 'What are players saying about the new update?'
+  inputPlaceholder: 'Type your question...'
   thinking: 'Thinking...'
-  analyzing: 'Analyzing 2,847 community posts...'
-  assistantResponse: 'Based on 2,847 posts across Reddit, Steam, and Discord, the community sentiment is mixed (6.2/10). Main concerns: difficulty balance (68% of discussions). Positive feedback: boss mechanics praised universally. Top issue: rewards don''t match difficulty.'
-  note: '💡 This is a simulation. Real assistant analyzes live community data.'
+  analyzingTemplate: 'Analyzing {count} community posts...'
+  note: '💡 The production service analyzes live community data\nin real time.'
+  questions:
+    question1:
+      text: 'What are players saying about the new update?'
+      response: 'Based on 2,847 posts across Reddit, DCInside, and Steam Community, the community sentiment is mixed (6.2/10). Main concerns: difficulty balance (68% of discussions). Positive feedback: boss mechanics praised universally.'
+    question2:
+      text: 'What are the most mentioned issues recently?'
+      response: 'Analyzing 1,523 posts from Naver Cafe, Daum Cafe, and Steam Community, top 3 issues: 1) Server stability (42%), 2) Reward system (28%), 3) Matchmaking (18%). Positive mentions 34.2%, negative 51.8%—improvements needed.'
+    question3:
+      text: 'What content is most popular in the community?'
+      response: 'Analyzing 3,124 posts from DCInside, Reddit, and Daum Cafe: New character content has the highest engagement (avg 156 likes). Fan art +89%, strategy guides +67% increase. Overall positive sentiment 7.8/10—very favorable.'
 
 newsletter:
   badge: 'Daily Newsletter'
   title: 'CM Lia''s Daily Pulse'
-  subtitle: 'Daily community insights delivered with a friendly voice'
+  subtitle: 'Daily community insights\ndelivered in a friendly voice'
   readMore: 'Read Full Newsletter →'
   hotTopics: 'Today''s Hot Topics'

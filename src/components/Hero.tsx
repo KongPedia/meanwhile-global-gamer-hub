@@ -98,7 +98,11 @@ const Hero = () => {
           scale: 0.8,
           duration: 0.9,
           ease: "power3.out"
-        }, "-=0.1");
+        }, "-=0.1").to(milestoneContainerRef.current, {
+          opacity: 1,
+          duration: 0.3,
+          ease: "power2.out"
+        }, "-=0.6");
       }
 
       // 2. Milestone cards animation (순차적으로)
@@ -115,7 +119,7 @@ const Hero = () => {
           onComplete: () => {
             gsap.set(milestoneCards, { clearProps: "willChange" });
           }
-        }, "-=0.2"); // Reduced overlap for performance
+        }, "-=0.3"); // Reduced overlap for performance
       }
 
       // 3. Daily Report container animation (마일스톤 완료 후 시작)
@@ -212,20 +216,20 @@ const Hero = () => {
         </div>
       </header>
 
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-x-hidden pt-24 md:pt-28 bg-background">
+      <section className="relative min-h-[100vh] md:min-h-screen flex flex-col items-center md:justify-center overflow-x-hidden pt-24 md:pt-28 bg-background">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
         
         {/* Content */}
         <div className="relative z-10 w-full px-4 md:px-6">
-          <div ref={heroTextRef} className="text-center md:text-left mb-12 max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-pre-line">
+          <div ref={heroTextRef} className="text-center md:text-left mb-8 md:mb-12 max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 leading-tight whitespace-pre-line">
               <span className="bg-gradient-primary bg-clip-text text-transparent">
                 {t('landing.hero.title')}
               </span>
             </h1>
             
-            <p className="text-base md:text-lg lg:text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed whitespace-pre-line">
+            <p className="text-sm md:text-base lg:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl leading-relaxed whitespace-pre-line">
               {t('landing.hero.subtitle')}
             </p>
             
@@ -244,10 +248,10 @@ const Hero = () => {
           {/* 3D Stacked Container */}
           <div className="relative w-full py-12 overflow-visible" style={{ perspective: '3000px', width: '1600px',  maxWidth: 'none' }}>
             
-            {/* Bottom Layer: Milestone Report (50% opacity with blur overlay) */}
+            {/* Bottom Layer: Milestone Report */}
             <div 
               ref={milestoneContainerRef}
-              className="absolute bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden shadow-2xl opacity-50 flex-shrink-0"
+              className="absolute bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden shadow-2xl flex-shrink-0"
               style={{ 
                 width: '1600px',
                 height: '400px',
@@ -427,10 +431,10 @@ const Hero = () => {
             {/* Top-Right: Community Metrics */}
             <div ref={card1Ref} className="border-b border-border/20">
                 <div className="p-5">
-                  <h3 className="text-lg font-bold mb-3">{t('reports.daily.community.metrics')}</h3>
+                  <h3 className="text-lg font-bold mb-3 whitespace-pre-line">{t('reports.daily.community.metrics')}</h3>
                   <div className="flex flex-col gap-3 mb-3">
                     <div className="border rounded-lg p-3">
-                      <div className="flex items-center justify-between">
+                      <div className="flex flex-col gap-2">
                         <span className="text-xs text-muted-foreground">{t('reports.daily.community.totalPosts')}</span>
                         <div className="flex items-center gap-1">
                           <span className="text-lg font-bold">{report.communityMetrics.totalPosts.toLocaleString()}</span>
@@ -442,7 +446,7 @@ const Hero = () => {
                       </div>
                     </div>
                     <div className="border rounded-lg p-3">
-                      <div className="flex items-center justify-between">
+                      <div className="flex flex-col gap-2">
                         <span className="text-xs text-muted-foreground">{t('reports.daily.community.comments')}</span>
                         <div className="flex items-center gap-1">
                           <span className="text-lg font-bold">{report.communityMetrics.totalComments.toLocaleString()}</span>
@@ -533,7 +537,7 @@ const Hero = () => {
               <div className="flex-shrink-0" style={{ width: '700px' }}>
                 <Card 
                   ref={chatbotContainerRef}
-                  className="p-4 bg-card/50 border-border shadow-2xl"
+                  className="p-4 bg-card/50 backdrop-blur-sm border-border shadow-2xl"
                   style={{ 
                     width: '100%', 
                     height: '100%',
@@ -560,7 +564,7 @@ const Hero = () => {
                   {/* Sample User Message */}
                   <div ref={chatMessage1Ref} className="flex gap-2 justify-end">
                     <div className="max-w-[80%] rounded-lg p-3 bg-primary text-primary-foreground text-sm">
-                      <p>{language === 'ko' ? '신규 업데이트에 대해 플레이어들은 어떻게 말하고 있나요?' : language === 'ja' ? '新しいパッチノートについてプレイヤーは何と言っていますか？' : 'What are players saying about the new update?'}</p>
+                      <p className="break-words">{t('landing.hero.cards.chatbot.example')}</p>
                     </div>
                     <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
                       <User className="w-4 h-4" />
@@ -574,11 +578,7 @@ const Hero = () => {
                     </div>
                     <div className="max-w-[80%] rounded-lg p-3 bg-muted text-sm">
                       <p className="leading-relaxed">
-                        {language === 'ko' 
-                          ? '2,847개 게시물 분석 결과, 커뮤니티 감정은 복합적입니다 (6.2/10). 주요 우려: 난이도 밸런스 (68%). 긍정적: 보스 메카닉 칭찬.'
-                          : language === 'ja'
-                          ? '2,847件の投稿を分析した結果、コミュニティの感情は複雑です（6.2/10）。主な懸念：難易度バランス（68％）。肯定的：ボスメカニクスの称賛。'
-                          : 'Analyzing 2,847 posts: sentiment is mixed (6.2/10). Main concern: difficulty balance (68%). Positive: boss mechanics praised.'}
+                        {t('landing.hero.cards.chatbot.response')}
                       </p>
                     </div>
                   </div>
@@ -591,7 +591,7 @@ const Hero = () => {
                     <div className="bg-muted rounded-lg p-3">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Loader2 className="w-3 h-3 animate-spin" />
-                        <span>{language === 'ko' ? '분석 중...' : language === 'ja' ? '分析中...' : 'Analyzing...'}</span>
+                        <span>{t('landing.chatSimulator.thinking')}</span>
                       </div>
                     </div>
                   </div>
@@ -599,11 +599,14 @@ const Hero = () => {
 
                 {/* Input Area */}
                 <div className="flex gap-2">
-                  <Input
-                    placeholder={language === 'ko' ? '질문을 입력하세요...' : language === 'ja' ? '質問を入力してください...' : 'Type your question...'}
-                    className="flex-1 text-sm"
-                    disabled
-                  />
+                  <div className="flex-1 relative">
+                    <Input
+                      value={t('landing.hero.cards.chatbot.inputPreview')}
+                      className="text-sm pr-2 overflow-x-auto whitespace-nowrap"
+                      disabled
+                      readOnly
+                    />
+                  </div>
                   <Button size="icon" disabled>
                     <Send className="w-4 h-4" />
                   </Button>
@@ -612,7 +615,7 @@ const Hero = () => {
                 {/* Footer Note */}
                 <div className="mt-3 pt-3 border-t border-border">
                   <p className="text-xs text-center text-muted-foreground">
-                    💡 {language === 'ko' ? '실시간 커뮤니티 데이터 분석' : language === 'ja' ? 'リアルタイムコミュニティデータ分析' : 'Real-time community analysis'}
+                    {t('landing.chatSimulator.note')}
                   </p>
                 </div>
               </Card>
@@ -622,7 +625,7 @@ const Hero = () => {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+        <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
           <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
           </div>

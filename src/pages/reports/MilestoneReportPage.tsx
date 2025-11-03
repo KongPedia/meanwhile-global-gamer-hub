@@ -25,6 +25,10 @@ export default function MilestoneReportPage() {
   const comparisonRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
+
+  useEffect(() => {
     const loadReport = async () => {
       try {
         setLoading(true);

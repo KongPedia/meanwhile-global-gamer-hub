@@ -4,9 +4,9 @@
   "date": "2025-10-17",
   "period": "2025-10-17 00:00 ~ 23:59 KST",
   "title": {
-    "ko": "가디언테일즈 일일 리포트",
-    "en": "Guardian Tales Daily Report",
-    "ja": "ガーディアンテイルズ日次レポート"
+    "ko": "가디언테일즈\n일일 리포트",
+    "en": "Guardian Tales\nDaily Report",
+    "ja": "ガーディアンテイルズ\nデイリーレポート"
   },
   "summary": [
     {
@@ -170,9 +170,9 @@
         "ja": "報酬/システムエラー"
       },
       "description": {
-        "ko": "스테이지 클리어 보상이 비정상적으로 지급된 것으로 보이는 현상에 대한 문의",
-        "en": "Inquiry about abnormal stage clear reward distribution",
-        "ja": "ステージクリア報酬が異常に支給されたと見られる現象に関する問い合わせ"
+        "ko": "신규 핵심 콘텐츠 및\n시스템 개별 커뮤니티 반응",
+        "en": "New Core Content and\nSystem Individual Community Response",
+        "ja": "新規コアコンテンツおよび\nシステム個別コミュニティ反応"
       },
       "severity": "medium",
       "mentions": 1

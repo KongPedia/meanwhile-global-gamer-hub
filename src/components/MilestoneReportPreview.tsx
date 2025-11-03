@@ -40,7 +40,7 @@ export default function MilestoneReportPreview() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
             {t('reports.milestone.preview.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto whitespace-pre-line">
             {t('reports.milestone.preview.subtitle')}
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function MilestoneReportPreview() {
                 </div>
                 <div className="flex-1">
                   <Badge variant="outline" className="mb-2">Milestone Report</Badge>
-                  <h3 className="text-xl font-bold mb-1 line-clamp-2">
+                  <h3 className="text-xl font-bold mb-1 line-clamp-2 whitespace-pre-line">
                     {getLocalizedText(report.title, language)}
                   </h3>
                   <p className="text-sm text-muted-foreground">

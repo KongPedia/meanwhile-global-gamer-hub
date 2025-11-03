@@ -36,7 +36,7 @@ const ProblemSection = () => {
           <h2 className="text-2xl md:text-4xl font-bold mb-6 text-foreground whitespace-pre-line">
             {t('landing.problem.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto whitespace-pre-line">
             {t('landing.problem.subtitle')}
           </p>
         </div>
@@ -56,7 +56,7 @@ const ProblemSection = () => {
                         <h3 className="text-lg font-bold mb-3 text-foreground">
                           {problem.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                           {problem.description}
                         </p>
                       </div>
