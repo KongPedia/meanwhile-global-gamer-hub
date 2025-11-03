@@ -8,6 +8,30 @@ hero:
     demo: "View Demo"
     discord: 'Contact via Discord'
     learn: 'Learn More'
+  cards:
+    daily:
+      title: 'Daily Operations Briefing'
+      desc: 'Morning summary of key community reactions'
+      posts: 'Posts'
+      comments: 'Comments'
+      positive: 'Positive'
+    milestone:
+      title: 'Milestone Performance Analysis'
+      desc: 'Track community reactions per update'
+      posts: 'Posts'
+      likes: 'Likes'
+      sentiment: 'Positive'
+      sentimentLabel: 'Sentiment'
+    newsletter:
+      title: "CM Lia's Pulse"
+      desc: 'Insights delivered in a friendly voice'
+      posts: 'Posts'
+      positive: 'Positive'
+      growth: 'Growth'
+    chatbot:
+      title: 'AI Insights Chatbot'
+      desc: 'Ask about community data'
+      example: '"How are players reacting to the new update?"'
 
 problem:
   title: 'Challenges Game Companies Face'

@@ -173,7 +173,7 @@ export default function NewsletterSection({ newsletters }: NewsletterSectionProp
   };
 
   return (
-    <section className="py-20 px-4 bg-muted/20">
+    <section className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
