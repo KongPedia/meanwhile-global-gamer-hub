@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState, useRef, useLayoutEffect } from 'react';
-import { gsap } from 'gsap';
+import { useEffect, useState, useRef } from 'react';
 import { DailyReport } from '@/types/reports';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, TrendingUp, TrendingDown } from 'lucide-react';
@@ -10,6 +9,7 @@ import { getSupportedLanguageCodes } from '@/contexts/LanguageContext';
 import { getLocalizedText } from '@/lib/i18n-utils';
 import LanguageSelector from '@/components/LanguageSelector';
 import ReportKPI from '@/components/reports/ReportKPI';
+import { useReportAnimations } from '@/hooks/useReportAnimations';
 import DeltaBar from '@/components/reports/DeltaBar';
 import KeywordTable from '@/components/reports/KeywordTable';
 import IssueTable from '@/components/reports/IssueTable';
@@ -61,68 +61,45 @@ export default function DailyReportPage() {
     }
   }, [game, date]);
 
-  // GSAP animations on mount
-  useLayoutEffect(() => {
-    if (!report || loading) return;
-
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-      // Header animation - slide down and fade in
-      tl.fromTo(
-        headerRef.current,
-        { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6 }
-      );
-
-      // Sections stagger animation - slide up and fade in
-      tl.fromTo(
-        [summaryRef.current, keywordsRef.current, metricsRef.current, issuesRef.current],
-        { y: 60, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15 },
-        '-=0.3'
-      );
-
-      // Animate individual items within sections
-      const summaryItems = summaryRef.current?.querySelectorAll('li');
-      if (summaryItems) {
-        gsap.fromTo(
-          summaryItems,
-          { x: -20, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5, stagger: 0.08, delay: 0.5 }
-        );
+  // GSAP animations on mount using custom hook
+  useReportAnimations(loading, report, {
+    headerRef,
+    sectionRefs: [summaryRef, keywordsRef, metricsRef, issuesRef],
+    itemSelectors: [
+      {
+        ref: summaryRef,
+        selector: 'ul > li',
+        animation: {
+          from: { x: -20, opacity: 0 },
+          to: { x: 0, opacity: 1, duration: 0.5, stagger: 0.08, delay: 0.5 }
+        }
+      },
+      {
+        ref: keywordsRef,
+        selector: '.keyword-card',
+        animation: {
+          from: { scale: 0.9, opacity: 0 },
+          to: { scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.7 }
+        }
+      },
+      {
+        ref: metricsRef,
+        selector: '.metric-card',
+        animation: {
+          from: { y: 30, opacity: 0 },
+          to: { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.9 }
+        }
+      },
+      {
+        ref: issuesRef,
+        selector: '.issue-card',
+        animation: {
+          from: { x: 30, opacity: 0 },
+          to: { x: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 1.1 }
+        }
       }
-
-      const keywordCards = keywordsRef.current?.querySelectorAll('.keyword-card');
-      if (keywordCards) {
-        gsap.fromTo(
-          keywordCards,
-          { scale: 0.9, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.7 }
-        );
-      }
-
-      const metricCards = metricsRef.current?.querySelectorAll('.metric-card');
-      if (metricCards) {
-        gsap.fromTo(
-          metricCards,
-          { y: 30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.9 }
-        );
-      }
-
-      const issueCards = issuesRef.current?.querySelectorAll('.issue-card');
-      if (issueCards) {
-        gsap.fromTo(
-          issueCards,
-          { x: 30, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 1.1 }
-        );
-      }
-    });
-
-    return () => ctx.revert();
-  }, [report, loading]);
+    ]
+  });
 
   if (loading) {
     return (

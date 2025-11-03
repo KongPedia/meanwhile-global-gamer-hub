@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState, useRef, useLayoutEffect } from 'react';
-import { gsap } from 'gsap';
+import { useEffect, useState, useRef } from 'react';
 import { MilestoneReport } from '@/types/reports';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
@@ -9,6 +8,7 @@ import { Helmet } from 'react-helmet-async';
 import { getSupportedLanguageCodes } from '@/contexts/LanguageContext';
 import { getLocalizedText } from '@/lib/i18n-utils';
 import LanguageSelector from '@/components/LanguageSelector';
+import { useReportAnimations } from '@/hooks/useReportAnimations';
 
 export default function MilestoneReportPage() {
   const { lang, game, milestoneId } = useParams<{ lang: string; game: string; milestoneId: string }>();
@@ -46,71 +46,45 @@ export default function MilestoneReportPage() {
     }
   }, [game, milestoneId]);
 
-  // GSAP animations on mount
-  useLayoutEffect(() => {
-    if (!report || loading) return;
-
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-      // Header animation - slide down and fade in
-      tl.fromTo(
-        headerRef.current,
-        { y: -50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6 }
-      );
-
-      // Sections stagger animation - slide up and fade in
-      tl.fromTo(
-        [summaryRef.current, feedbackRef.current, comparisonRef.current],
-        { y: 60, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2 },
-        '-=0.3'
-      );
-
-      // Animate metric cards in summary
-      const metricCards = summaryRef.current?.querySelectorAll('.metric-card');
-      if (metricCards) {
-        gsap.fromTo(
-          metricCards,
-          { scale: 0.9, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.5 }
-        );
+  // GSAP animations on mount using custom hook
+  useReportAnimations(loading, report, {
+    headerRef,
+    sectionRefs: [summaryRef, feedbackRef, comparisonRef],
+    itemSelectors: [
+      {
+        ref: summaryRef,
+        selector: '.metric-card',
+        animation: {
+          from: { scale: 0.9, opacity: 0 },
+          to: { scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.5 }
+        }
+      },
+      {
+        ref: summaryRef,
+        selector: 'ul > li',
+        animation: {
+          from: { x: -20, opacity: 0 },
+          to: { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, delay: 0.7 }
+        }
+      },
+      {
+        ref: feedbackRef,
+        selector: '.feedback-card',
+        animation: {
+          from: { y: 40, opacity: 0 },
+          to: { y: 0, opacity: 1, duration: 0.7, stagger: 0.15, delay: 0.9 }
+        }
+      },
+      {
+        ref: comparisonRef,
+        selector: '.comparison-card',
+        animation: {
+          from: { x: 30, opacity: 0 },
+          to: { x: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 1.1 }
+        }
       }
-
-      // Animate summary list items
-      const summaryItems = summaryRef.current?.querySelectorAll('ul > li');
-      if (summaryItems) {
-        gsap.fromTo(
-          summaryItems,
-          { x: -20, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, delay: 0.7 }
-        );
-      }
-
-      // Animate feedback cards
-      const feedbackCards = feedbackRef.current?.querySelectorAll('.feedback-card');
-      if (feedbackCards) {
-        gsap.fromTo(
-          feedbackCards,
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, stagger: 0.15, delay: 0.9 }
-        );
-      }
-
-      // Animate comparison cards
-      const comparisonCards = comparisonRef.current?.querySelectorAll('.comparison-card');
-      if (comparisonCards) {
-        gsap.fromTo(
-          comparisonCards,
-          { x: 30, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 1.1 }
-        );
-      }
-    });
-
-    return () => ctx.revert();
-  }, [report, loading]);
+    ]
+  });
 
   if (loading) {
     return (
